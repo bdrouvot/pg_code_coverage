@@ -1,0 +1,500 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/xml.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - xml.c<span style="font-size: 80%;"> (<a href="xml.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1418</td>
+            <td class="headerCovTableEntry">1719</td>
+            <td class="headerCovTableEntryMed">82.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">91</td>
+            <td class="headerCovTableEntry">105</td>
+            <td class="headerCovTableEntryMed">86.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="xml.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4588">GetXmlTableBuilderPrivateData</a></td>
+              <td class="coverFnHi">155874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4022">SPI_sql_row_to_xmlelement</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#5003">XmlTableDestroyOpaque</a></td>
+              <td class="coverFnHi">264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4806">XmlTableFetchRow</a></td>
+              <td class="coverFnHi">22404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4851">XmlTableGetValue</a></td>
+              <td class="coverFnHi">131898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4614">XmlTableInitOpaque</a></td>
+              <td class="coverFnHi">264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4774">XmlTableSetColumnFilter</a></td>
+              <td class="coverFnHi">774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4662">XmlTableSetDocument</a></td>
+              <td class="coverFnHi">264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4719">XmlTableSetNamespace</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4745">XmlTableSetRowFilter</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2665">_SPI_strdup</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2260">appendStringInfoLineSeparator</a></td>
+              <td class="coverFnHi">646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#458">appendStringInfoText</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2249">chopStringInfoNewlines</a></td>
+              <td class="coverFnHi">972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#473">cstring_to_xmltype</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2849">cursor_to_xml</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3030">cursor_to_xmlschema</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2778">database_get_xml_visible_schemas</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2785">database_get_xml_visible_tables</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3335">database_to_xml</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3402">database_to_xml_and_xmlschema</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3292">database_to_xml_internal</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3390">database_to_xmlschema</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3347">database_to_xmlschema_internal</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2212">errdetail_for_xml_code</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2633">escape_xml</a></td>
+              <td class="coverFnHi">109228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2300">is_valid_xml_namechar</a></td>
+              <td class="coverFnHi">14642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2291">is_valid_xml_namefirst</a></td>
+              <td class="coverFnHi">3638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3421">map_multipart_sql_identifier_to_xml_name</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3630">map_sql_catalog_to_xmlschema_types</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2316">map_sql_identifier_to_xml_name</a></td>
+              <td class="coverFnHi">3652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3557">map_sql_schema_to_xmlschema_types</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3452">map_sql_table_to_xmlschema</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3687">map_sql_type_to_xml_name</a></td>
+              <td class="coverFnHi">810</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3847">map_sql_type_to_xmlschema_type</a></td>
+              <td class="coverFnHi">546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3792">map_sql_typecoll_to_xmlschema_types</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2414">map_sql_value_to_xml_value</a></td>
+              <td class="coverFnHi">130930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2372">map_xml_name_to_sql_identifier</a></td>
+              <td class="coverFnHi">128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1399">parse_xml_decl</a></td>
+              <td class="coverFnHi">67992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1353">pg_xmlCharStrndup</a></td>
+              <td class="coverFnHi">2424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1258">pg_xml_done</a></td>
+              <td class="coverFnHi">24002</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1306">pg_xml_error_occurred</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1177">pg_xml_init</a></td>
+              <td class="coverFnHi">24002</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1131">pg_xml_init_library</a></td>
+              <td class="coverFnHi">91994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1572">print_xml_decl</a></td>
+              <td class="coverFnHi">23026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2722">query_to_oid_list</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2835">query_to_xml</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3081">query_to_xml_and_xmlschema</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2937">query_to_xml_internal</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3001">query_to_xmlschema</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2751">schema_get_xml_visible_tables</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3160">schema_to_xml</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3264">schema_to_xml_and_xmlschema</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3117">schema_to_xml_internal</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3251">schema_to_xmlschema</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3206">schema_to_xmlschema_internal</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2272">sqlchar_to_unicode</a></td>
+              <td class="coverFnHi">18280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#466">stringinfo_to_xmltype</a></td>
+              <td class="coverFnHi">21940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2821">table_to_xml</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3060">table_to_xml_and_xmlschema</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2804">table_to_xml_internal</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2982">table_to_xmlschema</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#636">texttoxml</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4521">wellformed_xml</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#481">xmlBuffer_to_xmltype</a></td>
+              <td class="coverFnHi">22062</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#250">xmlChar_to_encoding</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1951">xmlPgEntityLoader</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1638">xml_doctype_in_content</a></td>
+              <td class="coverFnHi">938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1969">xml_ereport</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2035">xml_errorHandler</a></td>
+              <td class="coverFnHi">398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2006">xml_errsave</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#272">xml_in</a></td>
+              <td class="coverFnHi">830</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1095">xml_is_document</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4539">xml_is_well_formed</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4565">xml_is_well_formed_content</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4552">xml_is_well_formed_document</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#355">xml_out</a></td>
+              <td class="coverFnHi">22696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#311">xml_out_internal</a></td>
+              <td class="coverFnHi">22960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1714">xml_parse</a></td>
+              <td class="coverFnHi">1238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1341">xml_pnstrdup</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1370">xml_pstrdup_and_free</a></td>
+              <td class="coverFnHi">109468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#370">xml_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#437">xml_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1880">xml_text2xmlChar</a></td>
+              <td class="coverFnHi">1376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4092">xml_xmlnodetoxmltype</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4182">xml_xpathobjtoxmlarray</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#490">xmlcomment</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#552">xmlconcat</a></td>
+              <td class="coverFnHi">21690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#618">xmlconcat2</a></td>
+              <td class="coverFnHi">21666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2930">xmldata_root_element_end</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#2903">xmldata_root_element_start</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#835">xmlelement</a></td>
+              <td class="coverFnHi">21822</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4474">xmlexists</a></td>
+              <td class="coverFnHi">198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#959">xmlparse</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#977">xmlpi</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1029">xmlroot</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#526">xmltext</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#645">xmltotext</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#655">xmltotext_with_options</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#1085">xmlvalidate</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4451">xpath</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4497">xpath_exists</a></td>
+              <td class="coverFnHi">234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#4260">xpath_internal</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3199">xsd_schema_element_end</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xml.c.gcov.html#3182">xsd_schema_element_start</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/windowfuncs.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - windowfuncs.c<span style="font-size: 80%;"> (<a href="windowfuncs.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">190</td>
+            <td class="headerCovTableEntry">199</td>
+            <td class="headerCovTableEntryHi">95.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="windowfuncs.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#369">window_cume_dist_support</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#286">window_percent_rank_support</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#328">window_cume_dist</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#259">window_percent_rank</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#198">window_dense_rank</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#218">window_dense_rank_support</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#481">window_ntile_support</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#409">window_ntile</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#590">window_lag_with_offset</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#601">window_lag_with_offset_and_default</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#636">window_lead_with_offset_and_default</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#625">window_lead_with_offset</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#613">window_lead</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#156">window_rank_support</a></td>
+              <td class="coverFnHi">354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#689">window_nth_value</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#96">window_row_number_support</a></td>
+              <td class="coverFnHi">618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#647">window_first_value</a></td>
+              <td class="coverFnHi">3726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#668">window_last_value</a></td>
+              <td class="coverFnHi">4422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#136">window_rank</a></td>
+              <td class="coverFnHi">165486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#47">rank_up</a></td>
+              <td class="coverFnHi">165678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#578">window_lag</a></td>
+              <td class="coverFnHi">181938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#526">leadlag_common</a></td>
+              <td class="coverFnHi">182778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="windowfuncs.c.gcov.html#82">window_row_number</a></td>
+              <td class="coverFnHi">439656</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/regproc.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - regproc.c<span style="font-size: 80%;"> (<a href="regproc.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">479</td>
+            <td class="headerCovTableEntry">625</td>
+            <td class="headerCovTableEntryMed">76.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">66</td>
+            <td class="headerCovTableEntryLo">63.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="regproc.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#791">format_operator</a></td>
+              <td class="coverFnHi">1792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#720">format_operator_extended</a></td>
+              <td class="coverFnHi">2574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#804">format_operator_parts</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#797">format_operator_qualified</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#297">format_procedure</a></td>
+              <td class="coverFnHi">14302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#324">format_procedure_extended</a></td>
+              <td class="coverFnHi">17606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#396">format_procedure_parts</a></td>
+              <td class="coverFnHi">122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#303">format_procedure_qualified</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1846">parseDashOrOid</a></td>
+              <td class="coverFnHi">646350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1873">parseNameAndArgTypes</a></td>
+              <td class="coverFnHi">562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1821">parseNumericOid</a></td>
+              <td class="coverFnHi">525598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#880">regclassin</a></td>
+              <td class="coverFnHi">30812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#941">regclassout</a></td>
+              <td class="coverFnHi">176670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#998">regclassrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1008">regclasssend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1024">regcollationin</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1084">regcollationout</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1142">regcollationrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1152">regcollationsend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1299">regconfigin</a></td>
+              <td class="coverFnHi">1928</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1337">regconfigout</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1383">regconfigrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1393">regconfigsend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1409">regdictionaryin</a></td>
+              <td class="coverFnHi">636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1447">regdictionaryout</a></td>
+              <td class="coverFnHi">3476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1494">regdictionaryrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1504">regdictionarysend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1636">regnamespacein</a></td>
+              <td class="coverFnHi">532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1696">regnamespaceout</a></td>
+              <td class="coverFnHi">1610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1728">regnamespacerecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1738">regnamespacesend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#637">regoperatorin</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#837">regoperatorout</a></td>
+              <td class="coverFnHi">836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#854">regoperatorrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#864">regoperatorsend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#476">regoperin</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#543">regoperout</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#611">regoperrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#621">regopersend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#222">regprocedurein</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#433">regprocedureout</a></td>
+              <td class="coverFnHi">7808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#450">regprocedurerecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#460">regproceduresend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#64">regprocin</a></td>
+              <td class="coverFnHi">610644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#134">regprocout</a></td>
+              <td class="coverFnHi">45168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#196">regprocrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#206">regprocsend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1519">regrolein</a></td>
+              <td class="coverFnHi">212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1579">regroleout</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1611">regrolerecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1621">regrolesend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1174">regtypein</a></td>
+              <td class="coverFnHi">1058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1225">regtypeout</a></td>
+              <td class="coverFnHi">9280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1273">regtyperecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1283">regtypesend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1775">stringToQualifiedNameList</a></td>
+              <td class="coverFnHi">32314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1752">text_regclass</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#923">to_regclass</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1066">to_regcollation</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1678">to_regnamespace</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#525">to_regoper</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#692">to_regoperator</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#116">to_regproc</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#276">to_regprocedure</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1561">to_regrole</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regproc.c.gcov.html#1207">to_regtype</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

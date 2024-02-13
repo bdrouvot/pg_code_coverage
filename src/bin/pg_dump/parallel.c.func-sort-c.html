@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pg_dump/parallel.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pg_dump</a> - parallel.c<span style="font-size: 80%;"> (<a href="parallel.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">279</td>
+            <td class="headerCovTableEntry">339</td>
+            <td class="headerCovTableEntryMed">82.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntryHi">90.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="parallel.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#262">GetMyPSlot</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#393">ShutdownWorkersHard</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#543">sigTermHandler</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#444">WaitForTerminatingWorkers</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1057">ParallelBackupEnd</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#895">ParallelBackupStart</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#787">set_cancel_pstate</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#827">RunWorker</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1334">WaitForCommands</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1250">HasEveryWorkerTerminated</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#807">set_cancel_slot_archive</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1266">IsEveryWorkerIdle</a></td>
+              <td class="coverFnHi">128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1299">lockTableForWorker</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1538">select_loop</a></td>
+              <td class="coverFnHi">244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1203">DispatchJobForTocEntry</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1106">buildWorkerCommand</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1154">buildWorkerResponse</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1121">parseWorkerCommand</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1169">parseWorkerResponse</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1525">sendMessageToLeader</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1642">sendMessageToWorker</a></td>
+              <td class="coverFnHi">248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1449">WaitForWorkers</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1514">getMessageFromLeader</a></td>
+              <td class="coverFnHi">296</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#337">archive_close_connection</a></td>
+              <td class="coverFnHi">328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#326">on_exit_close_archive</a></td>
+              <td class="coverFnHi">402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1396">ListenToWorkers</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1577">getMessageFromWorker</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1660">readMessageFromPipe</a></td>
+              <td class="coverFnHi">544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#234">init_parallel_dump_utils</a></td>
+              <td class="coverFnHi">594</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#1234">GetIdleWorker</a></td>
+              <td class="coverFnHi">598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#728">set_archive_cancel_info</a></td>
+              <td class="coverFnHi">906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parallel.c.gcov.html#606">set_cancel_handler</a></td>
+              <td class="coverFnHi">906</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/util/pathnode.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/util</a> - pathnode.c<span style="font-size: 80%;"> (<a href="pathnode.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1397</td>
+            <td class="headerCovTableEntry">1528</td>
+            <td class="headerCovTableEntryHi">91.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntry">63</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="pathnode.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#747">add_partial_path</a></td>
+              <td class="coverFnHi">90838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#865">add_partial_path_precheck</a></td>
+              <td class="coverFnHi">62598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#420">add_path</a></td>
+              <td class="coverFnHi">3389202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#642">add_path_precheck</a></td>
+              <td class="coverFnHi">3564384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3854">adjust_limit_rows_costs</a></td>
+              <td class="coverFnHi">5666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1393">append_startup_cost_compare</a></td>
+              <td class="coverFnHi">32342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1371">append_total_cost_compare</a></td>
+              <td class="coverFnHi">1918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2772">apply_projection_to_path</a></td>
+              <td class="coverFnHi">25798</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2367">calc_nestloop_required_outer</a></td>
+              <td class="coverFnHi">2302482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2394">calc_non_nestloop_required_outer</a></td>
+              <td class="coverFnHi">1555122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#115">compare_fractional_path_costs</a></td>
+              <td class="coverFnHi">6544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#69">compare_path_costs</a></td>
+              <td class="coverFnHi">680866</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#164">compare_path_costs_fuzzily</a></td>
+              <td class="coverFnHi">3158906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3134">create_agg_path</a></td>
+              <td class="coverFnHi">49738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1240">create_append_path</a></td>
+              <td class="coverFnHi">65510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1075">create_bitmap_and_path</a></td>
+              <td class="coverFnHi">32488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1042">create_bitmap_heap_path</a></td>
+              <td class="coverFnHi">278678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1127">create_bitmap_or_path</a></td>
+              <td class="coverFnHi">960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2114">create_ctescan_path</a></td>
+              <td class="coverFnHi">3244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2270">create_foreign_join_path</a></td>
+              <td class="coverFnHi">1072</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2322">create_foreign_upper_path</a></td>
+              <td class="coverFnHi">568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2224">create_foreignscan_path</a></td>
+              <td class="coverFnHi">3498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2036">create_functionscan_path</a></td>
+              <td class="coverFnHi">38802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1871">create_gather_merge_path</a></td>
+              <td class="coverFnHi">9642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1962">create_gather_path</a></td>
+              <td class="coverFnHi">15520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3023">create_group_path</a></td>
+              <td class="coverFnHi">1224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1514">create_group_result_path</a></td>
+              <td class="coverFnHi">189210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3216">create_groupingsets_path</a></td>
+              <td class="coverFnHi">1792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2598">create_hashjoin_path</a></td>
+              <td class="coverFnHi">213604</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2930">create_incremental_sort_path</a></td>
+              <td class="coverFnHi">4770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#993">create_index_path</a></td>
+              <td class="coverFnHi">603084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3799">create_limit_path</a></td>
+              <td class="coverFnHi">5484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3638">create_lockrows_path</a></td>
+              <td class="coverFnHi">7204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1562">create_material_path</a></td>
+              <td class="coverFnHi">405582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1594">create_memoize_path</a></td>
+              <td class="coverFnHi">229804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1411">create_merge_append_path</a></td>
+              <td class="coverFnHi">3698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2532">create_mergejoin_path</a></td>
+              <td class="coverFnHi">242342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3376">create_minmaxagg_path</a></td>
+              <td class="coverFnHi">380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3700">create_modifytable_path</a></td>
+              <td class="coverFnHi">72406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2139">create_namedtuplestorescan_path</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2446">create_nestloop_path</a></td>
+              <td class="coverFnHi">1031956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2664">create_projection_path</a></td>
+              <td class="coverFnHi">347210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3593">create_recursiveunion_path</a></td>
+              <td class="coverFnHi">808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2165">create_resultscan_path</a></td>
+              <td class="coverFnHi">1438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#952">create_samplescan_path</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#927">create_seqscan_path</a></td>
+              <td class="coverFnHi">357550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2861">create_set_projection_path</a></td>
+              <td class="coverFnHi">8326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3531">create_setop_path</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2979">create_sort_path</a></td>
+              <td class="coverFnHi">67714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2006">create_subqueryscan_path</a></td>
+              <td class="coverFnHi">20596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2062">create_tablefuncscan_path</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1208">create_tidrangescan_path</a></td>
+              <td class="coverFnHi">202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1179">create_tidscan_path</a></td>
+              <td class="coverFnHi">756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1650">create_unique_path</a></td>
+              <td class="coverFnHi">28944</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3082">create_upper_unique_path</a></td>
+              <td class="coverFnHi">3306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2088">create_valuesscan_path</a></td>
+              <td class="coverFnHi">7396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3463">create_windowagg_path</a></td>
+              <td class="coverFnHi">2610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#2191">create_worktablescan_path</a></td>
+              <td class="coverFnHi">814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#3922">reparameterize_path</a></td>
+              <td class="coverFnHi">308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#4083">reparameterize_path_by_child</a></td>
+              <td class="coverFnHi">8512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#4379">reparameterize_pathlist_by_child</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#242">set_cheapest</a></td>
+              <td class="coverFnHi">1770670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pathnode.c.gcov.html#1936">translate_sub_tlist</a></td>
+              <td class="coverFnHi">548</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

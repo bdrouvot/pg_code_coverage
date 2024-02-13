@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/cache/relcache.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/cache</a> - relcache.c<span style="font-size: 80%;"> (<a href="relcache.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1939</td>
+            <td class="headerCovTableEntry">2121</td>
+            <td class="headerCovTableEntryHi">91.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">81</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntryHi">98.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="relcache.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#407">AllocateRelationDesc</a></td>
+              <td class="coverFnHi">974858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3097">AssertPendingSyncConsistency</a></td>
+              <td class="coverFnHi">2492498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3119">AssertPendingSyncs_RelationCache</a></td>
+              <td class="coverFnHi">11754</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3342">AtEOSubXact_RelationCache</a></td>
+              <td class="coverFnHi">17714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3397">AtEOSubXact_cleanup</a></td>
+              <td class="coverFnHi">8432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3190">AtEOXact_RelationCache</a></td>
+              <td class="coverFnHi">519890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3260">AtEOXact_cleanup</a></td>
+              <td class="coverFnHi">117170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4516">AttrDefaultCmp</a></td>
+              <td class="coverFnHi">9970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4436">AttrDefaultFetch</a></td>
+              <td class="coverFnHi">25268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4371">BuildHardcodedDescriptor</a></td>
+              <td class="coverFnHi">44688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4620">CheckConstraintCmp</a></td>
+              <td class="coverFnHi">2840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4531">CheckConstraintFetch</a></td>
+              <td class="coverFnHi">10184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5843">CopyIndexAttOptions</a></td>
+              <td class="coverFnHi">979538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4401">GetPgClassDescriptor</a></td>
+              <td class="coverFnHi">1042872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4414">GetPgIndexDescriptor</a></td>
+              <td class="coverFnHi">1226508</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1588">IndexSupportInitialize</a></td>
+              <td class="coverFnHi">392394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1393">InitIndexAmRoutine</a></td>
+              <td class="coverFnHi">2111930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1792">InitTableAmRoutine</a></td>
+              <td class="coverFnHi">1578076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1639">LookupOpclassInfo</a></td>
+              <td class="coverFnHi">660446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3921">RelationAssumeNewRelfilelocator</a></td>
+              <td class="coverFnHi">11094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1038">RelationBuildDesc</a></td>
+              <td class="coverFnHi">976014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3479">RelationBuildLocalRelation</a></td>
+              <td class="coverFnHi">106928</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5695">RelationBuildPublicationDesc</a></td>
+              <td class="coverFnHi">170900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#731">RelationBuildRuleLock</a></td>
+              <td class="coverFnHi">28284</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#519">RelationBuildTupleDesc</a></td>
+              <td class="coverFnHi">974858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6750">RelationCacheInitFilePostInvalidate</a></td>
+              <td class="coverFnHi">12406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6725">RelationCacheInitFilePreInvalidate</a></td>
+              <td class="coverFnHi">12406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6765">RelationCacheInitFileRemove</a></td>
+              <td class="coverFnHi">1312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6798">RelationCacheInitFileRemoveInDir</a></td>
+              <td class="coverFnHi">1404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3947">RelationCacheInitialize</a></td>
+              <td class="coverFnHi">24298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3993">RelationCacheInitializePhase2</a></td>
+              <td class="coverFnHi">24298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4052">RelationCacheInitializePhase3</a></td>
+              <td class="coverFnHi">22344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2965">RelationCacheInvalidate</a></td>
+              <td class="coverFnHi">4098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2909">RelationCacheInvalidateEntry</a></td>
+              <td class="coverFnHi">2126172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2527">RelationClearRelation</a></td>
+              <td class="coverFnHi">1153096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2185">RelationClose</a></td>
+              <td class="coverFnHi">29892184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2194">RelationCloseCleanup</a></td>
+              <td class="coverFnHi">29925088</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2165">RelationDecrementReferenceCount</a></td>
+              <td class="coverFnHi">43951664</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2434">RelationDestroyRelation</a></td>
+              <td class="coverFnHi">915918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2832">RelationFlushRelation</a></td>
+              <td class="coverFnHi">546536</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2865">RelationForgetRelation</a></td>
+              <td class="coverFnHi">61036</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5067">RelationGetDummyIndexExpressions</a></td>
+              <td class="coverFnHi">234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5560">RelationGetExclusionInfo</a></td>
+              <td class="coverFnHi">422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4643">RelationGetFKeyList</a></td>
+              <td class="coverFnHi">188018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5483">RelationGetIdentityKeyBitmap</a></td>
+              <td class="coverFnHi">524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5863">RelationGetIndexAttOptions</a></td>
+              <td class="coverFnHi">1885258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5210">RelationGetIndexAttrBitmap</a></td>
+              <td class="coverFnHi">2453696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5008">RelationGetIndexExpressions</a></td>
+              <td class="coverFnHi">3432436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4752">RelationGetIndexList</a></td>
+              <td class="coverFnHi">1801484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5121">RelationGetIndexPredicate</a></td>
+              <td class="coverFnHi">3432352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4962">RelationGetPrimaryKeyIndex</a></td>
+              <td class="coverFnHi">144488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4983">RelationGetReplicaIndex</a></td>
+              <td class="coverFnHi">460880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4893">RelationGetStatExtList</a></td>
+              <td class="coverFnHi">391958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2054">RelationIdGetRelation</a></td>
+              <td class="coverFnHi">29814646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6685">RelationIdIsInInitFile</a></td>
+              <td class="coverFnHi">1716050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2152">RelationIncrementReferenceCount</a></td>
+              <td class="coverFnHi">43984568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1417">RelationInitIndexAccessInfo</a></td>
+              <td class="coverFnHi">392394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1311">RelationInitPhysicalAddr</a></td>
+              <td class="coverFnHi">4172500</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1801">RelationInitTableAccessMethod</a></td>
+              <td class="coverFnHi">1578076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#462">RelationParseRelOptions</a></td>
+              <td class="coverFnHi">1052298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2248">RelationReloadIndexInfo</a></td>
+              <td class="coverFnHi">61858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2362">RelationReloadNailed</a></td>
+              <td class="coverFnHi">194870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3722">RelationSetNewRelfilenumber</a></td>
+              <td class="coverFnHi">9094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#3068">RememberToFreeTupleDescAtEOX</a></td>
+              <td class="coverFnHi">17382</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6839">ResOwnerPrintRelCache</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6847">ResOwnerReleaseRelation</a></td>
+              <td class="coverFnHi">32904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2138">ResourceOwnerForgetRelationRef</a></td>
+              <td class="coverFnHi">43586898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#2133">ResourceOwnerRememberRelationRef</a></td>
+              <td class="coverFnHi">43619802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#337">ScanPgRelation</a></td>
+              <td class="coverFnHi">1060344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#951">equalPolicy</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#997">equalRSDesc</a></td>
+              <td class="coverFnHi">256240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#906">equalRuleLocks</a></td>
+              <td class="coverFnHi">256240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5924">errtable</a></td>
+              <td class="coverFnHi">2944</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5941">errtablecol</a></td>
+              <td class="coverFnHi">374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5965">errtablecolname</a></td>
+              <td class="coverFnHi">374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#5978">errtableconstraint</a></td>
+              <td class="coverFnHi">2074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#1866">formrdesc</a></td>
+              <td class="coverFnHi">22600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#4335">load_critical_index</a></td>
+              <td class="coverFnHi">23082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6042">load_relcache_init_file</a></td>
+              <td class="coverFnHi">46514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6822">unlink_initfile</a></td>
+              <td class="coverFnHi">30018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6666">write_item</a></td>
+              <td class="coverFnHi">3423800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="relcache.c.gcov.html#6458">write_relcache_init_file</a></td>
+              <td class="coverFnHi">4044</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

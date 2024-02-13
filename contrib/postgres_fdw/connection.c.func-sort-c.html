@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/postgres_fdw/connection.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/postgres_fdw</a> - connection.c<span style="font-size: 80%;"> (<a href="connection.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">511</td>
+            <td class="headerCovTableEntry">619</td>
+            <td class="headerCovTableEntryMed">82.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntryHi">92.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="connection.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1305">pgfdw_cancel_query</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1322">pgfdw_cancel_query_begin</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1349">pgfdw_cancel_query_end</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1782">pgfdw_finish_pre_subcommit_cleanup</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#112">pg_finfo_postgres_fdw_disconnect</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#113">pg_finfo_postgres_fdw_disconnect_all</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#111">pg_finfo_postgres_fdw_get_connections</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1816">pgfdw_finish_abort_cleanup</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#2076">postgres_fdw_disconnect</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#2097">postgres_fdw_disconnect_all</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#592">UserMappingPasswordRequired</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#2125">disconnect_cached_connections</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1654">pgfdw_abort_cleanup_begin</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1987">postgres_fdw_get_connections</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1708">pgfdw_finish_pre_commit_cleanup</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#867">pgfdw_report_error</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1073">pgfdw_subxact_callback</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1580">pgfdw_abort_cleanup</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1401">pgfdw_exec_cleanup_query</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#578">disconnect_pg_server</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#659">configure_remote_session</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#404">pgfdw_security_check</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#616">check_conn_params</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#442">connect_pg_server</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#338">make_new_connection</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1421">pgfdw_exec_cleanup_query_begin</a></td>
+              <td class="coverFnHi">128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1437">pgfdw_exec_cleanup_query_end</a></td>
+              <td class="coverFnHi">128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1492">pgfdw_get_cleanup_result</a></td>
+              <td class="coverFnHi">128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1186">pgfdw_inval_callback</a></td>
+              <td class="coverFnHi">332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#816">GetPrepStmtNumber</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#802">GetCursorNumber</a></td>
+              <td class="coverFnHi">1018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1260">pgfdw_reset_xact_state</a></td>
+              <td class="coverFnHi">2498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#695">do_sql_command</a></td>
+              <td class="coverFnHi">3388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#702">do_sql_command_begin</a></td>
+              <td class="coverFnHi">3424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#709">do_sql_command_end</a></td>
+              <td class="coverFnHi">3424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#781">ReleaseConnection</a></td>
+              <td class="coverFnHi">4034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#738">begin_remote_xact</a></td>
+              <td class="coverFnHi">4142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#175">GetConnection</a></td>
+              <td class="coverFnHi">4152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#1236">pgfdw_reject_incomplete_xact_state_change</a></td>
+              <td class="coverFnHi">5518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#923">pgfdw_xact_callback</a></td>
+              <td class="coverFnHi">7518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#831">pgfdw_exec_query</a></td>
+              <td class="coverFnHi">7680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="connection.c.gcov.html#848">pgfdw_get_result</a></td>
+              <td class="coverFnHi">15528</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

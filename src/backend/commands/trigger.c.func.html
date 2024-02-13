@@ -1,0 +1,356 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/commands/trigger.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/commands</a> - trigger.c<span style="font-size: 80%;"> (<a href="trigger.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1939</td>
+            <td class="headerCovTableEntry">2067</td>
+            <td class="headerCovTableEntryHi">93.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">69</td>
+            <td class="headerCovTableEntryHi">98.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="trigger.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5023">AfterTriggerBeginQuery</a></td>
+              <td class="coverFnHi">399552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5306">AfterTriggerBeginSubXact</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4991">AfterTriggerBeginXact</a></td>
+              <td class="coverFnHi">519100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5043">AfterTriggerEndQuery</a></td>
+              <td class="coverFnHi">395590</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5354">AfterTriggerEndSubXact</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5258">AfterTriggerEndXact</a></td>
+              <td class="coverFnHi">519510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5542">AfterTriggerEnlargeQueryState</a></td>
+              <td class="coverFnHi">6156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4275">AfterTriggerExecute</a></td>
+              <td class="coverFnHi">10638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5202">AfterTriggerFireDeferred</a></td>
+              <td class="coverFnHi">484718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5134">AfterTriggerFreeQuery</a></td>
+              <td class="coverFnHi">7134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5979">AfterTriggerPendingOnRel</a></td>
+              <td class="coverFnHi">97734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#6066">AfterTriggerSaveEvent</a></td>
+              <td class="coverFnHi">75570</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5664">AfterTriggerSetState</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2090">CopyTriggerDesc</a></td>
+              <td class="coverFnHi">455504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#163">CreateTrigger</a></td>
+              <td class="coverFnHi">13140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#180">CreateTriggerFiringOn</a></td>
+              <td class="coverFnHi">13956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1726">EnableDisableTrigger</a></td>
+              <td class="coverFnHi">450</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2779">ExecARDeleteTriggers</a></td>
+              <td class="coverFnHi">1606086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2539">ExecARInsertTriggers</a></td>
+              <td class="coverFnHi">11565112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3102">ExecARUpdateTriggers</a></td>
+              <td class="coverFnHi">373696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2668">ExecASDeleteTriggers</a></td>
+              <td class="coverFnHi">11796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2450">ExecASInsertTriggers</a></td>
+              <td class="coverFnHi">74402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3274">ExecASTruncateTriggers</a></td>
+              <td class="coverFnHi">3090</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2921">ExecASUpdateTriggers</a></td>
+              <td class="coverFnHi">13122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2688">ExecBRDeleteTriggers</a></td>
+              <td class="coverFnHi">368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2463">ExecBRInsertTriggers</a></td>
+              <td class="coverFnHi">2334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2939">ExecBRUpdateTriggers</a></td>
+              <td class="coverFnHi">2532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2617">ExecBSDeleteTriggers</a></td>
+              <td class="coverFnHi">11948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2399">ExecBSInsertTriggers</a></td>
+              <td class="coverFnHi">76648</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3227">ExecBSTruncateTriggers</a></td>
+              <td class="coverFnHi">3098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2863">ExecBSUpdateTriggers</a></td>
+              <td class="coverFnHi">13858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2307">ExecCallTriggerFunc</a></td>
+              <td class="coverFnHi">20784</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2816">ExecIRDeleteTriggers</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2556">ExecIRInsertTriggers</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3161">ExecIRUpdateTriggers</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2277">FindTriggerIncompatibleWithInheritance</a></td>
+              <td class="coverFnHi">2276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2145">FreeTriggerDesc</a></td>
+              <td class="coverFnHi">954036</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4838">GetAfterTriggersStoreSlot</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4801">GetAfterTriggersTableData</a></td>
+              <td class="coverFnHi">2060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5451">GetAfterTriggersTransitionTable</a></td>
+              <td class="coverFnHi">66080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3923">GetCurrentFDWTuplestore</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3291">GetTupleForTrigger</a></td>
+              <td class="coverFnHi">12102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4887">MakeTransitionCaptureState</a></td>
+              <td class="coverFnHi">102340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1421">RangeVarCallbackForRenameTrigger</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1861">RelationBuildTriggers</a></td>
+              <td class="coverFnHi">50820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1292">RemoveTriggerById</a></td>
+              <td class="coverFnHi">11448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5634">SetConstraintStateAddItem</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5614">SetConstraintStateCopy</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5589">SetConstraintStateCreate</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#2013">SetTriggerFlags</a></td>
+              <td class="coverFnHi">88472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#5502">TransitionTableAddTuple</a></td>
+              <td class="coverFnHi">66080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3427">TriggerEnabled</a></td>
+              <td class="coverFnHi">23222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1221">TriggerSetParentTrigger</a></td>
+              <td class="coverFnHi">276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4036">afterTriggerAddEvent</a></td>
+              <td class="coverFnHi">11472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#3959">afterTriggerCheckState</a></td>
+              <td class="coverFnHi">10904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4004">afterTriggerCopyBitmap</a></td>
+              <td class="coverFnHi">10948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4213">afterTriggerDeleteHeadEventChunk</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4152">afterTriggerFreeEventList</a></td>
+              <td class="coverFnHi">16168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4630">afterTriggerInvokeEvents</a></td>
+              <td class="coverFnHi">6832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4546">afterTriggerMarkEvents</a></td>
+              <td class="coverFnHi">493048</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#4173">afterTriggerRestoreEventList</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#6584">assign_session_replication_role</a></td>
+              <td class="coverFnHi">2310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#6463">before_stmt_triggers_fired</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#6509">cancel_prior_stmt_triggers</a></td>
+              <td class="coverFnHi">1030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1371">get_trigger_oid</a></td>
+              <td class="coverFnHi">734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#6598">pg_trigger_depth</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1468">renametrig</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1582">renametrig_internal</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="trigger.c.gcov.html#1653">renametrig_partition</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

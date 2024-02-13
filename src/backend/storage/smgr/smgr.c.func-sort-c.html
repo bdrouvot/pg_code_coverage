@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/smgr/smgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/smgr</a> - smgr.c<span style="font-size: 80%;"> (<a href="smgr.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">157</td>
+            <td class="headerCovTableEntry">161</td>
+            <td class="headerCovTableEntryHi">97.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="smgr.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#425">smgrdosyncall</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#786">ProcessBarrierSmgrRelease</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#352">smgrreleaseall</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#693">smgrtruncate</a></td>
+              <td class="coverFnHi">1022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#461">smgrdounlinkall</a></td>
+              <td class="coverFnHi">22990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#151">smgrinit</a></td>
+              <td class="coverFnHi">27696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#169">smgrshutdown</a></td>
+              <td class="coverFnHi">27696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#758">smgrimmedsync</a></td>
+              <td class="coverFnHi">29414</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#634">smgrwriteback</a></td>
+              <td class="coverFnHi">110800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#534">smgrextend</a></td>
+              <td class="coverFnHi">188496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#584">smgrprefetch</a></td>
+              <td class="coverFnHi">260806</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#262">smgrunpin</a></td>
+              <td class="coverFnHi">329308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#559">smgrzeroextend</a></td>
+              <td class="coverFnHi">355692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#378">smgrreleaserellocator</a></td>
+              <td class="coverFnHi">394570</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#317">smgrclose</a></td>
+              <td class="coverFnHi">466232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#776">AtEOXact_SMgr</a></td>
+              <td class="coverFnHi">519448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#329">smgrdestroyall</a></td>
+              <td class="coverFnHi">524564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#274">smgrdestroy</a></td>
+              <td class="coverFnHi">527192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#297">smgrrelease</a></td>
+              <td class="coverFnHi">534960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#622">smgrwritev</a></td>
+              <td class="coverFnHi">855224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#247">smgrpin</a></td>
+              <td class="coverFnHi">1225896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#397">smgrexists</a></td>
+              <td class="coverFnHi">1878326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#599">smgrreadv</a></td>
+              <td class="coverFnHi">2160114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#410">smgrcreate</a></td>
+              <td class="coverFnHi">5292088</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#646">smgrnblocks</a></td>
+              <td class="coverFnHi">9586732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#670">smgrnblocks_cached</a></td>
+              <td class="coverFnHi">9621434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="smgr.c.gcov.html#195">smgropen</a></td>
+              <td class="coverFnHi">14800054</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

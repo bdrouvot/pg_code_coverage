@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/executor/execExprInterp.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/executor</a> - execExprInterp.c<span style="font-size: 80%;"> (<a href="execExprInterp.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1589</td>
+            <td class="headerCovTableEntry">1699</td>
+            <td class="headerCovTableEntryHi">93.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">67</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntryHi">98.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="execExprInterp.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#1887">CheckExprStillValid</a></td>
+              <td class="coverFnHi">1688396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#1989">CheckOpSlotCompatibility</a></td>
+              <td class="coverFnHi">138090820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#1938">CheckVarSlotCompatibility</a></td>
+              <td class="coverFnHi">536114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4568">ExecAggCopyTransValue</a></td>
+              <td class="coverFnHi">61310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4515">ExecAggInitGroup</a></td>
+              <td class="coverFnHi">60060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4767">ExecAggPlainTransByRef</a></td>
+              <td class="coverFnHi">2787358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4735">ExecAggPlainTransByVal</a></td>
+              <td class="coverFnHi">27041252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4707">ExecEvalAggOrderedTransDatum</a></td>
+              <td class="coverFnHi">824172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4721">ExecEvalAggOrderedTransTuple</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3011">ExecEvalArrayCoerce</a></td>
+              <td class="coverFnHi">65558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2797">ExecEvalArrayExpr</a></td>
+              <td class="coverFnHi">757020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2531">ExecEvalCoerceViaIOSafe</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3818">ExecEvalConstraintCheck</a></td>
+              <td class="coverFnHi">10250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3804">ExecEvalConstraintNotNull</a></td>
+              <td class="coverFnHi">360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3324">ExecEvalConvertRowtype</a></td>
+              <td class="coverFnHi">12012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2658">ExecEvalCurrentOfExpr</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3125">ExecEvalFieldSelect</a></td>
+              <td class="coverFnHi">111818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3250">ExecEvalFieldStoreDeForm</a></td>
+              <td class="coverFnHi">394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3300">ExecEvalFieldStoreForm</a></td>
+              <td class="coverFnHi">394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2404">ExecEvalFuncExprFusage</a></td>
+              <td class="coverFnHi">208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2425">ExecEvalFuncExprStrictFusage</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4226">ExecEvalGroupingFunc</a></td>
+              <td class="coverFnHi">1688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3622">ExecEvalHashedScalarArrayOp</a></td>
+              <td class="coverFnHi">4614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4053">ExecEvalJsonConstructor</a></td>
+              <td class="coverFnHi">576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4131">ExecEvalJsonIsPredicate</a></td>
+              <td class="coverFnHi">2698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3072">ExecEvalMinMax</a></td>
+              <td class="coverFnHi">3060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2669">ExecEvalNextValueExpr</a></td>
+              <td class="coverFnHi">888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2462">ExecEvalParamExec</a></td>
+              <td class="coverFnHi">4005174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2484">ExecEvalParamExtern</a></td>
+              <td class="coverFnHi">543654</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4660">ExecEvalPreOrderedDistinctMulti</a></td>
+              <td class="coverFnHi">720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4617">ExecEvalPreOrderedDistinctSingle</a></td>
+              <td class="coverFnHi">365784</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3052">ExecEvalRow</a></td>
+              <td class="coverFnHi">26986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2704">ExecEvalRowNotNull</a></td>
+              <td class="coverFnHi">554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2695">ExecEvalRowNull</a></td>
+              <td class="coverFnHi">696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2711">ExecEvalRowNullInt</a></td>
+              <td class="coverFnHi">1250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2591">ExecEvalSQLValueFunction</a></td>
+              <td class="coverFnHi">17156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3419">ExecEvalScalarArrayOp</a></td>
+              <td class="coverFnHi">3983574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2374">ExecEvalStepOp</a></td>
+              <td class="coverFnHi">7746206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4251">ExecEvalSubPlan</a></td>
+              <td class="coverFnHi">2705534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4495">ExecEvalSysVar</a></td>
+              <td class="coverFnHi">6444718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#4268">ExecEvalWholeRowVar</a></td>
+              <td class="coverFnHi">38652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3838">ExecEvalXmlExpr</a></td>
+              <td class="coverFnHi">44010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2342">ExecInitInterpreter</a></td>
+              <td class="coverFnHi">2153534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#394">ExecInterpExpr</a></td>
+              <td class="coverFnHi">902414986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#1867">ExecInterpExprStillValid</a></td>
+              <td class="coverFnHi">1682130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2187">ExecJustApplyFuncToCase</a></td>
+              <td class="coverFnHi">2658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2166">ExecJustAssignInnerVar</a></td>
+              <td class="coverFnHi">45316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2300">ExecJustAssignInnerVarVirt</a></td>
+              <td class="coverFnHi">121178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2173">ExecJustAssignOuterVar</a></td>
+              <td class="coverFnHi">407092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2307">ExecJustAssignOuterVarVirt</a></td>
+              <td class="coverFnHi">541890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2180">ExecJustAssignScanVar</a></td>
+              <td class="coverFnHi">9714264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2314">ExecJustAssignScanVarVirt</a></td>
+              <td class="coverFnHi">182112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2140">ExecJustAssignVarImpl</a></td>
+              <td class="coverFnHi">10166672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2278">ExecJustAssignVarVirtImpl</a></td>
+              <td class="coverFnHi">845180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2225">ExecJustConst</a></td>
+              <td class="coverFnHi">1728628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2119">ExecJustInnerVar</a></td>
+              <td class="coverFnHi">3639398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2257">ExecJustInnerVarVirt</a></td>
+              <td class="coverFnHi">529586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2126">ExecJustOuterVar</a></td>
+              <td class="coverFnHi">10239714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2264">ExecJustOuterVarVirt</a></td>
+              <td class="coverFnHi">16627204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2133">ExecJustScanVar</a></td>
+              <td class="coverFnHi">238326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2271">ExecJustScanVarVirt</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2102">ExecJustVarImpl</a></td>
+              <td class="coverFnHi">14117438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2235">ExecJustVarVirtImpl</a></td>
+              <td class="coverFnHi">17156976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#234">ExecReadyInterpretedExpr</a></td>
+              <td class="coverFnHi">2153534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2325">dispatch_compare_ptr</a></td>
+              <td class="coverFnHi">53693218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#2036">get_cached_rowtype</a></td>
+              <td class="coverFnHi">136720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3572">saop_element_hash</a></td>
+              <td class="coverFnHi">6460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execExprInterp.c.gcov.html#3591">saop_hash_element_match</a></td>
+              <td class="coverFnHi">4402</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

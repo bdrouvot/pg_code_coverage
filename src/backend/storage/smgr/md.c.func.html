@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/smgr/md.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/smgr</a> - md.c<span style="font-size: 80%;"> (<a href="md.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">351</td>
+            <td class="headerCovTableEntry">469</td>
+            <td class="headerCovTableEntryLo">74.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntryHi">97.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="md.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1404">DropRelationFiles</a></td>
+              <td class="coverFnHi">4654</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1386">ForgetDatabaseSyncRequests</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1436">_fdvec_resize</a></td>
+              <td class="coverFnHi">1985838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1542">_mdfd_getseg</a></td>
+              <td class="coverFnHi">3931132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#145">_mdfd_open_flags</a></td>
+              <td class="coverFnHi">1809426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1497">_mdfd_openseg</a></td>
+              <td class="coverFnHi">29434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1474">_mdfd_segpath</a></td>
+              <td class="coverFnHi">29458</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1673">_mdnblocks</a></td>
+              <td class="coverFnHi">4829876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#763">buffers_to_iovec</a></td>
+              <td class="coverFnHi">3015308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#324">do_truncate</a></td>
+              <td class="coverFnHi">361258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#692">mdclose</a></td>
+              <td class="coverFnHi">5283500</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#191">mdcreate</a></td>
+              <td class="coverFnHi">5292088</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#172">mdexists</a></td>
+              <td class="coverFnHi">1878398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#461">mdextend</a></td>
+              <td class="coverFnHi">188496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1766">mdfiletagmatches</a></td>
+              <td class="coverFnHi">12912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1249">mdimmedsync</a></td>
+              <td class="coverFnHi">29434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#159">mdinit</a></td>
+              <td class="coverFnHi">27696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1090">mdnblocks</a></td>
+              <td class="coverFnHi">3300886</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#681">mdopen</a></td>
+              <td class="coverFnHi">1489740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#638">mdopenfork</a></td>
+              <td class="coverFnHi">5495534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#715">mdprefetch</a></td>
+              <td class="coverFnHi">260806</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#811">mdreadv</a></td>
+              <td class="coverFnHi">2160114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1694">mdsyncfiletag</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1147">mdtruncate</a></td>
+              <td class="coverFnHi">1394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#308">mdunlink</a></td>
+              <td class="coverFnHi">309376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1747">mdunlinkfiletag</a></td>
+              <td class="coverFnHi">56740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#345">mdunlinkfork</a></td>
+              <td class="coverFnHi">309376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1031">mdwriteback</a></td>
+              <td class="coverFnHi">110800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#929">mdwritev</a></td>
+              <td class="coverFnHi">855224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#526">mdzeroextend</a></td>
+              <td class="coverFnHi">355692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1311">register_dirty_segment</a></td>
+              <td class="coverFnHi">1426274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1372">register_forget_request</a></td>
+              <td class="coverFnHi">227616</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="md.c.gcov.html#1355">register_unlink_segment</a></td>
+              <td class="coverFnHi">58872</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,1148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/geo_ops.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - geo_ops.c<span style="font-size: 80%;"> (<a href="geo_ops.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1871</td>
+            <td class="headerCovTableEntry">2024</td>
+            <td class="headerCovTableEntryHi">92.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">254</td>
+            <td class="headerCovTableEntry">267</td>
+            <td class="headerCovTableEntryHi">95.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="geo_ops.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#464">box_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#499">box_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4701">circle_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4725">circle_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2598">dist_polyc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1036">line_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1059">line_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2090">lseg_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2109">lseg_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1486">path_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1524">path_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3473">poly_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3508">poly_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2127">lseg_construct</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1851">point_recv</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1866">point_send</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5080">circle_contain_pt</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#794">box_area</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#931">box_diagonal</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#760">box_eq</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#778">box_ge</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#751">box_gt</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#818">box_height</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#769">box_le</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#742">box_lt</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#806">box_width</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5305">poly_circle</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4517">poly_box</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4501">poly_center</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4562">poly_path</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5184">circle_box</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2225">lseg_horizontal</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2170">lseg_length</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2217">lseg_vertical</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1378">path_area</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1790">path_length</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1635">path_open</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4278">box_div</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1180">line_horizontal</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1172">line_vertical</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5092">pt_contained_circle</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5283">poly_to_circle</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1625">path_close</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#847">box_center</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4450">path_poly</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5041">circle_diameter</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2314">lseg_center</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2063">lseg_in</a></td>
+              <td class="coverFnHi">106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5012">circle_div_pt</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4436">path_div_pt</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1608">path_isopen</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4492">poly_npoints</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4194">point_div</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#948">line_decode</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#729">box_above_eq</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#720">box_below_eq</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#830">box_distance</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#906">box_intersect</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4259">box_mul</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4319">boxes_bound_box</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1600">path_isclosed</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5064">circle_distance</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#977">line_in</a></td>
+              <td class="coverFnHi">210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3215">box_contain_lseg</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3061">close_sb</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2560">dist_bs</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2548">dist_sb</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3313">inter_sb</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3222">on_sb</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3669">poly_above</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3623">poly_below</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4025">poly_distance</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3531">poly_left</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3692">poly_overabove</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3646">poly_overbelow</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3554">poly_overleft</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3600">poly_overright</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3577">poly_right</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4229">box_add</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4244">box_sub</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2931">close_pb</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3326">inter_lb</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4165">point_mul</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#861">box_ar</a></td>
+              <td class="coverFnHi">330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2586">dist_cpoly</a></td>
+              <td class="coverFnHi">336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2569">dist_cpoly_internal</a></td>
+              <td class="coverFnHi">336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#891">box_ht</a></td>
+              <td class="coverFnHi">360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#881">box_wd</a></td>
+              <td class="coverFnHi">360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4300">point_box</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4861">circle_above</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4849">circle_below</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4824">circle_contained</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4901">circle_eq</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4928">circle_gt</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4937">circle_le</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4787">circle_left</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4910">circle_ne</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4887">circle_overabove</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4874">circle_overbelow</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4775">circle_overleft</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4812">circle_overright</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4799">circle_right</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2851">close_lseg</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2304">lseg_distance</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2284">lseg_ge</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2274">lseg_gt</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2163">lseg_invsl</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2264">lseg_le</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2254">lseg_lt</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2244">lseg_ne</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2196">lseg_parallel</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2208">lseg_perp</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3964">poly_contain</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4749">circle_same</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2234">lseg_eq</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4836">circle_contain</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4609">circle_in</a></td>
+              <td class="coverFnHi">402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3413">poly_in</a></td>
+              <td class="coverFnHi">406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2610">dist_ppoly</a></td>
+              <td class="coverFnHi">420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2500">dist_pb</a></td>
+              <td class="coverFnHi">426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4006">poly_contain_pt</a></td>
+              <td class="coverFnHi">444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#870">box_cn</a></td>
+              <td class="coverFnHi">474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4963">circle_add_pt</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4997">circle_mul_pt</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4978">circle_sub_pt</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2986">close_ls</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2789">close_ps</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2536">dist_ls</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2412">dist_ps</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2524">dist_sl</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2424">dist_sp</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3236">inter_sl</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1231">line_sl</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3115">on_ps</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3199">on_sl</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4015">pt_contained_poly</a></td>
+              <td class="coverFnHi">482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4946">circle_ge</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4346">path_add</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1728">path_distance</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1587">path_n_ge</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1560">path_n_gt</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1578">path_n_le</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1551">path_n_lt</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1569">path_n_eq</a></td>
+              <td class="coverFnHi">488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5030">circle_area</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2488">dist_pathp</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2476">dist_ppath</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1113">line_construct_pp</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4394">path_add_pt</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4423">path_mul_pt</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4407">path_sub_pt</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4180">point_div_point</a></td>
+              <td class="coverFnHi">594</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2748">close_pl</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2400">dist_lp</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2388">dist_pl</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1259">line_distance</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1284">line_interpt</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1135">line_intersect</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1144">line_parallel</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1153">line_perp</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3093">on_pl</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3164">on_ppath</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4117">point_add</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2006">point_slope</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4140">point_sub</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3828">touched_lseg_inside_poly</a></td>
+              <td class="coverFnHi">606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1192">line_eq</a></td>
+              <td class="coverFnHi">612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1962">point_ne</a></td>
+              <td class="coverFnHi">702</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3011">box_closept_lseg</a></td>
+              <td class="coverFnHi">720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5107">dist_pc</a></td>
+              <td class="coverFnHi">846</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3261">box_interpt_lseg</a></td>
+              <td class="coverFnHi">960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2433">dist_ppath_internal</a></td>
+              <td class="coverFnHi">1080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3085">line_contain_point</a></td>
+              <td class="coverFnHi">1104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4919">circle_lt</a></td>
+              <td class="coverFnHi">1578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1829">point_in</a></td>
+              <td class="coverFnHi">1732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4155">point_mul_point</a></td>
+              <td class="coverFnHi">2220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4132">point_sub_point</a></td>
+              <td class="coverFnHi">2820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4109">point_add_point</a></td>
+              <td class="coverFnHi">3072</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2808">lseg_closept_lseg</a></td>
+              <td class="coverFnHi">5268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1616">path_npoints</a></td>
+              <td class="coverFnHi">5430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2359">lseg_interpt</a></td>
+              <td class="coverFnHi">5748</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5455">plist_same</a></td>
+              <td class="coverFnHi">6092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3718">poly_same</a></td>
+              <td class="coverFnHi">6296</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1021">line_out</a></td>
+              <td class="coverFnHi">6964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2079">lseg_out</a></td>
+              <td class="coverFnHi">7326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5157">circle_ar</a></td>
+              <td class="coverFnHi">7710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4679">circle_out</a></td>
+              <td class="coverFnHi">9176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#201">single_encode</a></td>
+              <td class="coverFnHi">9176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#690">box_contain</a></td>
+              <td class="coverFnHi">12252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#549">box_same</a></td>
+              <td class="coverFnHi">13760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5206">box_circle</a></td>
+              <td class="coverFnHi">18630</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4533">box_poly</a></td>
+              <td class="coverFnHi">18630</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5125">dist_cpoint</a></td>
+              <td class="coverFnHi">18726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5052">circle_radius</a></td>
+              <td class="coverFnHi">18756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5141">circle_center</a></td>
+              <td class="coverFnHi">18906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4762">circle_overlap</a></td>
+              <td class="coverFnHi">19218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#420">box_in</a></td>
+              <td class="coverFnHi">19844</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2186">lseg_intersect</a></td>
+              <td class="coverFnHi">25368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#633">box_below</a></td>
+              <td class="coverFnHi">27678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3799">poly_overlap</a></td>
+              <td class="coverFnHi">29124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3742">poly_overlap_internal</a></td>
+              <td class="coverFnHi">29418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1400">path_in</a></td>
+              <td class="coverFnHi">30922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#390">pair_count</a></td>
+              <td class="coverFnHi">31328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2619">dist_polyp</a></td>
+              <td class="coverFnHi">34308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2628">dist_ppoly_internal</a></td>
+              <td class="coverFnHi">35064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#581">box_left</a></td>
+              <td class="coverFnHi">50022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#264">path_decode</a></td>
+              <td class="coverFnHi">51296</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#656">box_above</a></td>
+              <td class="coverFnHi">57720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1472">path_out</a></td>
+              <td class="coverFnHi">60054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5223">circle_poly</a></td>
+              <td class="coverFnHi">60086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3374">make_bound_box</a></td>
+              <td class="coverFnHi">60510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#561">box_overlap</a></td>
+              <td class="coverFnHi">64734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1953">point_eq</a></td>
+              <td class="coverFnHi">80204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#645">box_overbelow</a></td>
+              <td class="coverFnHi">80436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3986">poly_contained</a></td>
+              <td class="coverFnHi">84546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3936">poly_contain_poly</a></td>
+              <td class="coverFnHi">84930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3457">poly_out</a></td>
+              <td class="coverFnHi">93666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#596">box_overleft</a></td>
+              <td class="coverFnHi">99708</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#668">box_overabove</a></td>
+              <td class="coverFnHi">111150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#210">pair_decode</a></td>
+              <td class="coverFnHi">112044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#622">box_overright</a></td>
+              <td class="coverFnHi">112398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#607">box_right</a></td>
+              <td class="coverFnHi">131742</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3135">on_pb</a></td>
+              <td class="coverFnHi">138252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3144">box_contain_pt</a></td>
+              <td class="coverFnHi">142686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2512">dist_bp</a></td>
+              <td class="coverFnHi">155262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2876">box_closept_point</a></td>
+              <td class="coverFnHi">155988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#679">box_contained</a></td>
+              <td class="coverFnHi">158292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#453">box_out</a></td>
+              <td class="coverFnHi">177552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5168">cr_circle</a></td>
+              <td class="coverFnHi">180158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3864">lseg_inside_poly</a></td>
+              <td class="coverFnHi">198276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#192">single_decode</a></td>
+              <td class="coverFnHi">224748</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4215">points_box</a></td>
+              <td class="coverFnHi">241704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5338">point_inside</a></td>
+              <td class="coverFnHi">246650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#702">box_contain_box</a></td>
+              <td class="coverFnHi">255474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1840">point_out</a></td>
+              <td class="coverFnHi">259510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#516">box_construct</a></td>
+              <td class="coverFnHi">260544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1975">point_eq_point</a></td>
+              <td class="coverFnHi">303394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3128">box_contain_point</a></td>
+              <td class="coverFnHi">437784</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1935">point_vert</a></td>
+              <td class="coverFnHi">496922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1944">point_horiz</a></td>
+              <td class="coverFnHi">531862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#338">path_encode</a></td>
+              <td class="coverFnHi">598108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1899">point_left</a></td>
+              <td class="coverFnHi">706466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1991">point_distance</a></td>
+              <td class="coverFnHi">739054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2770">lseg_closept_point</a></td>
+              <td class="coverFnHi">906096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2037">point_invsl</a></td>
+              <td class="coverFnHi">906480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2958">lseg_closept_line</a></td>
+              <td class="coverFnHi">907482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2140">statlseg_construct</a></td>
+              <td class="coverFnHi">1010922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#4094">construct_point</a></td>
+              <td class="coverFnHi">1053908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5395">lseg_crossing</a></td>
+              <td class="coverFnHi">1137948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1926">point_below</a></td>
+              <td class="coverFnHi">1249836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1651">path_inter</a></td>
+              <td class="coverFnHi">1380918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2336">lseg_interpt_lseg</a></td>
+              <td class="coverFnHi">1468350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#570">box_ov</a></td>
+              <td class="coverFnHi">1476180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#253">pair_encode</a></td>
+              <td class="coverFnHi">1784570</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2722">line_closept_point</a></td>
+              <td class="coverFnHi">1793160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1245">line_invsl</a></td>
+              <td class="coverFnHi">1793160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2673">lseg_interpt_line</a></td>
+              <td class="coverFnHi">2377290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2153">lseg_sl</a></td>
+              <td class="coverFnHi">3848070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2021">point_sl</a></td>
+              <td class="coverFnHi">3849204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#3107">lseg_contain_point</a></td>
+              <td class="coverFnHi">4014858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1312">line_interpt_line</a></td>
+              <td class="coverFnHi">4172850</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1882">point_construct</a></td>
+              <td class="coverFnHi">5221370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1081">line_construct</a></td>
+              <td class="coverFnHi">6545460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#2000">point_dt</a></td>
+              <td class="coverFnHi">15546124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#5517">pg_hypot</a></td>
+              <td class="coverFnHi">15654202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1908">point_right</a></td>
+              <td class="coverFnHi">16833190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="geo_ops.c.gcov.html#1917">point_above</a></td>
+              <td class="coverFnHi">17070736</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

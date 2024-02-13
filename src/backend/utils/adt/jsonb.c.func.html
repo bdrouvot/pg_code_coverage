@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/jsonb.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - jsonb.c<span style="font-size: 80%;"> (<a href="jsonb.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">772</td>
+            <td class="headerCovTableEntry">868</td>
+            <td class="headerCovTableEntryMed">88.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">53</td>
+            <td class="headerCovTableEntry">57</td>
+            <td class="headerCovTableEntryHi">93.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="jsonb.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#162">JsonbContainerTypeName</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1971">JsonbExtractScalar</a></td>
+              <td class="coverFnHi">192834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#476">JsonbToCString</a></td>
+              <td class="coverFnHi">21524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#485">JsonbToCStringIndent</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#494">JsonbToCStringWorker</a></td>
+              <td class="coverFnHi">21560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#183">JsonbTypeName</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#618">add_indent</a></td>
+              <td class="coverFnHi">79870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1019">add_jsonb</a></td>
+              <td class="coverFnHi">1618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#865">array_dim_to_jsonb</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#897">array_to_jsonb_internal</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2011">cannotCastJsonbValue</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#280">checkStringLen</a></td>
+              <td class="coverFnHi">77180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1474">clone_parse_state</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#945">composite_to_jsonb</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1115">datum_to_jsonb</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#641">datum_to_jsonb_internal</a></td>
+              <td class="coverFnHi">3082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1643">jsonb_agg_finalfn</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1637">jsonb_agg_strict_transfn</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1628">jsonb_agg_transfn</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1504">jsonb_agg_transfn_worker</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2041">jsonb_bool</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1240">jsonb_build_array</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1261">jsonb_build_array_noargs</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1213">jsonb_build_array_worker</a></td>
+              <td class="coverFnHi">176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1180">jsonb_build_object</a></td>
+              <td class="coverFnHi">336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1200">jsonb_build_object_noargs</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1128">jsonb_build_object_worker</a></td>
+              <td class="coverFnHi">398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2130">jsonb_float4</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2148">jsonb_float8</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#251">jsonb_from_cstring</a></td>
+              <td class="coverFnHi">19528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#150">jsonb_from_text</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#75">jsonb_in</a></td>
+              <td class="coverFnHi">19528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#324">jsonb_in_array_end</a></td>
+              <td class="coverFnHi">6548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#314">jsonb_in_array_start</a></td>
+              <td class="coverFnHi">10998</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#304">jsonb_in_object_end</a></td>
+              <td class="coverFnHi">16408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#334">jsonb_in_object_field_start</a></td>
+              <td class="coverFnHi">50760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#293">jsonb_in_object_start</a></td>
+              <td class="coverFnHi">20458</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#382">jsonb_in_scalar</a></td>
+              <td class="coverFnHi">60122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2076">jsonb_int2</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2094">jsonb_int4</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2112">jsonb_int8</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#2055">jsonb_numeric</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1282">jsonb_object</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1933">jsonb_object_agg_finalfn</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1909">jsonb_object_agg_strict_transfn</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1899">jsonb_object_agg_transfn</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1676">jsonb_object_agg_transfn_worker</a></td>
+              <td class="coverFnHi">234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1927">jsonb_object_agg_unique_strict_transfn</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1918">jsonb_object_agg_unique_transfn</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1382">jsonb_object_two_arg</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#110">jsonb_out</a></td>
+              <td class="coverFnHi">20330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#352">jsonb_put_escaped_value</a></td>
+              <td class="coverFnHi">102680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#91">jsonb_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#126">jsonb_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#232">jsonb_typeof</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1091">to_jsonb</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonb.c.gcov.html#1052">to_jsonb_is_immutable</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/transam/xact.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/transam</a> - xact.c<span style="font-size: 80%;"> (<a href="xact.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1630</td>
+            <td class="headerCovTableEntry">1873</td>
+            <td class="headerCovTableEntryMed">87.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntry">107</td>
+            <td class="headerCovTableEntryHi">93.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="xact.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3303">AbortCurrentTransaction</a></td>
+              <td class="coverFnHi">42394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4710">AbortOutOfAnyTransaction</a></td>
+              <td class="coverFnHi">24732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5056">AbortSubTransaction</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#2695">AbortTransaction</a></td>
+              <td class="coverFnHi">42882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#624">AssignTransactionId</a></td>
+              <td class="coverFnHi">210470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1830">AtAbort_Memory</a></td>
+              <td class="coverFnHi">67614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1862">AtAbort_ResourceOwner</a></td>
+              <td class="coverFnHi">42882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1535">AtCCI_LocalCache</a></td>
+              <td class="coverFnHi">922022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1920">AtCleanup_Memory</a></td>
+              <td class="coverFnHi">67614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1554">AtCommit_Memory</a></td>
+              <td class="coverFnHi">476178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1141">AtStart_Cache</a></td>
+              <td class="coverFnHi">519060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1150">AtStart_Memory</a></td>
+              <td class="coverFnHi">519060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1197">AtStart_ResourceOwner</a></td>
+              <td class="coverFnHi">519060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1850">AtSubAbort_Memory</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1875">AtSubAbort_ResourceOwner</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1888">AtSubAbort_childXids</a></td>
+              <td class="coverFnHi">1274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1956">AtSubCleanup_Memory</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1581">AtSubCommit_Memory</a></td>
+              <td class="coverFnHi">8618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1610">AtSubCommit_childXids</a></td>
+              <td class="coverFnHi">5504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1225">AtSubStart_Memory</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1249">AtSubStart_ResourceOwner</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4170">BeginImplicitTransactionBlock</a></td>
+              <td class="coverFnHi">47344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4538">BeginInternalSubTransaction</a></td>
+              <td class="coverFnHi">14960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3768">BeginTransactionBlock</a></td>
+              <td class="coverFnHi">15208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5542">BlockStateAsString</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3742">CallSubXactCallbacks</a></td>
+              <td class="coverFnHi">43966</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3682">CallXactCallbacks</a></td>
+              <td class="coverFnHi">995650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3566">CheckTransactionBlock</a></td>
+              <td class="coverFnHi">8246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5228">CleanupSubTransaction</a></td>
+              <td class="coverFnHi">9056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#2886">CleanupTransaction</a></td>
+              <td class="coverFnHi">42882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1076">CommandCounterIncrement</a></td>
+              <td class="coverFnHi">1808944</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4947">CommitSubTransaction</a></td>
+              <td class="coverFnHi">8618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#2150">CommitTransaction</a></td>
+              <td class="coverFnHi">475840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3032">CommitTransactionCommand</a></td>
+              <td class="coverFnHi">614462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4217">DefineSavepoint</a></td>
+              <td class="coverFnHi">2726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4195">EndImplicitTransactionBlock</a></td>
+              <td class="coverFnHi">10034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5480">EndParallelWorkerTransaction</a></td>
+              <td class="coverFnHi">2586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3888">EndTransactionBlock</a></td>
+              <td class="coverFnHi">12522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1034">EnterParallelMode</a></td>
+              <td class="coverFnHi">5964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5356">EstimateTransactionStateSpace</a></td>
+              <td class="coverFnHi">804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1047">ExitParallelMode</a></td>
+              <td class="coverFnHi">3366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1126">ForceSyncCommit</a></td>
+              <td class="coverFnHi">698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#816">GetCurrentCommandId</a></td>
+              <td class="coverFnHi">8457144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#501">GetCurrentFullTransactionId</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#519">GetCurrentFullTransactionIdIfAny</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#862">GetCurrentStatementStartTimestamp</a></td>
+              <td class="coverFnHi">1771854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#778">GetCurrentSubTransactionId</a></td>
+              <td class="coverFnHi">2536946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#443">GetCurrentTransactionId</a></td>
+              <td class="coverFnHi">19128734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#460">GetCurrentTransactionIdIfAny</a></td>
+              <td class="coverFnHi">24852342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#912">GetCurrentTransactionNestLevel</a></td>
+              <td class="coverFnHi">30926762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#853">GetCurrentTransactionStartTimestamp</a></td>
+              <td class="coverFnHi">85096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#874">GetCurrentTransactionStopTimestamp</a></td>
+              <td class="coverFnHi">1557840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#596">GetStableLatestTransactionId</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#472">GetTopFullTransactionId</a></td>
+              <td class="coverFnHi">6018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#488">GetTopFullTransactionIdIfAny</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#415">GetTopTransactionId</a></td>
+              <td class="coverFnHi">47328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#430">GetTopTransactionIdIfAny</a></td>
+              <td class="coverFnHi">104975812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#396">IsAbortedTransactionBlockState</a></td>
+              <td class="coverFnHi">1215038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1067">IsInParallelMode</a></td>
+              <td class="coverFnHi">7825840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3610">IsInTransactionBlock</a></td>
+              <td class="coverFnHi">4370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4887">IsSubTransaction</a></td>
+              <td class="coverFnHi">1057132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#548">IsSubxactTopXidLogPending</a></td>
+              <td class="coverFnHi">24796464</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4814">IsTransactionBlock</a></td>
+              <td class="coverFnHi">309176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4832">IsTransactionOrTransactionBlock</a></td>
+              <td class="coverFnHi">1071108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#376">IsTransactionState</a></td>
+              <td class="coverFnHi">101738718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#530">MarkCurrentTransactionIdLoggedIfAny</a></td>
+              <td class="coverFnHi">24785454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#580">MarkSubxactTopXidLogged</a></td>
+              <td class="coverFnHi">434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5322">PopTransaction</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#2410">PrepareTransaction</a></td>
+              <td class="coverFnHi">858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3836">PrepareTransactionBlock</a></td>
+              <td class="coverFnHi">862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3479">PreventInTransactionBlock</a></td>
+              <td class="coverFnHi">10434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5261">PushTransaction</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1700">RecordTransactionAbort</a></td>
+              <td class="coverFnHi">51932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1281">RecordTransactionCommit</a></td>
+              <td class="coverFnHi">472830</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3708">RegisterSubXactCallback</a></td>
+              <td class="coverFnHi">3272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3648">RegisterXactCallback</a></td>
+              <td class="coverFnHi">3272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4609">ReleaseCurrentSubTransaction</a></td>
+              <td class="coverFnHi">7038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4302">ReleaseSavepoint</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3557">RequireTransactionBlock</a></td>
+              <td class="coverFnHi">6558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3020">RestoreTransactionCharacteristics</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4643">RollbackAndReleaseCurrentSubTransaction</a></td>
+              <td class="coverFnHi">7922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4411">RollbackToSavepoint</a></td>
+              <td class="coverFnHi">722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3012">SaveTransactionCharacteristics</a></td>
+              <td class="coverFnHi">614470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5384">SerializeTransactionState</a></td>
+              <td class="coverFnHi">804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#897">SetCurrentStatementStartTimestamp</a></td>
+              <td class="coverFnHi">920198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#842">SetParallelStartTimestamps</a></td>
+              <td class="coverFnHi">2592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5492">ShowTransactionState</a></td>
+              <td class="coverFnHi">1040162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5504">ShowTransactionStateRec</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5455">StartParallelWorkerTransaction</a></td>
+              <td class="coverFnHi">2592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4910">StartSubTransaction</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1991">StartTransaction</a></td>
+              <td class="coverFnHi">519060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#2935">StartTransactionCommand</a></td>
+              <td class="coverFnHi">654342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#792">SubTransactionIsActive</a></td>
+              <td class="coverFnHi">94526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5595">TransStateAsString</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4846">TransactionBlockStatusCode</a></td>
+              <td class="coverFnHi">533690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#924">TransactionIdIsCurrentTransactionId</a></td>
+              <td class="coverFnHi">105054786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#1025">TransactionStartedDuringRecovery</a></td>
+              <td class="coverFnHi">10164622</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3721">UnregisterSubXactCallback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3661">UnregisterXactCallback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#4048">UserAbortTransactionBlock</a></td>
+              <td class="coverFnHi">2444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#3551">WarnNoTransactionBlock</a></td>
+              <td class="coverFnHi">1688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5821">XactLogAbortRecord</a></td>
+              <td class="coverFnHi">10096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5649">XactLogCommitRecord</a></td>
+              <td class="coverFnHi">194876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5625">xactGetCommittedChildren</a></td>
+              <td class="coverFnHi">483628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#6198">xact_redo</a></td>
+              <td class="coverFnHi">42552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#6119">xact_redo_abort</a></td>
+              <td class="coverFnHi">3030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xact.c.gcov.html#5965">xact_redo_commit</a></td>
+              <td class="coverFnHi">39062</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

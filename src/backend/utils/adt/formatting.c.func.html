@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/formatting.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - formatting.c<span style="font-size: 80%;"> (<a href="formatting.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1865</td>
+            <td class="headerCovTableEntry">2331</td>
+            <td class="headerCovTableEntryMed">80.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">64</td>
+            <td class="headerCovTableEntryHi">92.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="formatting.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4008">DCH_cache_fetch</a></td>
+              <td class="coverFnHi">49030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#3927">DCH_cache_getnew</a></td>
+              <td class="coverFnHi">832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#3987">DCH_cache_search</a></td>
+              <td class="coverFnHi">49030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#3830">DCH_datetime_type</a></td>
+              <td class="coverFnHi">8112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#3266">DCH_from_char</a></td>
+              <td class="coverFnHi">39926</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#3816">DCH_prevent_counter_overflow</a></td>
+              <td class="coverFnHi">49862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2619">DCH_to_char</a></td>
+              <td class="coverFnHi">9098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1150">NUMDesc_prepare</a></td>
+              <td class="coverFnHi">13890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4990">NUM_cache</a></td>
+              <td class="coverFnHi">995940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4962">NUM_cache_fetch</a></td>
+              <td class="coverFnHi">995730</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4882">NUM_cache_getnew</a></td>
+              <td class="coverFnHi">532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4941">NUM_cache_search</a></td>
+              <td class="coverFnHi">995730</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5620">NUM_eat_non_data_chars</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5215">NUM_numpart_from_char</a></td>
+              <td class="coverFnHi">858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5430">NUM_numpart_to_char</a></td>
+              <td class="coverFnHi">8827970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5097">NUM_prepare_locale</a></td>
+              <td class="coverFnHi">995622</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4870">NUM_prevent_counter_overflow</a></td>
+              <td class="coverFnHi">996262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5633">NUM_processor</a></td>
+              <td class="coverFnHi">995940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2208">adjust_partial_year_to_2020</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2058">asc_initcap</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2012">asc_tolower</a></td>
+              <td class="coverFnHi">39836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2107">asc_tolower_z</a></td>
+              <td class="coverFnHi">4578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2035">asc_toupper</a></td>
+              <td class="coverFnHi">19728</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2113">asc_toupper_z</a></td>
+              <td class="coverFnHi">4572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4035">datetime_to_char_body</a></td>
+              <td class="coverFnHi">9098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4491">do_to_timestamp</a></td>
+              <td class="coverFnHi">39932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4848">fill_str</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6537">float4_to_char</a></td>
+              <td class="coverFnHi">130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6639">float8_to_char</a></td>
+              <td class="coverFnHi">146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2414">from_char_parse_int</a></td>
+              <td class="coverFnHi">86576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2317">from_char_parse_int_len</a></td>
+              <td class="coverFnHi">122054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2573">from_char_seq_search</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2281">from_char_set_int</a></td>
+              <td class="coverFnHi">121428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2254">from_char_set_mode</a></td>
+              <td class="coverFnHi">122042</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5179">get_last_relevant_decnum</a></td>
+              <td class="coverFnHi">678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1513">get_th</a></td>
+              <td class="coverFnHi">2334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1578">icu_convert_case</a></td>
+              <td class="coverFnHi">319084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1096">index_seq_search</a></td>
+              <td class="coverFnHi">26690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6337">int4_to_char</a></td>
+              <td class="coverFnHi">993170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6431">int8_to_char</a></td>
+              <td class="coverFnHi">632</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#5048">int_to_roman</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4180">interval_to_char</a></td>
+              <td class="coverFnHi">338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2175">is_next_separator</a></td>
+              <td class="coverFnHi">122012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1136">is_separator_char</a></td>
+              <td class="coverFnHi">6384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6212">numeric_to_char</a></td>
+              <td class="coverFnHi">1718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#6153">numeric_to_number</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4309">parse_datetime</a></td>
+              <td class="coverFnHi">38892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1325">parse_format</a></td>
+              <td class="coverFnHi">1574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2432">seq_search_ascii</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2489">seq_search_localized</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1869">str_initcap</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2101">str_initcap_z</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1558">str_numth</a></td>
+              <td class="coverFnHi">2286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1633">str_tolower</a></td>
+              <td class="coverFnHi">185916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2089">str_tolower_z</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1751">str_toupper</a></td>
+              <td class="coverFnHi">1044402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2095">str_toupper_z</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#2232">strspace_len</a></td>
+              <td class="coverFnHi">122054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1120">suff_search</a></td>
+              <td class="coverFnHi">10802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4104">timestamp_to_char</a></td>
+              <td class="coverFnHi">4316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4139">timestamptz_to_char</a></td>
+              <td class="coverFnHi">4720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4261">to_date</a></td>
+              <td class="coverFnHi">182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#4222">to_timestamp</a></td>
+              <td class="coverFnHi">858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="formatting.c.gcov.html#1605">u_strToTitle_default_BI</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

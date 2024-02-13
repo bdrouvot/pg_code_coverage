@@ -1,0 +1,396 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/error/elog.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/error</a> - elog.c<span style="font-size: 80%;"> (<a href="elog.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">820</td>
+            <td class="headerCovTableEntry">1232</td>
+            <td class="headerCovTableEntryLo">66.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">72</td>
+            <td class="headerCovTableEntry">79</td>
+            <td class="headerCovTableEntryHi">91.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="elog.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1724">CopyErrorData</a></td>
+              <td class="coverFnHi">6324</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2070">DebugFileOpen</a></td>
+              <td class="coverFnHi">27856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1673">EmitErrorReport</a></td>
+              <td class="coverFnHi">418956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1829">FlushErrorState</a></td>
+              <td class="coverFnHi">44256</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1780">FreeErrorData</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1792">FreeErrorDataContents</a></td>
+              <td class="coverFnHi">380990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2018">GetErrorContextStack</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1913">ReThrowError</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1854">ThrowErrorData</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3684">append_with_tabs</a></td>
+              <td class="coverFnHi">484600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2185">assign_backtrace_functions</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2256">assign_log_destination</a></td>
+              <td class="coverFnHi">1582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2297">assign_syslog_facility</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2265">assign_syslog_ident</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2126">check_backtrace_functions</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2194">check_log_destination</a></td>
+              <td class="coverFnHi">1582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2690">check_log_of_query</a></td>
+              <td class="coverFnHi">400220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1515">err_generic_string</a></td>
+              <td class="coverFnHi">10272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#308">err_gettext</a></td>
+              <td class="coverFnHi">555656</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3442">err_sendstring</a></td>
+              <td class="coverFnHi">468882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1095">errbacktrace</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#858">errcode</a></td>
+              <td class="coverFnHi">47828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#881">errcode_for_file_access</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#956">errcode_for_socket_access</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1368">errcontext_msg</a></td>
+              <td class="coverFnHi">40220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1206">errdetail</a></td>
+              <td class="coverFnHi">24538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1233">errdetail_internal</a></td>
+              <td class="coverFnHi">2840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1254">errdetail_log</a></td>
+              <td class="coverFnHi">1094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1275">errdetail_log_plural</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1298">errdetail_plural</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#476">errfinish</a></td>
+              <td class="coverFnHi">425214</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1433">errhidecontext</a></td>
+              <td class="coverFnHi">1584</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1414">errhidestmt</a></td>
+              <td class="coverFnHi">324066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1320">errhint</a></td>
+              <td class="coverFnHi">4700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1342">errhint_plural</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1073">errmsg</a></td>
+              <td class="coverFnHi">401918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1160">errmsg_internal</a></td>
+              <td class="coverFnHi">23254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1183">errmsg_plural</a></td>
+              <td class="coverFnHi">746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3632">error_severity</a></td>
+              <td class="coverFnHi">460120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1449">errposition</a></td>
+              <td class="coverFnHi">9746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#686">errsave_finish</a></td>
+              <td class="coverFnHi">6722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#634">errsave_start</a></td>
+              <td class="coverFnHi">49136</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#345">errstart</a></td>
+              <td class="coverFnHi">27358510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#329">errstart_cold</a></td>
+              <td class="coverFnHi">37362</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1640">format_elog_string</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2713">get_backend_type_for_log</a></td>
+              <td class="coverFnHi">44404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#756">get_error_stack_entry</a></td>
+              <td class="coverFnHi">426032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2616">get_formatted_log_time</a></td>
+              <td class="coverFnHi">484824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2666">get_formatted_start_time</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1564">geterrcode</a></td>
+              <td class="coverFnHi">4970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1581">geterrposition</a></td>
+              <td class="coverFnHi">15694</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1598">getinternalerrposition</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#296">in_error_recursion_trouble</a></td>
+              <td class="coverFnHi">1497962</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1465">internalerrposition</a></td>
+              <td class="coverFnHi">506</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1485">internalerrquery</a></td>
+              <td class="coverFnHi">488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#204">is_log_level_output</a></td>
+              <td class="coverFnHi">28990312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2766">log_line_prefix</a></td>
+              <td class="coverFnHi">484744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2775">log_status_format</a></td>
+              <td class="coverFnHi">484744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#830">matches_backtrace_functions</a></td>
+              <td class="coverFnHi">425214</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#275">message_level_is_interesting</a></td>
+              <td class="coverFnHi">1231582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1963">pg_re_throw</a></td>
+              <td class="coverFnHi">96300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1631">pre_format_elog_string</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2735">process_log_prefix_padding</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2654">reset_formatted_start_time</a></td>
+              <td class="coverFnHi">22378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3454">send_message_to_frontend</a></td>
+              <td class="coverFnHi">59900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3148">send_message_to_server_log</a></td>
+              <td class="coverFnHi">400140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1119">set_backtrace</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1394">set_errcontext_domain</a></td>
+              <td class="coverFnHi">40220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#1551">set_errdata_field</a></td>
+              <td class="coverFnHi">10272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#783">set_stack_entry_domain</a></td>
+              <td class="coverFnHi">425924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#800">set_stack_entry_location</a></td>
+              <td class="coverFnHi">425924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#247">should_output_to_client</a></td>
+              <td class="coverFnHi">28588878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#238">should_output_to_server</a></td>
+              <td class="coverFnHi">28590092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3128">unpack_sql_state</a></td>
+              <td class="coverFnHi">78398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2538">write_console</a></td>
+              <td class="coverFnHi">400100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3391">write_pipe_chunks</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3703">write_stderr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#3748">write_stderr_signal_safe</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="elog.c.gcov.html#2322">write_syslog</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

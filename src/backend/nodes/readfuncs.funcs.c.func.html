@@ -1,0 +1,1252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/nodes/readfuncs.funcs.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/nodes</a> - readfuncs.funcs.c<span style="font-size: 80%;"> (<a href="readfuncs.funcs.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1065</td>
+            <td class="headerCovTableEntry">3005</td>
+            <td class="headerCovTableEntryLo">35.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">293</td>
+            <td class="headerCovTableEntryLo">29.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="readfuncs.funcs.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1042">_readA_ArrayExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1019">_readA_Indices</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1031">_readA_Indirection</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1010">_readA_Star</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1977">_readAccessPriv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4439">_readAgg</a></td>
+              <td class="coverFnHi">1532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#140">_readAggref</a></td>
+              <td class="coverFnHi">5502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#40">_readAlias</a></td>
+              <td class="coverFnHi">183826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1921">_readAlterCollationStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3011">_readAlterDatabaseRefreshCollStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3021">_readAlterDatabaseSetStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3000">_readAlterDatabaseStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2003">_readAlterDefaultPrivilegesStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1931">_readAlterDomainStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2949">_readAlterEnumStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2369">_readAlterEventTrigStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2149">_readAlterExtensionContentsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2138">_readAlterExtensionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2174">_readAlterFdwStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2201">_readAlterForeignServerStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2740">_readAlterFunctionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2791">_readAlterObjectDependsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2805">_readAlterObjectSchemaStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2539">_readAlterOpFamilyStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2832">_readAlterOperatorStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2819">_readAlterOwnerStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2306">_readAlterPolicyStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3346">_readAlterPublicationStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2419">_readAlterRoleSetStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2407">_readAlterRoleStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2456">_readAlterSeqStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2699">_readAlterStatsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3373">_readAlterSubscriptionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3044">_readAlterSystemStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3292">_readAlterTSConfigurationStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3281">_readAlterTSDictionaryStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1904">_readAlterTableCmd</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2112">_readAlterTableMoveAllStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2100">_readAlterTableSpaceOptionsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1880">_readAlterTableStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2843">_readAlterTypeStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2251">_readAlterUserMappingStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#359">_readAlternativeSubPlan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3567">_readAppend</a></td>
+              <td class="coverFnHi">378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3424">_readAppendRelInfo</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#425">_readArrayCoerceExpr</a></td>
+              <td class="coverFnHi">734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#505">_readArrayExpr</a></td>
+              <td class="coverFnHi">6432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3658">_readBitmapAnd</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3852">_readBitmapHeapScan</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3823">_readBitmapIndexScan</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3683">_readBitmapOr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#689">_readBooleanTest</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1519">_readCTECycleClause</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1506">_readCTESearchClause</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2762">_readCallStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#466">_readCaseExpr</a></td>
+              <td class="coverFnHi">12852</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#493">_readCaseTestExpr</a></td>
+              <td class="coverFnHi">8022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#481">_readCaseWhen</a></td>
+              <td class="coverFnHi">26976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3127">_readCheckPointStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2615">_readClosePortalStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3054">_readClusterStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#549">_readCoalesceExpr</a></td>
+              <td class="coverFnHi">5716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#716">_readCoerceToDomain</a></td>
+              <td class="coverFnHi">60516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#731">_readCoerceToDomainValue</a></td>
+              <td class="coverFnHi">1536</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#411">_readCoerceViaIO</a></td>
+              <td class="coverFnHi">3746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#966">_readCollateClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#454">_readCollateExpr</a></td>
+              <td class="coverFnHi">276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1182">_readColumnDef</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#932">_readColumnRef</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2578">_readCommentStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1538">_readCommonTableExpr</a></td>
+              <td class="coverFnHi">356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2916">_readCompositeTypeStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3158">_readConstraintsSetStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#441">_readConvertRowtypeExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2014">_readCopyStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2320">_readCreateAmStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3196">_readCreateCastStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3182">_readCreateConversionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2485">_readCreateDomainStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2927">_readCreateEnumStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2356">_readCreateEventTrigStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2126">_readCreateExtensionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2162">_readCreateFdwStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2186">_readCreateForeignServerStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2214">_readCreateForeignTableStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2711">_readCreateFunctionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2513">_readCreateOpClassItem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2498">_readCreateOpClassStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2528">_readCreateOpFamilyStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2380">_readCreatePLangStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2290">_readCreatePolicyStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3333">_readCreatePublicationStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2938">_readCreateRangeStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2395">_readCreateRoleStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1867">_readCreateSchemaStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2442">_readCreateSeqStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2672">_readCreateStatsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2054">_readCreateStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3360">_readCreateSubscriptionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3101">_readCreateTableAsStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2076">_readCreateTableSpaceStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3210">_readCreateTransformStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2332">_readCreateTrigStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2238">_readCreateUserMappingStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2989">_readCreatedbStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4036">_readCteScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#757">_readCurrentOfExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4151">_readCustomScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3247">_readDeallocateStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2603">_readDeclareCursorStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1239">_readDefElem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2469">_readDefineStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1754">_readDeleteStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3136">_readDiscardStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#268">_readDistinctExpr</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2752">_readDoStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3259">_readDropOwnedStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2431">_readDropRoleStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2552">_readDropStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3387">_readDropSubscriptionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2089">_readDropTableSpaceStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2263">_readDropUserMappingStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3032">_readDropdbStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3236">_readExecuteStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3090">_readExplainStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2625">_readFetchStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#369">_readFieldSelect</a></td>
+              <td class="coverFnHi">13080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#383">_readFieldStore</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4115">_readForeignScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#836">_readFromExpr</a></td>
+              <td class="coverFnHi">55332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#990">_readFuncCall</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#220">_readFuncExpr</a></td>
+              <td class="coverFnHi">237862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2727">_readFunctionParameter</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3957">_readFunctionScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4546">_readGather</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4575">_readGatherMerge</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1988">_readGrantRoleStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1946">_readGrantStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4411">_readGroup</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#169">_readGroupingFunc</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1418">_readGroupingSet</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4607">_readHash</a></td>
+              <td class="coverFnHi">546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4265">_readHashJoin</a></td>
+              <td class="coverFnHi">546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2275">_readImportForeignSchemaStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4381">_readIncrementalSort</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1222">_readIndexElem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3792">_readIndexOnlyScan</a></td>
+              <td class="coverFnHi">236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3760">_readIndexScan</a></td>
+              <td class="coverFnHi">372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2638">_readIndexStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1479">_readInferClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#780">_readInferenceElem</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1738">_readInsertStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#89">_readIntoClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#818">_readJoinExpr</a></td>
+              <td class="coverFnHi">19566</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1687">_readJsonAggConstructor</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1714">_readJsonArrayAgg</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1660">_readJsonArrayConstructor</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1673">_readJsonArrayQueryConstructor</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#645">_readJsonConstructorExpr</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#609">_readJsonFormat</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#662">_readJsonIsPredicate</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1598">_readJsonKeyValue</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1701">_readJsonObjectAgg</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1646">_readJsonObjectConstructor</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1587">_readJsonOutput</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1609">_readJsonParseExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#621">_readJsonReturning</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1622">_readJsonScalarExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1634">_readJsonSerializeExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#633">_readJsonValueExpr</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4695">_readLimit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2881">_readListenStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2979">_readLoadStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4669">_readLockRows</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3146">_readLockStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1253">_readLockingClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4296">_readMaterial</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4320">_readMemoize</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#701">_readMergeAction</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3596">_readMergeAppend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4232">_readMergeJoin</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1783">_readMergeStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1560">_readMergeWhenClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#562">_readMinMaxExpr</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3522">_readModifyTable</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1066">_readMultiAssignRef</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#238">_readNamedArgExpr</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4063">_readNamedTuplestoreScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4193">_readNestLoop</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4221">_readNestLoopParam</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#769">_readNextValueExpr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2870">_readNotifyStmt</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#285">_readNullIfExpr</a></td>
+              <td class="coverFnHi">188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#676">_readNullTest</a></td>
+              <td class="coverFnHi">2522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1964">_readObjectWithArgs</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1492">_readOnConflictClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#847">_readOnConflictExpr</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#251">_readOpExpr</a></td>
+              <td class="coverFnHi">122484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1853">_readPLAssignStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#125">_readParam</a></td>
+              <td class="coverFnHi">22042</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#943">_readParamRef</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1305">_readPartitionBoundSpec</a></td>
+              <td class="coverFnHi">37364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1334">_readPartitionCmd</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1279">_readPartitionElem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4743">_readPartitionPruneInfo</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4786">_readPartitionPruneStepCombine</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4772">_readPartitionPruneStepOp</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1322">_readPartitionRangeDatum</a></td>
+              <td class="coverFnHi">43436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1293">_readPartitionSpec</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4754">_readPartitionedRelPruneInfo</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3399">_readPathKeyInfo</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3410">_readPlaceHolderVar</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4798">_readPlanInvalItem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4726">_readPlanRowMark</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3441">_readPlannedStmt</a></td>
+              <td class="coverFnHi">2418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3224">_readPrepareStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3498">_readProjectSet</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3320">_readPublicationObjSpec</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3308">_readPublicationTable</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#864">_readQuery</a></td>
+              <td class="coverFnHi">55452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1346">_readRTEPermissionInfo</a></td>
+              <td class="coverFnHi">72686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1121">_readRangeFunction</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1109">_readRangeSubselect</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1136">_readRangeTableFunc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1152">_readRangeTableFuncCol</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1168">_readRangeTableSample</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1362">_readRangeTblFunction</a></td>
+              <td class="coverFnHi">8718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#808">_readRangeTblRef</a></td>
+              <td class="coverFnHi">83962</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#51">_readRangeVar</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1726">_readRawStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3270">_readReassignOwnedStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3628">_readRecursiveUnion</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3115">_readRefreshMatViewStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3169">_readReindexStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#396">_readRelabelType</a></td>
+              <td class="coverFnHi">16714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2774">_readRenameStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1893">_readReplicaIdentityStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1053">_readResTarget</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3473">_readResult</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1843">_readReturnStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#978">_readRoleSpec</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#534">_readRowCompareExpr</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#520">_readRowExpr</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1454">_readRowMarkClause</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2854">_readRuleStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#577">_readSQLValueFunction</a></td>
+              <td class="coverFnHi">1874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3734">_readSampleScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#302">_readScalarArrayOpExpr</a></td>
+              <td class="coverFnHi">6592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2590">_readSecLabelStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1797">_readSelectStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3709">_readSeqScan</a></td>
+              <td class="coverFnHi">3566</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4636">_readSetOp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1826">_readSetOperationStmt</a></td>
+              <td class="coverFnHi">4040</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#744">_readSetToDefault</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4352">_readSort</a></td>
+              <td class="coverFnHi">452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1078">_readSortBy</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1404">_readSortGroupClause</a></td>
+              <td class="coverFnHi">11686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2688">_readStatsElem</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#319">_readSubLink</a></td>
+              <td class="coverFnHi">5310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#334">_readSubPlan</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3930">_readSubqueryScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#202">_readSubscriptingRef</a></td>
+              <td class="coverFnHi">2888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#67">_readTableFunc</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4010">_readTableFuncScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1210">_readTableLikeClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1378">_readTableSampleClause</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#792">_readTargetEntry</a></td>
+              <td class="coverFnHi">306482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3904">_readTidRangeScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3878">_readTidScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2901">_readTransactionStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1575">_readTriggerTransition</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2566">_readTruncateStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#954">_readTypeCast</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#915">_readTypeName</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4518">_readUnique</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2891">_readUnlistenStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1768">_readUpdateStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3078">_readVacuumRelation</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3066">_readVacuumStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#3984">_readValuesScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#106">_readVar</a></td>
+              <td class="coverFnHi">1365444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2031">_readVariableSetStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2044">_readVariableShowStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#2964">_readViewStmt</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4474">_readWindowAgg</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1430">_readWindowClause</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1092">_readWindowDef</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#183">_readWindowFunc</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1390">_readWithCheckOption</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1467">_readWithClause</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#4089">_readWorkTableScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#590">_readXmlExpr</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="readfuncs.funcs.c.gcov.html#1265">_readXmlSerialize</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

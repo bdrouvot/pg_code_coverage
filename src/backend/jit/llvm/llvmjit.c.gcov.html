@@ -1,0 +1,1468 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/jit/llvm/llvmjit.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/jit/llvm</a> - llvmjit.c<span style="font-size: 80%;"> (source / <a href="llvmjit.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">346</td>
+            <td class="headerCovTableEntry">394</td>
+            <td class="headerCovTableEntryMed">87.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntryHi">93.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*-------------------------------------------------------------------------</a>
+<a name="2"><span class="lineNum">       2 </span>            :  *</a>
+<a name="3"><span class="lineNum">       3 </span>            :  * llvmjit.c</a>
+<a name="4"><span class="lineNum">       4 </span>            :  *    Core part of the LLVM JIT provider.</a>
+<a name="5"><span class="lineNum">       5 </span>            :  *</a>
+<a name="6"><span class="lineNum">       6 </span>            :  * Copyright (c) 2016-2024, PostgreSQL Global Development Group</a>
+<a name="7"><span class="lineNum">       7 </span>            :  *</a>
+<a name="8"><span class="lineNum">       8 </span>            :  * IDENTIFICATION</a>
+<a name="9"><span class="lineNum">       9 </span>            :  *    src/backend/jit/llvm/llvmjit.c</a>
+<a name="10"><span class="lineNum">      10 </span>            :  *</a>
+<a name="11"><span class="lineNum">      11 </span>            :  *-------------------------------------------------------------------------</a>
+<a name="12"><span class="lineNum">      12 </span>            :  */</a>
+<a name="13"><span class="lineNum">      13 </span>            : </a>
+<a name="14"><span class="lineNum">      14 </span>            : #include &quot;postgres.h&quot;</a>
+<a name="15"><span class="lineNum">      15 </span>            : </a>
+<a name="16"><span class="lineNum">      16 </span>            : #include &lt;llvm-c/Analysis.h&gt;</a>
+<a name="17"><span class="lineNum">      17 </span>            : #include &lt;llvm-c/BitReader.h&gt;</a>
+<a name="18"><span class="lineNum">      18 </span>            : #include &lt;llvm-c/BitWriter.h&gt;</a>
+<a name="19"><span class="lineNum">      19 </span>            : #include &lt;llvm-c/Core.h&gt;</a>
+<a name="20"><span class="lineNum">      20 </span>            : #include &lt;llvm-c/ExecutionEngine.h&gt;</a>
+<a name="21"><span class="lineNum">      21 </span>            : #if LLVM_VERSION_MAJOR &gt; 16</a>
+<a name="22"><span class="lineNum">      22 </span>            : #include &lt;llvm-c/Transforms/PassBuilder.h&gt;</a>
+<a name="23"><span class="lineNum">      23 </span>            : #endif</a>
+<a name="24"><span class="lineNum">      24 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="25"><span class="lineNum">      25 </span>            : #include &lt;llvm-c/Orc.h&gt;</a>
+<a name="26"><span class="lineNum">      26 </span>            : #include &lt;llvm-c/OrcEE.h&gt;</a>
+<a name="27"><span class="lineNum">      27 </span>            : #include &lt;llvm-c/LLJIT.h&gt;</a>
+<a name="28"><span class="lineNum">      28 </span>            : #else</a>
+<a name="29"><span class="lineNum">      29 </span>            : #include &lt;llvm-c/OrcBindings.h&gt;</a>
+<a name="30"><span class="lineNum">      30 </span>            : #endif</a>
+<a name="31"><span class="lineNum">      31 </span>            : #include &lt;llvm-c/Support.h&gt;</a>
+<a name="32"><span class="lineNum">      32 </span>            : #include &lt;llvm-c/Target.h&gt;</a>
+<a name="33"><span class="lineNum">      33 </span>            : #if LLVM_VERSION_MAJOR &lt; 17</a>
+<a name="34"><span class="lineNum">      34 </span>            : #include &lt;llvm-c/Transforms/IPO.h&gt;</a>
+<a name="35"><span class="lineNum">      35 </span>            : #include &lt;llvm-c/Transforms/PassManagerBuilder.h&gt;</a>
+<a name="36"><span class="lineNum">      36 </span>            : #include &lt;llvm-c/Transforms/Scalar.h&gt;</a>
+<a name="37"><span class="lineNum">      37 </span>            : #include &lt;llvm-c/Transforms/Utils.h&gt;</a>
+<a name="38"><span class="lineNum">      38 </span>            : #endif</a>
+<a name="39"><span class="lineNum">      39 </span>            : </a>
+<a name="40"><span class="lineNum">      40 </span>            : #include &quot;jit/llvmjit.h&quot;</a>
+<a name="41"><span class="lineNum">      41 </span>            : #include &quot;jit/llvmjit_emit.h&quot;</a>
+<a name="42"><span class="lineNum">      42 </span>            : #include &quot;miscadmin.h&quot;</a>
+<a name="43"><span class="lineNum">      43 </span>            : #include &quot;portability/instr_time.h&quot;</a>
+<a name="44"><span class="lineNum">      44 </span>            : #include &quot;storage/ipc.h&quot;</a>
+<a name="45"><span class="lineNum">      45 </span>            : #include &quot;utils/memutils.h&quot;</a>
+<a name="46"><span class="lineNum">      46 </span>            : #include &quot;utils/resowner.h&quot;</a>
+<a name="47"><span class="lineNum">      47 </span>            : </a>
+<a name="48"><span class="lineNum">      48 </span>            : #define LLVMJIT_LLVM_CONTEXT_REUSE_MAX 100</a>
+<a name="49"><span class="lineNum">      49 </span>            : </a>
+<a name="50"><span class="lineNum">      50 </span>            : /* Handle of a module emitted via ORC JIT */</a>
+<a name="51"><span class="lineNum">      51 </span>            : typedef struct LLVMJitHandle</a>
+<a name="52"><span class="lineNum">      52 </span>            : {</a>
+<a name="53"><span class="lineNum">      53 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="54"><span class="lineNum">      54 </span>            :     LLVMOrcLLJITRef lljit;</a>
+<a name="55"><span class="lineNum">      55 </span>            :     LLVMOrcResourceTrackerRef resource_tracker;</a>
+<a name="56"><span class="lineNum">      56 </span>            : #else</a>
+<a name="57"><span class="lineNum">      57 </span>            :     LLVMOrcJITStackRef stack;</a>
+<a name="58"><span class="lineNum">      58 </span>            :     LLVMOrcModuleHandle orc_handle;</a>
+<a name="59"><span class="lineNum">      59 </span>            : #endif</a>
+<a name="60"><span class="lineNum">      60 </span>            : } LLVMJitHandle;</a>
+<a name="61"><span class="lineNum">      61 </span>            : </a>
+<a name="62"><span class="lineNum">      62 </span>            : </a>
+<a name="63"><span class="lineNum">      63 </span>            : /* types &amp; functions commonly needed for JITing */</a>
+<a name="64"><span class="lineNum">      64 </span>            : LLVMTypeRef TypeSizeT;</a>
+<a name="65"><span class="lineNum">      65 </span>            : LLVMTypeRef TypeParamBool;</a>
+<a name="66"><span class="lineNum">      66 </span>            : LLVMTypeRef TypeStorageBool;</a>
+<a name="67"><span class="lineNum">      67 </span>            : LLVMTypeRef TypePGFunction;</a>
+<a name="68"><span class="lineNum">      68 </span>            : LLVMTypeRef StructNullableDatum;</a>
+<a name="69"><span class="lineNum">      69 </span>            : LLVMTypeRef StructHeapTupleData;</a>
+<a name="70"><span class="lineNum">      70 </span>            : LLVMTypeRef StructMinimalTupleData;</a>
+<a name="71"><span class="lineNum">      71 </span>            : LLVMTypeRef StructTupleDescData;</a>
+<a name="72"><span class="lineNum">      72 </span>            : LLVMTypeRef StructTupleTableSlot;</a>
+<a name="73"><span class="lineNum">      73 </span>            : LLVMTypeRef StructHeapTupleHeaderData;</a>
+<a name="74"><span class="lineNum">      74 </span>            : LLVMTypeRef StructHeapTupleTableSlot;</a>
+<a name="75"><span class="lineNum">      75 </span>            : LLVMTypeRef StructMinimalTupleTableSlot;</a>
+<a name="76"><span class="lineNum">      76 </span>            : LLVMTypeRef StructMemoryContextData;</a>
+<a name="77"><span class="lineNum">      77 </span>            : LLVMTypeRef StructFunctionCallInfoData;</a>
+<a name="78"><span class="lineNum">      78 </span>            : LLVMTypeRef StructExprContext;</a>
+<a name="79"><span class="lineNum">      79 </span>            : LLVMTypeRef StructExprEvalStep;</a>
+<a name="80"><span class="lineNum">      80 </span>            : LLVMTypeRef StructExprState;</a>
+<a name="81"><span class="lineNum">      81 </span>            : LLVMTypeRef StructAggState;</a>
+<a name="82"><span class="lineNum">      82 </span>            : LLVMTypeRef StructAggStatePerGroupData;</a>
+<a name="83"><span class="lineNum">      83 </span>            : LLVMTypeRef StructAggStatePerTransData;</a>
+<a name="84"><span class="lineNum">      84 </span>            : LLVMTypeRef StructPlanState;</a>
+<a name="85"><span class="lineNum">      85 </span>            : </a>
+<a name="86"><span class="lineNum">      86 </span>            : LLVMValueRef AttributeTemplate;</a>
+<a name="87"><span class="lineNum">      87 </span>            : LLVMValueRef ExecEvalSubroutineTemplate;</a>
+<a name="88"><span class="lineNum">      88 </span>            : LLVMValueRef ExecEvalBoolSubroutineTemplate;</a>
+<a name="89"><span class="lineNum">      89 </span>            : </a>
+<a name="90"><span class="lineNum">      90 </span>            : static LLVMModuleRef llvm_types_module = NULL;</a>
+<a name="91"><span class="lineNum">      91 </span>            : </a>
+<a name="92"><span class="lineNum">      92 </span>            : static bool llvm_session_initialized = false;</a>
+<a name="93"><span class="lineNum">      93 </span>            : static size_t llvm_generation = 0;</a>
+<a name="94"><span class="lineNum">      94 </span>            : </a>
+<a name="95"><span class="lineNum">      95 </span>            : /* number of LLVMJitContexts that currently are in use */</a>
+<a name="96"><span class="lineNum">      96 </span>            : static size_t llvm_jit_context_in_use_count = 0;</a>
+<a name="97"><span class="lineNum">      97 </span>            : </a>
+<a name="98"><span class="lineNum">      98 </span>            : /* how many times has the current LLVMContextRef been used */</a>
+<a name="99"><span class="lineNum">      99 </span>            : static size_t llvm_llvm_context_reuse_count = 0;</a>
+<a name="100"><span class="lineNum">     100 </span>            : static const char *llvm_triple = NULL;</a>
+<a name="101"><span class="lineNum">     101 </span>            : static const char *llvm_layout = NULL;</a>
+<a name="102"><span class="lineNum">     102 </span>            : static LLVMContextRef llvm_context;</a>
+<a name="103"><span class="lineNum">     103 </span>            : </a>
+<a name="104"><span class="lineNum">     104 </span>            : </a>
+<a name="105"><span class="lineNum">     105 </span>            : static LLVMTargetRef llvm_targetref;</a>
+<a name="106"><span class="lineNum">     106 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="107"><span class="lineNum">     107 </span>            : static LLVMOrcThreadSafeContextRef llvm_ts_context;</a>
+<a name="108"><span class="lineNum">     108 </span>            : static LLVMOrcLLJITRef llvm_opt0_orc;</a>
+<a name="109"><span class="lineNum">     109 </span>            : static LLVMOrcLLJITRef llvm_opt3_orc;</a>
+<a name="110"><span class="lineNum">     110 </span>            : #else                           /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="111"><span class="lineNum">     111 </span>            : static LLVMOrcJITStackRef llvm_opt0_orc;</a>
+<a name="112"><span class="lineNum">     112 </span>            : static LLVMOrcJITStackRef llvm_opt3_orc;</a>
+<a name="113"><span class="lineNum">     113 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="114"><span class="lineNum">     114 </span>            : </a>
+<a name="115"><span class="lineNum">     115 </span>            : </a>
+<a name="116"><span class="lineNum">     116 </span>            : static void llvm_release_context(JitContext *context);</a>
+<a name="117"><span class="lineNum">     117 </span>            : static void llvm_session_initialize(void);</a>
+<a name="118"><span class="lineNum">     118 </span>            : static void llvm_shutdown(int code, Datum arg);</a>
+<a name="119"><span class="lineNum">     119 </span>            : static void llvm_compile_module(LLVMJitContext *context);</a>
+<a name="120"><span class="lineNum">     120 </span>            : static void llvm_optimize_module(LLVMJitContext *context, LLVMModuleRef module);</a>
+<a name="121"><span class="lineNum">     121 </span>            : </a>
+<a name="122"><span class="lineNum">     122 </span>            : static void llvm_create_types(void);</a>
+<a name="123"><span class="lineNum">     123 </span>            : static void llvm_set_target(void);</a>
+<a name="124"><span class="lineNum">     124 </span>            : static void llvm_recreate_llvm_context(void);</a>
+<a name="125"><span class="lineNum">     125 </span>            : static uint64_t llvm_resolve_symbol(const char *name, void *ctx);</a>
+<a name="126"><span class="lineNum">     126 </span>            : </a>
+<a name="127"><span class="lineNum">     127 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="128"><span class="lineNum">     128 </span>            : static LLVMOrcLLJITRef llvm_create_jit_instance(LLVMTargetMachineRef tm);</a>
+<a name="129"><span class="lineNum">     129 </span>            : static char *llvm_error_message(LLVMErrorRef error);</a>
+<a name="130"><span class="lineNum">     130 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="131"><span class="lineNum">     131 </span>            : </a>
+<a name="132"><span class="lineNum">     132 </span>            : /* ResourceOwner callbacks to hold JitContexts  */</a>
+<a name="133"><span class="lineNum">     133 </span>            : static void ResOwnerReleaseJitContext(Datum res);</a>
+<a name="134"><span class="lineNum">     134 </span>            : </a>
+<a name="135"><span class="lineNum">     135 </span>            : static const ResourceOwnerDesc jit_resowner_desc =</a>
+<a name="136"><span class="lineNum">     136 </span>            : {</a>
+<a name="137"><span class="lineNum">     137 </span>            :     .name = &quot;LLVM JIT context&quot;,</a>
+<a name="138"><span class="lineNum">     138 </span>            :     .release_phase = RESOURCE_RELEASE_BEFORE_LOCKS,</a>
+<a name="139"><span class="lineNum">     139 </span>            :     .release_priority = RELEASE_PRIO_JIT_CONTEXTS,</a>
+<a name="140"><span class="lineNum">     140 </span>            :     .ReleaseResource = ResOwnerReleaseJitContext,</a>
+<a name="141"><span class="lineNum">     141 </span>            :     .DebugPrint = NULL          /* the default message is fine */</a>
+<a name="142"><span class="lineNum">     142 </span>            : };</a>
+<a name="143"><span class="lineNum">     143 </span>            : </a>
+<a name="144"><span class="lineNum">     144 </span>            : /* Convenience wrappers over ResourceOwnerRemember/Forget */</a>
+<a name="145"><span class="lineNum">     145 </span>            : static inline void</a>
+<a name="146"><span class="lineNum">     146 </span><span class="lineCov">       1734 : ResourceOwnerRememberJIT(ResourceOwner owner, LLVMJitContext *handle)</span></a>
+<a name="147"><span class="lineNum">     147 </span>            : {</a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">       1734 :     ResourceOwnerRemember(owner, PointerGetDatum(handle), &amp;jit_resowner_desc);</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">       1734 : }</span></a>
+<a name="150"><span class="lineNum">     150 </span>            : static inline void</a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">       1718 : ResourceOwnerForgetJIT(ResourceOwner owner, LLVMJitContext *handle)</span></a>
+<a name="152"><span class="lineNum">     152 </span>            : {</a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineCov">       1718 :     ResourceOwnerForget(owner, PointerGetDatum(handle), &amp;jit_resowner_desc);</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineCov">       1718 : }</span></a>
+<a name="155"><span class="lineNum">     155 </span>            : </a>
+<a name="156"><span class="lineNum">     156 </span><span class="lineCov">       1972 : PG_MODULE_MAGIC;</span></a>
+<a name="157"><span class="lineNum">     157 </span>            : </a>
+<a name="158"><span class="lineNum">     158 </span>            : </a>
+<a name="159"><span class="lineNum">     159 </span>            : /*</a>
+<a name="160"><span class="lineNum">     160 </span>            :  * Initialize LLVM JIT provider.</a>
+<a name="161"><span class="lineNum">     161 </span>            :  */</a>
+<a name="162"><span class="lineNum">     162 </span>            : void</a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineCov">        784 : _PG_jit_provider_init(JitProviderCallbacks *cb)</span></a>
+<a name="164"><span class="lineNum">     164 </span>            : {</a>
+<a name="165"><span class="lineNum">     165 </span><span class="lineCov">        784 :     cb-&gt;reset_after_error = llvm_reset_after_error;</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">        784 :     cb-&gt;release_context = llvm_release_context;</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">        784 :     cb-&gt;compile_expr = llvm_compile_expr;</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">        784 : }</span></a>
+<a name="169"><span class="lineNum">     169 </span>            : </a>
+<a name="170"><span class="lineNum">     170 </span>            : </a>
+<a name="171"><span class="lineNum">     171 </span>            : /*</a>
+<a name="172"><span class="lineNum">     172 </span>            :  * Every now and then create a new LLVMContextRef. Unfortunately, during every</a>
+<a name="173"><span class="lineNum">     173 </span>            :  * round of inlining, types may &quot;leak&quot; (they can still be found/used via the</a>
+<a name="174"><span class="lineNum">     174 </span>            :  * context, but new types will be created the next time in inlining is</a>
+<a name="175"><span class="lineNum">     175 </span>            :  * performed). To prevent that from slowly accumulating problematic amounts of</a>
+<a name="176"><span class="lineNum">     176 </span>            :  * memory, recreate the LLVMContextRef we use. We don't want to do so too</a>
+<a name="177"><span class="lineNum">     177 </span>            :  * often, as that implies some overhead (particularly re-loading the module</a>
+<a name="178"><span class="lineNum">     178 </span>            :  * summaries / modules is fairly expensive). A future TODO would be to make</a>
+<a name="179"><span class="lineNum">     179 </span>            :  * this more finegrained and only drop/recreate the LLVMContextRef when we know</a>
+<a name="180"><span class="lineNum">     180 </span>            :  * there has been inlining. If we can get the size of the context from LLVM</a>
+<a name="181"><span class="lineNum">     181 </span>            :  * then that might be a better way to determine when to drop/recreate rather</a>
+<a name="182"><span class="lineNum">     182 </span>            :  * then the usagecount heuristic currently employed.</a>
+<a name="183"><span class="lineNum">     183 </span>            :  */</a>
+<a name="184"><span class="lineNum">     184 </span>            : static void</a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineCov">       1734 : llvm_recreate_llvm_context(void)</span></a>
+<a name="186"><span class="lineNum">     186 </span>            : {</a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">       1734 :     if (!llvm_context)</span></a>
+<a name="188"><span class="lineNum">     188 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;Trying to recreate a non-existing context&quot;);</span></a>
+<a name="189"><span class="lineNum">     189 </span>            : </a>
+<a name="190"><span class="lineNum">     190 </span>            :     /*</a>
+<a name="191"><span class="lineNum">     191 </span>            :      * We can only safely recreate the LLVM context if no other code is being</a>
+<a name="192"><span class="lineNum">     192 </span>            :      * JITed, otherwise we'd release the types in use for that.</a>
+<a name="193"><span class="lineNum">     193 </span>            :      */</a>
+<a name="194"><span class="lineNum">     194 </span><span class="lineCov">       1734 :     if (llvm_jit_context_in_use_count &gt; 0)</span></a>
+<a name="195"><span class="lineNum">     195 </span>            :     {</a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineNoCov">          0 :         llvm_llvm_context_reuse_count++;</span></a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineNoCov">          0 :         return;</span></a>
+<a name="198"><span class="lineNum">     198 </span>            :     }</a>
+<a name="199"><span class="lineNum">     199 </span>            : </a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">       1734 :     if (llvm_llvm_context_reuse_count &lt;= LLVMJIT_LLVM_CONTEXT_REUSE_MAX)</span></a>
+<a name="201"><span class="lineNum">     201 </span>            :     {</a>
+<a name="202"><span class="lineNum">     202 </span><span class="lineCov">       1734 :         llvm_llvm_context_reuse_count++;</span></a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">       1734 :         return;</span></a>
+<a name="204"><span class="lineNum">     204 </span>            :     }</a>
+<a name="205"><span class="lineNum">     205 </span>            : </a>
+<a name="206"><span class="lineNum">     206 </span>            :     /*</a>
+<a name="207"><span class="lineNum">     207 </span>            :      * Need to reset the modules that the inlining code caches before</a>
+<a name="208"><span class="lineNum">     208 </span>            :      * disposing of the context. LLVM modules exist within a specific LLVM</a>
+<a name="209"><span class="lineNum">     209 </span>            :      * context, therefore disposing of the context before resetting the cache</a>
+<a name="210"><span class="lineNum">     210 </span>            :      * would lead to dangling pointers to modules.</a>
+<a name="211"><span class="lineNum">     211 </span>            :      */</a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineNoCov">          0 :     llvm_inline_reset_caches();</span></a>
+<a name="213"><span class="lineNum">     213 </span>            : </a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineNoCov">          0 :     LLVMContextDispose(llvm_context);</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineNoCov">          0 :     llvm_context = LLVMContextCreate();</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineNoCov">          0 :     llvm_llvm_context_reuse_count = 0;</span></a>
+<a name="217"><span class="lineNum">     217 </span>            : </a>
+<a name="218"><span class="lineNum">     218 </span>            :     /*</a>
+<a name="219"><span class="lineNum">     219 </span>            :      * Re-build cached type information, so code generation code can rely on</a>
+<a name="220"><span class="lineNum">     220 </span>            :      * that information to be present (also prevents the variables to be</a>
+<a name="221"><span class="lineNum">     221 </span>            :      * dangling references).</a>
+<a name="222"><span class="lineNum">     222 </span>            :      */</a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineNoCov">          0 :     llvm_create_types();</span></a>
+<a name="224"><span class="lineNum">     224 </span>            : }</a>
+<a name="225"><span class="lineNum">     225 </span>            : </a>
+<a name="226"><span class="lineNum">     226 </span>            : </a>
+<a name="227"><span class="lineNum">     227 </span>            : /*</a>
+<a name="228"><span class="lineNum">     228 </span>            :  * Create a context for JITing work.</a>
+<a name="229"><span class="lineNum">     229 </span>            :  *</a>
+<a name="230"><span class="lineNum">     230 </span>            :  * The context, including subsidiary resources, will be cleaned up either when</a>
+<a name="231"><span class="lineNum">     231 </span>            :  * the context is explicitly released, or when the lifetime of</a>
+<a name="232"><span class="lineNum">     232 </span>            :  * CurrentResourceOwner ends (usually the end of the current [sub]xact).</a>
+<a name="233"><span class="lineNum">     233 </span>            :  */</a>
+<a name="234"><span class="lineNum">     234 </span>            : LLVMJitContext *</a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">       1734 : llvm_create_context(int jitFlags)</span></a>
+<a name="236"><span class="lineNum">     236 </span>            : {</a>
+<a name="237"><span class="lineNum">     237 </span>            :     LLVMJitContext *context;</a>
+<a name="238"><span class="lineNum">     238 </span>            : </a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">       1734 :     llvm_assert_in_fatal_section();</span></a>
+<a name="240"><span class="lineNum">     240 </span>            : </a>
+<a name="241"><span class="lineNum">     241 </span><span class="lineCov">       1734 :     llvm_session_initialize();</span></a>
+<a name="242"><span class="lineNum">     242 </span>            : </a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">       1734 :     llvm_recreate_llvm_context();</span></a>
+<a name="244"><span class="lineNum">     244 </span>            : </a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineCov">       1734 :     ResourceOwnerEnlarge(CurrentResourceOwner);</span></a>
+<a name="246"><span class="lineNum">     246 </span>            : </a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">       1734 :     context = MemoryContextAllocZero(TopMemoryContext,</span></a>
+<a name="248"><span class="lineNum">     248 </span>            :                                      sizeof(LLVMJitContext));</a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">       1734 :     context-&gt;base.flags = jitFlags;</span></a>
+<a name="250"><span class="lineNum">     250 </span>            : </a>
+<a name="251"><span class="lineNum">     251 </span>            :     /* ensure cleanup */</a>
+<a name="252"><span class="lineNum">     252 </span><span class="lineCov">       1734 :     context-&gt;base.resowner = CurrentResourceOwner;</span></a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">       1734 :     ResourceOwnerRememberJIT(CurrentResourceOwner, context);</span></a>
+<a name="254"><span class="lineNum">     254 </span>            : </a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">       1734 :     llvm_jit_context_in_use_count++;</span></a>
+<a name="256"><span class="lineNum">     256 </span>            : </a>
+<a name="257"><span class="lineNum">     257 </span><span class="lineCov">       1734 :     return context;</span></a>
+<a name="258"><span class="lineNum">     258 </span>            : }</a>
+<a name="259"><span class="lineNum">     259 </span>            : </a>
+<a name="260"><span class="lineNum">     260 </span>            : /*</a>
+<a name="261"><span class="lineNum">     261 </span>            :  * Release resources required by one llvm context.</a>
+<a name="262"><span class="lineNum">     262 </span>            :  */</a>
+<a name="263"><span class="lineNum">     263 </span>            : static void</a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">       1734 : llvm_release_context(JitContext *context)</span></a>
+<a name="265"><span class="lineNum">     265 </span>            : {</a>
+<a name="266"><span class="lineNum">     266 </span><span class="lineCov">       1734 :     LLVMJitContext *llvm_jit_context = (LLVMJitContext *) context;</span></a>
+<a name="267"><span class="lineNum">     267 </span>            :     ListCell   *lc;</a>
+<a name="268"><span class="lineNum">     268 </span>            : </a>
+<a name="269"><span class="lineNum">     269 </span>            :     /*</a>
+<a name="270"><span class="lineNum">     270 </span>            :      * Consider as cleaned up even if we skip doing so below, that way we can</a>
+<a name="271"><span class="lineNum">     271 </span>            :      * verify the tracking is correct (see llvm_shutdown()).</a>
+<a name="272"><span class="lineNum">     272 </span>            :      */</a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       1734 :     llvm_jit_context_in_use_count--;</span></a>
+<a name="274"><span class="lineNum">     274 </span>            : </a>
+<a name="275"><span class="lineNum">     275 </span>            :     /*</a>
+<a name="276"><span class="lineNum">     276 </span>            :      * When this backend is exiting, don't clean up LLVM. As an error might</a>
+<a name="277"><span class="lineNum">     277 </span>            :      * have occurred from within LLVM, we do not want to risk reentering. All</a>
+<a name="278"><span class="lineNum">     278 </span>            :      * resource cleanup is going to happen through process exit.</a>
+<a name="279"><span class="lineNum">     279 </span>            :      */</a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">       1734 :     if (proc_exit_inprogress)</span></a>
+<a name="281"><span class="lineNum">     281 </span><span class="lineNoCov">          0 :         return;</span></a>
+<a name="282"><span class="lineNum">     282 </span>            : </a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">       1734 :     llvm_enter_fatal_on_oom();</span></a>
+<a name="284"><span class="lineNum">     284 </span>            : </a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">       1734 :     if (llvm_jit_context-&gt;module)</span></a>
+<a name="286"><span class="lineNum">     286 </span>            :     {</a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">        530 :         LLVMDisposeModule(llvm_jit_context-&gt;module);</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">        530 :         llvm_jit_context-&gt;module = NULL;</span></a>
+<a name="289"><span class="lineNum">     289 </span>            :     }</a>
+<a name="290"><span class="lineNum">     290 </span>            : </a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineCov">       3072 :     foreach(lc, llvm_jit_context-&gt;handles)</span></a>
+<a name="292"><span class="lineNum">     292 </span>            :     {</a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">       1338 :         LLVMJitHandle *jit_handle = (LLVMJitHandle *) lfirst(lc);</span></a>
+<a name="294"><span class="lineNum">     294 </span>            : </a>
+<a name="295"><span class="lineNum">     295 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="296"><span class="lineNum">     296 </span>            :         {</a>
+<a name="297"><span class="lineNum">     297 </span>            :             LLVMOrcExecutionSessionRef ee;</a>
+<a name="298"><span class="lineNum">     298 </span>            :             LLVMOrcSymbolStringPoolRef sp;</a>
+<a name="299"><span class="lineNum">     299 </span>            : </a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">       1338 :             LLVMOrcResourceTrackerRemove(jit_handle-&gt;resource_tracker);</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">       1338 :             LLVMOrcReleaseResourceTracker(jit_handle-&gt;resource_tracker);</span></a>
+<a name="302"><span class="lineNum">     302 </span>            : </a>
+<a name="303"><span class="lineNum">     303 </span>            :             /*</a>
+<a name="304"><span class="lineNum">     304 </span>            :              * Without triggering cleanup of the string pool, we'd leak</a>
+<a name="305"><span class="lineNum">     305 </span>            :              * memory. It'd be sufficient to do this far less often, but in</a>
+<a name="306"><span class="lineNum">     306 </span>            :              * experiments the required time was small enough to just always</a>
+<a name="307"><span class="lineNum">     307 </span>            :              * do it.</a>
+<a name="308"><span class="lineNum">     308 </span>            :              */</a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">       1338 :             ee = LLVMOrcLLJITGetExecutionSession(jit_handle-&gt;lljit);</span></a>
+<a name="310"><span class="lineNum">     310 </span><span class="lineCov">       1338 :             sp = LLVMOrcExecutionSessionGetSymbolStringPool(ee);</span></a>
+<a name="311"><span class="lineNum">     311 </span><span class="lineCov">       1338 :             LLVMOrcSymbolStringPoolClearDeadEntries(sp);</span></a>
+<a name="312"><span class="lineNum">     312 </span>            :         }</a>
+<a name="313"><span class="lineNum">     313 </span>            : #else                           /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="314"><span class="lineNum">     314 </span>            :         {</a>
+<a name="315"><span class="lineNum">     315 </span>            :             LLVMOrcRemoveModule(jit_handle-&gt;stack, jit_handle-&gt;orc_handle);</a>
+<a name="316"><span class="lineNum">     316 </span>            :         }</a>
+<a name="317"><span class="lineNum">     317 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="318"><span class="lineNum">     318 </span>            : </a>
+<a name="319"><span class="lineNum">     319 </span><span class="lineCov">       1338 :         pfree(jit_handle);</span></a>
+<a name="320"><span class="lineNum">     320 </span>            :     }</a>
+<a name="321"><span class="lineNum">     321 </span><span class="lineCov">       1734 :     list_free(llvm_jit_context-&gt;handles);</span></a>
+<a name="322"><span class="lineNum">     322 </span><span class="lineCov">       1734 :     llvm_jit_context-&gt;handles = NIL;</span></a>
+<a name="323"><span class="lineNum">     323 </span>            : </a>
+<a name="324"><span class="lineNum">     324 </span><span class="lineCov">       1734 :     llvm_leave_fatal_on_oom();</span></a>
+<a name="325"><span class="lineNum">     325 </span>            : </a>
+<a name="326"><span class="lineNum">     326 </span><span class="lineCov">       1734 :     if (context-&gt;resowner)</span></a>
+<a name="327"><span class="lineNum">     327 </span><span class="lineCov">       1718 :         ResourceOwnerForgetJIT(context-&gt;resowner, llvm_jit_context);</span></a>
+<a name="328"><span class="lineNum">     328 </span>            : }</a>
+<a name="329"><span class="lineNum">     329 </span>            : </a>
+<a name="330"><span class="lineNum">     330 </span>            : /*</a>
+<a name="331"><span class="lineNum">     331 </span>            :  * Return module which may be modified, e.g. by creating new functions.</a>
+<a name="332"><span class="lineNum">     332 </span>            :  */</a>
+<a name="333"><span class="lineNum">     333 </span>            : LLVMModuleRef</a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineCov">      17014 : llvm_mutable_module(LLVMJitContext *context)</span></a>
+<a name="335"><span class="lineNum">     335 </span>            : {</a>
+<a name="336"><span class="lineNum">     336 </span><span class="lineCov">      17014 :     llvm_assert_in_fatal_section();</span></a>
+<a name="337"><span class="lineNum">     337 </span>            : </a>
+<a name="338"><span class="lineNum">     338 </span>            :     /*</a>
+<a name="339"><span class="lineNum">     339 </span>            :      * If there's no in-progress module, create a new one.</a>
+<a name="340"><span class="lineNum">     340 </span>            :      */</a>
+<a name="341"><span class="lineNum">     341 </span><span class="lineCov">      17014 :     if (!context-&gt;module)</span></a>
+<a name="342"><span class="lineNum">     342 </span>            :     {</a>
+<a name="343"><span class="lineNum">     343 </span><span class="lineCov">       1868 :         context-&gt;compiled = false;</span></a>
+<a name="344"><span class="lineNum">     344 </span><span class="lineCov">       1868 :         context-&gt;module_generation = llvm_generation++;</span></a>
+<a name="345"><span class="lineNum">     345 </span><span class="lineCov">       1868 :         context-&gt;module = LLVMModuleCreateWithNameInContext(&quot;pg&quot;, llvm_context);</span></a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">       1868 :         LLVMSetTarget(context-&gt;module, llvm_triple);</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">       1868 :         LLVMSetDataLayout(context-&gt;module, llvm_layout);</span></a>
+<a name="348"><span class="lineNum">     348 </span>            :     }</a>
+<a name="349"><span class="lineNum">     349 </span>            : </a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">      17014 :     return context-&gt;module;</span></a>
+<a name="351"><span class="lineNum">     351 </span>            : }</a>
+<a name="352"><span class="lineNum">     352 </span>            : </a>
+<a name="353"><span class="lineNum">     353 </span>            : /*</a>
+<a name="354"><span class="lineNum">     354 </span>            :  * Expand function name to be non-conflicting. This should be used by code</a>
+<a name="355"><span class="lineNum">     355 </span>            :  * generating code, when adding new externally visible function definitions to</a>
+<a name="356"><span class="lineNum">     356 </span>            :  * a Module.</a>
+<a name="357"><span class="lineNum">     357 </span>            :  */</a>
+<a name="358"><span class="lineNum">     358 </span>            : char *</a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">      17014 : llvm_expand_funcname(struct LLVMJitContext *context, const char *basename)</span></a>
+<a name="360"><span class="lineNum">     360 </span>            : {</a>
+<a name="361"><span class="lineNum">     361 </span><span class="lineCov">      17014 :     Assert(context-&gt;module != NULL);</span></a>
+<a name="362"><span class="lineNum">     362 </span>            : </a>
+<a name="363"><span class="lineNum">     363 </span><span class="lineCov">      17014 :     context-&gt;base.instr.created_functions++;</span></a>
+<a name="364"><span class="lineNum">     364 </span>            : </a>
+<a name="365"><span class="lineNum">     365 </span>            :     /*</a>
+<a name="366"><span class="lineNum">     366 </span>            :      * Previously we used dots to separate, but turns out some tools, e.g.</a>
+<a name="367"><span class="lineNum">     367 </span>            :      * GDB, don't like that and truncate name.</a>
+<a name="368"><span class="lineNum">     368 </span>            :      */</a>
+<a name="369"><span class="lineNum">     369 </span><span class="lineCov">      34028 :     return psprintf(&quot;%s_%zu_%d&quot;,</span></a>
+<a name="370"><span class="lineNum">     370 </span>            :                     basename,</a>
+<a name="371"><span class="lineNum">     371 </span>            :                     context-&gt;module_generation,</a>
+<a name="372"><span class="lineNum">     372 </span><span class="lineCov">      17014 :                     context-&gt;counter++);</span></a>
+<a name="373"><span class="lineNum">     373 </span>            : }</a>
+<a name="374"><span class="lineNum">     374 </span>            : </a>
+<a name="375"><span class="lineNum">     375 </span>            : /*</a>
+<a name="376"><span class="lineNum">     376 </span>            :  * Return pointer to function funcname, which has to exist. If there's pending</a>
+<a name="377"><span class="lineNum">     377 </span>            :  * code to be optimized and emitted, do so first.</a>
+<a name="378"><span class="lineNum">     378 </span>            :  */</a>
+<a name="379"><span class="lineNum">     379 </span>            : void *</a>
+<a name="380"><span class="lineNum">     380 </span><span class="lineCov">       6266 : llvm_get_function(LLVMJitContext *context, const char *funcname)</span></a>
+<a name="381"><span class="lineNum">     381 </span>            : {</a>
+<a name="382"><span class="lineNum">     382 </span>            :     ListCell   *lc;</a>
+<a name="383"><span class="lineNum">     383 </span>            : </a>
+<a name="384"><span class="lineNum">     384 </span><span class="lineCov">       6266 :     llvm_assert_in_fatal_section();</span></a>
+<a name="385"><span class="lineNum">     385 </span>            : </a>
+<a name="386"><span class="lineNum">     386 </span>            :     /*</a>
+<a name="387"><span class="lineNum">     387 </span>            :      * If there is a pending / not emitted module, compile and emit now.</a>
+<a name="388"><span class="lineNum">     388 </span>            :      * Otherwise we might not find the [correct] function.</a>
+<a name="389"><span class="lineNum">     389 </span>            :      */</a>
+<a name="390"><span class="lineNum">     390 </span><span class="lineCov">       6266 :     if (!context-&gt;compiled)</span></a>
+<a name="391"><span class="lineNum">     391 </span>            :     {</a>
+<a name="392"><span class="lineNum">     392 </span><span class="lineCov">       1338 :         llvm_compile_module(context);</span></a>
+<a name="393"><span class="lineNum">     393 </span>            :     }</a>
+<a name="394"><span class="lineNum">     394 </span>            : </a>
+<a name="395"><span class="lineNum">     395 </span>            :     /*</a>
+<a name="396"><span class="lineNum">     396 </span>            :      * ORC's symbol table is of *unmangled* symbols. Therefore we don't need</a>
+<a name="397"><span class="lineNum">     397 </span>            :      * to mangle here.</a>
+<a name="398"><span class="lineNum">     398 </span>            :      */</a>
+<a name="399"><span class="lineNum">     399 </span>            : </a>
+<a name="400"><span class="lineNum">     400 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="401"><span class="lineNum">     401 </span><span class="lineCov">       6266 :     foreach(lc, context-&gt;handles)</span></a>
+<a name="402"><span class="lineNum">     402 </span>            :     {</a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">       6266 :         LLVMJitHandle *handle = (LLVMJitHandle *) lfirst(lc);</span></a>
+<a name="404"><span class="lineNum">     404 </span>            :         instr_time  starttime;</a>
+<a name="405"><span class="lineNum">     405 </span>            :         instr_time  endtime;</a>
+<a name="406"><span class="lineNum">     406 </span>            :         LLVMErrorRef error;</a>
+<a name="407"><span class="lineNum">     407 </span>            :         LLVMOrcJITTargetAddress addr;</a>
+<a name="408"><span class="lineNum">     408 </span>            : </a>
+<a name="409"><span class="lineNum">     409 </span><span class="lineCov">       6266 :         INSTR_TIME_SET_CURRENT(starttime);</span></a>
+<a name="410"><span class="lineNum">     410 </span>            : </a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">       6266 :         addr = 0;</span></a>
+<a name="412"><span class="lineNum">     412 </span><span class="lineCov">       6266 :         error = LLVMOrcLLJITLookup(handle-&gt;lljit, &amp;addr, funcname);</span></a>
+<a name="413"><span class="lineNum">     413 </span><span class="lineCov">       6266 :         if (error)</span></a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineNoCov">          0 :             elog(ERROR, &quot;failed to look up symbol \&quot;%s\&quot;: %s&quot;,</span></a>
+<a name="415"><span class="lineNum">     415 </span>            :                  funcname, llvm_error_message(error));</a>
+<a name="416"><span class="lineNum">     416 </span>            : </a>
+<a name="417"><span class="lineNum">     417 </span>            :         /*</a>
+<a name="418"><span class="lineNum">     418 </span>            :          * LLJIT only actually emits code the first time a symbol is</a>
+<a name="419"><span class="lineNum">     419 </span>            :          * referenced. Thus add lookup time to emission time. That's counting</a>
+<a name="420"><span class="lineNum">     420 </span>            :          * a bit more than with older LLVM versions, but unlikely to ever</a>
+<a name="421"><span class="lineNum">     421 </span>            :          * matter.</a>
+<a name="422"><span class="lineNum">     422 </span>            :          */</a>
+<a name="423"><span class="lineNum">     423 </span><span class="lineCov">       6266 :         INSTR_TIME_SET_CURRENT(endtime);</span></a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">       6266 :         INSTR_TIME_ACCUM_DIFF(context-&gt;base.instr.emission_counter,</span></a>
+<a name="425"><span class="lineNum">     425 </span>            :                               endtime, starttime);</a>
+<a name="426"><span class="lineNum">     426 </span>            : </a>
+<a name="427"><span class="lineNum">     427 </span><span class="lineCov">       6266 :         if (addr)</span></a>
+<a name="428"><span class="lineNum">     428 </span><span class="lineCov">       6266 :             return (void *) (uintptr_t) addr;</span></a>
+<a name="429"><span class="lineNum">     429 </span>            :     }</a>
+<a name="430"><span class="lineNum">     430 </span>            : #else</a>
+<a name="431"><span class="lineNum">     431 </span>            :     foreach(lc, context-&gt;handles)</a>
+<a name="432"><span class="lineNum">     432 </span>            :     {</a>
+<a name="433"><span class="lineNum">     433 </span>            :         LLVMOrcTargetAddress addr;</a>
+<a name="434"><span class="lineNum">     434 </span>            :         LLVMJitHandle *handle = (LLVMJitHandle *) lfirst(lc);</a>
+<a name="435"><span class="lineNum">     435 </span>            : </a>
+<a name="436"><span class="lineNum">     436 </span>            :         addr = 0;</a>
+<a name="437"><span class="lineNum">     437 </span>            :         if (LLVMOrcGetSymbolAddressIn(handle-&gt;stack, &amp;addr, handle-&gt;orc_handle, funcname))</a>
+<a name="438"><span class="lineNum">     438 </span>            :             elog(ERROR, &quot;failed to look up symbol \&quot;%s\&quot;&quot;, funcname);</a>
+<a name="439"><span class="lineNum">     439 </span>            :         if (addr)</a>
+<a name="440"><span class="lineNum">     440 </span>            :             return (void *) (uintptr_t) addr;</a>
+<a name="441"><span class="lineNum">     441 </span>            :     }</a>
+<a name="442"><span class="lineNum">     442 </span>            : #endif</a>
+<a name="443"><span class="lineNum">     443 </span>            : </a>
+<a name="444"><span class="lineNum">     444 </span><span class="lineNoCov">          0 :     elog(ERROR, &quot;failed to JIT: %s&quot;, funcname);</span></a>
+<a name="445"><span class="lineNum">     445 </span>            : </a>
+<a name="446"><span class="lineNum">     446 </span>            :     return NULL;</a>
+<a name="447"><span class="lineNum">     447 </span>            : }</a>
+<a name="448"><span class="lineNum">     448 </span>            : </a>
+<a name="449"><span class="lineNum">     449 </span>            : /*</a>
+<a name="450"><span class="lineNum">     450 </span>            :  * Return type of a variable in llvmjit_types.c. This is useful to keep types</a>
+<a name="451"><span class="lineNum">     451 </span>            :  * in sync between plain C and JIT related code.</a>
+<a name="452"><span class="lineNum">     452 </span>            :  */</a>
+<a name="453"><span class="lineNum">     453 </span>            : LLVMTypeRef</a>
+<a name="454"><span class="lineNum">     454 </span><span class="lineCov">      15798 : llvm_pg_var_type(const char *varname)</span></a>
+<a name="455"><span class="lineNum">     455 </span>            : {</a>
+<a name="456"><span class="lineNum">     456 </span>            :     LLVMValueRef v_srcvar;</a>
+<a name="457"><span class="lineNum">     457 </span>            :     LLVMTypeRef typ;</a>
+<a name="458"><span class="lineNum">     458 </span>            : </a>
+<a name="459"><span class="lineNum">     459 </span>            :     /* this'll return a *pointer* to the global */</a>
+<a name="460"><span class="lineNum">     460 </span><span class="lineCov">      15798 :     v_srcvar = LLVMGetNamedGlobal(llvm_types_module, varname);</span></a>
+<a name="461"><span class="lineNum">     461 </span><span class="lineCov">      15798 :     if (!v_srcvar)</span></a>
+<a name="462"><span class="lineNum">     462 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;variable %s not in llvmjit_types.c&quot;, varname);</span></a>
+<a name="463"><span class="lineNum">     463 </span>            : </a>
+<a name="464"><span class="lineNum">     464 </span><span class="lineCov">      15798 :     typ = LLVMGlobalGetValueType(v_srcvar);</span></a>
+<a name="465"><span class="lineNum">     465 </span>            : </a>
+<a name="466"><span class="lineNum">     466 </span><span class="lineCov">      15798 :     return typ;</span></a>
+<a name="467"><span class="lineNum">     467 </span>            : }</a>
+<a name="468"><span class="lineNum">     468 </span>            : </a>
+<a name="469"><span class="lineNum">     469 </span>            : /*</a>
+<a name="470"><span class="lineNum">     470 </span>            :  * Return function type of a variable in llvmjit_types.c. This is useful to</a>
+<a name="471"><span class="lineNum">     471 </span>            :  * keep function types in sync between C and JITed code.</a>
+<a name="472"><span class="lineNum">     472 </span>            :  */</a>
+<a name="473"><span class="lineNum">     473 </span>            : LLVMTypeRef</a>
+<a name="474"><span class="lineNum">     474 </span><span class="lineCov">      15084 : llvm_pg_var_func_type(const char *varname)</span></a>
+<a name="475"><span class="lineNum">     475 </span>            : {</a>
+<a name="476"><span class="lineNum">     476 </span>            :     LLVMValueRef v_srcvar;</a>
+<a name="477"><span class="lineNum">     477 </span>            :     LLVMTypeRef typ;</a>
+<a name="478"><span class="lineNum">     478 </span>            : </a>
+<a name="479"><span class="lineNum">     479 </span><span class="lineCov">      15084 :     v_srcvar = LLVMGetNamedFunction(llvm_types_module, varname);</span></a>
+<a name="480"><span class="lineNum">     480 </span><span class="lineCov">      15084 :     if (!v_srcvar)</span></a>
+<a name="481"><span class="lineNum">     481 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;function %s not in llvmjit_types.c&quot;, varname);</span></a>
+<a name="482"><span class="lineNum">     482 </span>            : </a>
+<a name="483"><span class="lineNum">     483 </span><span class="lineCov">      15084 :     typ = LLVMGetFunctionType(v_srcvar);</span></a>
+<a name="484"><span class="lineNum">     484 </span>            : </a>
+<a name="485"><span class="lineNum">     485 </span><span class="lineCov">      15084 :     return typ;</span></a>
+<a name="486"><span class="lineNum">     486 </span>            : }</a>
+<a name="487"><span class="lineNum">     487 </span>            : </a>
+<a name="488"><span class="lineNum">     488 </span>            : /*</a>
+<a name="489"><span class="lineNum">     489 </span>            :  * Return declaration for a function referenced in llvmjit_types.c, adding it</a>
+<a name="490"><span class="lineNum">     490 </span>            :  * to the module if necessary.</a>
+<a name="491"><span class="lineNum">     491 </span>            :  *</a>
+<a name="492"><span class="lineNum">     492 </span>            :  * This is used to make functions discovered via llvm_create_types() known to</a>
+<a name="493"><span class="lineNum">     493 </span>            :  * the module that's currently being worked on.</a>
+<a name="494"><span class="lineNum">     494 </span>            :  */</a>
+<a name="495"><span class="lineNum">     495 </span>            : LLVMValueRef</a>
+<a name="496"><span class="lineNum">     496 </span><span class="lineCov">      13656 : llvm_pg_func(LLVMModuleRef mod, const char *funcname)</span></a>
+<a name="497"><span class="lineNum">     497 </span>            : {</a>
+<a name="498"><span class="lineNum">     498 </span>            :     LLVMValueRef v_srcfn;</a>
+<a name="499"><span class="lineNum">     499 </span>            :     LLVMValueRef v_fn;</a>
+<a name="500"><span class="lineNum">     500 </span>            : </a>
+<a name="501"><span class="lineNum">     501 </span>            :     /* don't repeatedly add function */</a>
+<a name="502"><span class="lineNum">     502 </span><span class="lineCov">      13656 :     v_fn = LLVMGetNamedFunction(mod, funcname);</span></a>
+<a name="503"><span class="lineNum">     503 </span><span class="lineCov">      13656 :     if (v_fn)</span></a>
+<a name="504"><span class="lineNum">     504 </span><span class="lineCov">       9836 :         return v_fn;</span></a>
+<a name="505"><span class="lineNum">     505 </span>            : </a>
+<a name="506"><span class="lineNum">     506 </span><span class="lineCov">       3820 :     v_srcfn = LLVMGetNamedFunction(llvm_types_module, funcname);</span></a>
+<a name="507"><span class="lineNum">     507 </span>            : </a>
+<a name="508"><span class="lineNum">     508 </span><span class="lineCov">       3820 :     if (!v_srcfn)</span></a>
+<a name="509"><span class="lineNum">     509 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;function %s not in llvmjit_types.c&quot;, funcname);</span></a>
+<a name="510"><span class="lineNum">     510 </span>            : </a>
+<a name="511"><span class="lineNum">     511 </span><span class="lineCov">       3820 :     v_fn = LLVMAddFunction(mod,</span></a>
+<a name="512"><span class="lineNum">     512 </span>            :                            funcname,</a>
+<a name="513"><span class="lineNum">     513 </span>            :                            LLVMGetFunctionType(v_srcfn));</a>
+<a name="514"><span class="lineNum">     514 </span><span class="lineCov">       3820 :     llvm_copy_attributes(v_srcfn, v_fn);</span></a>
+<a name="515"><span class="lineNum">     515 </span>            : </a>
+<a name="516"><span class="lineNum">     516 </span><span class="lineCov">       3820 :     return v_fn;</span></a>
+<a name="517"><span class="lineNum">     517 </span>            : }</a>
+<a name="518"><span class="lineNum">     518 </span>            : </a>
+<a name="519"><span class="lineNum">     519 </span>            : /*</a>
+<a name="520"><span class="lineNum">     520 </span>            :  * Copy attributes from one function to another, for a specific index (an</a>
+<a name="521"><span class="lineNum">     521 </span>            :  * index can reference return value, function and parameter attributes).</a>
+<a name="522"><span class="lineNum">     522 </span>            :  */</a>
+<a name="523"><span class="lineNum">     523 </span>            : static void</a>
+<a name="524"><span class="lineNum">     524 </span><span class="lineCov">      68152 : llvm_copy_attributes_at_index(LLVMValueRef v_from, LLVMValueRef v_to, uint32 index)</span></a>
+<a name="525"><span class="lineNum">     525 </span>            : {</a>
+<a name="526"><span class="lineNum">     526 </span>            :     int         num_attributes;</a>
+<a name="527"><span class="lineNum">     527 </span>            :     LLVMAttributeRef *attrs;</a>
+<a name="528"><span class="lineNum">     528 </span>            : </a>
+<a name="529"><span class="lineNum">     529 </span><span class="lineCov">      68152 :     num_attributes = LLVMGetAttributeCountAtIndex(v_from, index);</span></a>
+<a name="530"><span class="lineNum">     530 </span>            : </a>
+<a name="531"><span class="lineNum">     531 </span><span class="lineCov">      68152 :     if (num_attributes == 0)</span></a>
+<a name="532"><span class="lineNum">     532 </span><span class="lineCov">      20832 :         return;</span></a>
+<a name="533"><span class="lineNum">     533 </span>            : </a>
+<a name="534"><span class="lineNum">     534 </span><span class="lineCov">      47320 :     attrs = palloc(sizeof(LLVMAttributeRef) * num_attributes);</span></a>
+<a name="535"><span class="lineNum">     535 </span><span class="lineCov">      47320 :     LLVMGetAttributesAtIndex(v_from, index, attrs);</span></a>
+<a name="536"><span class="lineNum">     536 </span>            : </a>
+<a name="537"><span class="lineNum">     537 </span><span class="lineCov">     386024 :     for (int attno = 0; attno &lt; num_attributes; attno++)</span></a>
+<a name="538"><span class="lineNum">     538 </span><span class="lineCov">     338704 :         LLVMAddAttributeAtIndex(v_to, index, attrs[attno]);</span></a>
+<a name="539"><span class="lineNum">     539 </span>            : </a>
+<a name="540"><span class="lineNum">     540 </span><span class="lineCov">      47320 :     pfree(attrs);</span></a>
+<a name="541"><span class="lineNum">     541 </span>            : }</a>
+<a name="542"><span class="lineNum">     542 </span>            : </a>
+<a name="543"><span class="lineNum">     543 </span>            : /*</a>
+<a name="544"><span class="lineNum">     544 </span>            :  * Copy all attributes from one function to another. I.e. function, return and</a>
+<a name="545"><span class="lineNum">     545 </span>            :  * parameters will be copied.</a>
+<a name="546"><span class="lineNum">     546 </span>            :  */</a>
+<a name="547"><span class="lineNum">     547 </span>            : void</a>
+<a name="548"><span class="lineNum">     548 </span><span class="lineCov">      20834 : llvm_copy_attributes(LLVMValueRef v_from, LLVMValueRef v_to)</span></a>
+<a name="549"><span class="lineNum">     549 </span>            : {</a>
+<a name="550"><span class="lineNum">     550 </span>            :     uint32      param_count;</a>
+<a name="551"><span class="lineNum">     551 </span>            : </a>
+<a name="552"><span class="lineNum">     552 </span>            :     /* copy function attributes */</a>
+<a name="553"><span class="lineNum">     553 </span><span class="lineCov">      20834 :     llvm_copy_attributes_at_index(v_from, v_to, LLVMAttributeFunctionIndex);</span></a>
+<a name="554"><span class="lineNum">     554 </span>            : </a>
+<a name="555"><span class="lineNum">     555 </span>            :     /* and the return value attributes */</a>
+<a name="556"><span class="lineNum">     556 </span><span class="lineCov">      20834 :     llvm_copy_attributes_at_index(v_from, v_to, LLVMAttributeReturnIndex);</span></a>
+<a name="557"><span class="lineNum">     557 </span>            : </a>
+<a name="558"><span class="lineNum">     558 </span>            :     /* and each function parameter's attribute */</a>
+<a name="559"><span class="lineNum">     559 </span><span class="lineCov">      20834 :     param_count = LLVMCountParams(v_from);</span></a>
+<a name="560"><span class="lineNum">     560 </span>            : </a>
+<a name="561"><span class="lineNum">     561 </span><span class="lineCov">      47318 :     for (int paramidx = 1; paramidx &lt;= param_count; paramidx++)</span></a>
+<a name="562"><span class="lineNum">     562 </span><span class="lineCov">      26484 :         llvm_copy_attributes_at_index(v_from, v_to, paramidx);</span></a>
+<a name="563"><span class="lineNum">     563 </span><span class="lineCov">      20834 : }</span></a>
+<a name="564"><span class="lineNum">     564 </span>            : </a>
+<a name="565"><span class="lineNum">     565 </span>            : /*</a>
+<a name="566"><span class="lineNum">     566 </span>            :  * Return a callable LLVMValueRef for fcinfo.</a>
+<a name="567"><span class="lineNum">     567 </span>            :  */</a>
+<a name="568"><span class="lineNum">     568 </span>            : LLVMValueRef</a>
+<a name="569"><span class="lineNum">     569 </span><span class="lineCov">       5628 : llvm_function_reference(LLVMJitContext *context,</span></a>
+<a name="570"><span class="lineNum">     570 </span>            :                         LLVMBuilderRef builder,</a>
+<a name="571"><span class="lineNum">     571 </span>            :                         LLVMModuleRef mod,</a>
+<a name="572"><span class="lineNum">     572 </span>            :                         FunctionCallInfo fcinfo)</a>
+<a name="573"><span class="lineNum">     573 </span>            : {</a>
+<a name="574"><span class="lineNum">     574 </span>            :     char       *modname;</a>
+<a name="575"><span class="lineNum">     575 </span>            :     char       *basename;</a>
+<a name="576"><span class="lineNum">     576 </span>            :     char       *funcname;</a>
+<a name="577"><span class="lineNum">     577 </span>            : </a>
+<a name="578"><span class="lineNum">     578 </span>            :     LLVMValueRef v_fn;</a>
+<a name="579"><span class="lineNum">     579 </span>            : </a>
+<a name="580"><span class="lineNum">     580 </span><span class="lineCov">       5628 :     fmgr_symbol(fcinfo-&gt;flinfo-&gt;fn_oid, &amp;modname, &amp;basename);</span></a>
+<a name="581"><span class="lineNum">     581 </span>            : </a>
+<a name="582"><span class="lineNum">     582 </span><span class="lineCov">       5628 :     if (modname != NULL &amp;&amp; basename != NULL)</span></a>
+<a name="583"><span class="lineNum">     583 </span>            :     {</a>
+<a name="584"><span class="lineNum">     584 </span>            :         /* external function in loadable library */</a>
+<a name="585"><span class="lineNum">     585 </span><span class="lineCov">         38 :         funcname = psprintf(&quot;pgextern.%s.%s&quot;, modname, basename);</span></a>
+<a name="586"><span class="lineNum">     586 </span>            :     }</a>
+<a name="587"><span class="lineNum">     587 </span><span class="lineCov">       5590 :     else if (basename != NULL)</span></a>
+<a name="588"><span class="lineNum">     588 </span>            :     {</a>
+<a name="589"><span class="lineNum">     589 </span>            :         /* internal function */</a>
+<a name="590"><span class="lineNum">     590 </span><span class="lineCov">       5578 :         funcname = pstrdup(basename);</span></a>
+<a name="591"><span class="lineNum">     591 </span>            :     }</a>
+<a name="592"><span class="lineNum">     592 </span>            :     else</a>
+<a name="593"><span class="lineNum">     593 </span>            :     {</a>
+<a name="594"><span class="lineNum">     594 </span>            :         /*</a>
+<a name="595"><span class="lineNum">     595 </span>            :          * Function we don't know to handle, return pointer. We do so by</a>
+<a name="596"><span class="lineNum">     596 </span>            :          * creating a global constant containing a pointer to the function.</a>
+<a name="597"><span class="lineNum">     597 </span>            :          * Makes IR more readable.</a>
+<a name="598"><span class="lineNum">     598 </span>            :          */</a>
+<a name="599"><span class="lineNum">     599 </span>            :         LLVMValueRef v_fn_addr;</a>
+<a name="600"><span class="lineNum">     600 </span>            : </a>
+<a name="601"><span class="lineNum">     601 </span><span class="lineCov">         12 :         funcname = psprintf(&quot;pgoidextern.%u&quot;,</span></a>
+<a name="602"><span class="lineNum">     602 </span><span class="lineCov">         12 :                             fcinfo-&gt;flinfo-&gt;fn_oid);</span></a>
+<a name="603"><span class="lineNum">     603 </span><span class="lineCov">         12 :         v_fn = LLVMGetNamedGlobal(mod, funcname);</span></a>
+<a name="604"><span class="lineNum">     604 </span><span class="lineCov">         12 :         if (v_fn != 0)</span></a>
+<a name="605"><span class="lineNum">     605 </span><span class="lineNoCov">          0 :             return l_load(builder, TypePGFunction, v_fn, &quot;&quot;);</span></a>
+<a name="606"><span class="lineNum">     606 </span>            : </a>
+<a name="607"><span class="lineNum">     607 </span><span class="lineCov">         12 :         v_fn_addr = l_ptr_const(fcinfo-&gt;flinfo-&gt;fn_addr, TypePGFunction);</span></a>
+<a name="608"><span class="lineNum">     608 </span>            : </a>
+<a name="609"><span class="lineNum">     609 </span><span class="lineCov">         12 :         v_fn = LLVMAddGlobal(mod, TypePGFunction, funcname);</span></a>
+<a name="610"><span class="lineNum">     610 </span><span class="lineCov">         12 :         LLVMSetInitializer(v_fn, v_fn_addr);</span></a>
+<a name="611"><span class="lineNum">     611 </span><span class="lineCov">         12 :         LLVMSetGlobalConstant(v_fn, true);</span></a>
+<a name="612"><span class="lineNum">     612 </span><span class="lineCov">         12 :         LLVMSetLinkage(v_fn, LLVMPrivateLinkage);</span></a>
+<a name="613"><span class="lineNum">     613 </span><span class="lineCov">         12 :         LLVMSetUnnamedAddr(v_fn, true);</span></a>
+<a name="614"><span class="lineNum">     614 </span>            : </a>
+<a name="615"><span class="lineNum">     615 </span><span class="lineCov">         12 :         return l_load(builder, TypePGFunction, v_fn, &quot;&quot;);</span></a>
+<a name="616"><span class="lineNum">     616 </span>            :     }</a>
+<a name="617"><span class="lineNum">     617 </span>            : </a>
+<a name="618"><span class="lineNum">     618 </span>            :     /* check if function already has been added */</a>
+<a name="619"><span class="lineNum">     619 </span><span class="lineCov">       5616 :     v_fn = LLVMGetNamedFunction(mod, funcname);</span></a>
+<a name="620"><span class="lineNum">     620 </span><span class="lineCov">       5616 :     if (v_fn != 0)</span></a>
+<a name="621"><span class="lineNum">     621 </span><span class="lineCov">       2388 :         return v_fn;</span></a>
+<a name="622"><span class="lineNum">     622 </span>            : </a>
+<a name="623"><span class="lineNum">     623 </span><span class="lineCov">       3228 :     v_fn = LLVMAddFunction(mod, funcname, LLVMGetFunctionType(AttributeTemplate));</span></a>
+<a name="624"><span class="lineNum">     624 </span>            : </a>
+<a name="625"><span class="lineNum">     625 </span><span class="lineCov">       3228 :     return v_fn;</span></a>
+<a name="626"><span class="lineNum">     626 </span>            : }</a>
+<a name="627"><span class="lineNum">     627 </span>            : </a>
+<a name="628"><span class="lineNum">     628 </span>            : /*</a>
+<a name="629"><span class="lineNum">     629 </span>            :  * Optimize code in module using the flags set in context.</a>
+<a name="630"><span class="lineNum">     630 </span>            :  */</a>
+<a name="631"><span class="lineNum">     631 </span>            : static void</a>
+<a name="632"><span class="lineNum">     632 </span><span class="lineCov">       1338 : llvm_optimize_module(LLVMJitContext *context, LLVMModuleRef module)</span></a>
+<a name="633"><span class="lineNum">     633 </span>            : {</a>
+<a name="634"><span class="lineNum">     634 </span>            : #if LLVM_VERSION_MAJOR &lt; 17</a>
+<a name="635"><span class="lineNum">     635 </span>            :     LLVMPassManagerBuilderRef llvm_pmb;</a>
+<a name="636"><span class="lineNum">     636 </span>            :     LLVMPassManagerRef llvm_mpm;</a>
+<a name="637"><span class="lineNum">     637 </span>            :     LLVMPassManagerRef llvm_fpm;</a>
+<a name="638"><span class="lineNum">     638 </span>            :     LLVMValueRef func;</a>
+<a name="639"><span class="lineNum">     639 </span>            :     int         compile_optlevel;</a>
+<a name="640"><span class="lineNum">     640 </span>            : </a>
+<a name="641"><span class="lineNum">     641 </span><span class="lineCov">       1338 :     if (context-&gt;base.flags &amp; PGJIT_OPT3)</span></a>
+<a name="642"><span class="lineNum">     642 </span><span class="lineCov">        992 :         compile_optlevel = 3;</span></a>
+<a name="643"><span class="lineNum">     643 </span>            :     else</a>
+<a name="644"><span class="lineNum">     644 </span><span class="lineCov">        346 :         compile_optlevel = 0;</span></a>
+<a name="645"><span class="lineNum">     645 </span>            : </a>
+<a name="646"><span class="lineNum">     646 </span>            :     /*</a>
+<a name="647"><span class="lineNum">     647 </span>            :      * Have to create a new pass manager builder every pass through, as the</a>
+<a name="648"><span class="lineNum">     648 </span>            :      * inliner has some per-builder state. Otherwise one ends up only inlining</a>
+<a name="649"><span class="lineNum">     649 </span>            :      * a function the first time though.</a>
+<a name="650"><span class="lineNum">     650 </span>            :      */</a>
+<a name="651"><span class="lineNum">     651 </span><span class="lineCov">       1338 :     llvm_pmb = LLVMPassManagerBuilderCreate();</span></a>
+<a name="652"><span class="lineNum">     652 </span><span class="lineCov">       1338 :     LLVMPassManagerBuilderSetOptLevel(llvm_pmb, compile_optlevel);</span></a>
+<a name="653"><span class="lineNum">     653 </span><span class="lineCov">       1338 :     llvm_fpm = LLVMCreateFunctionPassManagerForModule(module);</span></a>
+<a name="654"><span class="lineNum">     654 </span>            : </a>
+<a name="655"><span class="lineNum">     655 </span><span class="lineCov">       1338 :     if (context-&gt;base.flags &amp; PGJIT_OPT3)</span></a>
+<a name="656"><span class="lineNum">     656 </span>            :     {</a>
+<a name="657"><span class="lineNum">     657 </span>            :         /* TODO: Unscientifically determined threshold */</a>
+<a name="658"><span class="lineNum">     658 </span><span class="lineCov">        992 :         LLVMPassManagerBuilderUseInlinerWithThreshold(llvm_pmb, 512);</span></a>
+<a name="659"><span class="lineNum">     659 </span>            :     }</a>
+<a name="660"><span class="lineNum">     660 </span>            :     else</a>
+<a name="661"><span class="lineNum">     661 </span>            :     {</a>
+<a name="662"><span class="lineNum">     662 </span>            :         /* we rely on mem2reg heavily, so emit even in the O0 case */</a>
+<a name="663"><span class="lineNum">     663 </span><span class="lineCov">        346 :         LLVMAddPromoteMemoryToRegisterPass(llvm_fpm);</span></a>
+<a name="664"><span class="lineNum">     664 </span>            :     }</a>
+<a name="665"><span class="lineNum">     665 </span>            : </a>
+<a name="666"><span class="lineNum">     666 </span><span class="lineCov">       1338 :     LLVMPassManagerBuilderPopulateFunctionPassManager(llvm_pmb, llvm_fpm);</span></a>
+<a name="667"><span class="lineNum">     667 </span>            : </a>
+<a name="668"><span class="lineNum">     668 </span>            :     /*</a>
+<a name="669"><span class="lineNum">     669 </span>            :      * Do function level optimization. This could be moved to the point where</a>
+<a name="670"><span class="lineNum">     670 </span>            :      * functions are emitted, to reduce memory usage a bit.</a>
+<a name="671"><span class="lineNum">     671 </span>            :      */</a>
+<a name="672"><span class="lineNum">     672 </span><span class="lineCov">       1338 :     LLVMInitializeFunctionPassManager(llvm_fpm);</span></a>
+<a name="673"><span class="lineNum">     673 </span><span class="lineCov">       1338 :     for (func = LLVMGetFirstFunction(context-&gt;module);</span></a>
+<a name="674"><span class="lineNum">     674 </span><span class="lineCov">      34502 :          func != NULL;</span></a>
+<a name="675"><span class="lineNum">     675 </span><span class="lineCov">      33164 :          func = LLVMGetNextFunction(func))</span></a>
+<a name="676"><span class="lineNum">     676 </span><span class="lineCov">      33164 :         LLVMRunFunctionPassManager(llvm_fpm, func);</span></a>
+<a name="677"><span class="lineNum">     677 </span><span class="lineCov">       1338 :     LLVMFinalizeFunctionPassManager(llvm_fpm);</span></a>
+<a name="678"><span class="lineNum">     678 </span><span class="lineCov">       1338 :     LLVMDisposePassManager(llvm_fpm);</span></a>
+<a name="679"><span class="lineNum">     679 </span>            : </a>
+<a name="680"><span class="lineNum">     680 </span>            :     /*</a>
+<a name="681"><span class="lineNum">     681 </span>            :      * Perform module level optimization. We do so even in the non-optimized</a>
+<a name="682"><span class="lineNum">     682 </span>            :      * case, so always-inline functions etc get inlined. It's cheap enough.</a>
+<a name="683"><span class="lineNum">     683 </span>            :      */</a>
+<a name="684"><span class="lineNum">     684 </span><span class="lineCov">       1338 :     llvm_mpm = LLVMCreatePassManager();</span></a>
+<a name="685"><span class="lineNum">     685 </span><span class="lineCov">       1338 :     LLVMPassManagerBuilderPopulateModulePassManager(llvm_pmb,</span></a>
+<a name="686"><span class="lineNum">     686 </span>            :                                                     llvm_mpm);</a>
+<a name="687"><span class="lineNum">     687 </span>            :     /* always use always-inliner pass */</a>
+<a name="688"><span class="lineNum">     688 </span><span class="lineCov">       1338 :     if (!(context-&gt;base.flags &amp; PGJIT_OPT3))</span></a>
+<a name="689"><span class="lineNum">     689 </span><span class="lineCov">        346 :         LLVMAddAlwaysInlinerPass(llvm_mpm);</span></a>
+<a name="690"><span class="lineNum">     690 </span>            :     /* if doing inlining, but no expensive optimization, add inlining pass */</a>
+<a name="691"><span class="lineNum">     691 </span><span class="lineCov">       1338 :     if (context-&gt;base.flags &amp; PGJIT_INLINE</span></a>
+<a name="692"><span class="lineNum">     692 </span><span class="lineCov">        992 :         &amp;&amp; !(context-&gt;base.flags &amp; PGJIT_OPT3))</span></a>
+<a name="693"><span class="lineNum">     693 </span><span class="lineNoCov">          0 :         LLVMAddFunctionInliningPass(llvm_mpm);</span></a>
+<a name="694"><span class="lineNum">     694 </span><span class="lineCov">       1338 :     LLVMRunPassManager(llvm_mpm, context-&gt;module);</span></a>
+<a name="695"><span class="lineNum">     695 </span><span class="lineCov">       1338 :     LLVMDisposePassManager(llvm_mpm);</span></a>
+<a name="696"><span class="lineNum">     696 </span>            : </a>
+<a name="697"><span class="lineNum">     697 </span><span class="lineCov">       1338 :     LLVMPassManagerBuilderDispose(llvm_pmb);</span></a>
+<a name="698"><span class="lineNum">     698 </span>            : #else</a>
+<a name="699"><span class="lineNum">     699 </span>            :     LLVMPassBuilderOptionsRef options;</a>
+<a name="700"><span class="lineNum">     700 </span>            :     LLVMErrorRef err;</a>
+<a name="701"><span class="lineNum">     701 </span>            :     const char *passes;</a>
+<a name="702"><span class="lineNum">     702 </span>            : </a>
+<a name="703"><span class="lineNum">     703 </span>            :     if (context-&gt;base.flags &amp; PGJIT_OPT3)</a>
+<a name="704"><span class="lineNum">     704 </span>            :         passes = &quot;default&lt;O3&gt;&quot;;</a>
+<a name="705"><span class="lineNum">     705 </span>            :     else</a>
+<a name="706"><span class="lineNum">     706 </span>            :         passes = &quot;default&lt;O0&gt;,mem2reg&quot;;</a>
+<a name="707"><span class="lineNum">     707 </span>            : </a>
+<a name="708"><span class="lineNum">     708 </span>            :     options = LLVMCreatePassBuilderOptions();</a>
+<a name="709"><span class="lineNum">     709 </span>            : </a>
+<a name="710"><span class="lineNum">     710 </span>            : #ifdef LLVM_PASS_DEBUG</a>
+<a name="711"><span class="lineNum">     711 </span>            :     LLVMPassBuilderOptionsSetDebugLogging(options, 1);</a>
+<a name="712"><span class="lineNum">     712 </span>            : #endif</a>
+<a name="713"><span class="lineNum">     713 </span>            : </a>
+<a name="714"><span class="lineNum">     714 </span>            :     LLVMPassBuilderOptionsSetInlinerThreshold(options, 512);</a>
+<a name="715"><span class="lineNum">     715 </span>            : </a>
+<a name="716"><span class="lineNum">     716 </span>            :     err = LLVMRunPasses(module, passes, NULL, options);</a>
+<a name="717"><span class="lineNum">     717 </span>            : </a>
+<a name="718"><span class="lineNum">     718 </span>            :     if (err)</a>
+<a name="719"><span class="lineNum">     719 </span>            :         elog(ERROR, &quot;failed to JIT module: %s&quot;, llvm_error_message(err));</a>
+<a name="720"><span class="lineNum">     720 </span>            : </a>
+<a name="721"><span class="lineNum">     721 </span>            :     LLVMDisposePassBuilderOptions(options);</a>
+<a name="722"><span class="lineNum">     722 </span>            : #endif</a>
+<a name="723"><span class="lineNum">     723 </span><span class="lineCov">       1338 : }</span></a>
+<a name="724"><span class="lineNum">     724 </span>            : </a>
+<a name="725"><span class="lineNum">     725 </span>            : /*</a>
+<a name="726"><span class="lineNum">     726 </span>            :  * Emit code for the currently pending module.</a>
+<a name="727"><span class="lineNum">     727 </span>            :  */</a>
+<a name="728"><span class="lineNum">     728 </span>            : static void</a>
+<a name="729"><span class="lineNum">     729 </span><span class="lineCov">       1338 : llvm_compile_module(LLVMJitContext *context)</span></a>
+<a name="730"><span class="lineNum">     730 </span>            : {</a>
+<a name="731"><span class="lineNum">     731 </span>            :     LLVMJitHandle *handle;</a>
+<a name="732"><span class="lineNum">     732 </span>            :     MemoryContext oldcontext;</a>
+<a name="733"><span class="lineNum">     733 </span>            :     instr_time  starttime;</a>
+<a name="734"><span class="lineNum">     734 </span>            :     instr_time  endtime;</a>
+<a name="735"><span class="lineNum">     735 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="736"><span class="lineNum">     736 </span>            :     LLVMOrcLLJITRef compile_orc;</a>
+<a name="737"><span class="lineNum">     737 </span>            : #else</a>
+<a name="738"><span class="lineNum">     738 </span>            :     LLVMOrcJITStackRef compile_orc;</a>
+<a name="739"><span class="lineNum">     739 </span>            : #endif</a>
+<a name="740"><span class="lineNum">     740 </span>            : </a>
+<a name="741"><span class="lineNum">     741 </span><span class="lineCov">       1338 :     if (context-&gt;base.flags &amp; PGJIT_OPT3)</span></a>
+<a name="742"><span class="lineNum">     742 </span><span class="lineCov">        992 :         compile_orc = llvm_opt3_orc;</span></a>
+<a name="743"><span class="lineNum">     743 </span>            :     else</a>
+<a name="744"><span class="lineNum">     744 </span><span class="lineCov">        346 :         compile_orc = llvm_opt0_orc;</span></a>
+<a name="745"><span class="lineNum">     745 </span>            : </a>
+<a name="746"><span class="lineNum">     746 </span>            :     /* perform inlining */</a>
+<a name="747"><span class="lineNum">     747 </span><span class="lineCov">       1338 :     if (context-&gt;base.flags &amp; PGJIT_INLINE)</span></a>
+<a name="748"><span class="lineNum">     748 </span>            :     {</a>
+<a name="749"><span class="lineNum">     749 </span><span class="lineCov">        992 :         INSTR_TIME_SET_CURRENT(starttime);</span></a>
+<a name="750"><span class="lineNum">     750 </span><span class="lineCov">        992 :         llvm_inline(context-&gt;module);</span></a>
+<a name="751"><span class="lineNum">     751 </span><span class="lineCov">        992 :         INSTR_TIME_SET_CURRENT(endtime);</span></a>
+<a name="752"><span class="lineNum">     752 </span><span class="lineCov">        992 :         INSTR_TIME_ACCUM_DIFF(context-&gt;base.instr.inlining_counter,</span></a>
+<a name="753"><span class="lineNum">     753 </span>            :                               endtime, starttime);</a>
+<a name="754"><span class="lineNum">     754 </span>            :     }</a>
+<a name="755"><span class="lineNum">     755 </span>            : </a>
+<a name="756"><span class="lineNum">     756 </span><span class="lineCov">       1338 :     if (jit_dump_bitcode)</span></a>
+<a name="757"><span class="lineNum">     757 </span>            :     {</a>
+<a name="758"><span class="lineNum">     758 </span>            :         char       *filename;</a>
+<a name="759"><span class="lineNum">     759 </span>            : </a>
+<a name="760"><span class="lineNum">     760 </span><span class="lineNoCov">          0 :         filename = psprintf(&quot;%d.%zu.bc&quot;,</span></a>
+<a name="761"><span class="lineNum">     761 </span>            :                             MyProcPid,</a>
+<a name="762"><span class="lineNum">     762 </span>            :                             context-&gt;module_generation);</a>
+<a name="763"><span class="lineNum">     763 </span><span class="lineNoCov">          0 :         LLVMWriteBitcodeToFile(context-&gt;module, filename);</span></a>
+<a name="764"><span class="lineNum">     764 </span><span class="lineNoCov">          0 :         pfree(filename);</span></a>
+<a name="765"><span class="lineNum">     765 </span>            :     }</a>
+<a name="766"><span class="lineNum">     766 </span>            : </a>
+<a name="767"><span class="lineNum">     767 </span>            : </a>
+<a name="768"><span class="lineNum">     768 </span>            :     /* optimize according to the chosen optimization settings */</a>
+<a name="769"><span class="lineNum">     769 </span><span class="lineCov">       1338 :     INSTR_TIME_SET_CURRENT(starttime);</span></a>
+<a name="770"><span class="lineNum">     770 </span><span class="lineCov">       1338 :     llvm_optimize_module(context, context-&gt;module);</span></a>
+<a name="771"><span class="lineNum">     771 </span><span class="lineCov">       1338 :     INSTR_TIME_SET_CURRENT(endtime);</span></a>
+<a name="772"><span class="lineNum">     772 </span><span class="lineCov">       1338 :     INSTR_TIME_ACCUM_DIFF(context-&gt;base.instr.optimization_counter,</span></a>
+<a name="773"><span class="lineNum">     773 </span>            :                           endtime, starttime);</a>
+<a name="774"><span class="lineNum">     774 </span>            : </a>
+<a name="775"><span class="lineNum">     775 </span><span class="lineCov">       1338 :     if (jit_dump_bitcode)</span></a>
+<a name="776"><span class="lineNum">     776 </span>            :     {</a>
+<a name="777"><span class="lineNum">     777 </span>            :         char       *filename;</a>
+<a name="778"><span class="lineNum">     778 </span>            : </a>
+<a name="779"><span class="lineNum">     779 </span><span class="lineNoCov">          0 :         filename = psprintf(&quot;%d.%zu.optimized.bc&quot;,</span></a>
+<a name="780"><span class="lineNum">     780 </span>            :                             MyProcPid,</a>
+<a name="781"><span class="lineNum">     781 </span>            :                             context-&gt;module_generation);</a>
+<a name="782"><span class="lineNum">     782 </span><span class="lineNoCov">          0 :         LLVMWriteBitcodeToFile(context-&gt;module, filename);</span></a>
+<a name="783"><span class="lineNum">     783 </span><span class="lineNoCov">          0 :         pfree(filename);</span></a>
+<a name="784"><span class="lineNum">     784 </span>            :     }</a>
+<a name="785"><span class="lineNum">     785 </span>            : </a>
+<a name="786"><span class="lineNum">     786 </span>            :     handle = (LLVMJitHandle *)</a>
+<a name="787"><span class="lineNum">     787 </span><span class="lineCov">       1338 :         MemoryContextAlloc(TopMemoryContext, sizeof(LLVMJitHandle));</span></a>
+<a name="788"><span class="lineNum">     788 </span>            : </a>
+<a name="789"><span class="lineNum">     789 </span>            :     /*</a>
+<a name="790"><span class="lineNum">     790 </span>            :      * Emit the code. Note that this can, depending on the optimization</a>
+<a name="791"><span class="lineNum">     791 </span>            :      * settings, take noticeable resources as code emission executes low-level</a>
+<a name="792"><span class="lineNum">     792 </span>            :      * instruction combining/selection passes etc. Without optimization a</a>
+<a name="793"><span class="lineNum">     793 </span>            :      * faster instruction selection mechanism is used.</a>
+<a name="794"><span class="lineNum">     794 </span>            :      */</a>
+<a name="795"><span class="lineNum">     795 </span><span class="lineCov">       1338 :     INSTR_TIME_SET_CURRENT(starttime);</span></a>
+<a name="796"><span class="lineNum">     796 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="797"><span class="lineNum">     797 </span>            :     {</a>
+<a name="798"><span class="lineNum">     798 </span>            :         LLVMOrcThreadSafeModuleRef ts_module;</a>
+<a name="799"><span class="lineNum">     799 </span>            :         LLVMErrorRef error;</a>
+<a name="800"><span class="lineNum">     800 </span><span class="lineCov">       1338 :         LLVMOrcJITDylibRef jd = LLVMOrcLLJITGetMainJITDylib(compile_orc);</span></a>
+<a name="801"><span class="lineNum">     801 </span>            : </a>
+<a name="802"><span class="lineNum">     802 </span><span class="lineCov">       1338 :         ts_module = LLVMOrcCreateNewThreadSafeModule(context-&gt;module, llvm_ts_context);</span></a>
+<a name="803"><span class="lineNum">     803 </span>            : </a>
+<a name="804"><span class="lineNum">     804 </span><span class="lineCov">       1338 :         handle-&gt;lljit = compile_orc;</span></a>
+<a name="805"><span class="lineNum">     805 </span><span class="lineCov">       1338 :         handle-&gt;resource_tracker = LLVMOrcJITDylibCreateResourceTracker(jd);</span></a>
+<a name="806"><span class="lineNum">     806 </span>            : </a>
+<a name="807"><span class="lineNum">     807 </span>            :         /*</a>
+<a name="808"><span class="lineNum">     808 </span>            :          * NB: This doesn't actually emit code. That happens lazily the first</a>
+<a name="809"><span class="lineNum">     809 </span>            :          * time a symbol defined in the module is requested. Due to that</a>
+<a name="810"><span class="lineNum">     810 </span>            :          * llvm_get_function() also accounts for emission time.</a>
+<a name="811"><span class="lineNum">     811 </span>            :          */</a>
+<a name="812"><span class="lineNum">     812 </span>            : </a>
+<a name="813"><span class="lineNum">     813 </span><span class="lineCov">       1338 :         context-&gt;module = NULL; /* will be owned by LLJIT */</span></a>
+<a name="814"><span class="lineNum">     814 </span><span class="lineCov">       1338 :         error = LLVMOrcLLJITAddLLVMIRModuleWithRT(compile_orc,</span></a>
+<a name="815"><span class="lineNum">     815 </span>            :                                                   handle-&gt;resource_tracker,</a>
+<a name="816"><span class="lineNum">     816 </span>            :                                                   ts_module);</a>
+<a name="817"><span class="lineNum">     817 </span>            : </a>
+<a name="818"><span class="lineNum">     818 </span><span class="lineCov">       1338 :         if (error)</span></a>
+<a name="819"><span class="lineNum">     819 </span><span class="lineNoCov">          0 :             elog(ERROR, &quot;failed to JIT module: %s&quot;,</span></a>
+<a name="820"><span class="lineNum">     820 </span>            :                  llvm_error_message(error));</a>
+<a name="821"><span class="lineNum">     821 </span>            : </a>
+<a name="822"><span class="lineNum">     822 </span>            :         /* LLVMOrcLLJITAddLLVMIRModuleWithRT takes ownership of the module */</a>
+<a name="823"><span class="lineNum">     823 </span>            :     }</a>
+<a name="824"><span class="lineNum">     824 </span>            : #else</a>
+<a name="825"><span class="lineNum">     825 </span>            :     {</a>
+<a name="826"><span class="lineNum">     826 </span>            :         handle-&gt;stack = compile_orc;</a>
+<a name="827"><span class="lineNum">     827 </span>            :         if (LLVMOrcAddEagerlyCompiledIR(compile_orc, &amp;handle-&gt;orc_handle, context-&gt;module,</a>
+<a name="828"><span class="lineNum">     828 </span>            :                                         llvm_resolve_symbol, NULL))</a>
+<a name="829"><span class="lineNum">     829 </span>            :             elog(ERROR, &quot;failed to JIT module&quot;);</a>
+<a name="830"><span class="lineNum">     830 </span>            : </a>
+<a name="831"><span class="lineNum">     831 </span>            :         /* LLVMOrcAddEagerlyCompiledIR takes ownership of the module */</a>
+<a name="832"><span class="lineNum">     832 </span>            :     }</a>
+<a name="833"><span class="lineNum">     833 </span>            : #endif</a>
+<a name="834"><span class="lineNum">     834 </span>            : </a>
+<a name="835"><span class="lineNum">     835 </span><span class="lineCov">       1338 :     INSTR_TIME_SET_CURRENT(endtime);</span></a>
+<a name="836"><span class="lineNum">     836 </span><span class="lineCov">       1338 :     INSTR_TIME_ACCUM_DIFF(context-&gt;base.instr.emission_counter,</span></a>
+<a name="837"><span class="lineNum">     837 </span>            :                           endtime, starttime);</a>
+<a name="838"><span class="lineNum">     838 </span>            : </a>
+<a name="839"><span class="lineNum">     839 </span><span class="lineCov">       1338 :     context-&gt;module = NULL;</span></a>
+<a name="840"><span class="lineNum">     840 </span><span class="lineCov">       1338 :     context-&gt;compiled = true;</span></a>
+<a name="841"><span class="lineNum">     841 </span>            : </a>
+<a name="842"><span class="lineNum">     842 </span>            :     /* remember emitted code for cleanup and lookups */</a>
+<a name="843"><span class="lineNum">     843 </span><span class="lineCov">       1338 :     oldcontext = MemoryContextSwitchTo(TopMemoryContext);</span></a>
+<a name="844"><span class="lineNum">     844 </span><span class="lineCov">       1338 :     context-&gt;handles = lappend(context-&gt;handles, handle);</span></a>
+<a name="845"><span class="lineNum">     845 </span><span class="lineCov">       1338 :     MemoryContextSwitchTo(oldcontext);</span></a>
+<a name="846"><span class="lineNum">     846 </span>            : </a>
+<a name="847"><span class="lineNum">     847 </span><span class="lineCov">       1338 :     ereport(DEBUG1,</span></a>
+<a name="848"><span class="lineNum">     848 </span>            :             (errmsg_internal(&quot;time to inline: %.3fs, opt: %.3fs, emit: %.3fs&quot;,</a>
+<a name="849"><span class="lineNum">     849 </span>            :                              INSTR_TIME_GET_DOUBLE(context-&gt;base.instr.inlining_counter),</a>
+<a name="850"><span class="lineNum">     850 </span>            :                              INSTR_TIME_GET_DOUBLE(context-&gt;base.instr.optimization_counter),</a>
+<a name="851"><span class="lineNum">     851 </span>            :                              INSTR_TIME_GET_DOUBLE(context-&gt;base.instr.emission_counter)),</a>
+<a name="852"><span class="lineNum">     852 </span>            :              errhidestmt(true),</a>
+<a name="853"><span class="lineNum">     853 </span>            :              errhidecontext(true)));</a>
+<a name="854"><span class="lineNum">     854 </span><span class="lineCov">       1338 : }</span></a>
+<a name="855"><span class="lineNum">     855 </span>            : </a>
+<a name="856"><span class="lineNum">     856 </span>            : /*</a>
+<a name="857"><span class="lineNum">     857 </span>            :  * Per session initialization.</a>
+<a name="858"><span class="lineNum">     858 </span>            :  */</a>
+<a name="859"><span class="lineNum">     859 </span>            : static void</a>
+<a name="860"><span class="lineNum">     860 </span><span class="lineCov">       1734 : llvm_session_initialize(void)</span></a>
+<a name="861"><span class="lineNum">     861 </span>            : {</a>
+<a name="862"><span class="lineNum">     862 </span>            :     MemoryContext oldcontext;</a>
+<a name="863"><span class="lineNum">     863 </span><span class="lineCov">       1734 :     char       *error = NULL;</span></a>
+<a name="864"><span class="lineNum">     864 </span><span class="lineCov">       1734 :     char       *cpu = NULL;</span></a>
+<a name="865"><span class="lineNum">     865 </span><span class="lineCov">       1734 :     char       *features = NULL;</span></a>
+<a name="866"><span class="lineNum">     866 </span>            :     LLVMTargetMachineRef opt0_tm;</a>
+<a name="867"><span class="lineNum">     867 </span>            :     LLVMTargetMachineRef opt3_tm;</a>
+<a name="868"><span class="lineNum">     868 </span>            : </a>
+<a name="869"><span class="lineNum">     869 </span><span class="lineCov">       1734 :     if (llvm_session_initialized)</span></a>
+<a name="870"><span class="lineNum">     870 </span><span class="lineCov">        950 :         return;</span></a>
+<a name="871"><span class="lineNum">     871 </span>            : </a>
+<a name="872"><span class="lineNum">     872 </span><span class="lineCov">        784 :     oldcontext = MemoryContextSwitchTo(TopMemoryContext);</span></a>
+<a name="873"><span class="lineNum">     873 </span>            : </a>
+<a name="874"><span class="lineNum">     874 </span><span class="lineCov">        784 :     LLVMInitializeNativeTarget();</span></a>
+<a name="875"><span class="lineNum">     875 </span><span class="lineCov">        784 :     LLVMInitializeNativeAsmPrinter();</span></a>
+<a name="876"><span class="lineNum">     876 </span><span class="lineCov">        784 :     LLVMInitializeNativeAsmParser();</span></a>
+<a name="877"><span class="lineNum">     877 </span>            : </a>
+<a name="878"><span class="lineNum">     878 </span><span class="lineCov">        784 :     if (llvm_context == NULL)</span></a>
+<a name="879"><span class="lineNum">     879 </span>            :     {</a>
+<a name="880"><span class="lineNum">     880 </span><span class="lineCov">        784 :         llvm_context = LLVMContextCreate();</span></a>
+<a name="881"><span class="lineNum">     881 </span>            : </a>
+<a name="882"><span class="lineNum">     882 </span><span class="lineCov">        784 :         llvm_jit_context_in_use_count = 0;</span></a>
+<a name="883"><span class="lineNum">     883 </span><span class="lineCov">        784 :         llvm_llvm_context_reuse_count = 0;</span></a>
+<a name="884"><span class="lineNum">     884 </span>            :     }</a>
+<a name="885"><span class="lineNum">     885 </span>            : </a>
+<a name="886"><span class="lineNum">     886 </span>            :     /*</a>
+<a name="887"><span class="lineNum">     887 </span>            :      * When targeting LLVM 15, turn off opaque pointers for the context we</a>
+<a name="888"><span class="lineNum">     888 </span>            :      * build our code in.  We don't need to do so for other contexts (e.g.</a>
+<a name="889"><span class="lineNum">     889 </span>            :      * llvm_ts_context).  Once the IR is generated, it carries the necessary</a>
+<a name="890"><span class="lineNum">     890 </span>            :      * information.</a>
+<a name="891"><span class="lineNum">     891 </span>            :      *</a>
+<a name="892"><span class="lineNum">     892 </span>            :      * For 16 and above, opaque pointers must be used, and we have special</a>
+<a name="893"><span class="lineNum">     893 </span>            :      * code for that.</a>
+<a name="894"><span class="lineNum">     894 </span>            :      */</a>
+<a name="895"><span class="lineNum">     895 </span>            : #if LLVM_VERSION_MAJOR == 15</a>
+<a name="896"><span class="lineNum">     896 </span>            :     LLVMContextSetOpaquePointers(LLVMGetGlobalContext(), false);</a>
+<a name="897"><span class="lineNum">     897 </span>            : #endif</a>
+<a name="898"><span class="lineNum">     898 </span>            : </a>
+<a name="899"><span class="lineNum">     899 </span>            :     /*</a>
+<a name="900"><span class="lineNum">     900 </span>            :      * Synchronize types early, as that also includes inferring the target</a>
+<a name="901"><span class="lineNum">     901 </span>            :      * triple.</a>
+<a name="902"><span class="lineNum">     902 </span>            :      */</a>
+<a name="903"><span class="lineNum">     903 </span><span class="lineCov">        784 :     llvm_create_types();</span></a>
+<a name="904"><span class="lineNum">     904 </span>            : </a>
+<a name="905"><span class="lineNum">     905 </span>            :     /*</a>
+<a name="906"><span class="lineNum">     906 </span>            :      * Extract target information from loaded module.</a>
+<a name="907"><span class="lineNum">     907 </span>            :      */</a>
+<a name="908"><span class="lineNum">     908 </span><span class="lineCov">        784 :     llvm_set_target();</span></a>
+<a name="909"><span class="lineNum">     909 </span>            : </a>
+<a name="910"><span class="lineNum">     910 </span><span class="lineCov">        784 :     if (LLVMGetTargetFromTriple(llvm_triple, &amp;llvm_targetref, &amp;error) != 0)</span></a>
+<a name="911"><span class="lineNum">     911 </span>            :     {</a>
+<a name="912"><span class="lineNum">     912 </span><span class="lineNoCov">          0 :         elog(FATAL, &quot;failed to query triple %s&quot;, error);</span></a>
+<a name="913"><span class="lineNum">     913 </span>            :     }</a>
+<a name="914"><span class="lineNum">     914 </span>            : </a>
+<a name="915"><span class="lineNum">     915 </span>            :     /*</a>
+<a name="916"><span class="lineNum">     916 </span>            :      * We want the generated code to use all available features. Therefore</a>
+<a name="917"><span class="lineNum">     917 </span>            :      * grab the host CPU string and detect features of the current CPU. The</a>
+<a name="918"><span class="lineNum">     918 </span>            :      * latter is needed because some CPU architectures default to enabling</a>
+<a name="919"><span class="lineNum">     919 </span>            :      * features not all CPUs have (weird, huh).</a>
+<a name="920"><span class="lineNum">     920 </span>            :      */</a>
+<a name="921"><span class="lineNum">     921 </span><span class="lineCov">        784 :     cpu = LLVMGetHostCPUName();</span></a>
+<a name="922"><span class="lineNum">     922 </span><span class="lineCov">        784 :     features = LLVMGetHostCPUFeatures();</span></a>
+<a name="923"><span class="lineNum">     923 </span><span class="lineCov">        784 :     elog(DEBUG2, &quot;LLVMJIT detected CPU \&quot;%s\&quot;, with features \&quot;%s\&quot;&quot;,</span></a>
+<a name="924"><span class="lineNum">     924 </span>            :          cpu, features);</a>
+<a name="925"><span class="lineNum">     925 </span>            : </a>
+<a name="926"><span class="lineNum">     926 </span>            :     opt0_tm =</a>
+<a name="927"><span class="lineNum">     927 </span><span class="lineCov">        784 :         LLVMCreateTargetMachine(llvm_targetref, llvm_triple, cpu, features,</span></a>
+<a name="928"><span class="lineNum">     928 </span>            :                                 LLVMCodeGenLevelNone,</a>
+<a name="929"><span class="lineNum">     929 </span>            :                                 LLVMRelocDefault,</a>
+<a name="930"><span class="lineNum">     930 </span>            :                                 LLVMCodeModelJITDefault);</a>
+<a name="931"><span class="lineNum">     931 </span>            :     opt3_tm =</a>
+<a name="932"><span class="lineNum">     932 </span><span class="lineCov">        784 :         LLVMCreateTargetMachine(llvm_targetref, llvm_triple, cpu, features,</span></a>
+<a name="933"><span class="lineNum">     933 </span>            :                                 LLVMCodeGenLevelAggressive,</a>
+<a name="934"><span class="lineNum">     934 </span>            :                                 LLVMRelocDefault,</a>
+<a name="935"><span class="lineNum">     935 </span>            :                                 LLVMCodeModelJITDefault);</a>
+<a name="936"><span class="lineNum">     936 </span>            : </a>
+<a name="937"><span class="lineNum">     937 </span><span class="lineCov">        784 :     LLVMDisposeMessage(cpu);</span></a>
+<a name="938"><span class="lineNum">     938 </span><span class="lineCov">        784 :     cpu = NULL;</span></a>
+<a name="939"><span class="lineNum">     939 </span><span class="lineCov">        784 :     LLVMDisposeMessage(features);</span></a>
+<a name="940"><span class="lineNum">     940 </span><span class="lineCov">        784 :     features = NULL;</span></a>
+<a name="941"><span class="lineNum">     941 </span>            : </a>
+<a name="942"><span class="lineNum">     942 </span>            :     /* force symbols in main binary to be loaded */</a>
+<a name="943"><span class="lineNum">     943 </span><span class="lineCov">        784 :     LLVMLoadLibraryPermanently(NULL);</span></a>
+<a name="944"><span class="lineNum">     944 </span>            : </a>
+<a name="945"><span class="lineNum">     945 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="946"><span class="lineNum">     946 </span>            :     {</a>
+<a name="947"><span class="lineNum">     947 </span><span class="lineCov">        784 :         llvm_ts_context = LLVMOrcCreateNewThreadSafeContext();</span></a>
+<a name="948"><span class="lineNum">     948 </span>            : </a>
+<a name="949"><span class="lineNum">     949 </span><span class="lineCov">        784 :         llvm_opt0_orc = llvm_create_jit_instance(opt0_tm);</span></a>
+<a name="950"><span class="lineNum">     950 </span><span class="lineCov">        784 :         opt0_tm = 0;</span></a>
+<a name="951"><span class="lineNum">     951 </span>            : </a>
+<a name="952"><span class="lineNum">     952 </span><span class="lineCov">        784 :         llvm_opt3_orc = llvm_create_jit_instance(opt3_tm);</span></a>
+<a name="953"><span class="lineNum">     953 </span><span class="lineCov">        784 :         opt3_tm = 0;</span></a>
+<a name="954"><span class="lineNum">     954 </span>            :     }</a>
+<a name="955"><span class="lineNum">     955 </span>            : #else                           /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="956"><span class="lineNum">     956 </span>            :     {</a>
+<a name="957"><span class="lineNum">     957 </span>            :         llvm_opt0_orc = LLVMOrcCreateInstance(opt0_tm);</a>
+<a name="958"><span class="lineNum">     958 </span>            :         llvm_opt3_orc = LLVMOrcCreateInstance(opt3_tm);</a>
+<a name="959"><span class="lineNum">     959 </span>            : </a>
+<a name="960"><span class="lineNum">     960 </span>            : #if defined(HAVE_DECL_LLVMCREATEGDBREGISTRATIONLISTENER) &amp;&amp; HAVE_DECL_LLVMCREATEGDBREGISTRATIONLISTENER</a>
+<a name="961"><span class="lineNum">     961 </span>            :         if (jit_debugging_support)</a>
+<a name="962"><span class="lineNum">     962 </span>            :         {</a>
+<a name="963"><span class="lineNum">     963 </span>            :             LLVMJITEventListenerRef l = LLVMCreateGDBRegistrationListener();</a>
+<a name="964"><span class="lineNum">     964 </span>            : </a>
+<a name="965"><span class="lineNum">     965 </span>            :             LLVMOrcRegisterJITEventListener(llvm_opt0_orc, l);</a>
+<a name="966"><span class="lineNum">     966 </span>            :             LLVMOrcRegisterJITEventListener(llvm_opt3_orc, l);</a>
+<a name="967"><span class="lineNum">     967 </span>            :         }</a>
+<a name="968"><span class="lineNum">     968 </span>            : #endif</a>
+<a name="969"><span class="lineNum">     969 </span>            : #if defined(HAVE_DECL_LLVMCREATEPERFJITEVENTLISTENER) &amp;&amp; HAVE_DECL_LLVMCREATEPERFJITEVENTLISTENER</a>
+<a name="970"><span class="lineNum">     970 </span>            :         if (jit_profiling_support)</a>
+<a name="971"><span class="lineNum">     971 </span>            :         {</a>
+<a name="972"><span class="lineNum">     972 </span>            :             LLVMJITEventListenerRef l = LLVMCreatePerfJITEventListener();</a>
+<a name="973"><span class="lineNum">     973 </span>            : </a>
+<a name="974"><span class="lineNum">     974 </span>            :             LLVMOrcRegisterJITEventListener(llvm_opt0_orc, l);</a>
+<a name="975"><span class="lineNum">     975 </span>            :             LLVMOrcRegisterJITEventListener(llvm_opt3_orc, l);</a>
+<a name="976"><span class="lineNum">     976 </span>            :         }</a>
+<a name="977"><span class="lineNum">     977 </span>            : #endif</a>
+<a name="978"><span class="lineNum">     978 </span>            :     }</a>
+<a name="979"><span class="lineNum">     979 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="980"><span class="lineNum">     980 </span>            : </a>
+<a name="981"><span class="lineNum">     981 </span><span class="lineCov">        784 :     on_proc_exit(llvm_shutdown, 0);</span></a>
+<a name="982"><span class="lineNum">     982 </span>            : </a>
+<a name="983"><span class="lineNum">     983 </span><span class="lineCov">        784 :     llvm_session_initialized = true;</span></a>
+<a name="984"><span class="lineNum">     984 </span>            : </a>
+<a name="985"><span class="lineNum">     985 </span><span class="lineCov">        784 :     MemoryContextSwitchTo(oldcontext);</span></a>
+<a name="986"><span class="lineNum">     986 </span>            : }</a>
+<a name="987"><span class="lineNum">     987 </span>            : </a>
+<a name="988"><span class="lineNum">     988 </span>            : static void</a>
+<a name="989"><span class="lineNum">     989 </span><span class="lineCov">        784 : llvm_shutdown(int code, Datum arg)</span></a>
+<a name="990"><span class="lineNum">     990 </span>            : {</a>
+<a name="991"><span class="lineNum">     991 </span>            :     /*</a>
+<a name="992"><span class="lineNum">     992 </span>            :      * If llvm_shutdown() is reached while in a fatal-on-oom section an error</a>
+<a name="993"><span class="lineNum">     993 </span>            :      * has occurred in the middle of LLVM code. It is not safe to call back</a>
+<a name="994"><span class="lineNum">     994 </span>            :      * into LLVM (which is why a FATAL error was thrown).</a>
+<a name="995"><span class="lineNum">     995 </span>            :      *</a>
+<a name="996"><span class="lineNum">     996 </span>            :      * We do need to shutdown LLVM in other shutdown cases, otherwise e.g.</a>
+<a name="997"><span class="lineNum">     997 </span>            :      * profiling data won't be written out.</a>
+<a name="998"><span class="lineNum">     998 </span>            :      */</a>
+<a name="999"><span class="lineNum">     999 </span><span class="lineCov">        784 :     if (llvm_in_fatal_on_oom())</span></a>
+<a name="1000"><span class="lineNum">    1000 </span>            :     {</a>
+<a name="1001"><span class="lineNum">    1001 </span><span class="lineNoCov">          0 :         Assert(proc_exit_inprogress);</span></a>
+<a name="1002"><span class="lineNum">    1002 </span><span class="lineNoCov">          0 :         return;</span></a>
+<a name="1003"><span class="lineNum">    1003 </span>            :     }</a>
+<a name="1004"><span class="lineNum">    1004 </span>            : </a>
+<a name="1005"><span class="lineNum">    1005 </span><span class="lineCov">        784 :     if (llvm_jit_context_in_use_count != 0)</span></a>
+<a name="1006"><span class="lineNum">    1006 </span><span class="lineNoCov">          0 :         elog(PANIC, &quot;LLVMJitContext in use count not 0 at exit (is %zu)&quot;,</span></a>
+<a name="1007"><span class="lineNum">    1007 </span>            :              llvm_jit_context_in_use_count);</a>
+<a name="1008"><span class="lineNum">    1008 </span>            : </a>
+<a name="1009"><span class="lineNum">    1009 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="1010"><span class="lineNum">    1010 </span>            :     {</a>
+<a name="1011"><span class="lineNum">    1011 </span><span class="lineCov">        784 :         if (llvm_opt3_orc)</span></a>
+<a name="1012"><span class="lineNum">    1012 </span>            :         {</a>
+<a name="1013"><span class="lineNum">    1013 </span><span class="lineCov">        784 :             LLVMOrcDisposeLLJIT(llvm_opt3_orc);</span></a>
+<a name="1014"><span class="lineNum">    1014 </span><span class="lineCov">        784 :             llvm_opt3_orc = NULL;</span></a>
+<a name="1015"><span class="lineNum">    1015 </span>            :         }</a>
+<a name="1016"><span class="lineNum">    1016 </span><span class="lineCov">        784 :         if (llvm_opt0_orc)</span></a>
+<a name="1017"><span class="lineNum">    1017 </span>            :         {</a>
+<a name="1018"><span class="lineNum">    1018 </span><span class="lineCov">        784 :             LLVMOrcDisposeLLJIT(llvm_opt0_orc);</span></a>
+<a name="1019"><span class="lineNum">    1019 </span><span class="lineCov">        784 :             llvm_opt0_orc = NULL;</span></a>
+<a name="1020"><span class="lineNum">    1020 </span>            :         }</a>
+<a name="1021"><span class="lineNum">    1021 </span><span class="lineCov">        784 :         if (llvm_ts_context)</span></a>
+<a name="1022"><span class="lineNum">    1022 </span>            :         {</a>
+<a name="1023"><span class="lineNum">    1023 </span><span class="lineCov">        784 :             LLVMOrcDisposeThreadSafeContext(llvm_ts_context);</span></a>
+<a name="1024"><span class="lineNum">    1024 </span><span class="lineCov">        784 :             llvm_ts_context = NULL;</span></a>
+<a name="1025"><span class="lineNum">    1025 </span>            :         }</a>
+<a name="1026"><span class="lineNum">    1026 </span>            :     }</a>
+<a name="1027"><span class="lineNum">    1027 </span>            : #else                           /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="1028"><span class="lineNum">    1028 </span>            :     {</a>
+<a name="1029"><span class="lineNum">    1029 </span>            :         /* unregister profiling support, needs to be flushed to be useful */</a>
+<a name="1030"><span class="lineNum">    1030 </span>            : </a>
+<a name="1031"><span class="lineNum">    1031 </span>            :         if (llvm_opt3_orc)</a>
+<a name="1032"><span class="lineNum">    1032 </span>            :         {</a>
+<a name="1033"><span class="lineNum">    1033 </span>            : #if defined(HAVE_DECL_LLVMORCREGISTERPERF) &amp;&amp; HAVE_DECL_LLVMORCREGISTERPERF</a>
+<a name="1034"><span class="lineNum">    1034 </span>            :             if (jit_profiling_support)</a>
+<a name="1035"><span class="lineNum">    1035 </span>            :                 LLVMOrcUnregisterPerf(llvm_opt3_orc);</a>
+<a name="1036"><span class="lineNum">    1036 </span>            : #endif</a>
+<a name="1037"><span class="lineNum">    1037 </span>            :             LLVMOrcDisposeInstance(llvm_opt3_orc);</a>
+<a name="1038"><span class="lineNum">    1038 </span>            :             llvm_opt3_orc = NULL;</a>
+<a name="1039"><span class="lineNum">    1039 </span>            :         }</a>
+<a name="1040"><span class="lineNum">    1040 </span>            : </a>
+<a name="1041"><span class="lineNum">    1041 </span>            :         if (llvm_opt0_orc)</a>
+<a name="1042"><span class="lineNum">    1042 </span>            :         {</a>
+<a name="1043"><span class="lineNum">    1043 </span>            : #if defined(HAVE_DECL_LLVMORCREGISTERPERF) &amp;&amp; HAVE_DECL_LLVMORCREGISTERPERF</a>
+<a name="1044"><span class="lineNum">    1044 </span>            :             if (jit_profiling_support)</a>
+<a name="1045"><span class="lineNum">    1045 </span>            :                 LLVMOrcUnregisterPerf(llvm_opt0_orc);</a>
+<a name="1046"><span class="lineNum">    1046 </span>            : #endif</a>
+<a name="1047"><span class="lineNum">    1047 </span>            :             LLVMOrcDisposeInstance(llvm_opt0_orc);</a>
+<a name="1048"><span class="lineNum">    1048 </span>            :             llvm_opt0_orc = NULL;</a>
+<a name="1049"><span class="lineNum">    1049 </span>            :         }</a>
+<a name="1050"><span class="lineNum">    1050 </span>            :     }</a>
+<a name="1051"><span class="lineNum">    1051 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="1052"><span class="lineNum">    1052 </span>            : }</a>
+<a name="1053"><span class="lineNum">    1053 </span>            : </a>
+<a name="1054"><span class="lineNum">    1054 </span>            : /* helper for llvm_create_types, returning a function's return type */</a>
+<a name="1055"><span class="lineNum">    1055 </span>            : static LLVMTypeRef</a>
+<a name="1056"><span class="lineNum">    1056 </span><span class="lineCov">        784 : load_return_type(LLVMModuleRef mod, const char *name)</span></a>
+<a name="1057"><span class="lineNum">    1057 </span>            : {</a>
+<a name="1058"><span class="lineNum">    1058 </span>            :     LLVMValueRef value;</a>
+<a name="1059"><span class="lineNum">    1059 </span>            :     LLVMTypeRef typ;</a>
+<a name="1060"><span class="lineNum">    1060 </span>            : </a>
+<a name="1061"><span class="lineNum">    1061 </span>            :     /* this'll return a *pointer* to the function */</a>
+<a name="1062"><span class="lineNum">    1062 </span><span class="lineCov">        784 :     value = LLVMGetNamedFunction(mod, name);</span></a>
+<a name="1063"><span class="lineNum">    1063 </span><span class="lineCov">        784 :     if (!value)</span></a>
+<a name="1064"><span class="lineNum">    1064 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;function %s is unknown&quot;, name);</span></a>
+<a name="1065"><span class="lineNum">    1065 </span>            : </a>
+<a name="1066"><span class="lineNum">    1066 </span><span class="lineCov">        784 :     typ = LLVMGetFunctionReturnType(value); /* in llvmjit_wrap.cpp */</span></a>
+<a name="1067"><span class="lineNum">    1067 </span>            : </a>
+<a name="1068"><span class="lineNum">    1068 </span><span class="lineCov">        784 :     return typ;</span></a>
+<a name="1069"><span class="lineNum">    1069 </span>            : }</a>
+<a name="1070"><span class="lineNum">    1070 </span>            : </a>
+<a name="1071"><span class="lineNum">    1071 </span>            : /*</a>
+<a name="1072"><span class="lineNum">    1072 </span>            :  * Load triple &amp; layout from clang emitted file so we're guaranteed to be</a>
+<a name="1073"><span class="lineNum">    1073 </span>            :  * compatible.</a>
+<a name="1074"><span class="lineNum">    1074 </span>            :  */</a>
+<a name="1075"><span class="lineNum">    1075 </span>            : static void</a>
+<a name="1076"><span class="lineNum">    1076 </span><span class="lineCov">        784 : llvm_set_target(void)</span></a>
+<a name="1077"><span class="lineNum">    1077 </span>            : {</a>
+<a name="1078"><span class="lineNum">    1078 </span><span class="lineCov">        784 :     if (!llvm_types_module)</span></a>
+<a name="1079"><span class="lineNum">    1079 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;failed to extract target information, llvmjit_types.c not loaded&quot;);</span></a>
+<a name="1080"><span class="lineNum">    1080 </span>            : </a>
+<a name="1081"><span class="lineNum">    1081 </span><span class="lineCov">        784 :     if (llvm_triple == NULL)</span></a>
+<a name="1082"><span class="lineNum">    1082 </span><span class="lineCov">        784 :         llvm_triple = pstrdup(LLVMGetTarget(llvm_types_module));</span></a>
+<a name="1083"><span class="lineNum">    1083 </span>            : </a>
+<a name="1084"><span class="lineNum">    1084 </span><span class="lineCov">        784 :     if (llvm_layout == NULL)</span></a>
+<a name="1085"><span class="lineNum">    1085 </span><span class="lineCov">        784 :         llvm_layout = pstrdup(LLVMGetDataLayoutStr(llvm_types_module));</span></a>
+<a name="1086"><span class="lineNum">    1086 </span><span class="lineCov">        784 : }</span></a>
+<a name="1087"><span class="lineNum">    1087 </span>            : </a>
+<a name="1088"><span class="lineNum">    1088 </span>            : /*</a>
+<a name="1089"><span class="lineNum">    1089 </span>            :  * Load required information, types, function signatures from llvmjit_types.c</a>
+<a name="1090"><span class="lineNum">    1090 </span>            :  * and make them available in global variables.</a>
+<a name="1091"><span class="lineNum">    1091 </span>            :  *</a>
+<a name="1092"><span class="lineNum">    1092 </span>            :  * Those global variables are then used while emitting code.</a>
+<a name="1093"><span class="lineNum">    1093 </span>            :  */</a>
+<a name="1094"><span class="lineNum">    1094 </span>            : static void</a>
+<a name="1095"><span class="lineNum">    1095 </span><span class="lineCov">        784 : llvm_create_types(void)</span></a>
+<a name="1096"><span class="lineNum">    1096 </span>            : {</a>
+<a name="1097"><span class="lineNum">    1097 </span>            :     char        path[MAXPGPATH];</a>
+<a name="1098"><span class="lineNum">    1098 </span>            :     LLVMMemoryBufferRef buf;</a>
+<a name="1099"><span class="lineNum">    1099 </span>            :     char       *msg;</a>
+<a name="1100"><span class="lineNum">    1100 </span>            : </a>
+<a name="1101"><span class="lineNum">    1101 </span><span class="lineCov">        784 :     snprintf(path, MAXPGPATH, &quot;%s/%s&quot;, pkglib_path, &quot;llvmjit_types.bc&quot;);</span></a>
+<a name="1102"><span class="lineNum">    1102 </span>            : </a>
+<a name="1103"><span class="lineNum">    1103 </span>            :     /* open file */</a>
+<a name="1104"><span class="lineNum">    1104 </span><span class="lineCov">        784 :     if (LLVMCreateMemoryBufferWithContentsOfFile(path, &amp;buf, &amp;msg))</span></a>
+<a name="1105"><span class="lineNum">    1105 </span>            :     {</a>
+<a name="1106"><span class="lineNum">    1106 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;LLVMCreateMemoryBufferWithContentsOfFile(%s) failed: %s&quot;,</span></a>
+<a name="1107"><span class="lineNum">    1107 </span>            :              path, msg);</a>
+<a name="1108"><span class="lineNum">    1108 </span>            :     }</a>
+<a name="1109"><span class="lineNum">    1109 </span>            : </a>
+<a name="1110"><span class="lineNum">    1110 </span>            :     /* eagerly load contents, going to need it all */</a>
+<a name="1111"><span class="lineNum">    1111 </span><span class="lineCov">        784 :     if (LLVMParseBitcodeInContext2(llvm_context, buf, &amp;llvm_types_module))</span></a>
+<a name="1112"><span class="lineNum">    1112 </span>            :     {</a>
+<a name="1113"><span class="lineNum">    1113 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;LLVMParseBitcodeInContext2 of %s failed&quot;, path);</span></a>
+<a name="1114"><span class="lineNum">    1114 </span>            :     }</a>
+<a name="1115"><span class="lineNum">    1115 </span><span class="lineCov">        784 :     LLVMDisposeMemoryBuffer(buf);</span></a>
+<a name="1116"><span class="lineNum">    1116 </span>            : </a>
+<a name="1117"><span class="lineNum">    1117 </span><span class="lineCov">        784 :     TypeSizeT = llvm_pg_var_type(&quot;TypeSizeT&quot;);</span></a>
+<a name="1118"><span class="lineNum">    1118 </span><span class="lineCov">        784 :     TypeParamBool = load_return_type(llvm_types_module, &quot;FunctionReturningBool&quot;);</span></a>
+<a name="1119"><span class="lineNum">    1119 </span><span class="lineCov">        784 :     TypeStorageBool = llvm_pg_var_type(&quot;TypeStorageBool&quot;);</span></a>
+<a name="1120"><span class="lineNum">    1120 </span><span class="lineCov">        784 :     TypePGFunction = llvm_pg_var_type(&quot;TypePGFunction&quot;);</span></a>
+<a name="1121"><span class="lineNum">    1121 </span><span class="lineCov">        784 :     StructNullableDatum = llvm_pg_var_type(&quot;StructNullableDatum&quot;);</span></a>
+<a name="1122"><span class="lineNum">    1122 </span><span class="lineCov">        784 :     StructExprContext = llvm_pg_var_type(&quot;StructExprContext&quot;);</span></a>
+<a name="1123"><span class="lineNum">    1123 </span><span class="lineCov">        784 :     StructExprEvalStep = llvm_pg_var_type(&quot;StructExprEvalStep&quot;);</span></a>
+<a name="1124"><span class="lineNum">    1124 </span><span class="lineCov">        784 :     StructExprState = llvm_pg_var_type(&quot;StructExprState&quot;);</span></a>
+<a name="1125"><span class="lineNum">    1125 </span><span class="lineCov">        784 :     StructFunctionCallInfoData = llvm_pg_var_type(&quot;StructFunctionCallInfoData&quot;);</span></a>
+<a name="1126"><span class="lineNum">    1126 </span><span class="lineCov">        784 :     StructMemoryContextData = llvm_pg_var_type(&quot;StructMemoryContextData&quot;);</span></a>
+<a name="1127"><span class="lineNum">    1127 </span><span class="lineCov">        784 :     StructTupleTableSlot = llvm_pg_var_type(&quot;StructTupleTableSlot&quot;);</span></a>
+<a name="1128"><span class="lineNum">    1128 </span><span class="lineCov">        784 :     StructHeapTupleTableSlot = llvm_pg_var_type(&quot;StructHeapTupleTableSlot&quot;);</span></a>
+<a name="1129"><span class="lineNum">    1129 </span><span class="lineCov">        784 :     StructMinimalTupleTableSlot = llvm_pg_var_type(&quot;StructMinimalTupleTableSlot&quot;);</span></a>
+<a name="1130"><span class="lineNum">    1130 </span><span class="lineCov">        784 :     StructHeapTupleData = llvm_pg_var_type(&quot;StructHeapTupleData&quot;);</span></a>
+<a name="1131"><span class="lineNum">    1131 </span><span class="lineCov">        784 :     StructHeapTupleHeaderData = llvm_pg_var_type(&quot;StructHeapTupleHeaderData&quot;);</span></a>
+<a name="1132"><span class="lineNum">    1132 </span><span class="lineCov">        784 :     StructTupleDescData = llvm_pg_var_type(&quot;StructTupleDescData&quot;);</span></a>
+<a name="1133"><span class="lineNum">    1133 </span><span class="lineCov">        784 :     StructAggState = llvm_pg_var_type(&quot;StructAggState&quot;);</span></a>
+<a name="1134"><span class="lineNum">    1134 </span><span class="lineCov">        784 :     StructAggStatePerGroupData = llvm_pg_var_type(&quot;StructAggStatePerGroupData&quot;);</span></a>
+<a name="1135"><span class="lineNum">    1135 </span><span class="lineCov">        784 :     StructAggStatePerTransData = llvm_pg_var_type(&quot;StructAggStatePerTransData&quot;);</span></a>
+<a name="1136"><span class="lineNum">    1136 </span><span class="lineCov">        784 :     StructPlanState = llvm_pg_var_type(&quot;StructPlanState&quot;);</span></a>
+<a name="1137"><span class="lineNum">    1137 </span><span class="lineCov">        784 :     StructMinimalTupleData = llvm_pg_var_type(&quot;StructMinimalTupleData&quot;);</span></a>
+<a name="1138"><span class="lineNum">    1138 </span>            : </a>
+<a name="1139"><span class="lineNum">    1139 </span><span class="lineCov">        784 :     AttributeTemplate = LLVMGetNamedFunction(llvm_types_module, &quot;AttributeTemplate&quot;);</span></a>
+<a name="1140"><span class="lineNum">    1140 </span><span class="lineCov">        784 :     ExecEvalSubroutineTemplate = LLVMGetNamedFunction(llvm_types_module, &quot;ExecEvalSubroutineTemplate&quot;);</span></a>
+<a name="1141"><span class="lineNum">    1141 </span><span class="lineCov">        784 :     ExecEvalBoolSubroutineTemplate = LLVMGetNamedFunction(llvm_types_module, &quot;ExecEvalBoolSubroutineTemplate&quot;);</span></a>
+<a name="1142"><span class="lineNum">    1142 </span><span class="lineCov">        784 : }</span></a>
+<a name="1143"><span class="lineNum">    1143 </span>            : </a>
+<a name="1144"><span class="lineNum">    1144 </span>            : /*</a>
+<a name="1145"><span class="lineNum">    1145 </span>            :  * Split a symbol into module / function parts.  If the function is in the</a>
+<a name="1146"><span class="lineNum">    1146 </span>            :  * main binary (or an external library) *modname will be NULL.</a>
+<a name="1147"><span class="lineNum">    1147 </span>            :  */</a>
+<a name="1148"><span class="lineNum">    1148 </span>            : void</a>
+<a name="1149"><span class="lineNum">    1149 </span><span class="lineCov">      34278 : llvm_split_symbol_name(const char *name, char **modname, char **funcname)</span></a>
+<a name="1150"><span class="lineNum">    1150 </span>            : {</a>
+<a name="1151"><span class="lineNum">    1151 </span><span class="lineCov">      34278 :     *modname = NULL;</span></a>
+<a name="1152"><span class="lineNum">    1152 </span><span class="lineCov">      34278 :     *funcname = NULL;</span></a>
+<a name="1153"><span class="lineNum">    1153 </span>            : </a>
+<a name="1154"><span class="lineNum">    1154 </span>            :     /*</a>
+<a name="1155"><span class="lineNum">    1155 </span>            :      * Module function names are pgextern.$module.$funcname</a>
+<a name="1156"><span class="lineNum">    1156 </span>            :      */</a>
+<a name="1157"><span class="lineNum">    1157 </span><span class="lineCov">      34278 :     if (strncmp(name, &quot;pgextern.&quot;, strlen(&quot;pgextern.&quot;)) == 0)</span></a>
+<a name="1158"><span class="lineNum">    1158 </span>            :     {</a>
+<a name="1159"><span class="lineNum">    1159 </span>            :         /*</a>
+<a name="1160"><span class="lineNum">    1160 </span>            :          * Symbol names cannot contain a ., therefore we can split based on</a>
+<a name="1161"><span class="lineNum">    1161 </span>            :          * first and last occurrence of one.</a>
+<a name="1162"><span class="lineNum">    1162 </span>            :          */</a>
+<a name="1163"><span class="lineNum">    1163 </span><span class="lineCov">         88 :         *funcname = rindex(name, '.');</span></a>
+<a name="1164"><span class="lineNum">    1164 </span><span class="lineCov">         88 :         (*funcname)++;          /* jump over . */</span></a>
+<a name="1165"><span class="lineNum">    1165 </span>            : </a>
+<a name="1166"><span class="lineNum">    1166 </span><span class="lineCov">        176 :         *modname = pnstrdup(name + strlen(&quot;pgextern.&quot;),</span></a>
+<a name="1167"><span class="lineNum">    1167 </span><span class="lineCov">         88 :                             *funcname - name - strlen(&quot;pgextern.&quot;) - 1);</span></a>
+<a name="1168"><span class="lineNum">    1168 </span><span class="lineCov">         88 :         Assert(funcname);</span></a>
+<a name="1169"><span class="lineNum">    1169 </span>            : </a>
+<a name="1170"><span class="lineNum">    1170 </span><span class="lineCov">         88 :         *funcname = pstrdup(*funcname);</span></a>
+<a name="1171"><span class="lineNum">    1171 </span>            :     }</a>
+<a name="1172"><span class="lineNum">    1172 </span>            :     else</a>
+<a name="1173"><span class="lineNum">    1173 </span>            :     {</a>
+<a name="1174"><span class="lineNum">    1174 </span><span class="lineCov">      34190 :         *modname = NULL;</span></a>
+<a name="1175"><span class="lineNum">    1175 </span><span class="lineCov">      34190 :         *funcname = pstrdup(name);</span></a>
+<a name="1176"><span class="lineNum">    1176 </span>            :     }</a>
+<a name="1177"><span class="lineNum">    1177 </span><span class="lineCov">      34278 : }</span></a>
+<a name="1178"><span class="lineNum">    1178 </span>            : </a>
+<a name="1179"><span class="lineNum">    1179 </span>            : /*</a>
+<a name="1180"><span class="lineNum">    1180 </span>            :  * Attempt to resolve symbol, so LLVM can emit a reference to it.</a>
+<a name="1181"><span class="lineNum">    1181 </span>            :  */</a>
+<a name="1182"><span class="lineNum">    1182 </span>            : static uint64_t</a>
+<a name="1183"><span class="lineNum">    1183 </span><span class="lineCov">         16 : llvm_resolve_symbol(const char *symname, void *ctx)</span></a>
+<a name="1184"><span class="lineNum">    1184 </span>            : {</a>
+<a name="1185"><span class="lineNum">    1185 </span>            :     uintptr_t   addr;</a>
+<a name="1186"><span class="lineNum">    1186 </span>            :     char       *funcname;</a>
+<a name="1187"><span class="lineNum">    1187 </span>            :     char       *modname;</a>
+<a name="1188"><span class="lineNum">    1188 </span>            : </a>
+<a name="1189"><span class="lineNum">    1189 </span>            :     /*</a>
+<a name="1190"><span class="lineNum">    1190 </span>            :      * macOS prefixes all object level symbols with an underscore. But neither</a>
+<a name="1191"><span class="lineNum">    1191 </span>            :      * dlsym() nor PG's inliner expect that. So undo.</a>
+<a name="1192"><span class="lineNum">    1192 </span>            :      */</a>
+<a name="1193"><span class="lineNum">    1193 </span>            : #if defined(__darwin__)</a>
+<a name="1194"><span class="lineNum">    1194 </span>            :     if (symname[0] != '_')</a>
+<a name="1195"><span class="lineNum">    1195 </span>            :         elog(ERROR, &quot;expected prefixed symbol name, but got \&quot;%s\&quot;&quot;, symname);</a>
+<a name="1196"><span class="lineNum">    1196 </span>            :     symname++;</a>
+<a name="1197"><span class="lineNum">    1197 </span>            : #endif</a>
+<a name="1198"><span class="lineNum">    1198 </span>            : </a>
+<a name="1199"><span class="lineNum">    1199 </span><span class="lineCov">         16 :     llvm_split_symbol_name(symname, &amp;modname, &amp;funcname);</span></a>
+<a name="1200"><span class="lineNum">    1200 </span>            : </a>
+<a name="1201"><span class="lineNum">    1201 </span>            :     /* functions that aren't resolved to names shouldn't ever get here */</a>
+<a name="1202"><span class="lineNum">    1202 </span><span class="lineCov">         16 :     Assert(funcname);</span></a>
+<a name="1203"><span class="lineNum">    1203 </span>            : </a>
+<a name="1204"><span class="lineNum">    1204 </span><span class="lineCov">         16 :     if (modname)</span></a>
+<a name="1205"><span class="lineNum">    1205 </span><span class="lineCov">         16 :         addr = (uintptr_t) load_external_function(modname, funcname,</span></a>
+<a name="1206"><span class="lineNum">    1206 </span>            :                                                   true, NULL);</a>
+<a name="1207"><span class="lineNum">    1207 </span>            :     else</a>
+<a name="1208"><span class="lineNum">    1208 </span><span class="lineNoCov">          0 :         addr = (uintptr_t) LLVMSearchForAddressOfSymbol(symname);</span></a>
+<a name="1209"><span class="lineNum">    1209 </span>            : </a>
+<a name="1210"><span class="lineNum">    1210 </span><span class="lineCov">         16 :     pfree(funcname);</span></a>
+<a name="1211"><span class="lineNum">    1211 </span><span class="lineCov">         16 :     if (modname)</span></a>
+<a name="1212"><span class="lineNum">    1212 </span><span class="lineCov">         16 :         pfree(modname);</span></a>
+<a name="1213"><span class="lineNum">    1213 </span>            : </a>
+<a name="1214"><span class="lineNum">    1214 </span>            :     /* let LLVM will error out - should never happen */</a>
+<a name="1215"><span class="lineNum">    1215 </span><span class="lineCov">         16 :     if (!addr)</span></a>
+<a name="1216"><span class="lineNum">    1216 </span><span class="lineNoCov">          0 :         elog(WARNING, &quot;failed to resolve name %s&quot;, symname);</span></a>
+<a name="1217"><span class="lineNum">    1217 </span>            : </a>
+<a name="1218"><span class="lineNum">    1218 </span><span class="lineCov">         16 :     return (uint64_t) addr;</span></a>
+<a name="1219"><span class="lineNum">    1219 </span>            : }</a>
+<a name="1220"><span class="lineNum">    1220 </span>            : </a>
+<a name="1221"><span class="lineNum">    1221 </span>            : #if LLVM_VERSION_MAJOR &gt; 11</a>
+<a name="1222"><span class="lineNum">    1222 </span>            : </a>
+<a name="1223"><span class="lineNum">    1223 </span>            : static LLVMErrorRef</a>
+<a name="1224"><span class="lineNum">    1224 </span><span class="lineCov">         16 : llvm_resolve_symbols(LLVMOrcDefinitionGeneratorRef GeneratorObj, void *Ctx,</span></a>
+<a name="1225"><span class="lineNum">    1225 </span>            :                      LLVMOrcLookupStateRef *LookupState, LLVMOrcLookupKind Kind,</a>
+<a name="1226"><span class="lineNum">    1226 </span>            :                      LLVMOrcJITDylibRef JD, LLVMOrcJITDylibLookupFlags JDLookupFlags,</a>
+<a name="1227"><span class="lineNum">    1227 </span>            :                      LLVMOrcCLookupSet LookupSet, size_t LookupSetSize)</a>
+<a name="1228"><span class="lineNum">    1228 </span>            : {</a>
+<a name="1229"><span class="lineNum">    1229 </span>            : #if LLVM_VERSION_MAJOR &gt; 14</a>
+<a name="1230"><span class="lineNum">    1230 </span>            :     LLVMOrcCSymbolMapPairs symbols = palloc0(sizeof(LLVMOrcCSymbolMapPair) * LookupSetSize);</a>
+<a name="1231"><span class="lineNum">    1231 </span>            : #else</a>
+<a name="1232"><span class="lineNum">    1232 </span><span class="lineCov">         16 :     LLVMOrcCSymbolMapPairs symbols = palloc0(sizeof(LLVMJITCSymbolMapPair) * LookupSetSize);</span></a>
+<a name="1233"><span class="lineNum">    1233 </span>            : #endif</a>
+<a name="1234"><span class="lineNum">    1234 </span>            :     LLVMErrorRef error;</a>
+<a name="1235"><span class="lineNum">    1235 </span>            :     LLVMOrcMaterializationUnitRef mu;</a>
+<a name="1236"><span class="lineNum">    1236 </span>            : </a>
+<a name="1237"><span class="lineNum">    1237 </span><span class="lineCov">         32 :     for (int i = 0; i &lt; LookupSetSize; i++)</span></a>
+<a name="1238"><span class="lineNum">    1238 </span>            :     {</a>
+<a name="1239"><span class="lineNum">    1239 </span><span class="lineCov">         16 :         const char *name = LLVMOrcSymbolStringPoolEntryStr(LookupSet[i].Name);</span></a>
+<a name="1240"><span class="lineNum">    1240 </span>            : </a>
+<a name="1241"><span class="lineNum">    1241 </span>            : #if LLVM_VERSION_MAJOR &gt; 12</a>
+<a name="1242"><span class="lineNum">    1242 </span><span class="lineCov">         16 :         LLVMOrcRetainSymbolStringPoolEntry(LookupSet[i].Name);</span></a>
+<a name="1243"><span class="lineNum">    1243 </span>            : #endif</a>
+<a name="1244"><span class="lineNum">    1244 </span><span class="lineCov">         16 :         symbols[i].Name = LookupSet[i].Name;</span></a>
+<a name="1245"><span class="lineNum">    1245 </span><span class="lineCov">         16 :         symbols[i].Sym.Address = llvm_resolve_symbol(name, NULL);</span></a>
+<a name="1246"><span class="lineNum">    1246 </span><span class="lineCov">         16 :         symbols[i].Sym.Flags.GenericFlags = LLVMJITSymbolGenericFlagsExported;</span></a>
+<a name="1247"><span class="lineNum">    1247 </span>            :     }</a>
+<a name="1248"><span class="lineNum">    1248 </span>            : </a>
+<a name="1249"><span class="lineNum">    1249 </span><span class="lineCov">         16 :     mu = LLVMOrcAbsoluteSymbols(symbols, LookupSetSize);</span></a>
+<a name="1250"><span class="lineNum">    1250 </span><span class="lineCov">         16 :     error = LLVMOrcJITDylibDefine(JD, mu);</span></a>
+<a name="1251"><span class="lineNum">    1251 </span><span class="lineCov">         16 :     if (error != LLVMErrorSuccess)</span></a>
+<a name="1252"><span class="lineNum">    1252 </span><span class="lineNoCov">          0 :         LLVMOrcDisposeMaterializationUnit(mu);</span></a>
+<a name="1253"><span class="lineNum">    1253 </span>            : </a>
+<a name="1254"><span class="lineNum">    1254 </span><span class="lineCov">         16 :     pfree(symbols);</span></a>
+<a name="1255"><span class="lineNum">    1255 </span>            : </a>
+<a name="1256"><span class="lineNum">    1256 </span><span class="lineCov">         16 :     return error;</span></a>
+<a name="1257"><span class="lineNum">    1257 </span>            : }</a>
+<a name="1258"><span class="lineNum">    1258 </span>            : </a>
+<a name="1259"><span class="lineNum">    1259 </span>            : /*</a>
+<a name="1260"><span class="lineNum">    1260 </span>            :  * We cannot throw errors through LLVM (without causing a FATAL at least), so</a>
+<a name="1261"><span class="lineNum">    1261 </span>            :  * just use WARNING here. That's OK anyway, as the error is also reported at</a>
+<a name="1262"><span class="lineNum">    1262 </span>            :  * the top level action (with less detail) and there might be multiple</a>
+<a name="1263"><span class="lineNum">    1263 </span>            :  * invocations of errors with details.</a>
+<a name="1264"><span class="lineNum">    1264 </span>            :  *</a>
+<a name="1265"><span class="lineNum">    1265 </span>            :  * This doesn't really happen during normal operation, but in cases like</a>
+<a name="1266"><span class="lineNum">    1266 </span>            :  * symbol resolution breakage. So just using elog(WARNING) is fine.</a>
+<a name="1267"><span class="lineNum">    1267 </span>            :  */</a>
+<a name="1268"><span class="lineNum">    1268 </span>            : static void</a>
+<a name="1269"><span class="lineNum">    1269 </span><span class="lineNoCov">          0 : llvm_log_jit_error(void *ctx, LLVMErrorRef error)</span></a>
+<a name="1270"><span class="lineNum">    1270 </span>            : {</a>
+<a name="1271"><span class="lineNum">    1271 </span><span class="lineNoCov">          0 :     elog(WARNING, &quot;error during JITing: %s&quot;,</span></a>
+<a name="1272"><span class="lineNum">    1272 </span>            :          llvm_error_message(error));</a>
+<a name="1273"><span class="lineNum">    1273 </span><span class="lineNoCov">          0 : }</span></a>
+<a name="1274"><span class="lineNum">    1274 </span>            : </a>
+<a name="1275"><span class="lineNum">    1275 </span>            : /*</a>
+<a name="1276"><span class="lineNum">    1276 </span>            :  * Create our own object layer, so we can add event listeners.</a>
+<a name="1277"><span class="lineNum">    1277 </span>            :  */</a>
+<a name="1278"><span class="lineNum">    1278 </span>            : static LLVMOrcObjectLayerRef</a>
+<a name="1279"><span class="lineNum">    1279 </span><span class="lineCov">       1568 : llvm_create_object_layer(void *Ctx, LLVMOrcExecutionSessionRef ES, const char *Triple)</span></a>
+<a name="1280"><span class="lineNum">    1280 </span>            : {</a>
+<a name="1281"><span class="lineNum">    1281 </span>            :     LLVMOrcObjectLayerRef objlayer =</a>
+<a name="1282"><span class="lineNum">    1282 </span><span class="lineCov">       1568 :         LLVMOrcCreateRTDyldObjectLinkingLayerWithSectionMemoryManager(ES);</span></a>
+<a name="1283"><span class="lineNum">    1283 </span>            : </a>
+<a name="1284"><span class="lineNum">    1284 </span>            : #if defined(HAVE_DECL_LLVMCREATEGDBREGISTRATIONLISTENER) &amp;&amp; HAVE_DECL_LLVMCREATEGDBREGISTRATIONLISTENER</a>
+<a name="1285"><span class="lineNum">    1285 </span><span class="lineCov">       1568 :     if (jit_debugging_support)</span></a>
+<a name="1286"><span class="lineNum">    1286 </span>            :     {</a>
+<a name="1287"><span class="lineNum">    1287 </span><span class="lineNoCov">          0 :         LLVMJITEventListenerRef l = LLVMCreateGDBRegistrationListener();</span></a>
+<a name="1288"><span class="lineNum">    1288 </span>            : </a>
+<a name="1289"><span class="lineNum">    1289 </span><span class="lineNoCov">          0 :         LLVMOrcRTDyldObjectLinkingLayerRegisterJITEventListener(objlayer, l);</span></a>
+<a name="1290"><span class="lineNum">    1290 </span>            :     }</a>
+<a name="1291"><span class="lineNum">    1291 </span>            : #endif</a>
+<a name="1292"><span class="lineNum">    1292 </span>            : </a>
+<a name="1293"><span class="lineNum">    1293 </span>            : #if defined(HAVE_DECL_LLVMCREATEPERFJITEVENTLISTENER) &amp;&amp; HAVE_DECL_LLVMCREATEPERFJITEVENTLISTENER</a>
+<a name="1294"><span class="lineNum">    1294 </span><span class="lineCov">       1568 :     if (jit_profiling_support)</span></a>
+<a name="1295"><span class="lineNum">    1295 </span>            :     {</a>
+<a name="1296"><span class="lineNum">    1296 </span><span class="lineNoCov">          0 :         LLVMJITEventListenerRef l = LLVMCreatePerfJITEventListener();</span></a>
+<a name="1297"><span class="lineNum">    1297 </span>            : </a>
+<a name="1298"><span class="lineNum">    1298 </span><span class="lineNoCov">          0 :         LLVMOrcRTDyldObjectLinkingLayerRegisterJITEventListener(objlayer, l);</span></a>
+<a name="1299"><span class="lineNum">    1299 </span>            :     }</a>
+<a name="1300"><span class="lineNum">    1300 </span>            : #endif</a>
+<a name="1301"><span class="lineNum">    1301 </span>            : </a>
+<a name="1302"><span class="lineNum">    1302 </span><span class="lineCov">       1568 :     return objlayer;</span></a>
+<a name="1303"><span class="lineNum">    1303 </span>            : }</a>
+<a name="1304"><span class="lineNum">    1304 </span>            : </a>
+<a name="1305"><span class="lineNum">    1305 </span>            : /*</a>
+<a name="1306"><span class="lineNum">    1306 </span>            :  * Create LLJIT instance, using the passed in target machine. Note that the</a>
+<a name="1307"><span class="lineNum">    1307 </span>            :  * target machine afterwards is owned by the LLJIT instance.</a>
+<a name="1308"><span class="lineNum">    1308 </span>            :  */</a>
+<a name="1309"><span class="lineNum">    1309 </span>            : static LLVMOrcLLJITRef</a>
+<a name="1310"><span class="lineNum">    1310 </span><span class="lineCov">       1568 : llvm_create_jit_instance(LLVMTargetMachineRef tm)</span></a>
+<a name="1311"><span class="lineNum">    1311 </span>            : {</a>
+<a name="1312"><span class="lineNum">    1312 </span>            :     LLVMOrcLLJITRef lljit;</a>
+<a name="1313"><span class="lineNum">    1313 </span>            :     LLVMOrcJITTargetMachineBuilderRef tm_builder;</a>
+<a name="1314"><span class="lineNum">    1314 </span>            :     LLVMOrcLLJITBuilderRef lljit_builder;</a>
+<a name="1315"><span class="lineNum">    1315 </span>            :     LLVMErrorRef error;</a>
+<a name="1316"><span class="lineNum">    1316 </span>            :     LLVMOrcDefinitionGeneratorRef main_gen;</a>
+<a name="1317"><span class="lineNum">    1317 </span>            :     LLVMOrcDefinitionGeneratorRef ref_gen;</a>
+<a name="1318"><span class="lineNum">    1318 </span>            : </a>
+<a name="1319"><span class="lineNum">    1319 </span><span class="lineCov">       1568 :     lljit_builder = LLVMOrcCreateLLJITBuilder();</span></a>
+<a name="1320"><span class="lineNum">    1320 </span><span class="lineCov">       1568 :     tm_builder = LLVMOrcJITTargetMachineBuilderCreateFromTargetMachine(tm);</span></a>
+<a name="1321"><span class="lineNum">    1321 </span><span class="lineCov">       1568 :     LLVMOrcLLJITBuilderSetJITTargetMachineBuilder(lljit_builder, tm_builder);</span></a>
+<a name="1322"><span class="lineNum">    1322 </span>            : </a>
+<a name="1323"><span class="lineNum">    1323 </span><span class="lineCov">       1568 :     LLVMOrcLLJITBuilderSetObjectLinkingLayerCreator(lljit_builder,</span></a>
+<a name="1324"><span class="lineNum">    1324 </span>            :                                                     llvm_create_object_layer,</a>
+<a name="1325"><span class="lineNum">    1325 </span>            :                                                     NULL);</a>
+<a name="1326"><span class="lineNum">    1326 </span>            : </a>
+<a name="1327"><span class="lineNum">    1327 </span><span class="lineCov">       1568 :     error = LLVMOrcCreateLLJIT(&amp;lljit, lljit_builder);</span></a>
+<a name="1328"><span class="lineNum">    1328 </span><span class="lineCov">       1568 :     if (error)</span></a>
+<a name="1329"><span class="lineNum">    1329 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;failed to create lljit instance: %s&quot;,</span></a>
+<a name="1330"><span class="lineNum">    1330 </span>            :              llvm_error_message(error));</a>
+<a name="1331"><span class="lineNum">    1331 </span>            : </a>
+<a name="1332"><span class="lineNum">    1332 </span><span class="lineCov">       1568 :     LLVMOrcExecutionSessionSetErrorReporter(LLVMOrcLLJITGetExecutionSession(lljit),</span></a>
+<a name="1333"><span class="lineNum">    1333 </span>            :                                             llvm_log_jit_error, NULL);</a>
+<a name="1334"><span class="lineNum">    1334 </span>            : </a>
+<a name="1335"><span class="lineNum">    1335 </span>            :     /*</a>
+<a name="1336"><span class="lineNum">    1336 </span>            :      * Symbol resolution support for symbols in the postgres binary /</a>
+<a name="1337"><span class="lineNum">    1337 </span>            :      * libraries already loaded.</a>
+<a name="1338"><span class="lineNum">    1338 </span>            :      */</a>
+<a name="1339"><span class="lineNum">    1339 </span><span class="lineCov">       1568 :     error = LLVMOrcCreateDynamicLibrarySearchGeneratorForProcess(&amp;main_gen,</span></a>
+<a name="1340"><span class="lineNum">    1340 </span><span class="lineCov">       1568 :                                                                  LLVMOrcLLJITGetGlobalPrefix(lljit),</span></a>
+<a name="1341"><span class="lineNum">    1341 </span>            :                                                                  0, NULL);</a>
+<a name="1342"><span class="lineNum">    1342 </span><span class="lineCov">       1568 :     if (error)</span></a>
+<a name="1343"><span class="lineNum">    1343 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;failed to create generator: %s&quot;,</span></a>
+<a name="1344"><span class="lineNum">    1344 </span>            :              llvm_error_message(error));</a>
+<a name="1345"><span class="lineNum">    1345 </span><span class="lineCov">       1568 :     LLVMOrcJITDylibAddGenerator(LLVMOrcLLJITGetMainJITDylib(lljit), main_gen);</span></a>
+<a name="1346"><span class="lineNum">    1346 </span>            : </a>
+<a name="1347"><span class="lineNum">    1347 </span>            :     /*</a>
+<a name="1348"><span class="lineNum">    1348 </span>            :      * Symbol resolution support for &quot;special&quot; functions, e.g. a call into an</a>
+<a name="1349"><span class="lineNum">    1349 </span>            :      * SQL callable function.</a>
+<a name="1350"><span class="lineNum">    1350 </span>            :      */</a>
+<a name="1351"><span class="lineNum">    1351 </span>            : #if LLVM_VERSION_MAJOR &gt; 14</a>
+<a name="1352"><span class="lineNum">    1352 </span>            :     ref_gen = LLVMOrcCreateCustomCAPIDefinitionGenerator(llvm_resolve_symbols, NULL, NULL);</a>
+<a name="1353"><span class="lineNum">    1353 </span>            : #else</a>
+<a name="1354"><span class="lineNum">    1354 </span><span class="lineCov">       1568 :     ref_gen = LLVMOrcCreateCustomCAPIDefinitionGenerator(llvm_resolve_symbols, NULL);</span></a>
+<a name="1355"><span class="lineNum">    1355 </span>            : #endif</a>
+<a name="1356"><span class="lineNum">    1356 </span><span class="lineCov">       1568 :     LLVMOrcJITDylibAddGenerator(LLVMOrcLLJITGetMainJITDylib(lljit), ref_gen);</span></a>
+<a name="1357"><span class="lineNum">    1357 </span>            : </a>
+<a name="1358"><span class="lineNum">    1358 </span><span class="lineCov">       1568 :     return lljit;</span></a>
+<a name="1359"><span class="lineNum">    1359 </span>            : }</a>
+<a name="1360"><span class="lineNum">    1360 </span>            : </a>
+<a name="1361"><span class="lineNum">    1361 </span>            : static char *</a>
+<a name="1362"><span class="lineNum">    1362 </span><span class="lineNoCov">          0 : llvm_error_message(LLVMErrorRef error)</span></a>
+<a name="1363"><span class="lineNum">    1363 </span>            : {</a>
+<a name="1364"><span class="lineNum">    1364 </span><span class="lineNoCov">          0 :     char       *orig = LLVMGetErrorMessage(error);</span></a>
+<a name="1365"><span class="lineNum">    1365 </span><span class="lineNoCov">          0 :     char       *msg = pstrdup(orig);</span></a>
+<a name="1366"><span class="lineNum">    1366 </span>            : </a>
+<a name="1367"><span class="lineNum">    1367 </span><span class="lineNoCov">          0 :     LLVMDisposeErrorMessage(orig);</span></a>
+<a name="1368"><span class="lineNum">    1368 </span>            : </a>
+<a name="1369"><span class="lineNum">    1369 </span><span class="lineNoCov">          0 :     return msg;</span></a>
+<a name="1370"><span class="lineNum">    1370 </span>            : }</a>
+<a name="1371"><span class="lineNum">    1371 </span>            : </a>
+<a name="1372"><span class="lineNum">    1372 </span>            : #endif                          /* LLVM_VERSION_MAJOR &gt; 11 */</a>
+<a name="1373"><span class="lineNum">    1373 </span>            : </a>
+<a name="1374"><span class="lineNum">    1374 </span>            : /*</a>
+<a name="1375"><span class="lineNum">    1375 </span>            :  * ResourceOwner callbacks</a>
+<a name="1376"><span class="lineNum">    1376 </span>            :  */</a>
+<a name="1377"><span class="lineNum">    1377 </span>            : static void</a>
+<a name="1378"><span class="lineNum">    1378 </span><span class="lineCov">         16 : ResOwnerReleaseJitContext(Datum res)</span></a>
+<a name="1379"><span class="lineNum">    1379 </span>            : {</a>
+<a name="1380"><span class="lineNum">    1380 </span><span class="lineCov">         16 :     JitContext *context = (JitContext *) DatumGetPointer(res);</span></a>
+<a name="1381"><span class="lineNum">    1381 </span>            : </a>
+<a name="1382"><span class="lineNum">    1382 </span><span class="lineCov">         16 :     context-&gt;resowner = NULL;</span></a>
+<a name="1383"><span class="lineNum">    1383 </span><span class="lineCov">         16 :     jit_release_context(context);</span></a>
+<a name="1384"><span class="lineNum">    1384 </span><span class="lineCov">         16 : }</span></a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

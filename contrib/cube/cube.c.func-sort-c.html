@@ -1,0 +1,460 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/cube/cube.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/cube</a> - cube.c<span style="font-size: 80%;"> (<a href="cube.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">720</td>
+            <td class="headerCovTableEntry">817</td>
+            <td class="headerCovTableEntryMed">88.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">89</td>
+            <td class="headerCovTableEntry">95</td>
+            <td class="headerCovTableEntryHi">93.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="cube.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1105">cube_ge</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1090">cube_le</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#350">cube_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#328">cube_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#455">g_cube_compress</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#461">g_cube_decompress</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1045">cube_ne</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#897">cube_size</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#18">Pg_magic_func</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#67">pg_finfo_cube_ge</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#66">pg_finfo_cube_le</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#34">pg_finfo_cube_recv</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#33">pg_finfo_cube_send</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#51">pg_finfo_g_cube_compress</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#52">pg_finfo_g_cube_decompress</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#31">pg_finfo_cube_a_f8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#30">pg_finfo_cube_a_f8_f8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#38">pg_finfo_cube_c_f8_f8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#68">pg_finfo_cube_cmp</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#75">pg_finfo_cube_contained</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#42">pg_finfo_cube_coord</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#43">pg_finfo_cube_coord_llur</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#62">pg_finfo_cube_eq</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#36">pg_finfo_cube_f8_f8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#65">pg_finfo_cube_gt</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#78">pg_finfo_cube_inter</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#64">pg_finfo_cube_lt</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#63">pg_finfo_cube_ne</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#76">pg_finfo_cube_overlap</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#79">pg_finfo_cube_size</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#44">pg_finfo_cube_subset</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#77">pg_finfo_cube_union</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#86">pg_finfo_distance_chebyshev</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#84">pg_finfo_distance_taxicab</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#50">pg_finfo_g_cube_consistent</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#57">pg_finfo_g_cube_distance</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#53">pg_finfo_g_cube_penalty</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#54">pg_finfo_g_cube_picksplit</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#56">pg_finfo_g_cube_same</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#55">pg_finfo_g_cube_union</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#806">cube_union</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#37">pg_finfo_cube_c_f8</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#74">pg_finfo_cube_contains</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#39">pg_finfo_cube_dim</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#85">pg_finfo_cube_distance</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#88">pg_finfo_cube_enlarge</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#35">pg_finfo_cube_f8</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#87">pg_finfo_cube_is_point</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#40">pg_finfo_cube_ll_coord</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#32">pg_finfo_cube_out</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#41">pg_finfo_cube_ur_coord</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#241">cube_subset</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#29">pg_finfo_cube_in</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#204">cube_a_f8</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1030">cube_eq</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1075">cube_gt</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1060">cube_lt</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1231">cube_overlap</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1863">cube_c_f8_f8</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1601">cube_coord</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1784">cube_f8_f8</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1176">cube_contained</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1580">cube_ur_coord</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#137">cube_a_f8_f8</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1015">cube_cmp</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1160">cube_contains</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#509">g_cube_picksplit</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1701">cube_enlarge</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1122">cube_contains_v0</a></td>
+              <td class="coverFnHi">188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#706">g_cube_internal_consistent</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#677">g_cube_leaf_consistent</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1563">cube_ll_coord</a></td>
+              <td class="coverFnHi">302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1766">cube_f8</a></td>
+              <td class="coverFnHi">388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1552">cube_dim</a></td>
+              <td class="coverFnHi">400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1517">cube_is_point</a></td>
+              <td class="coverFnHi">402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1192">cube_overlap_v0</a></td>
+              <td class="coverFnHi">424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#389">g_cube_consistent</a></td>
+              <td class="coverFnHi">504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1816">cube_c_f8</a></td>
+              <td class="coverFnHi">774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#290">cube_out</a></td>
+              <td class="coverFnHi">778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#733">g_cube_binary_union</a></td>
+              <td class="coverFnHi">5924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#659">g_cube_same</a></td>
+              <td class="coverFnHi">5924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#423">g_cube_union</a></td>
+              <td class="coverFnHi">5924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#935">cube_cmp_v0</a></td>
+              <td class="coverFnHi">6020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1344">distance_chebyshev</a></td>
+              <td class="coverFnHi">6392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1300">distance_taxicab</a></td>
+              <td class="coverFnHi">6392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1251">cube_distance</a></td>
+              <td class="coverFnHi">6848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#116">cube_in</a></td>
+              <td class="coverFnHi">6870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1396">g_cube_distance</a></td>
+              <td class="coverFnHi">8196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1501">distance_1D</a></td>
+              <td class="coverFnHi">39722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1642">cube_coord_llur</a></td>
+              <td class="coverFnHi">49906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#484">g_cube_penalty</a></td>
+              <td class="coverFnHi">88018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#821">cube_inter</a></td>
+              <td class="coverFnHi">681114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#746">cube_union_v0</a></td>
+              <td class="coverFnHi">794652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#1528">cube_is_point_internal</a></td>
+              <td class="coverFnHi">1476914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="cube.c.gcov.html#908">rt_cube_size</a></td>
+              <td class="coverFnHi">1557840</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

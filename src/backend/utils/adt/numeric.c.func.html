@@ -1,0 +1,908 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/numeric.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - numeric.c<span style="font-size: 80%;"> (<a href="numeric.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">3631</td>
+            <td class="headerCovTableEntry">3863</td>
+            <td class="headerCovTableEntryHi">94.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">206</td>
+            <td class="headerCovTableEntry">207</td>
+            <td class="headerCovTableEntryHi">99.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="numeric.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11754">accum_sum_add</a></td>
+              <td class="coverFnHi">2355716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11802">accum_sum_carry</a></td>
+              <td class="coverFnHi">172776</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#12032">accum_sum_combine</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#12015">accum_sum_copy</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11964">accum_sum_final</a></td>
+              <td class="coverFnHi">172614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11875">accum_sum_rescale</a></td>
+              <td class="coverFnHi">2355716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11738">accum_sum_reset</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11362">add_abs</a></td>
+              <td class="coverFnHi">296700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8378">add_var</a></td>
+              <td class="coverFnHi">463970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6900">alloc_var</a></td>
+              <td class="coverFnHi">2833352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7854">apply_typmod</a></td>
+              <td class="coverFnHi">104842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7939">apply_typmod_special</a></td>
+              <td class="coverFnHi">1748</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9892">ceil_var</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11284">cmp_abs</a></td>
+              <td class="coverFnHi">292288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11298">cmp_abs_common</a></td>
+              <td class="coverFnHi">6487520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2502">cmp_numerics</a></td>
+              <td class="coverFnHi">6446580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8320">cmp_var</a></td>
+              <td class="coverFnHi">16766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8335">cmp_var_common</a></td>
+              <td class="coverFnHi">6443274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1914">compute_bucket</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9822">div_mod_var</a></td>
+              <td class="coverFnHi">4518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8824">div_var</a></td>
+              <td class="coverFnHi">180162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9132">div_var_fast</a></td>
+              <td class="coverFnHi">5802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9496">div_var_int</a></td>
+              <td class="coverFnHi">194920</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9612">div_var_int64</a></td>
+              <td class="coverFnHi">522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5465">do_int128_accum</a></td>
+              <td class="coverFnHi">552960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5478">do_int128_discard</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4804">do_numeric_accum</a></td>
+              <td class="coverFnHi">2113552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4874">do_numeric_discard</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7710">duplicate_numeric</a></td>
+              <td class="coverFnHi">10242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10618">estimate_ln_dweight</a></td>
+              <td class="coverFnHi">738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10489">exp_var</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4634">float4_numeric</a></td>
+              <td class="coverFnHi">21738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4540">float8_numeric</a></td>
+              <td class="coverFnHi">834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9916">floor_var</a></td>
+              <td class="coverFnHi">576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6916">free_var</a></td>
+              <td class="coverFnHi">3243666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9939">gcd_var</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1683">generate_series_numeric</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1689">generate_series_step_numeric</a></td>
+              <td class="coverFnHi">420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4133">get_min_scale</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7441">get_str_from_var</a></td>
+              <td class="coverFnHi">795014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7594">get_str_from_var_sci</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2694">hash_numeric</a></td>
+              <td class="coverFnHi">592026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2774">hash_numeric_extended</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2559">in_range_numeric_numeric</a></td>
+              <td class="coverFnHi">1152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7398">init_var_from_num</a></td>
+              <td class="coverFnHi">4876626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8242">int128_to_numericvar</a></td>
+              <td class="coverFnHi">8586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5497">int2_accum</a></td>
+              <td class="coverFnHi">198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5921">int2_accum_inv</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6604">int2_avg_accum</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6691">int2_avg_accum_inv</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4491">int2_numeric</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6455">int2_sum</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6774">int2int4_sum</a></td>
+              <td class="coverFnHi">5532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5520">int4_accum</a></td>
+              <td class="coverFnHi">242198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5946">int4_accum_inv</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6632">int4_avg_accum</a></td>
+              <td class="coverFnHi">2653044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6719">int4_avg_accum_inv</a></td>
+              <td class="coverFnHi">1452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6660">int4_avg_combine</a></td>
+              <td class="coverFnHi">4328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4336">int4_numeric</a></td>
+              <td class="coverFnHi">1523692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6504">int4_sum</a></td>
+              <td class="coverFnHi">3395318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4251">int64_div_fast_to_numeric</a></td>
+              <td class="coverFnHi">29200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4230">int64_to_numeric</a></td>
+              <td class="coverFnHi">1817488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8051">int64_to_numericvar</a></td>
+              <td class="coverFnHi">1848922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5543">int8_accum</a></td>
+              <td class="coverFnHi">240198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5971">int8_accum_inv</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6747">int8_avg</a></td>
+              <td class="coverFnHi">10738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5739">int8_avg_accum</a></td>
+              <td class="coverFnHi">311584</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5992">int8_avg_accum_inv</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5766">int8_avg_combine</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5875">int8_avg_deserialize</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5826">int8_avg_serialize</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4424">int8_numeric</a></td>
+              <td class="coverFnHi">12824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6556">int8_sum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#904">is_valid_numeric_typmod</a></td>
+              <td class="coverFnHi">125750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10700">ln_var</a></td>
+              <td class="coverFnHi">834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10818">log_var</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5427">makeInt128AggState</a></td>
+              <td class="coverFnHi">688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5451">makeInt128AggStateCurrentContext</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4764">makeNumericAggState</a></td>
+              <td class="coverFnHi">171140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4789">makeNumericAggStateCurrentContext</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#895">make_numeric_typmod</a></td>
+              <td class="coverFnHi">1874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7838">make_result</a></td>
+              <td class="coverFnHi">2063872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7729">make_result_opt_error</a></td>
+              <td class="coverFnHi">3138974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9793">mod_var</a></td>
+              <td class="coverFnHi">54606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8616">mul_var</a></td>
+              <td class="coverFnHi">829546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1234">numeric</a></td>
+              <td class="coverFnHi">11762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2105">numeric_abbrev_abort</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2043">numeric_abbrev_convert</a></td>
+              <td class="coverFnHi">886</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2262">numeric_abbrev_convert_var</a></td>
+              <td class="coverFnHi">736</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1381">numeric_abs</a></td>
+              <td class="coverFnHi">1260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4967">numeric_accum</a></td>
+              <td class="coverFnHi">642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5378">numeric_accum_inv</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2845">numeric_add</a></td>
+              <td class="coverFnHi">252050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2864">numeric_add_opt_error</a></td>
+              <td class="coverFnHi">252896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6075">numeric_avg</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5059">numeric_avg_accum</a></td>
+              <td class="coverFnHi">1872808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5079">numeric_avg_combine</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5203">numeric_avg_deserialize</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5151">numeric_avg_serialize</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1627">numeric_ceil</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2396">numeric_cmp</a></td>
+              <td class="coverFnHi">942480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2200">numeric_cmp_abbrev</a></td>
+              <td class="coverFnHi">926</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4987">numeric_combine</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5317">numeric_deserialize</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3121">numeric_div</a></td>
+              <td class="coverFnHi">122382</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3141">numeric_div_opt_error</a></td>
+              <td class="coverFnHi">123222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3256">numeric_div_trunc</a></td>
+              <td class="coverFnHi">1200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2412">numeric_eq</a></td>
+              <td class="coverFnHi">634430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3745">numeric_exp</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3621">numeric_fac</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2178">numeric_fast_cmp</a></td>
+              <td class="coverFnHi">4686156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4669">numeric_float4</a></td>
+              <td class="coverFnHi">2192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4575">numeric_float8</a></td>
+              <td class="coverFnHi">519156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4608">numeric_float8_no_overflow</a></td>
+              <td class="coverFnHi">4188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1655">numeric_floor</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3518">numeric_gcd</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2457">numeric_ge</a></td>
+              <td class="coverFnHi">15874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2442">numeric_gt</a></td>
+              <td class="coverFnHi">37414</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#625">numeric_in</a></td>
+              <td class="coverFnHi">102052</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3434">numeric_inc</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4500">numeric_int2</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4394">numeric_int4</a></td>
+              <td class="coverFnHi">6964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4344">numeric_int4_opt_error</a></td>
+              <td class="coverFnHi">8272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4482">numeric_int8</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4432">numeric_int8_opt_error</a></td>
+              <td class="coverFnHi">564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#850">numeric_is_inf</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#861">numeric_is_integral</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#839">numeric_is_nan</a></td>
+              <td class="coverFnHi">14732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3489">numeric_larger</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3561">numeric_lcm</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2487">numeric_le</a></td>
+              <td class="coverFnHi">16208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3812">numeric_ln</a></td>
+              <td class="coverFnHi">198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3861">numeric_log</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2472">numeric_lt</a></td>
+              <td class="coverFnHi">106290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#941">numeric_maximum_size</a></td>
+              <td class="coverFnHi">7534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4184">numeric_min_scale</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3345">numeric_mod</a></td>
+              <td class="coverFnHi">54204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3365">numeric_mod_opt_error</a></td>
+              <td class="coverFnHi">54216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3000">numeric_mul</a></td>
+              <td class="coverFnHi">489672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3020">numeric_mul_opt_error</a></td>
+              <td class="coverFnHi">489708</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2427">numeric_ne</a></td>
+              <td class="coverFnHi">5376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1014">numeric_normalize</a></td>
+              <td class="coverFnHi">12966</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#804">numeric_out</a></td>
+              <td class="coverFnHi">780758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#980">numeric_out_sci</a></td>
+              <td class="coverFnHi">234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4697">numeric_pg_lsn</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6045">numeric_poly_avg</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5563">numeric_poly_combine</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5686">numeric_poly_deserialize</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5628">numeric_poly_serialize</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6306">numeric_poly_stddev_internal</a></td>
+              <td class="coverFnHi">422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6414">numeric_poly_stddev_pop</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6372">numeric_poly_stddev_samp</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6017">numeric_poly_sum</a></td>
+              <td class="coverFnHi">782</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6393">numeric_poly_var_pop</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6351">numeric_poly_var_samp</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3932">numeric_power</a></td>
+              <td class="coverFnHi">1386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1066">numeric_recv</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1531">numeric_round</a></td>
+              <td class="coverFnHi">7502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4119">numeric_scale</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1151">numeric_send</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#5261">numeric_serialize</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1498">numeric_sign</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1466">numeric_sign_internal</a></td>
+              <td class="coverFnHi">3054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3467">numeric_smaller</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2002">numeric_sortsupport</a></td>
+              <td class="coverFnHi">938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#3673">numeric_sqrt</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6153">numeric_stddev_internal</a></td>
+              <td class="coverFnHi">986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6288">numeric_stddev_pop</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6254">numeric_stddev_samp</a></td>
+              <td class="coverFnHi">174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2922">numeric_sub</a></td>
+              <td class="coverFnHi">58778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#2942">numeric_sub_opt_error</a></td>
+              <td class="coverFnHi">58832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6110">numeric_sum</a></td>
+              <td class="coverFnHi">170906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1184">numeric_support</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4204">numeric_trim_scale</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1580">numeric_trunc</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#915">numeric_typmod_precision</a></td>
+              <td class="coverFnHi">24608</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#930">numeric_typmod_scale</a></td>
+              <td class="coverFnHi">17074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1408">numeric_uminus</a></td>
+              <td class="coverFnHi">884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1450">numeric_uplus</a></td>
+              <td class="coverFnHi">498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6271">numeric_var_pop</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6237">numeric_var_samp</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1312">numerictypmodin</a></td>
+              <td class="coverFnHi">1916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1357">numerictypmodout</a></td>
+              <td class="coverFnHi">376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7687">numericvar_deserialize</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7671">numericvar_serialize</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8288">numericvar_to_double_no_overflow</a></td>
+              <td class="coverFnHi">4554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8171">numericvar_to_int128</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#4407">numericvar_to_int32</a></td>
+              <td class="coverFnHi">8992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7976">numericvar_to_int64</a></td>
+              <td class="coverFnHi">10630</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8098">numericvar_to_uint64</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11243">power_ten_int</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10878">power_var</a></td>
+              <td class="coverFnHi">1140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11039">power_var_int</a></td>
+              <td class="coverFnHi">978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11529">round_var</a></td>
+              <td class="coverFnHi">997982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#9724">select_div_scale</a></td>
+              <td class="coverFnHi">124224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7189">set_var_from_non_decimal_integer_str</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7367">set_var_from_num</a></td>
+              <td class="coverFnHi">12374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6959">set_var_from_str</a></td>
+              <td class="coverFnHi">122832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7415">set_var_from_var</a></td>
+              <td class="coverFnHi">35986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#10009">sqrt_var</a></td>
+              <td class="coverFnHi">4194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11697">strip_var</a></td>
+              <td class="coverFnHi">1898726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11447">sub_abs</a></td>
+              <td class="coverFnHi">258162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#8495">sub_var</a></td>
+              <td class="coverFnHi">120278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#11635">trunc_var</a></td>
+              <td class="coverFnHi">61406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#1826">width_bucket_numeric</a></td>
+              <td class="coverFnHi">780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#7162">xdigit_value</a></td>
+              <td class="coverFnHi">708</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="numeric.c.gcov.html#6932">zero_var</a></td>
+              <td class="coverFnHi">39734</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

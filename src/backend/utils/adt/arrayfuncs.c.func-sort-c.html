@@ -1,0 +1,440 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/arrayfuncs.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - arrayfuncs.c<span style="font-size: 80%;"> (<a href="arrayfuncs.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2222</td>
+            <td class="headerCovTableEntry">2369</td>
+            <td class="headerCovTableEntryHi">93.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="headerCovTableEntry">90</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="arrayfuncs.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3947">array_ge</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3935">array_gt</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3941">array_le</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3577">construct_empty_expanded_array</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5150">array_insert_slice</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6639">array_replace</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1547">array_send</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6900">trim_array</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6046">create_array_envelope</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1453">ReadArrayBinary</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1270">array_recv</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5970">array_fill_with_lower_bounds</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6011">array_fill</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6775">width_bucket_array_fixed</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4778">array_set_isnull</a></td>
+              <td class="coverFnHi">134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6063">array_fill_internal</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4271">hash_array_extended</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5683">makeArrayResultArr</a></td>
+              <td class="coverFnHi">174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#2805">array_set_slice</a></td>
+              <td class="coverFnHi">250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5077">array_extract_slice</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4739">array_free_iterator</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5874">array_smaller</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5017">array_slice_size</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5865">array_larger</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4577">array_create_iterator</a></td>
+              <td class="coverFnHi">330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6830">width_bucket_array_variable</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#518">ReadDimensionInt</a></td>
+              <td class="coverFnHi">354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6731">width_bucket_array_float8</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#2029">array_get_slice</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3193">array_map</a></td>
+              <td class="coverFnHi">410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5484">initArrayResultArr</a></td>
+              <td class="coverFnHi">432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6668">width_bucket_array</a></td>
+              <td class="coverFnHi">810</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3155">array_set</a></td>
+              <td class="coverFnHi">898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3923">array_ne</a></td>
+              <td class="coverFnHi">924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4916">array_copy</a></td>
+              <td class="coverFnHi">1110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4894">array_nelems_size</a></td>
+              <td class="coverFnHi">1578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4656">array_iterate</a></td>
+              <td class="coverFnHi">1692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1651">array_ndims</a></td>
+              <td class="coverFnHi">1692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#2500">array_set_element_expanded</a></td>
+              <td class="coverFnHi">2010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1789">array_cardinality</a></td>
+              <td class="coverFnHi">2646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6359">array_replace_internal</a></td>
+              <td class="coverFnHi">2702</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#2200">array_set_element</a></td>
+              <td class="coverFnHi">3666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5895">generate_subscripts</a></td>
+              <td class="coverFnHi">4870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5959">generate_subscripts_nodir</a></td>
+              <td class="coverFnHi">4870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1920">array_get_element_expanded</a></td>
+              <td class="coverFnHi">5004</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3929">array_lt</a></td>
+              <td class="coverFnHi">5316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4504">arrayoverlap</a></td>
+              <td class="coverFnHi">6120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4540">arraycontained</a></td>
+              <td class="coverFnHi">6516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1667">array_dims</a></td>
+              <td class="coverFnHi">7838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6323">array_unnest_support</a></td>
+              <td class="coverFnHi">14178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4522">arraycontains</a></td>
+              <td class="coverFnHi">15168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5807">accumArrayResultAny</a></td>
+              <td class="coverFnHi">17032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1705">array_lower</a></td>
+              <td class="coverFnHi">25188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1732">array_upper</a></td>
+              <td class="coverFnHi">25786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4361">array_contain_compare</a></td>
+              <td class="coverFnHi">27804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4946">array_bitmap_copy</a></td>
+              <td class="coverFnHi">30878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3138">array_ref</a></td>
+              <td class="coverFnHi">39160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5762">initArrayResultAny</a></td>
+              <td class="coverFnHi">43274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5835">makeArrayResultAny</a></td>
+              <td class="coverFnHi">43274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5530">accumArrayResultArr</a></td>
+              <td class="coverFnHi">60198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4138">hash_array</a></td>
+              <td class="coverFnHi">69212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3747">array_contains_nulls</a></td>
+              <td class="coverFnHi">71412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1762">array_length</a></td>
+              <td class="coverFnHi">109646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6617">array_remove</a></td>
+              <td class="coverFnHi">149022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3373">construct_array_builtin</a></td>
+              <td class="coverFnHi">156468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3794">array_eq</a></td>
+              <td class="coverFnHi">169866</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5400">makeArrayResult</a></td>
+              <td class="coverFnHi">204220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#578">ReadArrayStr</a></td>
+              <td class="coverFnHi">216530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#401">ReadArrayDimensions</a></td>
+              <td class="coverFnHi">216580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#178">array_in</a></td>
+              <td class="coverFnHi">216580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3353">construct_array</a></td>
+              <td class="coverFnHi">218264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5432">makeMdArrayResult</a></td>
+              <td class="coverFnHi">322162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5273">initArrayResult</a></td>
+              <td class="coverFnHi">322636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5290">initArrayResultWithSize</a></td>
+              <td class="coverFnHi">322816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3677">deconstruct_array_builtin</a></td>
+              <td class="coverFnHi">385666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#6232">array_unnest</a></td>
+              <td class="coverFnHi">486666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1015">array_out</a></td>
+              <td class="coverFnHi">617918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4796">ArrayCast</a></td>
+              <td class="coverFnHi">687834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4761">array_get_isnull</a></td>
+              <td class="coverFnHi">690098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4846">array_seek</a></td>
+              <td class="coverFnHi">690170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#1819">array_get_element</a></td>
+              <td class="coverFnHi">746010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3474">construct_md_array</a></td>
+              <td class="coverFnHi">1305638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#960">CopyArrayEls</a></td>
+              <td class="coverFnHi">1477360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#795">ReadArrayToken</a></td>
+              <td class="coverFnHi">1998428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3611">deconstruct_array</a></td>
+              <td class="coverFnHi">2642500</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#5330">accumArrayResult</a></td>
+              <td class="coverFnHi">2709786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3560">construct_empty_array</a></td>
+              <td class="coverFnHi">2871352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3953">btarraycmp</a></td>
+              <td class="coverFnHi">7790612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#3965">array_cmp</a></td>
+              <td class="coverFnHi">7796546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="arrayfuncs.c.gcov.html#4807">ArrayCastAndSet</a></td>
+              <td class="coverFnHi">8005974</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

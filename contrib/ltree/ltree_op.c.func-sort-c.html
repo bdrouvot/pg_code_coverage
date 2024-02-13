@@ -1,0 +1,264 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/ltree/ltree_op.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/ltree</a> - ltree_op.c<span style="font-size: 80%;"> (<a href="ltree_op.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">263</td>
+            <td class="headerCovTableEntry">287</td>
+            <td class="headerCovTableEntryHi">91.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntry">46</td>
+            <td class="headerCovTableEntryHi">93.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="ltree_op.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#124">ltree_ne</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#393">ltree_textadd</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#574">ltreeparentsel</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#537">ltree2text</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#308">ltree_addtext</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#229">subltree</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#520">text2ltree</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#131">nlevel</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#22">pg_finfo_ltree_ne</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#33">pg_finfo_ltree_textadd</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#37">pg_finfo_ltreeparentsel</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#15">Pg_magic_func</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#35">pg_finfo_ltree2text</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#31">pg_finfo_ltree_addltree</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#32">pg_finfo_ltree_addtext</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#18">pg_finfo_ltree_cmp</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#21">pg_finfo_ltree_eq</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#23">pg_finfo_ltree_ge</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#24">pg_finfo_ltree_gt</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#26">pg_finfo_ltree_isparent</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#20">pg_finfo_ltree_le</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#19">pg_finfo_ltree_lt</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#27">pg_finfo_ltree_risparent</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#25">pg_finfo_nlevel</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#28">pg_finfo_subltree</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#36">pg_finfo_text2ltree</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#295">ltree_addltree</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#499">lca</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#272">ltree_concat</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#30">pg_finfo_ltree_index</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#29">pg_finfo_subpath</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#239">subpath</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#190">inner_subltree</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#424">lca_inner</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#34">pg_finfo_lca</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#333">ltree_index</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#103">ltree_eq</a></td>
+              <td class="coverFnHi">2020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#89">ltree_lt</a></td>
+              <td class="coverFnHi">2270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#96">ltree_le</a></td>
+              <td class="coverFnHi">2272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#117">ltree_gt</a></td>
+              <td class="coverFnHi">3834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#110">ltree_ge</a></td>
+              <td class="coverFnHi">3836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#177">ltree_risparent</a></td>
+              <td class="coverFnHi">18640</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#165">ltree_isparent</a></td>
+              <td class="coverFnHi">23076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#141">inner_isparent</a></td>
+              <td class="coverFnHi">42372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#82">ltree_cmp</a></td>
+              <td class="coverFnHi">142436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ltree_op.c.gcov.html#40">ltree_compare</a></td>
+              <td class="coverFnHi">273148</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

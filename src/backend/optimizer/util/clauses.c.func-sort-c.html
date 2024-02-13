@@ -1,0 +1,372 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/util/clauses.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/util</a> - clauses.c<span style="font-size: 80%;"> (<a href="clauses.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1491</td>
+            <td class="headerCovTableEntry">1719</td>
+            <td class="headerCovTableEntryMed">86.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntry">73</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="clauses.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4913">sql_inline_error_callback</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#660">contain_volatile_functions_not_nextval_checker</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#5317">substitute_actual_srf_parameters</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#3716">ece_function_is_safe</a></td>
+              <td class="coverFnHi">230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#654">contain_volatile_functions_not_nextval</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#667">contain_volatile_functions_not_nextval_walker</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2167">rowtype_field_matches</a></td>
+              <td class="coverFnHi">526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#3954">simplify_boolean_equality</a></td>
+              <td class="coverFnHi">532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#640">contain_volatile_functions_after_planning</a></td>
+              <td class="coverFnHi">548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#214">contain_window_function</a></td>
+              <td class="coverFnHi">1140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#5377">pull_paramids</a></td>
+              <td class="coverFnHi">1246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#974">contain_nonstrict_functions</a></td>
+              <td class="coverFnHi">1480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2111">NumRelids</a></td>
+              <td class="coverFnHi">1680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#980">contain_nonstrict_functions_checker</a></td>
+              <td class="coverFnHi">1900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#177">contain_agg_clause</a></td>
+              <td class="coverFnHi">1948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#471">contain_mutable_functions_after_planning</a></td>
+              <td class="coverFnHi">1972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#227">find_window_functions</a></td>
+              <td class="coverFnHi">2280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#5387">pull_paramids_walker</a></td>
+              <td class="coverFnHi">2704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1118">contain_exec_param</a></td>
+              <td class="coverFnHi">2726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#183">contain_agg_clause_walker</a></td>
+              <td class="coverFnHi">2758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1124">contain_exec_param_walker</a></td>
+              <td class="coverFnHi">2930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1244">contain_leaked_vars</a></td>
+              <td class="coverFnHi">4472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1250">contain_leaked_vars_checker</a></td>
+              <td class="coverFnHi">4606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2069">is_pseudo_constant_clause</a></td>
+              <td class="coverFnHi">4860</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#5332">substitute_actual_srf_parameters_mutator</a></td>
+              <td class="coverFnHi">5058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4290">add_function_defaults</a></td>
+              <td class="coverFnHi">5770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#986">contain_nonstrict_functions_walker</a></td>
+              <td class="coverFnHi">5974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2007">is_strict_saop</a></td>
+              <td class="coverFnHi">8280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1256">contain_leaked_vars_walker</a></td>
+              <td class="coverFnHi">9046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4314">fetch_function_defaults</a></td>
+              <td class="coverFnHi">13274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#3754">simplify_or_arguments</a></td>
+              <td class="coverFnHi">13528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2128">CommuteOpExpr</a></td>
+              <td class="coverFnHi">15614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4220">reorder_function_arguments</a></td>
+              <td class="coverFnHi">16402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4871">substitute_actual_parameters</a></td>
+              <td class="coverFnHi">19646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1160">contain_context_dependent_node</a></td>
+              <td class="coverFnHi">19652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#239">find_window_functions_walker</a></td>
+              <td class="coverFnHi">20348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4344">recheck_cast_function_args</a></td>
+              <td class="coverFnHi">22172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#5029">inline_set_returning_function</a></td>
+              <td class="coverFnHi">39286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1688">find_nonnullable_vars</a></td>
+              <td class="coverFnHi">40152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1170">contain_context_dependent_node_walker</a></td>
+              <td class="coverFnHi">41626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#330">contain_subplans</a></td>
+              <td class="coverFnHi">55494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1437">find_nonnullable_rels</a></td>
+              <td class="coverFnHi">88866</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1897">find_forced_null_vars</a></td>
+              <td class="coverFnHi">102996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#376">contain_mutable_functions_checker</a></td>
+              <td class="coverFnHi">109870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#3860">simplify_and_arguments</a></td>
+              <td class="coverFnHi">118136</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#370">contain_mutable_functions</a></td>
+              <td class="coverFnHi">150832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4884">substitute_actual_parameters_mutator</a></td>
+              <td class="coverFnHi">165790</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#3700">contain_non_const_walker</a></td>
+              <td class="coverFnHi">167780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#336">contain_subplans_walker</a></td>
+              <td class="coverFnHi">170062</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4937">evaluate_expr</a></td>
+              <td class="coverFnHi">194414</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1694">find_nonnullable_vars_walker</a></td>
+              <td class="coverFnHi">256512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#715">max_parallel_hazard</a></td>
+              <td class="coverFnHi">315486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#289">expression_returns_set_rows</a></td>
+              <td class="coverFnHi">317888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2089">is_pseudo_constant_clause_relids</a></td>
+              <td class="coverFnHi">333680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#382">contain_mutable_functions_walker</a></td>
+              <td class="coverFnHi">383930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1958">find_forced_null_var</a></td>
+              <td class="coverFnHi">482120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#1443">find_nonnullable_rels_walker</a></td>
+              <td class="coverFnHi">563172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#525">contain_volatile_functions_checker</a></td>
+              <td class="coverFnHi">643650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2376">estimate_expression_value</a></td>
+              <td class="coverFnHi">653976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2268">convert_saop_to_hashed_saop</a></td>
+              <td class="coverFnHi">719058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4516">inline_function</a></td>
+              <td class="coverFnHi">953612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2235">eval_const_expressions</a></td>
+              <td class="coverFnHi">1044044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4389">evaluate_function</a></td>
+              <td class="coverFnHi">1120912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4023">simplify_function</a></td>
+              <td class="coverFnHi">1121038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#4139">expand_function_arguments</a></td>
+              <td class="coverFnHi">1123094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#803">max_parallel_hazard_checker</a></td>
+              <td class="coverFnHi">1220994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#775">max_parallel_hazard_test</a></td>
+              <td class="coverFnHi">1327710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#734">is_parallel_safe</a></td>
+              <td class="coverFnHi">1883562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#519">contain_volatile_functions</a></td>
+              <td class="coverFnHi">2544640</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2274">convert_saop_to_hashed_saop_walker</a></td>
+              <td class="coverFnHi">5097562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#531">contain_volatile_functions_walker</a></td>
+              <td class="coverFnHi">5547892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#2421">eval_const_expressions_mutator</a></td>
+              <td class="coverFnHi">7480906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="clauses.c.gcov.html#810">max_parallel_hazard_walker</a></td>
+              <td class="coverFnHi">16744690</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

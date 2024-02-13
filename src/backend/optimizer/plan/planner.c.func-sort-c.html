@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/plan/planner.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/plan</a> - planner.c<span style="font-size: 80%;"> (<a href="planner.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2153</td>
+            <td class="headerCovTableEntry">2223</td>
+            <td class="headerCovTableEntryHi">96.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">57</td>
+            <td class="headerCovTableEntry">57</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="planner.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3793">create_degenerate_grouping_paths</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#1264">preprocess_phv_expression</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5760">common_prefix_cmp</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6485">plan_cluster_use_sort</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6432">expression_planner_with_deps</a></td>
+              <td class="coverFnHi">338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7819">group_by_has_partkey</a></td>
+              <td class="coverFnHi">508</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7675">create_partitionwise_grouping_paths</a></td>
+              <td class="coverFnHi">514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2841">extract_rollup_sets</a></td>
+              <td class="coverFnHi">722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2020">preprocess_grouping_sets</a></td>
+              <td class="coverFnHi">734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3053">reorder_grouping_sets</a></td>
+              <td class="coverFnHi">1210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3996">consider_groupingsets_paths</a></td>
+              <td class="coverFnHi">1444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7324">gather_grouping_paths</a></td>
+              <td class="coverFnHi">1588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3146">adjust_group_pathkeys_for_groupagg</a></td>
+              <td class="coverFnHi">1756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5357">make_partial_grouping_target</a></td>
+              <td class="coverFnHi">2106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#4578">create_distinct_paths</a></td>
+              <td class="coverFnHi">2124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#4648">create_partial_distinct_paths</a></td>
+              <td class="coverFnHi">2124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3101">has_volatile_pathkey</a></td>
+              <td class="coverFnHi">2176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#4847">create_final_distinct_paths</a></td>
+              <td class="coverFnHi">2220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#4358">create_window_paths</a></td>
+              <td class="coverFnHi">2274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5829">make_window_input_target</a></td>
+              <td class="coverFnHi">2274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5532">optimize_window_clauses</a></td>
+              <td class="coverFnHi">2274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5672">select_active_windows</a></td>
+              <td class="coverFnHi">2274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#4445">create_one_window_path</a></td>
+              <td class="coverFnHi">2460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2660">remove_useless_groupby_columns</a></td>
+              <td class="coverFnHi">3354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2805">groupclause_apply_groupingset</a></td>
+              <td class="coverFnHi">3510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2201">remap_to_groupclause_idx</a></td>
+              <td class="coverFnHi">3588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2416">preprocess_limit</a></td>
+              <td class="coverFnHi">4498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5949">make_pathkeys_for_window</a></td>
+              <td class="coverFnHi">4884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5495">postprocess_setop_tlist</a></td>
+              <td class="coverFnHi">5022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5460">mark_partial_aggref</a></td>
+              <td class="coverFnHi">6958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6289">adjust_paths_for_srfs</a></td>
+              <td class="coverFnHi">8816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2350">select_rowmark_type</a></td>
+              <td class="coverFnHi">11284</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6605">plan_create_index_workers</a></td>
+              <td class="coverFnHi">29548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7025">create_partial_grouping_paths</a></td>
+              <td class="coverFnHi">31208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7398">can_partial_agg</a></td>
+              <td class="coverFnHi">33078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3606">create_grouping_paths</a></td>
+              <td class="coverFnHi">33096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3772">is_degenerate_grouping</a></td>
+              <td class="coverFnHi">33096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5269">make_group_input_target</a></td>
+              <td class="coverFnHi">33096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6790">add_paths_to_grouping_rel</a></td>
+              <td class="coverFnHi">33882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3857">create_ordinary_grouping_paths</a></td>
+              <td class="coverFnHi">34476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3719">make_grouping_rel</a></td>
+              <td class="coverFnHi">34494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3484">get_number_of_groups</a></td>
+              <td class="coverFnHi">36238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6739">make_ordered_path</a></td>
+              <td class="coverFnHi">41056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6075">make_sort_input_target</a></td>
+              <td class="coverFnHi">51604</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#5054">create_ordered_paths</a></td>
+              <td class="coverFnHi">54824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6405">expression_planner</a></td>
+              <td class="coverFnHi">220590</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#273">planner</a></td>
+              <td class="coverFnHi">406550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#286">standard_planner</a></td>
+              <td class="coverFnHi">406550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#6246">get_cheapest_fractional_path</a></td>
+              <td class="coverFnHi">446818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#3327">standard_qp_callback</a></td>
+              <td class="coverFnHi">452198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#1293">grouping_planner</a></td>
+              <td class="coverFnHi">457246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2238">preprocess_rowmarks</a></td>
+              <td class="coverFnHi">460824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#623">subquery_planner</a></td>
+              <td class="coverFnHi">460842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#7440">apply_scanjoin_target_to_paths</a></td>
+              <td class="coverFnHi">473232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#2601">limit_needed</a></td>
+              <td class="coverFnHi">946476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#1220">preprocess_qual_conditions</a></td>
+              <td class="coverFnHi">1113700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="planner.c.gcov.html#1118">preprocess_expression</a></td>
+              <td class="coverFnHi">3357054</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

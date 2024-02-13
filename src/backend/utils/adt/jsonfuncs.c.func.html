@@ -1,0 +1,676 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/jsonfuncs.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - jsonfuncs.c<span style="font-size: 80%;"> (<a href="jsonfuncs.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2049</td>
+            <td class="headerCovTableEntry">2142</td>
+            <td class="headerCovTableEntryHi">95.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">149</td>
+            <td class="headerCovTableEntry">149</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="jsonfuncs.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4972">IteratorConcat</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3411">JsObjectGetField</a></td>
+              <td class="coverFnHi">30138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2976">JsValueToJsObject</a></td>
+              <td class="coverFnHi">3888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1800">JsonbValueAsText</a></td>
+              <td class="coverFnHi">420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1923">alen_array_element_start</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1895">alen_object_start</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1909">alen_scalar</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3395">allocate_record_info</a></td>
+              <td class="coverFnHi">2262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2163">each_array_start</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2115">each_object_field_end</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2093">each_object_field_start</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2177">each_scalar</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2053">each_worker</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1969">each_worker_jsonb</a></td>
+              <td class="coverFnHi">12192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2367">elements_array_element_end</a></td>
+              <td class="coverFnHi">2028</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2345">elements_array_element_start</a></td>
+              <td class="coverFnHi">2028</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2413">elements_object_start</a></td>
+              <td class="coverFnHi">1716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2428">elements_scalar</a></td>
+              <td class="coverFnHi">25536</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2303">elements_worker</a></td>
+              <td class="coverFnHi">402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2215">elements_worker_jsonb</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1396">get_array_element_end</a></td>
+              <td class="coverFnHi">1930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1348">get_array_element_start</a></td>
+              <td class="coverFnHi">1930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1330">get_array_end</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1290">get_array_start</a></td>
+              <td class="coverFnHi">1856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3729">get_json_object_as_hash</a></td>
+              <td class="coverFnHi">1884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1495">get_jsonb_path_all</a></td>
+              <td class="coverFnHi">450</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1174">get_object_end</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1239">get_object_field_end</a></td>
+              <td class="coverFnHi">106960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1192">get_object_field_start</a></td>
+              <td class="coverFnHi">106960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1155">get_object_start</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1019">get_path_all</a></td>
+              <td class="coverFnHi">468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3554">get_record_type_from_argument</a></td>
+              <td class="coverFnHi">1650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3580">get_record_type_from_query</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1440">get_scalar</a></td>
+              <td class="coverFnHi">105486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1098">get_worker</a></td>
+              <td class="coverFnHi">2688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3848">hash_array_start</a></td>
+              <td class="coverFnHi">1272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3797">hash_object_field_end</a></td>
+              <td class="coverFnHi">6156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3771">hash_object_field_start</a></td>
+              <td class="coverFnHi">6156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3861">hash_scalar</a></td>
+              <td class="coverFnHi">7380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5628">iterate_json_values</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5560">iterate_jsonb_values</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5681">iterate_values_object_field_start</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5653">iterate_values_scalar</a></td>
+              <td class="coverFnHi">564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#917">json_array_element</a></td>
+              <td class="coverFnHi">280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#960">json_array_element_text</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2291">json_array_elements</a></td>
+              <td class="coverFnHi">390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2297">json_array_elements_text</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1847">json_array_length</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5895">json_categorize_type</a></td>
+              <td class="coverFnHi">6404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1945">json_each</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1957">json_each_text</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#636">json_errsave_error</a></td>
+              <td class="coverFnHi">456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1004">json_extract_path</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1010">json_extract_path_text</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5868">json_get_first_token</a></td>
+              <td class="coverFnHi">672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#841">json_object_field</a></td>
+              <td class="coverFnHi">980</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#879">json_object_field_text</a></td>
+              <td class="coverFnHi">924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#727">json_object_keys</a></td>
+              <td class="coverFnHi">1860</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2490">json_populate_record</a></td>
+              <td class="coverFnHi">822</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3906">json_populate_recordset</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4412">json_strip_nulls</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2497">json_to_record</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3913">json_to_recordset</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#932">jsonb_array_element</a></td>
+              <td class="coverFnHi">318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#975">jsonb_array_element_text</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2203">jsonb_array_elements</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2209">jsonb_array_elements_text</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1873">jsonb_array_length</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4519">jsonb_concat</a></td>
+              <td class="coverFnHi">378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4560">jsonb_delete</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4613">jsonb_delete_array</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4700">jsonb_delete_idx</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4880">jsonb_delete_path</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1951">jsonb_each</a></td>
+              <td class="coverFnHi">12168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1963">jsonb_each_text</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1483">jsonb_extract_path</a></td>
+              <td class="coverFnHi">270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1489">jsonb_extract_path_text</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1526">jsonb_get_element</a></td>
+              <td class="coverFnHi">630</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4923">jsonb_insert</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#857">jsonb_object_field</a></td>
+              <td class="coverFnHi">24690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#895">jsonb_object_field_text</a></td>
+              <td class="coverFnHi">198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#563">jsonb_object_keys</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2459">jsonb_populate_record</a></td>
+              <td class="coverFnHi">882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2472">jsonb_populate_record_valid</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3892">jsonb_populate_recordset</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4503">jsonb_pretty</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4764">jsonb_set</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1674">jsonb_set_element</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4813">jsonb_set_lax</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4445">jsonb_strip_nulls</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2483">jsonb_to_record</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3899">jsonb_to_recordset</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#535">makeJsonLexContext</a></td>
+              <td class="coverFnHi">10728</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#804">okeys_array_start</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#781">okeys_object_field_start</a></td>
+              <td class="coverFnHi">1842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#819">okeys_scalar</a></td>
+              <td class="coverFnHi">1854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5492">parse_jsonb_index_flags</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#514">pg_parse_json_or_errsave</a></td>
+              <td class="coverFnHi">31022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2909">populate_array</a></td>
+              <td class="coverFnHi">1848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2662">populate_array_array_end</a></td>
+              <td class="coverFnHi">1152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2555">populate_array_assign_ndims</a></td>
+              <td class="coverFnHi">1788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2585">populate_array_check_dimension</a></td>
+              <td class="coverFnHi">1554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2819">populate_array_dim_jsonb</a></td>
+              <td class="coverFnHi">1386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2613">populate_array_element</a></td>
+              <td class="coverFnHi">6012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2704">populate_array_element_end</a></td>
+              <td class="coverFnHi">3312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2686">populate_array_element_start</a></td>
+              <td class="coverFnHi">3366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2783">populate_array_json</a></td>
+              <td class="coverFnHi">900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2639">populate_array_object_start</a></td>
+              <td class="coverFnHi">648</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2505">populate_array_report_expected_array</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#2747">populate_array_scalar</a></td>
+              <td class="coverFnHi">3654</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3052">populate_composite</a></td>
+              <td class="coverFnHi">3888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3206">populate_domain</a></td>
+              <td class="coverFnHi">2748</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3439">populate_record</a></td>
+              <td class="coverFnHi">4332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3326">populate_record_field</a></td>
+              <td class="coverFnHi">35502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3617">populate_record_worker</a></td>
+              <td class="coverFnHi">1968</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4186">populate_recordset_array_element_start</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4201">populate_recordset_array_start</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4163">populate_recordset_object_end</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4248">populate_recordset_object_field_end</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4225">populate_recordset_object_field_start</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4133">populate_recordset_object_start</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3920">populate_recordset_record</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4208">populate_recordset_scalar</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3959">populate_recordset_worker</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3119">populate_scalar</a></td>
+              <td class="coverFnHi">7746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3239">prepare_column_cache</a></td>
+              <td class="coverFnHi">20574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1697">push_null_elements</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#1716">push_path</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#672">report_json_context</a></td>
+              <td class="coverFnHi">438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5100">setPath</a></td>
+              <td class="coverFnHi">1314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5321">setPathArray</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5182">setPathObject</a></td>
+              <td class="coverFnHi">888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4378">sn_array_element_start</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4338">sn_array_end</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4328">sn_array_start</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4318">sn_object_end</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4348">sn_object_field_start</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4308">sn_object_start</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#4389">sn_scalar</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5749">transform_json_string_values</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5702">transform_jsonb_string_values</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5840">transform_string_values_array_element_start</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5812">transform_string_values_array_end</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5802">transform_string_values_array_start</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5792">transform_string_values_object_end</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5822">transform_string_values_object_field_start</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5782">transform_string_values_object_start</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#5851">transform_string_values_scalar</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonfuncs.c.gcov.html#3023">update_cached_tupdesc</a></td>
+              <td class="coverFnHi">4686</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

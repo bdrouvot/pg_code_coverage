@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/brin/brin.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/brin</a> - brin.c<span style="font-size: 80%;"> (<a href="brin.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">561</td>
+            <td class="headerCovTableEntry">837</td>
+            <td class="headerCovTableEntryLo">67.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntryMed">76.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="brin.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2330">_brin_begin_parallel</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2514">_brin_end_parallel</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2697">_brin_leader_participate_as_worker</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2782">_brin_parallel_build_main</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2686">_brin_parallel_estimate_shared</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2725">_brin_parallel_scan_and_build</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1028">brinbuildCallbackParallel</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1989">form_and_spill_tuple</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2014">union_tuples</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1257">brinbuildempty</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2872">brin_build_empty_tuple</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1286">brinbulkdelete</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1349">brin_summarize_new_values</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2155">brin_vacuum_scan</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1301">brinvacuumcleanup</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1474">brin_desummarize_range</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1364">brin_summarize_range</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1870">brinsummarize</a></td>
+              <td class="coverFnHi">218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2909">brin_fill_empty_ranges</a></td>
+              <td class="coverFnHi">326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1087">brinbuild</a></td>
+              <td class="coverFnHi">326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1652">initialize_brin_buildstate</a></td>
+              <td class="coverFnHi">404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1699">terminate_brin_buildstate</a></td>
+              <td class="coverFnHi">404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1331">brinoptions</a></td>
+              <td class="coverFnHi">824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#499">brininsertcleanup</a></td>
+              <td class="coverFnHi">1084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#302">initialize_brin_insertstate</a></td>
+              <td class="coverFnHi">1084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#243">brinhandler</a></td>
+              <td class="coverFnHi">2132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1968">form_and_insert_tuple</a></td>
+              <td class="coverFnHi">2534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1744">summarize_range</a></td>
+              <td class="coverFnHi">2934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#522">brinbeginscan</a></td>
+              <td class="coverFnHi">2946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#960">brinendscan</a></td>
+              <td class="coverFnHi">2946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#550">bringetbitmap</a></td>
+              <td class="coverFnHi">2946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#940">brinrescan</a></td>
+              <td class="coverFnHi">2946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1619">brin_free_desc</a></td>
+              <td class="coverFnHi">3378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1564">brin_build_desc</a></td>
+              <td class="coverFnHi">4464</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#1631">brinGetStats</a></td>
+              <td class="coverFnHi">10730</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#331">brininsert</a></td>
+              <td class="coverFnHi">126000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2282">check_null_keys</a></td>
+              <td class="coverFnHi">189936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#977">brinbuildCallback</a></td>
+              <td class="coverFnHi">712374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="brin.c.gcov.html#2188">add_values_to_range</a></td>
+              <td class="coverFnHi">760254</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

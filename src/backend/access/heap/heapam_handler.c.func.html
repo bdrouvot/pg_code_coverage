@@ -1,0 +1,216 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/heap/heapam_handler.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/heap</a> - heapam_handler.c<span style="font-size: 80%;"> (<a href="heapam_handler.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">742</td>
+            <td class="headerCovTableEntry">798</td>
+            <td class="headerCovTableEntryHi">93.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntry">34</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="heapam_handler.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2598">GetHeapamTableAmRoutine</a></td>
+              <td class="coverFnHi">16306468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2488">SampleHeapTupleVisible</a></td>
+              <td class="coverFnHi">812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2604">heap_tableam_handler</a></td>
+              <td class="coverFnHi">1565812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2094">heapam_estimate_rel_size</a></td>
+              <td class="coverFnHi">369222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#178">heapam_fetch_row_version</a></td>
+              <td class="coverFnHi">673910</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#1162">heapam_index_build_range_scan</a></td>
+              <td class="coverFnHi">44792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#77">heapam_index_fetch_begin</a></td>
+              <td class="coverFnHi">21544884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#100">heapam_index_fetch_end</a></td>
+              <td class="coverFnHi">21543456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#88">heapam_index_fetch_reset</a></td>
+              <td class="coverFnHi">37321044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#110">heapam_index_fetch_tuple</a></td>
+              <td class="coverFnHi">29980418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#1737">heapam_index_validate_scan</a></td>
+              <td class="coverFnHi">602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#630">heapam_relation_copy_data</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#683">heapam_relation_copy_for_cluster</a></td>
+              <td class="coverFnHi">496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2029">heapam_relation_needs_toast_table</a></td>
+              <td class="coverFnHi">40824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#624">heapam_relation_nontransactional_truncate</a></td>
+              <td class="coverFnHi">524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#578">heapam_relation_set_new_filelocator</a></td>
+              <td class="coverFnHi">53626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2077">heapam_relation_toast_am</a></td>
+              <td class="coverFnHi">14572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#994">heapam_scan_analyze_next_block</a></td>
+              <td class="coverFnHi">87230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#1019">heapam_scan_analyze_next_tuple</a></td>
+              <td class="coverFnHi">7962786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2111">heapam_scan_bitmap_next_block</a></td>
+              <td class="coverFnHi">367270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2226">heapam_scan_bitmap_next_tuple</a></td>
+              <td class="coverFnHi">6106366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#1984">heapam_scan_get_blocks_done</a></td>
+              <td class="coverFnHi">13167440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2267">heapam_scan_sample_next_block</a></td>
+              <td class="coverFnHi">12908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2341">heapam_scan_sample_next_tuple</a></td>
+              <td class="coverFnHi">253892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#65">heapam_slot_callbacks</a></td>
+              <td class="coverFnHi">22762450</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#281">heapam_tuple_complete_speculative</a></td>
+              <td class="coverFnHi">4020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#298">heapam_tuple_delete</a></td>
+              <td class="coverFnHi">1606146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#239">heapam_tuple_insert</a></td>
+              <td class="coverFnHi">13638648</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#258">heapam_tuple_insert_speculative</a></td>
+              <td class="coverFnHi">4026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#357">heapam_tuple_lock</a></td>
+              <td class="coverFnHi">164428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#211">heapam_tuple_satisfies_snapshot</a></td>
+              <td class="coverFnHi">192060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#202">heapam_tuple_tid_valid</a></td>
+              <td class="coverFnHi">584</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#312">heapam_tuple_update</a></td>
+              <td class="coverFnHi">373460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam_handler.c.gcov.html#2458">reform_and_rewrite_tuple</a></td>
+              <td class="coverFnHi">763020</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

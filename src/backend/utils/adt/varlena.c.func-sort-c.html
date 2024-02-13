@@ -1,0 +1,764 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/varlena.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - varlena.c<span style="font-size: 80%;"> (<a href="varlena.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1993</td>
+            <td class="headerCovTableEntry">2221</td>
+            <td class="headerCovTableEntryMed">89.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">158</td>
+            <td class="headerCovTableEntry">171</td>
+            <td class="headerCovTableEntryHi">92.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="varlena.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2713">bttextnamecmp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3162">byteapos</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2122">namefastcmp_locale</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2747">namegttext</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2741">nameletext</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6108">rest_of_char_same</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2777">textgename</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2771">textgtname</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2765">textlename</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2759">textltname</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#632">unknownin</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#656">unknownrecv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#671">unknownsend</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6258">icu_unicode_version</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3148">bytea_bit_count</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3092">byteaoverlay</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5539">text_reverse</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6249">unicode_version</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4779">array_to_text_null</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3235">byteaGetBit</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3305">byteaSetBit</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3273">byteaSetByte</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3103">byteaoverlay_no_len</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1492">text_position_reset</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1101">textoverlay_no_len</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4953">to_bin32</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4960">to_bin64</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4998">to_hex64</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4972">to_oct32</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4979">to_oct64</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6272">unicode_assigned</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3115">bytea_overlay</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2672">textnename</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3957">bytea_sortsupport</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2880">bttext_pattern_cmp</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4572">text_to_table_null</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1090">textoverlay</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6098">text_format_nv</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2647">namenetext</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5458">text_concat</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#864">text_substr_no_len</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1113">text_overlay</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5340">build_concat_foutcache</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1476">text_position_get_match_pos</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#599">textrecv</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6300">unicode_normalize_func</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6199">getClosestMatch</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6144">initClosestMatch</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3206">byteaGetByte</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4537">text_to_array_null</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5518">text_right</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6458">unistr</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#729">textoctetlen</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5058">pg_column_compression</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5473">text_concat_ws</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4548">text_to_table</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3002">bytea_substr</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6444">hexval_n</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4365">split_part</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1173">text_position</a></td>
+              <td class="coverFnHi">106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1150">textpos</a></td>
+              <td class="coverFnHi">106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5378">concat_internal</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2896">bttext_pattern_sortsupport</a></td>
+              <td class="coverFnHi">116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5011">pg_column_size</a></td>
+              <td class="coverFnHi">122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6366">unicode_is_normalized</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4511">text_to_array</a></td>
+              <td class="coverFnHi">146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#549">bytea_string_agg_finalfn</a></td>
+              <td class="coverFnHi">154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6418">isxdigits_n</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6212">unicode_norm_form_from_string</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4103">appendStringInfoRegexpSubstr</a></td>
+              <td class="coverFnHi">212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4588">split_text</a></td>
+              <td class="coverFnHi">230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5197">string_agg_combine</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5278">string_agg_deserialize</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5247">string_agg_serialize</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2919">byteaoctetlen</a></td>
+              <td class="coverFnHi">314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6164">updateClosestMatch</a></td>
+              <td class="coverFnHi">334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4497">text_isequal</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6428">hexval</a></td>
+              <td class="coverFnHi">504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#644">unknownout</a></td>
+              <td class="coverFnHi">680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3823">byteane</a></td>
+              <td class="coverFnHi">768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4724">split_text_accum_result</a></td>
+              <td class="coverFnHi">850</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#246">text_to_cstring_buffer</a></td>
+              <td class="coverFnHi">940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3993">replace_text</a></td>
+              <td class="coverFnHi">988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1500">text_position_cleanup</a></td>
+              <td class="coverFnHi">1236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1213">text_position_setup</a></td>
+              <td class="coverFnHi">1248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3581">SplitDirectoriesString</a></td>
+              <td class="coverFnHi">1292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3396">textToQualifiedNameList</a></td>
+              <td class="coverFnHi">1402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2935">byteacat</a></td>
+              <td class="coverFnHi">1520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2950">bytea_catenate</a></td>
+              <td class="coverFnHi">1556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5494">text_left</a></td>
+              <td class="coverFnHi">1884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5314">string_agg_finalfn</a></td>
+              <td class="coverFnHi">1996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2434">varstr_abbrev_abort</a></td>
+              <td class="coverFnHi">2124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5118">makeStringAggState</a></td>
+              <td class="coverFnHi">2552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3702">SplitGUCList</a></td>
+              <td class="coverFnHi">2836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3016">bytea_substr_no_len</a></td>
+              <td class="coverFnHi">3900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3025">bytea_substring</a></td>
+              <td class="coverFnHi">4022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1465">text_position_get_match_ptr</a></td>
+              <td class="coverFnHi">4658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#617">textsend</a></td>
+              <td class="coverFnHi">4936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3915">byteage</a></td>
+              <td class="coverFnHi">5010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1333">text_position_next</a></td>
+              <td class="coverFnHi">5912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1397">text_position_next_internal</a></td>
+              <td class="coverFnHi">5912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3895">byteagt</a></td>
+              <td class="coverFnHi">6228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3875">byteale</a></td>
+              <td class="coverFnHi">6356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2552">btvarstrequalimage</a></td>
+              <td class="coverFnHi">6896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2622">texteqname</a></td>
+              <td class="coverFnHi">7182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3855">bytealt</a></td>
+              <td class="coverFnHi">8318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3791">byteaeq</a></td>
+              <td class="coverFnHi">10388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4070">check_replace_text_has_escape</a></td>
+              <td class="coverFnHi">10522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4203">replace_text_regexp</a></td>
+              <td class="coverFnHi">10522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#804">charlen_to_bytelen</a></td>
+              <td class="coverFnHi">12000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1675">textne</a></td>
+              <td class="coverFnHi">20218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5594">text_format</a></td>
+              <td class="coverFnHi">25404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3356">text_name</a></td>
+              <td class="coverFnHi">30558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2864">text_pattern_gt</a></td>
+              <td class="coverFnHi">37510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2832">text_pattern_le</a></td>
+              <td class="coverFnHi">37510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2848">text_pattern_ge</a></td>
+              <td class="coverFnHi">37534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1788">text_starts_with</a></td>
+              <td class="coverFnHi">37914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4991">to_hex32</a></td>
+              <td class="coverFnHi">38690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4927">convert_to_base</a></td>
+              <td class="coverFnHi">38750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2816">text_pattern_lt</a></td>
+              <td class="coverFnHi">40342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2753">namegetext</a></td>
+              <td class="coverFnHi">51016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2735">namelttext</a></td>
+              <td class="coverFnHi">53330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#6046">text_format_append_string</a></td>
+              <td class="coverFnHi">59664</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5997">text_format_string_conversion</a></td>
+              <td class="coverFnHi">59670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5920">text_format_parse_format</a></td>
+              <td class="coverFnHi">59724</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2046">bpcharfastcmp_c</a></td>
+              <td class="coverFnHi">59998</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1843">bttextsortsupport</a></td>
+              <td class="coverFnHi">62328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4763">array_to_text</a></td>
+              <td class="coverFnHi">63788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#4805">array_to_text_internal</a></td>
+              <td class="coverFnHi">63818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#488">byteasend</a></td>
+              <td class="coverFnHi">68964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2580">text_smaller</a></td>
+              <td class="coverFnHi">86076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3935">byteacmp</a></td>
+              <td class="coverFnHi">87370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1870">varstr_sortsupport</a></td>
+              <td class="coverFnHi">95050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#469">bytearecv</a></td>
+              <td class="coverFnHi">107684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3454">SplitIdentifierString</a></td>
+              <td class="coverFnHi">107768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5871">text_format_parse_digits</a></td>
+              <td class="coverFnHi">119412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2794">internal_text_pattern_compare</a></td>
+              <td class="coverFnHi">152920</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#386">byteaout</a></td>
+              <td class="coverFnHi">158746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2697">btnametextcmp</a></td>
+              <td class="coverFnHi">166106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1758">text_gt</a></td>
+              <td class="coverFnHi">173642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1728">text_lt</a></td>
+              <td class="coverFnHi">184154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1773">text_ge</a></td>
+              <td class="coverFnHi">187172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2597">nameeqtext</a></td>
+              <td class="coverFnHi">206738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2568">text_larger</a></td>
+              <td class="coverFnHi">229560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#496">bytea_string_agg_transfn</a></td>
+              <td class="coverFnHi">258774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1743">text_le</a></td>
+              <td class="coverFnHi">324782</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#691">textlen</a></td>
+              <td class="coverFnHi">430600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#709">text_length</a></td>
+              <td class="coverFnHi">430612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#850">text_substr</a></td>
+              <td class="coverFnHi">581660</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#883">text_substring</a></td>
+              <td class="coverFnHi">621544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3379">name_text</a></td>
+              <td class="coverFnHi">625246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2236">varstr_abbrev_convert</a></td>
+              <td class="coverFnHi">817234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#5142">string_agg_transfn</a></td>
+              <td class="coverFnHi">859050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#288">byteain</a></td>
+              <td class="coverFnHi">980564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#3979">appendStringInfoText</a></td>
+              <td class="coverFnHi">1697740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#748">textcat</a></td>
+              <td class="coverFnHi">1896168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#763">text_catenate</a></td>
+              <td class="coverFnHi">1896248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1828">bttextcmp</a></td>
+              <td class="coverFnHi">3520396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1591">text_cmp</a></td>
+              <td class="coverFnHi">4706322</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1616">texteq</a></td>
+              <td class="coverFnHi">6183448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1536">varstr_cmp</a></td>
+              <td class="coverFnHi">6393070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#588">textout</a></td>
+              <td class="coverFnHi">7024108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#1507">check_collation_set</a></td>
+              <td class="coverFnHi">12951818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#215">text_to_cstring</a></td>
+              <td class="coverFnHi">13876032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#577">textin</a></td>
+              <td class="coverFnHi">19968320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2009">varstrfastcmp_c</a></td>
+              <td class="coverFnHi">20727658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#182">cstring_to_text</a></td>
+              <td class="coverFnHi">22832990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#194">cstring_to_text_with_len</a></td>
+              <td class="coverFnHi">25311754</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2079">namefastcmp_c</a></td>
+              <td class="coverFnHi">25832334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2091">varlenafastcmp_locale</a></td>
+              <td class="coverFnHi">36213274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="varlena.c.gcov.html#2136">varstrfastcmp_locale</a></td>
+              <td class="coverFnHi">36213274</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/date.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - date.c<span style="font-size: 80%;"> (<a href="date.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">883</td>
+            <td class="headerCovTableEntry">1181</td>
+            <td class="headerCovTableEntryLo">74.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">104</td>
+            <td class="headerCovTableEntry">142</td>
+            <td class="headerCovTableEntryLo">73.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="date.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1643">AdjustTimeForTypmod</a></td>
+              <td class="coverFnHi">7582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#292">EncodeSpecialDate</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#307">GetSQLCurrentDate</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#340">GetSQLCurrentTime</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#360">GetSQLLocalTime</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#69">anytime_typmod_check</a></td>
+              <td class="coverFnHi">452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#48">anytime_typmodin</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#91">anytime_typmodout</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#606">date2timestamp</a></td>
+              <td class="coverFnHi">4254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#718">date2timestamp_no_overflow</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#562">date2timestamp_opt_overflow</a></td>
+              <td class="coverFnHi">4452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#702">date2timestamptz</a></td>
+              <td class="coverFnHi">218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#622">date2timestamptz_opt_overflow</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#435">date_cmp</a></td>
+              <td class="coverFnHi">8836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#812">date_cmp_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#741">date_cmp_timestamp_internal</a></td>
+              <td class="coverFnHi">198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#896">date_cmp_timestamptz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#821">date_cmp_timestamptz_internal</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#381">date_eq</a></td>
+              <td class="coverFnHi">66522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#758">date_eq_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#842">date_eq_timestamptz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#457">date_finite</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#426">date_ge</a></td>
+              <td class="coverFnHi">6472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#803">date_ge_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#887">date_ge_timestamptz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#417">date_gt</a></td>
+              <td class="coverFnHi">8412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#785">date_gt_timestamp</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#869">date_gt_timestamptz</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#111">date_in</a></td>
+              <td class="coverFnHi">6946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#465">date_larger</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#408">date_le</a></td>
+              <td class="coverFnHi">6814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#794">date_le_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#878">date_le_timestamptz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#399">date_lt</a></td>
+              <td class="coverFnHi">157604</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#776">date_lt_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#860">date_lt_timestamptz</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#485">date_mi</a></td>
+              <td class="coverFnHi">3496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1264">date_mi_interval</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#526">date_mii</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#390">date_ne</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#767">date_ne_timestamp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#851">date_ne_timestamptz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#182">date_out</a></td>
+              <td class="coverFnHi">9746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1244">date_pl_interval</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#502">date_pli</a></td>
+              <td class="coverFnHi">2646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#207">date_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#229">date_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#474">date_smaller</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#448">date_sortsupport</a></td>
+              <td class="coverFnHi">592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1281">date_timestamp</a></td>
+              <td class="coverFnHi">1458</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1325">date_timestamptz</a></td>
+              <td class="coverFnHi">218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1964">datetime_timestamp</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2884">datetimetz_timestamptz</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1064">extract_date</a></td>
+              <td class="coverFnHi">678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2247">extract_time</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#3048">extract_timetz</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1449">float_time_overflows</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1037">in_range_date_interval</a></td>
+              <td class="coverFnHi">1338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2096">in_range_time_interval</a></td>
+              <td class="coverFnHi">960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2648">in_range_timetz_interval</a></td>
+              <td class="coverFnHi">1038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2010">interval_time</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#243">make_date</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1575">make_time</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1781">overlaps_time</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2693">overlaps_timetz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1486">time2tm</a></td>
+              <td class="coverFnHi">6142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1732">time_cmp</a></td>
+              <td class="coverFnHi">23390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1678">time_eq</a></td>
+              <td class="coverFnHi">40664</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1723">time_ge</a></td>
+              <td class="coverFnHi">6894</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1714">time_gt</a></td>
+              <td class="coverFnHi">11964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1745">time_hash</a></td>
+              <td class="coverFnHi">2262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1751">time_hash_extended</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1372">time_in</a></td>
+              <td class="coverFnHi">2016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1987">time_interval</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1757">time_larger</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1705">time_le</a></td>
+              <td class="coverFnHi">8724</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1696">time_lt</a></td>
+              <td class="coverFnHi">95156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2073">time_mi_interval</a></td>
+              <td class="coverFnHi">618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2031">time_mi_time</a></td>
+              <td class="coverFnHi">6488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1687">time_ne</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1499">time_out</a></td>
+              <td class="coverFnHi">5512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1425">time_overflows</a></td>
+              <td class="coverFnHi">57662</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2241">time_part</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2138">time_part_common</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2050">time_pl_interval</a></td>
+              <td class="coverFnHi">2646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1519">time_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1623">time_scale</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1545">time_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1766">time_smaller</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1603">time_support</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2826">time_timetz</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#959">timestamp_cmp_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1295">timestamp_date</a></td>
+              <td class="coverFnHi">4018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#905">timestamp_eq_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#950">timestamp_ge_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#932">timestamp_gt_date</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#941">timestamp_le_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#923">timestamp_lt_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#914">timestamp_ne_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1903">timestamp_time</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1022">timestamptz_cmp_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1340">timestamptz_date</a></td>
+              <td class="coverFnHi">3924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#968">timestamptz_eq_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1013">timestamptz_ge_date</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#995">timestamptz_gt_date</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1004">timestamptz_le_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#986">timestamptz_lt_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#977">timestamptz_ne_date</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1933">timestamptz_time</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2852">timestamptz_timetz</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1556">timetypmodin</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1564">timetypmodout</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2401">timetz2tm</a></td>
+              <td class="coverFnHi">6710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#3163">timetz_at_local</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2522">timetz_cmp</a></td>
+              <td class="coverFnHi">7200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2441">timetz_cmp_internal</a></td>
+              <td class="coverFnHi">198194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2468">timetz_eq</a></td>
+              <td class="coverFnHi">29618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2513">timetz_ge</a></td>
+              <td class="coverFnHi">6636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2504">timetz_gt</a></td>
+              <td class="coverFnHi">7716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2531">timetz_hash</a></td>
+              <td class="coverFnHi">2262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2547">timetz_hash_extended</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2271">timetz_in</a></td>
+              <td class="coverFnHi">2026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#3120">timetz_izone</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2563">timetz_larger</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2495">timetz_le</a></td>
+              <td class="coverFnHi">6984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2486">timetz_lt</a></td>
+              <td class="coverFnHi">139302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2621">timetz_mi_interval</a></td>
+              <td class="coverFnHi">738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2477">timetz_ne</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2312">timetz_out</a></td>
+              <td class="coverFnHi">6308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#3042">timetz_part</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2925">timetz_part_common</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2594">timetz_pl_interval</a></td>
+              <td class="coverFnHi">2718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2333">timetz_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2423">timetz_scale</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2369">timetz_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2577">timetz_smaller</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2813">timetz_time</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#3058">timetz_zone</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2381">timetztypmodin</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2389">timetztypmodout</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#1414">tm2time</a></td>
+              <td class="coverFnHi">3336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="date.c.gcov.html#2261">tm2timetz</a></td>
+              <td class="coverFnHi">3802</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

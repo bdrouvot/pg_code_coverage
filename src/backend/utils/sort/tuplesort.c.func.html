@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/sort/tuplesort.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/sort</a> - tuplesort.c<span style="font-size: 80%;"> (<a href="tuplesort.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">775</td>
+            <td class="headerCovTableEntry">870</td>
+            <td class="headerCovTableEntryMed">89.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntryHi">98.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="tuplesort.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2287">beginmerge</a></td>
+              <td class="coverFnHi">780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1336">consider_abort_common</a></td>
+              <td class="coverFnHi">4400154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2334">dumptuples</a></td>
+              <td class="coverFnHi">1173270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3161">free_sort_tuple</a></td>
+              <td class="coverFnHi">3743796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2889">getlen</a></td>
+              <td class="coverFnHi">7996530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1068">grow_memtuples</a></td>
+              <td class="coverFnHi">6624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2004">init_slab_allocator</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1886">inittapes</a></td>
+              <td class="coverFnHi">526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1937">inittapestate</a></td>
+              <td class="coverFnHi">668</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3102">leader_takeover_tapes</a></td>
+              <td class="coverFnHi">142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2620">make_bounded_heap</a></td>
+              <td class="coverFnHi">398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2902">markrunend</a></td>
+              <td class="coverFnHi">3650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1854">merge_read_buffer_size</a></td>
+              <td class="coverFnHi">354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2227">mergeonerun</a></td>
+              <td class="coverFnHi">542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2315">mergereadnext</a></td>
+              <td class="coverFnHi">7723524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2040">mergeruns</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#541">qsort_tuple_int32_compare</a></td>
+              <td class="coverFnHi">54329578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#517">qsort_tuple_signed_compare</a></td>
+              <td class="coverFnHi">5635394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#494">qsort_tuple_unsigned_compare</a></td>
+              <td class="coverFnHi">44850592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2871">reversedirection</a></td>
+              <td class="coverFnHi">796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1971">selectnewtape</a></td>
+              <td class="coverFnHi">3650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2669">sort_bounded_heap</a></td>
+              <td class="coverFnHi">398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3199">ssup_datum_int32_cmp</a></td>
+              <td class="coverFnHi">160556772</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3184">ssup_datum_signed_cmp</a></td>
+              <td class="coverFnHi">1045702</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3172">ssup_datum_unsigned_cmp</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2994">tuplesort_attach_shared</a></td>
+              <td class="coverFnHi">206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#753">tuplesort_begin_batch</a></td>
+              <td class="coverFnHi">221664</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#641">tuplesort_begin_common</a></td>
+              <td class="coverFnHi">219506</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#967">tuplesort_end</a></td>
+              <td class="coverFnHi">219268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2950">tuplesort_estimate_shared</a></td>
+              <td class="coverFnHi">142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#898">tuplesort_free</a></td>
+              <td class="coverFnHi">221426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2532">tuplesort_get_stats</a></td>
+              <td class="coverFnHi">360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1491">tuplesort_gettuple_common</a></td>
+              <td class="coverFnHi">24267992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2807">tuplesort_heap_delete_top</a></td>
+              <td class="coverFnHi">21400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2772">tuplesort_heap_insert</a></td>
+              <td class="coverFnHi">21828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2831">tuplesort_heap_replace_top</a></td>
+              <td class="coverFnHi">8249586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2971">tuplesort_initialize_shared</a></td>
+              <td class="coverFnHi">206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2468">tuplesort_markpos</a></td>
+              <td class="coverFnHi">566106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1799">tuplesort_merge_order</a></td>
+              <td class="coverFnHi">16516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2576">tuplesort_method_name</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1380">tuplesort_performsort</a></td>
+              <td class="coverFnHi">189368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1185">tuplesort_puttuple_common</a></td>
+              <td class="coverFnHi">27132758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2916">tuplesort_readtup_alloc</a></td>
+              <td class="coverFnHi">7692690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2435">tuplesort_rescan</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1035">tuplesort_reset</a></td>
+              <td class="coverFnHi">2158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2499">tuplesort_restorepos</a></td>
+              <td class="coverFnHi">30008</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#839">tuplesort_set_bound</a></td>
+              <td class="coverFnHi">1164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#1731">tuplesort_skiptuples</a></td>
+              <td class="coverFnHi">392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2709">tuplesort_sort_memtuples</a></td>
+              <td class="coverFnHi">191410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#2599">tuplesort_space_type_name</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#984">tuplesort_updatemax</a></td>
+              <td class="coverFnHi">2518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#887">tuplesort_used_bound</a></td>
+              <td class="coverFnHi">94</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3042">worker_freeze_result_tape</a></td>
+              <td class="coverFnHi">412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3014">worker_get_identifier</a></td>
+              <td class="coverFnHi">412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tuplesort.c.gcov.html#3080">worker_nomergeruns</a></td>
+              <td class="coverFnHi">410</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

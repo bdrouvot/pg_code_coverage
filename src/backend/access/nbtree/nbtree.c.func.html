@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/nbtree/nbtree.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/nbtree</a> - nbtree.c<span style="font-size: 80%;"> (<a href="nbtree.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">417</td>
+            <td class="headerCovTableEntry">454</td>
+            <td class="headerCovTableEntryHi">91.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">23</td>
+            <td class="headerCovTableEntryHi">95.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="nbtree.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#761">_bt_parallel_advance_array_keys</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#720">_bt_parallel_done</a></td>
+              <td class="coverFnHi">5164698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#697">_bt_parallel_release</a></td>
+              <td class="coverFnHi">1288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#639">_bt_parallel_seize</a></td>
+              <td class="coverFnHi">1656</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#346">btbeginscan</a></td>
+              <td class="coverFnHi">10155266</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#152">btbuildempty</a></td>
+              <td class="coverFnHi">154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#789">btbulkdelete</a></td>
+              <td class="coverFnHi">1946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#1425">btcanreturn</a></td>
+              <td class="coverFnHi">868394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#452">btendscan</a></td>
+              <td class="coverFnHi">10153838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#574">btestimateparallelscan</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#288">btgetbitmap</a></td>
+              <td class="coverFnHi">12800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#214">btgettuple</a></td>
+              <td class="coverFnHi">24978382</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#94">bthandler</a></td>
+              <td class="coverFnHi">2297996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#583">btinitparallelscan</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#190">btinsert</a></td>
+              <td class="coverFnHi">5872552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#488">btmarkpos</a></td>
+              <td class="coverFnHi">130042</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#598">btparallelrescan</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#1376">btreevacuumposting</a></td>
+              <td class="coverFnHi">63832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#393">btrescan</a></td>
+              <td class="coverFnHi">10584288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#518">btrestrpos</a></td>
+              <td class="coverFnHi">54018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#819">btvacuumcleanup</a></td>
+              <td class="coverFnHi">35490</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#1041">btvacuumpage</a></td>
+              <td class="coverFnHi">14430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nbtree.c.gcov.html#907">btvacuumscan</a></td>
+              <td class="coverFnHi">1962</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

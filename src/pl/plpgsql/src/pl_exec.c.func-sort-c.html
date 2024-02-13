@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/pl/plpgsql/src/pl_exec.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/pl/plpgsql/src</a> - pl_exec.c<span style="font-size: 80%;"> (<a href="pl_exec.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2482</td>
+            <td class="headerCovTableEntry">2724</td>
+            <td class="headerCovTableEntryHi">91.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="pl_exec.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8817">format_preparedparamsdata</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8760">format_expr_params</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5454">plpgsql_exec_get_datum_type</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5634">exec_eval_integer</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4914">exec_stmt_close</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2627">exec_stmt_loop</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4981">exec_stmt_rollback</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2274">make_callstmt_target</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2992">exec_stmt_foreach_a</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1548">push_stmt_mcontext</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2852">exec_stmt_forc</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7646">instantiate_empty_record_variable</a></td>
+              <td class="coverFnHi">110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2182">exec_stmt_call</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5048">exec_assign_c_string</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4658">exec_stmt_open</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2394">exec_stmt_getdiag</a></td>
+              <td class="coverFnHi">152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2540">exec_stmt_case</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7283">compatible_tupdescs</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8306">exec_check_assignable</a></td>
+              <td class="coverFnHi">292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4823">exec_stmt_fetch</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2649">exec_stmt_while</a></td>
+              <td class="coverFnHi">426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6874">revalidate_rectypeid</a></td>
+              <td class="coverFnHi">710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7413">exec_move_row_from_datum</a></td>
+              <td class="coverFnHi">904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1160">plpgsql_exec_event_trigger</a></td>
+              <td class="coverFnHi">1700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3148">exec_stmt_exit</a></td>
+              <td class="coverFnHi">1978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2823">exec_stmt_fors</a></td>
+              <td class="coverFnHi">2410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3542">exec_stmt_return_query</a></td>
+              <td class="coverFnHi">2666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6649">plpgsql_param_eval_generic</a></td>
+              <td class="coverFnHi">2812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7734">do_cast_value</a></td>
+              <td class="coverFnHi">3242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7778">get_cast_hashentry</a></td>
+              <td class="coverFnHi">3242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3667">exec_init_tuple_store</a></td>
+              <td class="coverFnHi">3394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2165">exec_stmt_perform</a></td>
+              <td class="coverFnHi">3684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2680">exec_stmt_fori</a></td>
+              <td class="coverFnHi">3908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3324">exec_stmt_return_next</a></td>
+              <td class="coverFnHi">4110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4957">exec_stmt_commit</a></td>
+              <td class="coverFnHi">4166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6954">make_expanded_record_for_rec</a></td>
+              <td class="coverFnHi">5992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#809">coerce_function_result_tuple</a></td>
+              <td class="coverFnHi">6158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1580">exception_matches_conditions</a></td>
+              <td class="coverFnHi">6186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1567">pop_stmt_mcontext</a></td>
+              <td class="coverFnHi">6198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7327">make_tuple_from_row</a></td>
+              <td class="coverFnHi">6218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8594">assign_record_var</a></td>
+              <td class="coverFnHi">6264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7382">deconstruct_composite_datum</a></td>
+              <td class="coverFnHi">6596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3934">exec_stmt_assert</a></td>
+              <td class="coverFnHi">8720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4631">exec_stmt_dynfors</a></td>
+              <td class="coverFnHi">9176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8699">exec_dynquery_with_params</a></td>
+              <td class="coverFnHi">9194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4442">exec_stmt_dynexecute</a></td>
+              <td class="coverFnHi">10782</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6306">plpgsql_param_fetch</a></td>
+              <td class="coverFnHi">11102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5848">exec_for_query</a></td>
+              <td class="coverFnHi">11678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5764">exec_run_select</a></td>
+              <td class="coverFnHi">12436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3723">exec_stmt_raise</a></td>
+              <td class="coverFnHi">14190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#920">plpgsql_exec_trigger</a></td>
+              <td class="coverFnHi">14768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6689">plpgsql_param_eval_generic_ro</a></td>
+              <td class="coverFnHi">19560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8617">exec_eval_using_params</a></td>
+              <td class="coverFnHi">20234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1228">plpgsql_exec_error_callback</a></td>
+              <td class="coverFnHi">21402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1369">plpgsql_fulfill_promise</a></td>
+              <td class="coverFnHi">21530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8585">assign_text_var</a></td>
+              <td class="coverFnHi">23210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7969">exec_simple_check_plan</a></td>
+              <td class="coverFnHi">24164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4171">exec_prepare_plan</a></td>
+              <td class="coverFnHi">24250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8195">exec_check_rw_parameter</a></td>
+              <td class="coverFnHi">25158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8088">exec_save_simple_expr</a></td>
+              <td class="coverFnHi">25158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5539">plpgsql_exec_get_datum_type_info</a></td>
+              <td class="coverFnHi">31174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8491">plpgsql_subxact_cb</a></td>
+              <td class="coverFnHi">34158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1529">get_stmt_mcontext</a></td>
+              <td class="coverFnHi">50034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4212">exec_stmt_execsql</a></td>
+              <td class="coverFnHi">51934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7017">exec_move_row_from_fields</a></td>
+              <td class="coverFnHi">53906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5303">exec_eval_datum</a></td>
+              <td class="coverFnHi">54316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7681">convert_value_to_string</a></td>
+              <td class="coverFnHi">55396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6577">plpgsql_param_eval_recfield</a></td>
+              <td class="coverFnHi">60302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6739">exec_move_row</a></td>
+              <td class="coverFnHi">64452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#479">plpgsql_exec_function</a></td>
+              <td class="coverFnHi">64814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6251">setup_param_list</a></td>
+              <td class="coverFnHi">67058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2149">exec_stmt_assign</a></td>
+              <td class="coverFnHi">79872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8427">plpgsql_destroy_econtext</a></td>
+              <td class="coverFnHi">80150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3181">exec_stmt_return</a></td>
+              <td class="coverFnHi">80320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1295">copy_plpgsql_datums</a></td>
+              <td class="coverFnHi">81282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1619">exec_toplevel_block</a></td>
+              <td class="coverFnHi">81282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#3977">plpgsql_estate_setup</a></td>
+              <td class="coverFnHi">81282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5004">exec_assign_expr</a></td>
+              <td class="coverFnHi">83432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#2510">exec_stmt_if</a></td>
+              <td class="coverFnHi">89224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6508">plpgsql_param_eval_var</a></td>
+              <td class="coverFnHi">90526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1648">exec_stmt_block</a></td>
+              <td class="coverFnHi">93618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8358">plpgsql_create_econtext</a></td>
+              <td class="coverFnHi">98030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5657">exec_eval_boolean</a></td>
+              <td class="coverFnHi">104344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6433">plpgsql_param_compile</a></td>
+              <td class="coverFnHi">123394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8342">exec_set_found</a></td>
+              <td class="coverFnHi">137628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5076">exec_assign_value</a></td>
+              <td class="coverFnHi">143922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6540">plpgsql_param_eval_var_ro</a></td>
+              <td class="coverFnHi">154454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8449">plpgsql_xact_cb</a></td>
+              <td class="coverFnHi">260948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#1981">exec_stmts</a></td>
+              <td class="coverFnHi">263560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#6030">exec_eval_simple_expr</a></td>
+              <td class="coverFnHi">268170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#5680">exec_eval_expr</a></td>
+              <td class="coverFnHi">268208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#7710">exec_cast_value</a></td>
+              <td class="coverFnHi">312488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#4134">exec_eval_cleanup</a></td>
+              <td class="coverFnHi">415888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pl_exec.c.gcov.html#8518">assign_simple_var</a></td>
+              <td class="coverFnHi">433952</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

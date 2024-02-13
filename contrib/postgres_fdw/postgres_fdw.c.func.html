@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/postgres_fdw/postgres_fdw.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/postgres_fdw</a> - postgres_fdw.c<span style="font-size: 80%;"> (<a href="postgres_fdw.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2169</td>
+            <td class="headerCovTableEntry">2348</td>
+            <td class="headerCovTableEntryHi">92.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">88</td>
+            <td class="headerCovTableEntry">89</td>
+            <td class="headerCovTableEntryHi">98.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="postgres_fdw.c.func-sort-c.html"><img src="../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#52">Pg_magic_func</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6976">add_foreign_final_paths</a></td>
+              <td class="coverFnHi">992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6749">add_foreign_grouping_paths</a></td>
+              <td class="coverFnHi">308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6841">add_foreign_ordered_paths</a></td>
+              <td class="coverFnHi">292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6076">add_paths_with_pathkeys_for_rel</a></td>
+              <td class="coverFnHi">2822</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3623">adjust_foreign_grouping_path_cost</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#5366">analyze_row_processor</a></td>
+              <td class="coverFnHi">31450</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4735">apply_returning_filter</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6195">apply_server_options</a></td>
+              <td class="coverFnHi">2252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6227">apply_table_options</a></td>
+              <td class="coverFnHi">2252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4408">build_remote_returning</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3930">close_cursor</a></td>
+              <td class="coverFnHi">954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7478">complete_pending_request</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7669">conversion_error_callback</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4249">convert_prep_stmt_params</a></td>
+              <td class="coverFnHi">2034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3706">create_cursor</a></td>
+              <td class="coverFnHi">1582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3954">create_foreign_modify</a></td>
+              <td class="coverFnHi">338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4379">deallocate_query</a></td>
+              <td class="coverFnHi">332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3677">ec_member_matches_foreign</a></td>
+              <td class="coverFnHi">596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3073">estimate_path_cost_size</a></td>
+              <td class="coverFnHi">5058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4535">execute_dml_stmt</a></td>
+              <td class="coverFnHi">142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4074">execute_foreign_modify</a></td>
+              <td class="coverFnHi">2034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3782">fetch_more_data</a></td>
+              <td class="coverFnHi">2916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7418">fetch_more_data_begin</a></td>
+              <td class="coverFnHi">320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7772">find_em_for_rel</a></td>
+              <td class="coverFnHi">3442</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7808">find_em_for_rel_target</a></td>
+              <td class="coverFnHi">502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2372">find_modifytable_subplan</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4361">finish_foreign_modify</a></td>
+              <td class="coverFnHi">310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6456">foreign_grouping_ok</a></td>
+              <td class="coverFnHi">308</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#5771">foreign_join_ok</a></td>
+              <td class="coverFnHi">692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7873">get_batch_size_option</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3577">get_remote_estimate</a></td>
+              <td class="coverFnHi">2438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4589">get_returning_data</a></td>
+              <td class="coverFnHi">728</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1437">get_tupdesc_for_join_scan_tuples</a></td>
+              <td class="coverFnHi">304</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#806">get_useful_ecs_for_relation</a></td>
+              <td class="coverFnHi">990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#902">get_useful_pathkeys_for_relation</a></td>
+              <td class="coverFnHi">2822</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4662">init_returning_filter</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7512">make_tuple_from_result_row</a></td>
+              <td class="coverFnHi">170532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6254">merge_fdw_options</a></td>
+              <td class="coverFnHi">1456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#320">pg_finfo_postgres_fdw_handler</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#5055">postgresAcquireSampleRowsFunc</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1732">postgresAddForeignUpdateTargets</a></td>
+              <td class="coverFnHi">340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4920">postgresAnalyzeForeignTable</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2630">postgresBeginDirectModify</a></td>
+              <td class="coverFnHi">208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2141">postgresBeginForeignInsert</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1899">postgresBeginForeignModify</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1489">postgresBeginForeignScan</a></td>
+              <td class="coverFnHi">1666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2791">postgresEndDirectModify</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2272">postgresEndForeignInsert</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2123">postgresEndForeignModify</a></td>
+              <td class="coverFnHi">286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1707">postgresEndForeignScan</a></td>
+              <td class="coverFnHi">1620</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1985">postgresExecForeignBatchInsert</a></td>
+              <td class="coverFnHi">82</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2104">postgresExecForeignDelete</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1956">postgresExecForeignInsert</a></td>
+              <td class="coverFnHi">1776</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2967">postgresExecForeignTruncate</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2085">postgresExecForeignUpdate</a></td>
+              <td class="coverFnHi">142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2949">postgresExplainDirectModify</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2921">postgresExplainForeignModify</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2814">postgresExplainForeignScan</a></td>
+              <td class="coverFnHi">734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7234">postgresForeignAsyncConfigureWait</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7309">postgresForeignAsyncNotify</a></td>
+              <td class="coverFnHi">302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7224">postgresForeignAsyncRequest</a></td>
+              <td class="coverFnHi">12350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4984">postgresGetAnalyzeInfoForForeignTable</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6315">postgresGetForeignJoinPaths</a></td>
+              <td class="coverFnHi">2170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2018">postgresGetForeignModifyBatchSize</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1009">postgresGetForeignPaths</a></td>
+              <td class="coverFnHi">2248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1220">postgresGetForeignPlan</a></td>
+              <td class="coverFnHi">1892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#620">postgresGetForeignRelSize</a></td>
+              <td class="coverFnHi">2252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#6696">postgresGetForeignUpperPaths</a></td>
+              <td class="coverFnHi">1870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#5433">postgresImportForeignSchema</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7211">postgresIsForeignPathAsyncCapable</a></td>
+              <td class="coverFnHi">466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2296">postgresIsForeignRelUpdatable</a></td>
+              <td class="coverFnHi">634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2747">postgresIterateDirectModify</a></td>
+              <td class="coverFnHi">836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1594">postgresIterateForeignScan</a></td>
+              <td class="coverFnHi">137602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2432">postgresPlanDirectModify</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1760">postgresPlanForeignModify</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#1639">postgresReScanForeignScan</a></td>
+              <td class="coverFnHi">798</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#2340">postgresRecheckForeignScan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#550">postgres_fdw_handler</a></td>
+              <td class="coverFnHi">1278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4194">prepare_foreign_modify</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4834">prepare_query_params</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7445">process_pending_request</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4879">process_query_params</a></td>
+              <td class="coverFnHi">692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#7347">produce_tuple_asynchronously</a></td>
+              <td class="coverFnHi">12658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4509">rebuild_fdw_scan_tlist</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3921">reset_transmission_modes</a></td>
+              <td class="coverFnHi">7976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#5732">semijoin_target_ok</a></td>
+              <td class="coverFnHi">116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#3885">set_transmission_modes</a></td>
+              <td class="coverFnHi">7976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postgres_fdw.c.gcov.html#4328">store_returning_result</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

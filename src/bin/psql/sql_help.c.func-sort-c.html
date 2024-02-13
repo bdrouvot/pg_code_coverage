@@ -1,0 +1,820 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/psql/sql_help.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/psql</a> - sql_help.c<span style="font-size: 80%;"> (<a href="sql_help.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">555</td>
+            <td class="headerCovTableEntryLo">0.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">185</td>
+            <td class="headerCovTableEntryLo">0.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="sql_help.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#13">sql_help_ABORT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#20">sql_help_ALTER_AGGREGATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#55">sql_help_ALTER_COLLATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#73">sql_help_ALTER_CONVERSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#88">sql_help_ALTER_DATABASE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#135">sql_help_ALTER_DEFAULT_PRIVILEGES</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#215">sql_help_ALTER_DOMAIN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#257">sql_help_ALTER_EVENT_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#273">sql_help_ALTER_EXTENSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#383">sql_help_ALTER_FOREIGN_DATA_WRAPPER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#404">sql_help_ALTER_FOREIGN_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#489">sql_help_ALTER_FUNCTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#553">sql_help_ALTER_GROUP</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#578">sql_help_ALTER_INDEX</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#613">sql_help_ALTER_LANGUAGE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#625">sql_help_ALTER_LARGE_OBJECT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#634">sql_help_ALTER_MATERIALIZED_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#699">sql_help_ALTER_OPERATOR</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#734">sql_help_ALTER_OPERATOR_CLASS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#757">sql_help_ALTER_OPERATOR_FAMILY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#812">sql_help_ALTER_POLICY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#832">sql_help_ALTER_PROCEDURE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#886">sql_help_ALTER_PUBLICATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#921">sql_help_ALTER_ROLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#977">sql_help_ALTER_ROUTINE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1038">sql_help_ALTER_RULE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1048">sql_help_ALTER_SCHEMA</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1060">sql_help_ALTER_SEQUENCE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1095">sql_help_ALTER_SERVER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1113">sql_help_ALTER_STATISTICS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1131">sql_help_ALTER_SUBSCRIPTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1177">sql_help_ALTER_SYSTEM</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1190">sql_help_ALTER_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1444">sql_help_ALTER_TABLESPACE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1463">sql_help_ALTER_TEXT_SEARCH_CONFIGURATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1503">sql_help_ALTER_TEXT_SEARCH_DICTIONARY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1524">sql_help_ALTER_TEXT_SEARCH_PARSER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1536">sql_help_ALTER_TEXT_SEARCH_TEMPLATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1548">sql_help_ALTER_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1562">sql_help_ALTER_TYPE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1610">sql_help_ALTER_USER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1666">sql_help_ALTER_USER_MAPPING</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1679">sql_help_ALTER_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1712">sql_help_ANALYZE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1738">sql_help_BEGIN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1753">sql_help_CALL</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1762">sql_help_CHECKPOINT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1769">sql_help_CLOSE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1777">sql_help_CLUSTER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1793">sql_help_COMMENT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1927">sql_help_COMMIT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1934">sql_help_COMMIT_PREPARED</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1942">sql_help_COPY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#1998">sql_help_CREATE_ACCESS_METHOD</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2010">sql_help_CREATE_AGGREGATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2125">sql_help_CREATE_CAST</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2150">sql_help_CREATE_COLLATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2176">sql_help_CREATE_CONVERSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2188">sql_help_CREATE_DATABASE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2228">sql_help_CREATE_DOMAIN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2251">sql_help_CREATE_EVENT_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2266">sql_help_CREATE_EXTENSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2279">sql_help_CREATE_FOREIGN_DATA_WRAPPER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2294">sql_help_CREATE_FOREIGN_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2374">sql_help_CREATE_FUNCTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2420">sql_help_CREATE_GROUP</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2458">sql_help_CREATE_INDEX</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2485">sql_help_CREATE_LANGUAGE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2499">sql_help_CREATE_MATERIALIZED_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2519">sql_help_CREATE_OPERATOR</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2540">sql_help_CREATE_OPERATOR_CLASS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2567">sql_help_CREATE_OPERATOR_FAMILY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2576">sql_help_CREATE_POLICY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2593">sql_help_CREATE_PROCEDURE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2623">sql_help_CREATE_PUBLICATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2647">sql_help_CREATE_ROLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2681">sql_help_CREATE_RULE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2702">sql_help_CREATE_SCHEMA</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2729">sql_help_CREATE_SEQUENCE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2750">sql_help_CREATE_SERVER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2765">sql_help_CREATE_STATISTICS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2789">sql_help_CREATE_SUBSCRIPTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2804">sql_help_CREATE_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3015">sql_help_CREATE_TABLESPACE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#2994">sql_help_CREATE_TABLE_AS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3030">sql_help_CREATE_TEXT_SEARCH_CONFIGURATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3043">sql_help_CREATE_TEXT_SEARCH_DICTIONARY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3057">sql_help_CREATE_TEXT_SEARCH_PARSER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3076">sql_help_CREATE_TEXT_SEARCH_TEMPLATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3089">sql_help_CREATE_TRANSFORM</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3105">sql_help_CREATE_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3136">sql_help_CREATE_TYPE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3213">sql_help_CREATE_USER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3251">sql_help_CREATE_USER_MAPPING</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3264">sql_help_CREATE_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3279">sql_help_DEALLOCATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3287">sql_help_DECLARE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3297">sql_help_DELETE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3316">sql_help_DISCARD</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3323">sql_help_DO</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3332">sql_help_DROP_ACCESS_METHOD</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3340">sql_help_DROP_AGGREGATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3365">sql_help_DROP_CAST</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3374">sql_help_DROP_COLLATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3382">sql_help_DROP_CONVERSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3390">sql_help_DROP_DATABASE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3404">sql_help_DROP_DOMAIN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3412">sql_help_DROP_EVENT_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3420">sql_help_DROP_EXTENSION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3428">sql_help_DROP_FOREIGN_DATA_WRAPPER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3436">sql_help_DROP_FOREIGN_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3444">sql_help_DROP_FUNCTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3456">sql_help_DROP_GROUP</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3464">sql_help_DROP_INDEX</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3472">sql_help_DROP_LANGUAGE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3480">sql_help_DROP_MATERIALIZED_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3488">sql_help_DROP_OPERATOR</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3498">sql_help_DROP_OPERATOR_CLASS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3507">sql_help_DROP_OPERATOR_FAMILY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3516">sql_help_DROP_OWNED</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3524">sql_help_DROP_POLICY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3533">sql_help_DROP_PROCEDURE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3545">sql_help_DROP_PUBLICATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3553">sql_help_DROP_ROLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3561">sql_help_DROP_ROUTINE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3573">sql_help_DROP_RULE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3582">sql_help_DROP_SCHEMA</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3590">sql_help_DROP_SEQUENCE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3598">sql_help_DROP_SERVER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3606">sql_help_DROP_STATISTICS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3614">sql_help_DROP_SUBSCRIPTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3622">sql_help_DROP_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3630">sql_help_DROP_TABLESPACE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3638">sql_help_DROP_TEXT_SEARCH_CONFIGURATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3646">sql_help_DROP_TEXT_SEARCH_DICTIONARY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3654">sql_help_DROP_TEXT_SEARCH_PARSER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3662">sql_help_DROP_TEXT_SEARCH_TEMPLATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3670">sql_help_DROP_TRANSFORM</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3679">sql_help_DROP_TRIGGER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3688">sql_help_DROP_TYPE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3696">sql_help_DROP_USER</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3704">sql_help_DROP_USER_MAPPING</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3713">sql_help_DROP_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3721">sql_help_END</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3728">sql_help_EXECUTE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3737">sql_help_EXPLAIN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3771">sql_help_FETCH</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3803">sql_help_GRANT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3951">sql_help_IMPORT_FOREIGN_SCHEMA</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#3968">sql_help_INSERT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4019">sql_help_LISTEN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4027">sql_help_LOAD</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4035">sql_help_LOCK</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4050">sql_help_MERGE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4109">sql_help_MOVE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4141">sql_help_NOTIFY</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4150">sql_help_PREPARE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4160">sql_help_PREPARE_TRANSACTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4168">sql_help_REASSIGN_OWNED</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4178">sql_help_REFRESH_MATERIALIZED_VIEW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4187">sql_help_REINDEX</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4209">sql_help_RELEASE_SAVEPOINT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4217">sql_help_RESET</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4226">sql_help_REVOKE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4403">sql_help_ROLLBACK</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4410">sql_help_ROLLBACK_PREPARED</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4418">sql_help_ROLLBACK_TO_SAVEPOINT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4426">sql_help_SAVEPOINT</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4434">sql_help_SECURITY_LABEL</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4648">sql_help_SELECT_INTO</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4687">sql_help_SET</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4700">sql_help_SET_CONSTRAINTS</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4708">sql_help_SET_ROLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4718">sql_help_SET_SESSION_AUTHORIZATION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4728">sql_help_SET_TRANSACTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4747">sql_help_SHOW</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4756">sql_help_START_TRANSACTION</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4771">sql_help_TABLE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4905">sql_help_TRUNCATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4914">sql_help_UNLISTEN</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4922">sql_help_UPDATE</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4951">sql_help_VACUUM</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4998">sql_help_VALUES</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#5015">sql_help_WITH</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="sql_help.c.gcov.html#4514">sql_help_SELECT</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

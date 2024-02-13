@@ -1,0 +1,852 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/commands/tablecmds.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/commands</a> - tablecmds.c<span style="font-size: 80%;"> (<a href="tablecmds.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">6030</td>
+            <td class="headerCovTableEntry">6583</td>
+            <td class="headerCovTableEntryHi">91.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">192</td>
+            <td class="headerCovTableEntry">193</td>
+            <td class="headerCovTableEntryHi">99.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="tablecmds.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1444">DropErrorMsgWrongType</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16971">ATExecDropOf</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14622">TryReuseForeignKey</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12267">findFkeyCast</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9408">ATExecAddStatistics</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19903">ATExecDetachPartitionFinalize</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14135">RememberStatisticsForRebuilding</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15186">ATExecDropCluster</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15819">ATExecEnableDisableRule</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#2394">storage_name</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15582">AlterTableMoveAll</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8619">ATExecDropExpression</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8844">ATExecSetOptions</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15543">ATExecSetTableSpaceNoStorage</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17351">ATExecSetCompression</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15198">ATPrepSetAccessMethod</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6413">alter_table_type_to_string</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16398">ATExecDropInherit</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8573">ATPrepDropExpression</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17270">ATExecGenericOptions</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8094">ATExecCookedColumnDefault</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15744">index_copy_data</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15154">ATExecClusterOn</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16829">ATExecAddOf</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11503">ATExecAlterConstraint</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16071">constraints_equivalent</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8346">ATExecDropIdentity</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17730">AlterIndexNamespaces</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17775">AlterSeqNamespaces</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8229">ATExecSetIdentity</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4076">RenameConstraint</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8460">ATExecSetExpression</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17621">AlterTableNamespaceInternal</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3967">rename_constraint_internal</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17431">ATPrepChangePersistence</a></td>
+              <td class="coverFnHi">88</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17550">AlterTableNamespace</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20393">verifyPartitionIndexNotNull</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14593">TryReuseIndex</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17241">ATExecForceNoForceRowSecurity</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11640">ATExecAlterConstrRecurse</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11376">GetForeignKeyActionTriggers</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16046">decompile_conbin</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19938">DetachAddConstraintIfNeeded</a></td>
+              <td class="coverFnHi">140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16452">MarkInheritDetached</a></td>
+              <td class="coverFnHi">146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8123">ATExecAddIdentity</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15217">ATPrepSetTableSpace</a></td>
+              <td class="coverFnHi">158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15450">ATExecSetTableSpace</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14662">ATExecAlterColumnGenericOptions</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8710">ATExecSetStatistics</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17860">register_on_commit_action</a></td>
+              <td class="coverFnHi">166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6960">check_of_type</a></td>
+              <td class="coverFnHi">170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17660">AlterRelationNamespaceInternal</a></td>
+              <td class="coverFnHi">176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11233">tryAttachPartitionForeignKey</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6708">ATTypedTableRecursion</a></td>
+              <td class="coverFnHi">190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3673">SetRelationTableSpace</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6911">find_typed_table_dependencies</a></td>
+              <td class="coverFnHi">214</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8986">ATExecSetStorage</a></td>
+              <td class="coverFnHi">230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7513">ATExecDropNotNull</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20555">GetAttributeStorage</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14084">RememberIndexForRebuilding</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8923">SetIndexStorageProperties</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16732">ATInheritAdjustNotNulls</a></td>
+              <td class="coverFnHi">262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3128">MergeCheckConstraint</a></td>
+              <td class="coverFnHi">268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3194">MergeChildAttribute</a></td>
+              <td class="coverFnHi">268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4449">AlterTableInternal</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17211">ATExecSetRowSecurity</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3355">MergeInheritedAttribute</a></td>
+              <td class="coverFnHi">290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15858">ATExecAddInherit</a></td>
+              <td class="coverFnHi">302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3929">renameatt</a></td>
+              <td class="coverFnHi">304</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15836">ATPrepAddInherit</a></td>
+              <td class="coverFnHi">320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20291">validatePartitionedIndex</a></td>
+              <td class="coverFnHi">336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15801">ATExecEnableDisableTrigger</a></td>
+              <td class="coverFnHi">340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20268">refuseDupeIndexAttach</a></td>
+              <td class="coverFnHi">360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20106">ATExecAttachPartitionIdx</a></td>
+              <td class="coverFnHi">384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3909">RangeVarCallbackForRenameAttribute</a></td>
+              <td class="coverFnHi">394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4280">ResetRelRewrite</a></td>
+              <td class="coverFnHi">394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17015">relation_mark_replica_identity</a></td>
+              <td class="coverFnHi">394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19664">DetachPartitionFinalize</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19979">DropClonedTriggersFromPartition</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20052">RangeVarCallbackForAttachIndex</a></td>
+              <td class="coverFnHi">406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14549">RebuildConstraintComment</a></td>
+              <td class="coverFnHi">418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14028">RememberClusterOnForRebuilding</a></td>
+              <td class="coverFnHi">422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14013">RememberReplicaIdentityForRebuilding</a></td>
+              <td class="coverFnHi">422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3616">CheckRelationTableSpaceMove</a></td>
+              <td class="coverFnHi">430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17103">ATExecReplicaIdentity</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11788">ATExecValidateConstraint</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15020">change_owner_fix_column_acls</a></td>
+              <td class="coverFnHi">438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15085">change_owner_recurse_to_sequences</a></td>
+              <td class="coverFnHi">438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20468">ATDetachCheckNoForeignKeyRefs</a></td>
+              <td class="coverFnHi">466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16777">drop_parent_dependency</a></td>
+              <td class="coverFnHi">476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7738">ATExecSetNotNull</a></td>
+              <td class="coverFnHi">478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16535">RemoveInheritance</a></td>
+              <td class="coverFnHi">488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19493">ATExecDetachPartition</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4126">RenameRelation</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14044">RememberConstraintForRebuilding</a></td>
+              <td class="coverFnHi">524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3764">renameatt_internal</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#8008">ATExecColumnDefault</a></td>
+              <td class="coverFnHi">554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11437">GetForeignKeyCheckTriggers</a></td>
+              <td class="coverFnHi">562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14333">ATPostAlterTypeParse</a></td>
+              <td class="coverFnHi">644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12640">ATExecDropConstraint</a></td>
+              <td class="coverFnHi">784</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6678">ATCheckPartitionsNotInUse</a></td>
+              <td class="coverFnHi">790</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20415">GetParentedForeignKeyRefs</a></td>
+              <td class="coverFnHi">862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#13425">ATColumnChangeRequiresRewrite</a></td>
+              <td class="coverFnHi">898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18093">RangeVarCallbackOwnsTable</a></td>
+              <td class="coverFnHi">900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#13472">ATExecAlterColumnType</a></td>
+              <td class="coverFnHi">932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15247">ATExecSetRelOptions</a></td>
+              <td class="coverFnHi">934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12029">transformFkeyGetPrimaryKey</a></td>
+              <td class="coverFnHi">936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14164">ATPostAlterTypeCleanup</a></td>
+              <td class="coverFnHi">944</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12325">validateForeignKeyConstraint</a></td>
+              <td class="coverFnHi">950</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3715">renameatt_check</a></td>
+              <td class="coverFnHi">976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#13789">RememberAllDependentForRebuilding</a></td>
+              <td class="coverFnHi">998</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1396">DropErrorMsgNonExistent</a></td>
+              <td class="coverFnHi">1046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12128">transformFkeyCheckAttrs</a></td>
+              <td class="coverFnHi">1082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#13144">ATPrepAlterColumnType</a></td>
+              <td class="coverFnHi">1106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12707">dropconstraint_internal</a></td>
+              <td class="coverFnHi">1124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7971">NotNullImpliedByRelConstraints</a></td>
+              <td class="coverFnHi">1248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4190">RenameRelationInternal</a></td>
+              <td class="coverFnHi">1264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1918">ExecuteTruncateGuts</a></td>
+              <td class="coverFnHi">1290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1794">ExecuteTruncate</a></td>
+              <td class="coverFnHi">1304</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9345">ATExecAddIndex</a></td>
+              <td class="coverFnHi">1406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9049">ATPrepDropColumn</a></td>
+              <td class="coverFnHi">1560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18125">RangeVarCallbackForTruncate</a></td>
+              <td class="coverFnHi">1642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#2353">truncate_check_perms</a></td>
+              <td class="coverFnHi">1732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19137">AttachPartitionEnsureIndexes</a></td>
+              <td class="coverFnHi">1884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9637">ATAddCheckNNConstraint</a></td>
+              <td class="coverFnHi">1900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#14779">ATExecChangeOwner</a></td>
+              <td class="coverFnHi">1942</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7003">ATPrepAddColumn</a></td>
+              <td class="coverFnHi">1970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9595">ChooseForeignKeyConstraintNameAddition</a></td>
+              <td class="coverFnHi">1974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12296">checkFkeyPermissions</a></td>
+              <td class="coverFnHi">2006</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10220">validateFkOnDeleteSetColumns</a></td>
+              <td class="coverFnHi">2054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9795">ATAddForeignKeyConstraint</a></td>
+              <td class="coverFnHi">2104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9077">ATExecDropColumn</a></td>
+              <td class="coverFnHi">2104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18821">ATExecAttachPartition</a></td>
+              <td class="coverFnHi">2106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16230">MergeConstraintsIntoExisting</a></td>
+              <td class="coverFnHi">2144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#16100">MergeAttributesIntoExisting</a></td>
+              <td class="coverFnHi">2222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#15977">CreateInheritance</a></td>
+              <td class="coverFnHi">2228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#19336">CloneRowTriggersToPartition</a></td>
+              <td class="coverFnHi">2232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18748">QueuePartitionConstraintValidation</a></td>
+              <td class="coverFnHi">2298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10282">addFkRecurseReferenced</a></td>
+              <td class="coverFnHi">2450</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10503">addFkRecurseReferencing</a></td>
+              <td class="coverFnHi">2494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12620">createForeignKeyCheckTriggers</a></td>
+              <td class="coverFnHi">2494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12485">createForeignKeyActionTriggers</a></td>
+              <td class="coverFnHi">2510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7027">ATExecAddColumn</a></td>
+              <td class="coverFnHi">2576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18638">PartConstraintImpliedByRelConstraint</a></td>
+              <td class="coverFnHi">2916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7417">check_for_column_name_collision</a></td>
+              <td class="coverFnHi">2966</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#2371">truncate_check_activity</a></td>
+              <td class="coverFnHi">3190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7488">add_column_collation_dependency</a></td>
+              <td class="coverFnHi">3280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7470">add_column_datatype_dependency</a></td>
+              <td class="coverFnHi">3280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#2305">truncate_check_rel</a></td>
+              <td class="coverFnHi">3364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9521">ATExecAddConstraint</a></td>
+              <td class="coverFnHi">3396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6753">find_composite_type_dependencies</a></td>
+              <td class="coverFnHi">3764</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18691">ConstraintImpliedByRelConstraint</a></td>
+              <td class="coverFnHi">4164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18380">ComputePartitionAttrs</a></td>
+              <td class="coverFnHi">4516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18322">transformPartitionSpec</a></td>
+              <td class="coverFnHi">4546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#12422">CreateFKCheckTrigger</a></td>
+              <td class="coverFnHi">4988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6003">ATRewriteTable</a></td>
+              <td class="coverFnHi">5012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#11977">transformColumnNameList</a></td>
+              <td class="coverFnHi">5262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9429">ATExecAddIndexConstraint</a></td>
+              <td class="coverFnHi">6674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#9269">ATPrepAddPrimaryKey</a></td>
+              <td class="coverFnHi">7676</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10759">CloneFkReferenced</a></td>
+              <td class="coverFnHi">8874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10964">CloneFkReferencing</a></td>
+              <td class="coverFnHi">8874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#10728">CloneForeignKeyConstraints</a></td>
+              <td class="coverFnHi">8874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3500">StoreCatalogInheritance1</a></td>
+              <td class="coverFnHi">11050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7942">ATExecSetAttNotNull</a></td>
+              <td class="coverFnHi">12462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6633">ATSimpleRecursion</a></td>
+              <td class="coverFnHi">13550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3575">SetRelationHasSubclass</a></td>
+              <td class="coverFnHi">13778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18149">RangeVarCallbackOwnsRelation</a></td>
+              <td class="coverFnHi">14166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1471">RemoveRelations</a></td>
+              <td class="coverFnHi">15496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#5582">ATParseTransformCmd</a></td>
+              <td class="coverFnHi">16816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18058">AtEOSubXact_on_commit_actions</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1635">RangeVarCallbackForDropRelation</a></td>
+              <td class="coverFnHi">19406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3545">findAttrByName</a></td>
+              <td class="coverFnHi">19650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#7658">set_attnotnull</a></td>
+              <td class="coverFnHi">20868</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#5719">ATRewriteTables</a></td>
+              <td class="coverFnHi">28480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#5179">ATRewriteCatalogs</a></td>
+              <td class="coverFnHi">30750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4420">AlterTable</a></td>
+              <td class="coverFnHi">30762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4361">AlterTableLookupRelation</a></td>
+              <td class="coverFnHi">31002</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4757">ATController</a></td>
+              <td class="coverFnHi">31022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4494">AlterTableGetLockLevel</a></td>
+              <td class="coverFnHi">31280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18181">RangeVarCallbackForAlterRelation</a></td>
+              <td class="coverFnHi">32354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4792">ATPrepCmd</a></td>
+              <td class="coverFnHi">33258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6558">ATSimplePermissions</a></td>
+              <td class="coverFnHi">35898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#6380">ATGetQueueEntry</a></td>
+              <td class="coverFnHi">39240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17896">remove_on_commit_action</a></td>
+              <td class="coverFnHi">39604</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#3456">StoreCatalogInheritance</a></td>
+              <td class="coverFnHi">47418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#2478">MergeAttributes</a></td>
+              <td class="coverFnHi">48138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#684">DefineRelation</a></td>
+              <td class="coverFnHi">48348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#5253">ATExecCmd</a></td>
+              <td class="coverFnHi">50282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#1294">BuildDescForRelation</a></td>
+              <td class="coverFnHi">50638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#4333">CheckTableNotInUse</a></td>
+              <td class="coverFnHi">124852</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#20517">GetAttributeCompression</a></td>
+              <td class="coverFnHi">186280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#17919">PreCommit_on_commit_actions</a></td>
+              <td class="coverFnHi">476628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tablecmds.c.gcov.html#18026">AtEOXact_on_commit_actions</a></td>
+              <td class="coverFnHi">519100</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

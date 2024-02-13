@@ -1,0 +1,540 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/cache/lsyscache.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/cache</a> - lsyscache.c<span style="font-size: 80%;"> (<a href="lsyscache.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1013</td>
+            <td class="headerCovTableEntry">1140</td>
+            <td class="headerCovTableEntryMed">88.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">113</td>
+            <td class="headerCovTableEntry">115</td>
+            <td class="headerCovTableEntryHi">98.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="lsyscache.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1649">get_func_nargs</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2959">get_typmodin</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#302">get_ordering_op_for_equality_op</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3465">get_index_column_opclass</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3648">get_subscription_name</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1285">get_opname</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1004">get_cast_oid</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3628">get_subscription_oid</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1308">get_op_rettype</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1607">get_func_namespace</a></td>
+              <td class="coverFnHi">160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#695">equality_ops_are_compatible</a></td>
+              <td class="coverFnHi">166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3411">get_range_multirange</a></td>
+              <td class="coverFnHi">174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1032">get_collation_name</a></td>
+              <td class="coverFnHi">254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1136">get_language_name</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1698">get_func_variadictype</a></td>
+              <td class="coverFnHi">276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2126">get_typisdefined</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3508">get_index_isreplident</a></td>
+              <td class="coverFnHi">422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#105">get_op_opfamily_sortfamily</a></td>
+              <td class="coverFnHi">474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1583">get_func_name</a></td>
+              <td class="coverFnHi">568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3598">get_publication_name</a></td>
+              <td class="coverFnHi">602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1078">get_constraint_name</a></td>
+              <td class="coverFnHi">658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3554">get_index_isclustered</a></td>
+              <td class="coverFnHi">682</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1110">get_constraint_index</a></td>
+              <td class="coverFnHi">692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3386">get_range_collation</a></td>
+              <td class="coverFnHi">864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1671">get_func_signature</a></td>
+              <td class="coverFnHi">1010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#885">get_attgenerated</a></td>
+              <td class="coverFnHi">1012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#264">get_equality_op_for_ordering_op</a></td>
+              <td class="coverFnHi">1338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#407">get_compatible_hash_operators</a></td>
+              <td class="coverFnHi">1546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2073">get_transform_fromsql</a></td>
+              <td class="coverFnHi">1546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1210">get_opclass_opfamily_and_input_type</a></td>
+              <td class="coverFnHi">1634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#910">get_atttype</a></td>
+              <td class="coverFnHi">1974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2095">get_transform_tosql</a></td>
+              <td class="coverFnHi">2056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2926">getTypeBinaryOutputInfo</a></td>
+              <td class="coverFnHi">2182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3578">get_publication_oid</a></td>
+              <td class="coverFnHi">2588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#598">get_op_btree_interpretation</a></td>
+              <td class="coverFnHi">4268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3531">get_index_isvalid</a></td>
+              <td class="coverFnHi">4496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1812">get_func_leakproof</a></td>
+              <td class="coverFnHi">5100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1954">get_rel_type_id</a></td>
+              <td class="coverFnHi">6116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2002">get_rel_relispartition</a></td>
+              <td class="coverFnHi">6896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1051">get_collation_isdeterministic</a></td>
+              <td class="coverFnHi">7444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2029">get_rel_tablespace</a></td>
+              <td class="coverFnHi">7856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2684">get_typ_typrelid</a></td>
+              <td class="coverFnHi">9688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#940">get_atttypetypmodcoll</a></td>
+              <td class="coverFnHi">12238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3360">get_range_subtype</a></td>
+              <td class="coverFnHi">14472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2764">get_promoted_array_type</a></td>
+              <td class="coverFnHi">15006</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3436">get_multirange_range</a></td>
+              <td class="coverFnHi">16602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2641">type_is_range</a></td>
+              <td class="coverFnHi">19686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1468">op_volatile</a></td>
+              <td class="coverFnHi">20210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1630">get_func_rettype</a></td>
+              <td class="coverFnHi">21528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#855">get_attnum</a></td>
+              <td class="coverFnHi">27312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3343">get_namespace_name_or_temp</a></td>
+              <td class="coverFnHi">29438</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1833">get_func_support</a></td>
+              <td class="coverFnHi">30848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3083">getSubscriptingRoutines</a></td>
+              <td class="coverFnHi">31856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3050">get_typsubscript</a></td>
+              <td class="coverFnHi">31916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1793">get_func_prokind</a></td>
+              <td class="coverFnHi">35118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2401">get_typdefault</a></td>
+              <td class="coverFnHi">36626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2651">type_is_multirange</a></td>
+              <td class="coverFnHi">41638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1452">op_strict</a></td>
+              <td class="coverFnHi">48422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#507">get_op_hash_functions</a></td>
+              <td class="coverFnHi">53196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1508">get_negator</a></td>
+              <td class="coverFnHi">59990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2175">get_typbyval</a></td>
+              <td class="coverFnHi">63474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#824">get_attname</a></td>
+              <td class="coverFnHi">69120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2372">get_typstorage</a></td>
+              <td class="coverFnHi">73032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1484">get_commutator</a></td>
+              <td class="coverFnHi">76974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2278">get_type_io_data</a></td>
+              <td class="coverFnHi">79570</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2631">type_is_enum</a></td>
+              <td class="coverFnHi">80846</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1903">get_rel_name</a></td>
+              <td class="coverFnHi">84318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2740">get_array_type</a></td>
+              <td class="coverFnHi">135304</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1235">get_opclass_method</a></td>
+              <td class="coverFnHi">144176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1978">get_rel_relkind</a></td>
+              <td class="coverFnHi">160848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2608">type_is_rowtype</a></td>
+              <td class="coverFnHi">181366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1165">get_opclass_family</a></td>
+              <td class="coverFnHi">184814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1556">get_oprjoin</a></td>
+              <td class="coverFnHi">185652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1187">get_opclass_input_type</a></td>
+              <td class="coverFnHi">185816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#746">comparison_ops_are_compatible</a></td>
+              <td class="coverFnHi">189874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2785">get_base_element_type</a></td>
+              <td class="coverFnHi">212878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1736">func_strict</a></td>
+              <td class="coverFnHi">226350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#133">get_op_opfamily_properties</a></td>
+              <td class="coverFnHi">306260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2663">get_type_category_preferred</a></td>
+              <td class="coverFnHi">307526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2893">getTypeBinaryInputInfo</a></td>
+              <td class="coverFnHi">313900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1927">get_rel_namespace</a></td>
+              <td class="coverFnHi">317850</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2053">get_rel_persistence</a></td>
+              <td class="coverFnHi">322332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1412">op_hashjoinable</a></td>
+              <td class="coverFnHi">328338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#204">get_ordering_op_properties</a></td>
+              <td class="coverFnHi">328420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1333">op_input_types</a></td>
+              <td class="coverFnHi">336310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3034">type_is_collatable</a></td>
+              <td class="coverFnHi">358264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1361">op_mergejoinable</a></td>
+              <td class="coverFnHi">443774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#63">op_in_opfamily</a></td>
+              <td class="coverFnHi">447950</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#80">get_op_opfamily_strategy</a></td>
+              <td class="coverFnHi">526440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1717">get_func_retset</a></td>
+              <td class="coverFnHi">564984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#793">get_opfamily_proc</a></td>
+              <td class="coverFnHi">565036</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2827">getTypeInputInfo</a></td>
+              <td class="coverFnHi">603798</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3319">get_namespace_name</a></td>
+              <td class="coverFnHi">622628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#967">get_attoptions</a></td>
+              <td class="coverFnHi">641054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2204">get_typlenbyval</a></td>
+              <td class="coverFnHi">733742</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2582">get_typtype</a></td>
+              <td class="coverFnHi">761888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1755">func_volatile</a></td>
+              <td class="coverFnHi">774948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1532">get_oprrest</a></td>
+              <td class="coverFnHi">904226</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3111">get_attavgwidth</a></td>
+              <td class="coverFnHi">1036864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2712">get_element_type</a></td>
+              <td class="coverFnHi">1134218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1774">func_parallel</a></td>
+              <td class="coverFnHi">1221682</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1260">get_opcode</a></td>
+              <td class="coverFnHi">1247764</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#1860">get_relname_relid</a></td>
+              <td class="coverFnHi">1278224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2531">get_typavgwidth</a></td>
+              <td class="coverFnHi">1331840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2860">getTypeOutputInfo</a></td>
+              <td class="coverFnHi">1454196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3297">free_attstatsslot</a></td>
+              <td class="coverFnHi">1546078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2256">getTypeIOParam</a></td>
+              <td class="coverFnHi">1547446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2224">get_typlenbyvalalign</a></td>
+              <td class="coverFnHi">1576230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#363">get_mergejoin_opfamilies</a></td>
+              <td class="coverFnHi">1769624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3187">get_attstatsslot</a></td>
+              <td class="coverFnHi">1784572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#3009">get_typcollation</a></td>
+              <td class="coverFnHi">2391410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2150">get_typlen</a></td>
+              <td class="coverFnHi">2452792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#163">get_opfamily_member</a></td>
+              <td class="coverFnHi">2685824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2474">getBaseType</a></td>
+              <td class="coverFnHi">4335356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lsyscache.c.gcov.html#2491">getBaseTypeAndTypmod</a></td>
+              <td class="coverFnHi">5945660</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

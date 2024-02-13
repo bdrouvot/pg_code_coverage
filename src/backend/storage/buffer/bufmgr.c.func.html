@@ -1,0 +1,424 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/buffer/bufmgr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/buffer</a> - bufmgr.c<span style="font-size: 80%;"> (<a href="bufmgr.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1427</td>
+            <td class="headerCovTableEntry">1545</td>
+            <td class="headerCovTableEntryHi">92.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntryHi">95.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="bufmgr.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5280">AbortBufferIO</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3211">AtEOXact_Buffers</a></td>
+              <td class="coverFnHi">519406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3253">AtProcExit_Buffers</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2840">BgBufferSync</a></td>
+              <td class="coverFnHi">10602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1238">BufferAlloc</a></td>
+              <td class="coverFnHi">89050236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3376">BufferGetBlockNumber</a></td>
+              <td class="coverFnHi">131618936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3637">BufferGetLSNAtomic</a></td>
+              <td class="coverFnHi">13072122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3397">BufferGetTag</a></td>
+              <td class="coverFnHi">26112400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2156">BufferIsDirty</a></td>
+              <td class="coverFnHi">25890130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2127">BufferIsExclusiveLocked</a></td>
+              <td class="coverFnHi">25890130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3607">BufferIsPermanent</a></td>
+              <td class="coverFnHi">17306602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2564">BufferSync</a></td>
+              <td class="coverFnHi">1476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4841">CheckBufferIsPinnedOnce</a></td>
+              <td class="coverFnHi">5867304</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3271">CheckForBufferLeaks</a></td>
+              <td class="coverFnHi">547092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3362">CheckPointBuffers</a></td>
+              <td class="coverFnHi">1476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4820">ConditionalLockBuffer</a></td>
+              <td class="coverFnHi">2036366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5035">ConditionalLockBufferForCleanup</a></td>
+              <td class="coverFnHi">147920</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4433">CreateAndCopyRelationData</a></td>
+              <td class="coverFnHi">82610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3317">DebugPrintBufferRefcount</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4038">DropDatabaseBuffers</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3683">DropRelationBuffers</a></td>
+              <td class="coverFnHi">1022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3806">DropRelationsAllBuffers</a></td>
+              <td class="coverFnHi">22240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#837">ExtendBufferedRel</a></td>
+              <td class="coverFnHi">83136</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#869">ExtendBufferedRelBy</a></td>
+              <td class="coverFnHi">264902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1803">ExtendBufferedRelCommon</a></td>
+              <td class="coverFnHi">355700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1847">ExtendBufferedRelShared</a></td>
+              <td class="coverFnHi">338224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#901">ExtendBufferedRelTo</a></td>
+              <td class="coverFnHi">86180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3977">FindAndDropRelationBuffers</a></td>
+              <td class="coverFnHi">1442</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3436">FlushBuffer</a></td>
+              <td class="coverFnHi">844940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4497">FlushDatabaseBuffers</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4539">FlushOneBuffer</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4144">FlushRelationBuffers</a></td>
+              <td class="coverFnHi">260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4242">FlushRelationsAllBuffers</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#426">ForgetPrivateRefCountEntry</a></td>
+              <td class="coverFnHi">87106632</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#403">GetPrivateRefCount</a></td>
+              <td class="coverFnHi">584732226</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#329">GetPrivateRefCountEntry</a></td>
+              <td class="coverFnHi">798790482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1606">GetVictimBuffer</a></td>
+              <td class="coverFnHi">2914216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5009">HoldingBufferPinThatDelaysRecovery</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4591">IncrBufferRefCount</a></td>
+              <td class="coverFnHi">16868206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3228">InitBufferPoolAccess</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1440">InvalidateBuffer</a></td>
+              <td class="coverFnHi">182068</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1538">InvalidateVictimBuffer</a></td>
+              <td class="coverFnHi">1916286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5091">IsBufferCleanupOK</a></td>
+              <td class="coverFnHi">4038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5588">IssuePendingWritebacks</a></td>
+              <td class="coverFnHi">469034</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1772">LimitAdditionalPins</a></td>
+              <td class="coverFnHi">338224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5389">LockBufHdr</a></td>
+              <td class="coverFnHi">43599954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4794">LockBuffer</a></td>
+              <td class="coverFnHi">273086890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4874">LockBufferForCleanup</a></td>
+              <td class="coverFnHi">27690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2188">MarkBufferDirty</a></td>
+              <td class="coverFnHi">37953848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4623">MarkBufferDirtyHint</a></td>
+              <td class="coverFnHi">18077610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#303">NewPrivateRefCountEntry</a></td>
+              <td class="coverFnHi">87106632</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2309">PinBuffer</a></td>
+              <td class="coverFnHi">86514870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2415">PinBuffer_Locked</a></td>
+              <td class="coverFnHi">4337278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#626">PrefetchBuffer</a></td>
+              <td class="coverFnHi">473358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#536">PrefetchSharedBuffer</a></td>
+              <td class="coverFnHi">1572786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#733">ReadBuffer</a></td>
+              <td class="coverFnHi">67340686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#780">ReadBufferExtended</a></td>
+              <td class="coverFnHi">85492880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#820">ReadBufferWithoutRelcache</a></td>
+              <td class="coverFnHi">5660528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#1013">ReadBuffer_common</a></td>
+              <td class="coverFnHi">91153416</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#657">ReadRecentBuffer</a></td>
+              <td class="coverFnHi">1028166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4342">RelationCopyStorageUsingBuffer</a></td>
+              <td class="coverFnHi">110142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3575">RelationGetNumberOfBlocksInFork</a></td>
+              <td class="coverFnHi">2707090</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2251">ReleaseAndReadBuffer</a></td>
+              <td class="coverFnHi">43945124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4559">ReleaseBuffer</a></td>
+              <td class="coverFnHi">92583942</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5679">ResOwnerPrintBufferIO</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5702">ResOwnerPrintBufferPin</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5671">ResOwnerReleaseBufferIO</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5687">ResOwnerReleaseBufferPin</a></td>
+              <td class="coverFnHi">7544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#237">ReservePrivateRefCountEntry</a></td>
+              <td class="coverFnHi">95872778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5543">ScheduleBufferTagForWriteback</a></td>
+              <td class="coverFnHi">837816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5188">StartBufferIO</a></td>
+              <td class="coverFnHi">3764678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#3138">SyncOneBuffer</a></td>
+              <td class="coverFnHi">2494838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5243">TerminateBufferIO</a></td>
+              <td class="coverFnHi">3756526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4766">UnlockBuffers</a></td>
+              <td class="coverFnHi">79626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#4576">UnlockReleaseBuffer</a></td>
+              <td class="coverFnHi">28443522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2458">UnpinBuffer</a></td>
+              <td class="coverFnHi">107022290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#2467">UnpinBufferNoOwner</a></td>
+              <td class="coverFnHi">107029128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5419">WaitBufHdrUnlocked</a></td>
+              <td class="coverFnHi">3082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5145">WaitIO</a></td>
+              <td class="coverFnHi">7946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5531">WritebackContextInit</a></td>
+              <td class="coverFnHi">3236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5443">buffertag_comparator</a></td>
+              <td class="coverFnHi">1139026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5477">ckpt_buforder_comparator</a></td>
+              <td class="coverFnHi">3918384</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5342">local_buffer_write_error_callback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5362">rlocator_comparator</a></td>
+              <td class="coverFnHi">19072298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5322">shared_buffer_write_error_callback</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="bufmgr.c.gcov.html#5508">ts_ckpt_progress_comparator</a></td>
+              <td class="coverFnHi">315404</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

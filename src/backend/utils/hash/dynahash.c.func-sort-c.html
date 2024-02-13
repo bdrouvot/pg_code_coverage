@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/hash/dynahash.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/hash</a> - dynahash.c<span style="font-size: 80%;"> (<a href="dynahash.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">418</td>
+            <td class="headerCovTableEntry">522</td>
+            <td class="headerCovTableEntryMed">80.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntryHi">91.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="dynahash.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1639">dir_realloc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1744">hash_corrupted</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1525">hash_freeze</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1155">hash_update_hash_key</a></td>
+              <td class="coverFnHi">1696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#850">hash_get_shared_size</a></td>
+              <td class="coverFnHi">13710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#826">hash_select_dirsize</a></td>
+              <td class="coverFnHi">13710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1902">AtEOSubXact_HashTables</a></td>
+              <td class="coverFnHi">17714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#779">hash_estimate_size</a></td>
+              <td class="coverFnHi">25698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1375">hash_get_num_entries</a></td>
+              <td class="coverFnHi">63594</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#861">hash_destroy</a></td>
+              <td class="coverFnHi">78454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#880">hash_stats</a></td>
+              <td class="coverFnHi">78454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1776">next_pow2_long</a></td>
+              <td class="coverFnHi">78816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#348">hash_create</a></td>
+              <td class="coverFnHi">347984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#625">hdefault</a></td>
+              <td class="coverFnHi">347984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#685">init_htab</a></td>
+              <td class="coverFnHi">347984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#652">choose_nelem_alloc</a></td>
+              <td class="coverFnHi">373682</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1876">AtEOXact_HashTables</a></td>
+              <td class="coverFnHi">519892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1542">expand_table</a></td>
+              <td class="coverFnHi">604078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1862">has_seq_scans</a></td>
+              <td class="coverFnHi">604078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1678">seg_alloc</a></td>
+              <td class="coverFnHi">677378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1697">element_alloc</a></td>
+              <td class="coverFnHi">699110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1784">next_pow2_int</a></td>
+              <td class="coverFnHi">703578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#303">string_compare</a></td>
+              <td class="coverFnHi">780898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1758">my_log2</a></td>
+              <td class="coverFnHi">819672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#287">DynaHashAlloc</a></td>
+              <td class="coverFnHi">1867990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1841">deregister_seq_scan</a></td>
+              <td class="coverFnHi">4860446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1505">hash_seq_term</a></td>
+              <td class="coverFnHi">4860446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1419">hash_seq_init</a></td>
+              <td class="coverFnHi">4860466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1829">register_seq_scan</a></td>
+              <td class="coverFnHi">4860466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1290">get_hash_entry</a></td>
+              <td class="coverFnHi">41813020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#1429">hash_seq_search</a></td>
+              <td class="coverFnHi">66097642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#907">get_hash_value</a></td>
+              <td class="coverFnHi">120301852</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#951">hash_search</a></td>
+              <td class="coverFnHi">161784772</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#964">hash_search_with_hash_value</a></td>
+              <td class="coverFnHi">271198892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dynahash.c.gcov.html#914">calc_bucket</a></td>
+              <td class="coverFnHi">272059886</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

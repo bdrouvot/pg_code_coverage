@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/heap/heapam.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/heap</a> - heapam.c<span style="font-size: 80%;"> (<a href="heapam.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">3043</td>
+            <td class="headerCovTableEntry">3362</td>
+            <td class="headerCovTableEntryHi">90.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">92</td>
+            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntryHi">97.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="heapam.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#10059">heap_mask</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9869">heap_xlog_lock_updated</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7323">ConditionalMultiXactIdWait</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6027">FreezeMultiXactId</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5738">heap_abort_speculative</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5170">test_lockmode_for_conflict</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7301">MultiXactIdWait</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7223">Do_MultiXactIdWait</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9762">heap_xlog_confirm</a></td>
+              <td class="coverFnHi">122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5261">heap_lock_updated_tuple_rec</a></td>
+              <td class="coverFnHi">160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5606">heap_lock_updated_tuple</a></td>
+              <td class="coverFnHi">176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1163">heap_set_tidrange</a></td>
+              <td class="coverFnHi">178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7124">DoesMultiXactIdConflict</a></td>
+              <td class="coverFnHi">188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9058">heap_xlog_freeze_page</a></td>
+              <td class="coverFnHi">236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1615">heap_get_latest_tid</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1737">UpdateXmaxHintBits</a></td>
+              <td class="coverFnHi">332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#4840">heap_acquire_tuplock</a></td>
+              <td class="coverFnHi">508</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7108">HeapTupleGetUpdateXid</a></td>
+              <td class="coverFnHi">1120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7056">MultiXactIdGetUpdateXid</a></td>
+              <td class="coverFnHi">1136</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6975">GetMultiXactIdHintBits</a></td>
+              <td class="coverFnHi">2364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#4094">get_mxact_status_for_lock</a></td>
+              <td class="coverFnHi">2400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8851">heap_xlog_vacuum</a></td>
+              <td class="coverFnHi">2424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8087">bottomup_nblocksfavorable</a></td>
+              <td class="coverFnHi">3246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8203">bottomup_sort_and_shrink</a></td>
+              <td class="coverFnHi">3246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#352">heap_setscanlimits</a></td>
+              <td class="coverFnHi">3738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1776">FreeBulkInsertState</a></td>
+              <td class="coverFnHi">3814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5651">heap_finish_speculative</a></td>
+              <td class="coverFnHi">4010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1759">GetBulkInsertState</a></td>
+              <td class="coverFnHi">4044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1236">heap_getnextslot_tidrange</a></td>
+              <td class="coverFnHi">5940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8926">heap_xlog_visible</a></td>
+              <td class="coverFnHi">7224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7645">heap_index_delete_tuples</a></td>
+              <td class="coverFnHi">9738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7990">index_delete_sort</a></td>
+              <td class="coverFnHi">9738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2492">xmax_infomask_changed</a></td>
+              <td class="coverFnHi">10634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9929">heap_xlog_inplace</a></td>
+              <td class="coverFnHi">12826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8763">heap_xlog_prune</a></td>
+              <td class="coverFnHi">12988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6874">heap_log_freeze_plan</a></td>
+              <td class="coverFnHi">18266</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6680">heap_freeze_execute_prepared</a></td>
+              <td class="coverFnHi">18272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6854">heap_log_freeze_new_plan</a></td>
+              <td class="coverFnHi">21646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7540">index_delete_prefetch_buffer</a></td>
+              <td class="coverFnHi">32110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8588">log_heap_new_cid</a></td>
+              <td class="coverFnHi">42572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8332">log_heap_visible</a></td>
+              <td class="coverFnHi">56474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#5891">heap_inplace_update</a></td>
+              <td class="coverFnHi">96018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9343">heap_xlog_multi_insert</a></td>
+              <td class="coverFnHi">97714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9798">heap_xlog_lock</a></td>
+              <td class="coverFnHi">108248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#10016">heap2_redo</a></td>
+              <td class="coverFnHi">122194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#4053">simple_heap_update</a></td>
+              <td class="coverFnHi">157968</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1788">ReleaseBulkInsertStatePin</a></td>
+              <td class="coverFnHi">161512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#4142">heap_lock_tuple</a></td>
+              <td class="coverFnHi">164722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#554">heapgettup_start_page</a></td>
+              <td class="coverFnHi">176652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9490">heap_xlog_update</a></td>
+              <td class="coverFnHi">180216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8130">bottomup_sort_and_shrink_cmp</a></td>
+              <td class="coverFnHi">344110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8366">log_heap_update</a></td>
+              <td class="coverFnHi">508488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#3963">HeapDetermineColumnsInfo</a></td>
+              <td class="coverFnHi">531428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2982">heap_update</a></td>
+              <td class="coverFnHi">531428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1051">heap_endscan</a></td>
+              <td class="coverFnHi">550122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2095">heap_multi_insert</a></td>
+              <td class="coverFnHi">551342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#929">heap_beginscan</a></td>
+              <td class="coverFnHi">552502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2063">heap_multi_insert_pages</a></td>
+              <td class="coverFnHi">561954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9150">heap_xlog_delete</a></td>
+              <td class="coverFnHi">564150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1343">heap_fetch</a></td>
+              <td class="coverFnHi">674442</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6931">heap_freeze_tuple</a></td>
+              <td class="coverFnHi">763020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6837">heap_log_freeze_eq</a></td>
+              <td class="coverFnHi">785074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9129">fix_infomask_from_infobits</a></td>
+              <td class="coverFnHi">851668</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7585">index_delete_check_htid</a></td>
+              <td class="coverFnHi">940912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1014">heap_rescan</a></td>
+              <td class="coverFnHi">953792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6790">heap_log_freeze_cmp</a></td>
+              <td class="coverFnHi">967208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2936">simple_heap_delete</a></td>
+              <td class="coverFnHi">1086812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#3912">heap_attr_equals</a></td>
+              <td class="coverFnHi">1149164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2457">simple_heap_insert</a></td>
+              <td class="coverFnHi">1189420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6651">heap_execute_freeze_tuple</a></td>
+              <td class="coverFnHi">1307848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#491">heapgettup_initial_block</a></td>
+              <td class="coverFnHi">1465368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#231">initscan</a></td>
+              <td class="coverFnHi">1506294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7337">heap_tuple_needs_eventual_freeze</a></td>
+              <td class="coverFnHi">2316364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9223">heap_xlog_insert</a></td>
+              <td class="coverFnHi">2522904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2515">heap_delete</a></td>
+              <td class="coverFnHi">2692958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7500">HeapTupleHeaderAdvanceConflictHorizon</a></td>
+              <td class="coverFnHi">2731854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7392">heap_tuple_should_freeze</a></td>
+              <td class="coverFnHi">2804538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#8669">ExtractReplicaIdentity</a></td>
+              <td class="coverFnHi">3223942</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#9970">heap_redo</a></td>
+              <td class="coverFnHi">3388466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#631">heapgettup_advance_block</a></td>
+              <td class="coverFnHi">3493514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2470">compute_infobits</a></td>
+              <td class="coverFnHi">3494664</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#4889">compute_new_xmax_infomask</a></td>
+              <td class="coverFnHi">3659824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#375">heapgetpage</a></td>
+              <td class="coverFnHi">3720510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#6377">heap_prepare_freeze_tuple</a></td>
+              <td class="coverFnHi">5846180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1826">heap_insert</a></td>
+              <td class="coverFnHi">14880370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#585">heapgettup_continue_page</a></td>
+              <td class="coverFnHi">15201344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#722">heapgettup</a></td>
+              <td class="coverFnHi">15235876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1084">heap_getnext</a></td>
+              <td class="coverFnHi">16284190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#2015">heap_prepare_insert</a></td>
+              <td class="coverFnHi">17450870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#7954">index_delete_sort_cmp</a></td>
+              <td class="coverFnHi">22268048</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1463">heap_hot_search_buffer</a></td>
+              <td class="coverFnHi">35601320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#1133">heap_getnextslot</a></td>
+              <td class="coverFnHi">73681710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#837">heapgettup_pagemode</a></td>
+              <td class="coverFnHi">74736150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="heapam.c.gcov.html#10155">HeapCheckForSerializableConflictOut</a></td>
+              <td class="coverFnHi">201356740</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

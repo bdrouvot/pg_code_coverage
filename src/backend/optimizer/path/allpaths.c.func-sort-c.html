@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/path/allpaths.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/path</a> - allpaths.c<span style="font-size: 80%;"> (<a href="allpaths.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1079</td>
+            <td class="headerCovTableEntry">1141</td>
+            <td class="headerCovTableEntryHi">94.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="allpaths.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3787">compare_tlist_datatypes</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#4011">recurse_push_qual</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3646">recurse_pushdown_safe</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2850">set_tablefunc_pathlist</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2215">find_window_run_conditions</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2420">check_and_push_window_quals</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#855">set_tablesample_rel_pathlist</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#815">set_tablesample_rel_size</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2941">set_namedtuplestore_pathlist</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3001">set_worktable_pathlist</a></td>
+              <td class="coverFnHi">814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3964">subquery_push_qual</a></td>
+              <td class="coverFnHi">964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2167">set_dummy_rel_pathlist</a></td>
+              <td class="coverFnHi">982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3820">targetIsInAllPartitionLists</a></td>
+              <td class="coverFnHi">1140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3715">check_output_expressions</a></td>
+              <td class="coverFnHi">1218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2971">set_result_pathlist</a></td>
+              <td class="coverFnHi">1390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3590">subquery_is_pushdown_safe</a></td>
+              <td class="coverFnHi">1396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3863">qual_is_pushdown_safe</a></td>
+              <td class="coverFnHi">1516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#927">set_foreign_pathlist</a></td>
+              <td class="coverFnHi">2320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#903">set_foreign_size</a></td>
+              <td class="coverFnHi">2324</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2874">set_cte_pathlist</a></td>
+              <td class="coverFnHi">3244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2000">get_cheapest_parameterized_child_path</a></td>
+              <td class="coverFnHi">5760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#4063">remove_unused_subquery_outputs</a></td>
+              <td class="coverFnHi">6864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2495">set_subquery_pathlist</a></td>
+              <td class="coverFnHi">6864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2830">set_values_pathlist</a></td>
+              <td class="coverFnHi">7396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2133">get_singleton_append_subpath</a></td>
+              <td class="coverFnHi">11896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3060">generate_gather_paths</a></td>
+              <td class="coverFnHi">15514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3130">get_useful_pathkeys_for_relation</a></td>
+              <td class="coverFnHi">15514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#1233">set_append_rel_pathlist</a></td>
+              <td class="coverFnHi">19052</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#945">set_append_rel_size</a></td>
+              <td class="coverFnHi">19324</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#1715">generate_orderedappend_paths</a></td>
+              <td class="coverFnHi">32636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#1303">add_paths_to_append_rel</a></td>
+              <td class="coverFnHi">32864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2763">set_function_pathlist</a></td>
+              <td class="coverFnHi">38800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3419">standard_join_search</a></td>
+              <td class="coverFnHi">79224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#4175">create_partial_bitmap_paths</a></td>
+              <td class="coverFnHi">121260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#4299">generate_partitionwise_join_paths</a></td>
+              <td class="coverFnHi">174678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#2088">accumulate_append_subpath</a></td>
+              <td class="coverFnHi">185140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#795">create_plain_partial_paths</a></td>
+              <td class="coverFnHi">247408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#334">set_base_rel_pathlists</a></td>
+              <td class="coverFnHi">263964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#172">make_one_rel</a></td>
+              <td class="coverFnHi">263992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#248">set_base_rel_consider_startup</a></td>
+              <td class="coverFnHi">263992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#291">set_base_rel_sizes</a></td>
+              <td class="coverFnHi">263992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3314">make_rel_from_joinlist</a></td>
+              <td class="coverFnHi">266958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#590">set_rel_consider_parallel</a></td>
+              <td class="coverFnHi">323500</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#765">set_plain_rel_pathlist</a></td>
+              <td class="coverFnHi">332236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#573">set_plain_rel_size</a></td>
+              <td class="coverFnHi">332260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#361">set_rel_size</a></td>
+              <td class="coverFnHi">413834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#470">set_rel_pathlist</a></td>
+              <td class="coverFnHi">413840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#3198">generate_useful_gather_paths</a></td>
+              <td class="coverFnHi">492492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="allpaths.c.gcov.html#4211">compute_parallel_worker</a></td>
+              <td class="coverFnHi">600754</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

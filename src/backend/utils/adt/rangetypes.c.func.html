@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/rangetypes.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - rangetypes.c<span style="font-size: 80%;"> (<a href="rangetypes.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">895</td>
+            <td class="headerCovTableEntry">1043</td>
+            <td class="headerCovTableEntryMed">85.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">76</td>
+            <td class="headerCovTableEntry">84</td>
+            <td class="headerCovTableEntryHi">90.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="rangetypes.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#755">bounds_adjacent</a></td>
+              <td class="coverFnHi">479832</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2906">build_bound_expr</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1556">daterange_canonical</a></td>
+              <td class="coverFnHi">292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1653">daterange_subdiff</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2681">datum_compute_size</a></td>
+              <td class="coverFnHi">1868456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2707">datum_write</a></td>
+              <td class="coverFnHi">1868456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#555">elem_contained_by_range</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2185">elem_contained_by_range_support</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2784">find_simplified_clause</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#315">get_range_io_data</a></td>
+              <td class="coverFnHi">107544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1328">hash_range</a></td>
+              <td class="coverFnHi">210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1394">hash_range_extended</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1462">int4range_canonical</a></td>
+              <td class="coverFnHi">467346</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1619">int4range_subdiff</a></td>
+              <td class="coverFnHi">1179568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1509">int8range_canonical</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1628">int8range_subdiff</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2163">make_empty_range</a></td>
+              <td class="coverFnHi">3120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1950">make_range</a></td>
+              <td class="coverFnHi">477080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1637">numrange_subdiff</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#826">range_adjacent</a></td>
+              <td class="coverFnHi">74436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#796">range_adjacent_internal</a></td>
+              <td class="coverFnHi">144602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#725">range_after</a></td>
+              <td class="coverFnHi">78306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#700">range_after_internal</a></td>
+              <td class="coverFnHi">194996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#687">range_before</a></td>
+              <td class="coverFnHi">78918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#662">range_before_internal</a></td>
+              <td class="coverFnHi">125990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2535">range_bound_escape</a></td>
+              <td class="coverFnHi">170066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1247">range_cmp</a></td>
+              <td class="coverFnHi">11344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2088">range_cmp_bound_values</a></td>
+              <td class="coverFnHi">1422762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2014">range_cmp_bounds</a></td>
+              <td class="coverFnHi">11056478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2127">range_compare</a></td>
+              <td class="coverFnHi">26718</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#375">range_constructor2</a></td>
+              <td class="coverFnHi">108054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#404">range_constructor3</a></td>
+              <td class="coverFnHi">5166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#649">range_contained_by</a></td>
+              <td class="coverFnHi">76908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2616">range_contained_by_internal</a></td>
+              <td class="coverFnHi">124510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#636">range_contains</a></td>
+              <td class="coverFnHi">154470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#542">range_contains_elem</a></td>
+              <td class="coverFnHi">76026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2625">range_contains_elem_internal</a></td>
+              <td class="coverFnHi">90652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2211">range_contains_elem_support</a></td>
+              <td class="coverFnHi">174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2584">range_contains_internal</a></td>
+              <td class="coverFnHi">487834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2505">range_deparse</a></td>
+              <td class="coverFnHi">104428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1854">range_deserialize</a></td>
+              <td class="coverFnHi">9606130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#489">range_empty</a></td>
+              <td class="coverFnHi">2196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#603">range_eq</a></td>
+              <td class="coverFnHi">77280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#571">range_eq_internal</a></td>
+              <td class="coverFnHi">179160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1309">range_ge</a></td>
+              <td class="coverFnHi">3036</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1921">range_get_flags</a></td>
+              <td class="coverFnHi">2964080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1701">range_get_typcache</a></td>
+              <td class="coverFnHi">4730678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1317">range_gt</a></td>
+              <td class="coverFnHi">3084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#86">range_in</a></td>
+              <td class="coverFnHi">3116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1125">range_intersect</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1217">range_intersect_agg_transfn</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1141">range_intersect_internal</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1301">range_le</a></td>
+              <td class="coverFnHi">3024</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#444">range_lower</a></td>
+              <td class="coverFnHi">240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#499">range_lower_inc</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#519">range_lower_inf</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1293">range_lt</a></td>
+              <td class="coverFnHi">1392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1112">range_merge</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#970">range_minus</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#991">range_minus_internal</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#623">range_ne</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#616">range_ne_internal</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#135">range_out</a></td>
+              <td class="coverFnHi">104428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#872">range_overlaps</a></td>
+              <td class="coverFnHi">77410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#839">range_overlaps_internal</a></td>
+              <td class="coverFnHi">96990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#913">range_overleft</a></td>
+              <td class="coverFnHi">76506</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#885">range_overleft_internal</a></td>
+              <td class="coverFnHi">133200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#954">range_overright</a></td>
+              <td class="coverFnHi">76500</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#926">range_overright_internal</a></td>
+              <td class="coverFnHi">218062</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2320">range_parse</a></td>
+              <td class="coverFnHi">3116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2436">range_parse_bound</a></td>
+              <td class="coverFnHi">5086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#2245">range_parse_flags</a></td>
+              <td class="coverFnHi">5166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#175">range_recv</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#259">range_send</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1725">range_serialize</a></td>
+              <td class="coverFnHi">946596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1935">range_set_contain_empty</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1180">range_split_internal</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1096">range_union</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1050">range_union_internal</a></td>
+              <td class="coverFnHi">1428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#465">range_upper</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#509">range_upper_inc</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#529">range_upper_inf</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1662">tsrange_subdiff</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="rangetypes.c.gcov.html#1673">tstzrange_subdiff</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

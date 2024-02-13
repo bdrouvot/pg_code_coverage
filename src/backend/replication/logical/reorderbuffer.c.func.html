@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/replication/logical/reorderbuffer.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/replication/logical</a> - reorderbuffer.c<span style="font-size: 80%;"> (<a href="reorderbuffer.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1547</td>
+            <td class="headerCovTableEntry">1661</td>
+            <td class="headerCovTableEntryHi">93.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntry">87</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="reorderbuffer.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#5013">ApplyLogicalMappingFile</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#973">AssertChangeLsnOrder</a></td>
+              <td class="coverFnHi">4444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#902">AssertTXNLsnOrder</a></td>
+              <td class="coverFnHi">13076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2886">ReorderBufferAbort</a></td>
+              <td class="coverFnHi">208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2931">ReorderBufferAbortOld</a></td>
+              <td class="coverFnHi">2322</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3264">ReorderBufferAddInvalidations</a></td>
+              <td class="coverFnHi">9060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3148">ReorderBufferAddNewCommandId</a></td>
+              <td class="coverFnHi">45016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3227">ReorderBufferAddNewTupleCids</a></td>
+              <td class="coverFnHi">45016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3099">ReorderBufferAddSnapshot</a></td>
+              <td class="coverFnHi">2044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#302">ReorderBufferAllocate</a></td>
+              <td class="coverFnHi">1780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1952">ReorderBufferApplyChange</a></td>
+              <td class="coverFnHi">667670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1980">ReorderBufferApplyMessage</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1966">ReorderBufferApplyTruncate</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1059">ReorderBufferAssignChild</a></td>
+              <td class="coverFnHi">1646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1718">ReorderBufferBuildTupleCidHash</a></td>
+              <td class="coverFnHi">3520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3961">ReorderBufferCanStartStreaming</a></td>
+              <td class="coverFnHi">981336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3952">ReorderBufferCanStream</a></td>
+              <td class="coverFnHi">3813490</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3173">ReorderBufferChangeMemoryUpdate</a></td>
+              <td class="coverFnHi">6423904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4104">ReorderBufferChangeSize</a></td>
+              <td class="coverFnHi">6423904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3573">ReorderBufferCheckMemoryLimit</a></td>
+              <td class="coverFnHi">2832154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4530">ReorderBufferCleanupSerializedTXNs</a></td>
+              <td class="coverFnHi">3330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1495">ReorderBufferCleanupTXN</a></td>
+              <td class="coverFnHi">6516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2695">ReorderBufferCommit</a></td>
+              <td class="coverFnHi">2202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1179">ReorderBufferCommitChild</a></td>
+              <td class="coverFnHi">534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1791">ReorderBufferCopySnap</a></td>
+              <td class="coverFnHi">3184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3323">ReorderBufferExecuteInvalidations</a></td>
+              <td class="coverFnHi">7352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2801">ReorderBufferFinishPrepared</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2978">ReorderBufferForget</a></td>
+              <td class="coverFnHi">4770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#386">ReorderBufferFree</a></td>
+              <td class="coverFnHi">1460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1850">ReorderBufferFreeSnap</a></td>
+              <td class="coverFnHi">5206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3373">ReorderBufferGetCatalogChangesXacts</a></td>
+              <td class="coverFnHi">470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#467">ReorderBufferGetChange</a></td>
+              <td class="coverFnHi">3234278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1004">ReorderBufferGetOldestTXN</a></td>
+              <td class="coverFnHi">578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1032">ReorderBufferGetOldestXmin</a></td>
+              <td class="coverFnHi">614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#585">ReorderBufferGetRelids</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#404">ReorderBufferGetTXN</a></td>
+              <td class="coverFnHi">6604</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#552">ReorderBufferGetTupleBuf</a></td>
+              <td class="coverFnHi">2956706</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3050">ReorderBufferImmediateInvalidation</a></td>
+              <td class="coverFnHi">1132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3019">ReorderBufferInvalidate</a></td>
+              <td class="coverFnHi">170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1221">ReorderBufferIterCompare</a></td>
+              <td class="coverFnHi">104164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1464">ReorderBufferIterTXNFinish</a></td>
+              <td class="coverFnHi">3518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1244">ReorderBufferIterTXNInit</a></td>
+              <td class="coverFnHi">3520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1372">ReorderBufferIterTXNNext</a></td>
+              <td class="coverFnHi">709802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3529">ReorderBufferLargestStreamableTopTXN</a></td>
+              <td class="coverFnHi">1318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3481">ReorderBufferLargestTXN</a></td>
+              <td class="coverFnHi">5936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2764">ReorderBufferPrepare</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#701">ReorderBufferProcessPartialChange</a></td>
+              <td class="coverFnHi">2832154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2064">ReorderBufferProcessTXN</a></td>
+              <td class="coverFnHi">3520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3086">ReorderBufferProcessXid</a></td>
+              <td class="coverFnHi">4337186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#770">ReorderBufferQueueChange</a></td>
+              <td class="coverFnHi">2832290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#833">ReorderBufferQueueMessage</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2717">ReorderBufferRememberPrepareInfo</a></td>
+              <td class="coverFnHi">254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2634">ReorderBufferReplay</a></td>
+              <td class="coverFnHi">2280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2021">ReorderBufferResetTXN</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4332">ReorderBufferRestoreChange</a></td>
+              <td class="coverFnHi">356972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4189">ReorderBufferRestoreChanges</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4500">ReorderBufferRestoreCleanup</a></td>
+              <td class="coverFnHi">476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#482">ReorderBufferReturnChange</a></td>
+              <td class="coverFnHi">3233934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#601">ReorderBufferReturnRelids</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#428">ReorderBufferReturnTXN</a></td>
+              <td class="coverFnHi">6516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#570">ReorderBufferReturnTupleBuf</a></td>
+              <td class="coverFnHi">2956638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2000">ReorderBufferSaveTXNSnapshot</a></td>
+              <td class="coverFnHi">1372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3737">ReorderBufferSerializeChange</a></td>
+              <td class="coverFnHi">2388366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3455">ReorderBufferSerializeReserve</a></td>
+              <td class="coverFnHi">5456482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3645">ReorderBufferSerializeTXN</a></td>
+              <td class="coverFnHi">6306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4569">ReorderBufferSerializedPath</a></td>
+              <td class="coverFnHi">6588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3117">ReorderBufferSetBaseSnapshot</a></td>
+              <td class="coverFnHi">5280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1047">ReorderBufferSetRestartPoint</a></td>
+              <td class="coverFnHi">652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#2745">ReorderBufferSkipPrepare</a></td>
+              <td class="coverFnHi">176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1865">ReorderBufferStreamCommit</a></td>
+              <td class="coverFnHi">130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3987">ReorderBufferStreamTXN</a></td>
+              <td class="coverFnHi">1372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#613">ReorderBufferTXNByXid</a></td>
+              <td class="coverFnHi">10732166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4640">ReorderBufferToastAppendChunk</a></td>
+              <td class="coverFnHi">3456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4620">ReorderBufferToastInitHash</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4723">ReorderBufferToastReplace</a></td>
+              <td class="coverFnHi">667670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4914">ReorderBufferToastReset</a></td>
+              <td class="coverFnHi">673732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1125">ReorderBufferTransferSnapToParent</a></td>
+              <td class="coverFnHi">1282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1603">ReorderBufferTruncateTXN</a></td>
+              <td class="coverFnHi">2044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3425">ReorderBufferXidHasBaseSnapshot</a></td>
+              <td class="coverFnHi">2797688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3408">ReorderBufferXidHasCatalogChanges</a></td>
+              <td class="coverFnHi">7564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#3335">ReorderBufferXidSetCatalogChanges</a></td>
+              <td class="coverFnHi">55962</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#5210">ResolveCminCmaxDuringDecoding</a></td>
+              <td class="coverFnHi">1182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#1929">SetupCheckXidLive</a></td>
+              <td class="coverFnHi">355404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#4586">StartupReorderBuffer</a></td>
+              <td class="coverFnHi">1312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#5105">TransactionIdInArray</a></td>
+              <td class="coverFnHi">580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#5132">UpdateLogicalMappings</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="reorderbuffer.c.gcov.html#5115">file_sort_by_lsn</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

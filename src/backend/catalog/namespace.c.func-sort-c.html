@@ -1,0 +1,520 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/catalog/namespace.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/catalog</a> - namespace.c<span style="font-size: 80%;"> (<a href="namespace.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1305</td>
+            <td class="headerCovTableEntry">1534</td>
+            <td class="headerCovTableEntryMed">85.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntry">110</td>
+            <td class="headerCovTableEntryHi">90.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="namespace.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3872">CopySearchPathMatcher</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3611">NameListToQuotedString</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#978">TypenameGetTypid</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3712">checkTempNamespaceStatus</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4949">pg_collation_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4963">pg_conversion_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#5033">pg_ts_config_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#5005">pg_ts_dict_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4991">pg_ts_parser_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#5019">pg_ts_template_is_visible</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4627">ResetTempTableNamespace</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2460">ConversionGetConid</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4921">pg_opclass_is_visible</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2492">ConversionIsVisible</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2504">ConversionIsVisibleExt</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2757">TSParserIsVisible</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2769">TSParserIsVisibleExt</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3048">TSTemplateIsVisible</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3060">TSTemplateIsVisibleExt</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3749">GetTempNamespaceBackendId</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3193">TSConfigIsVisible</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3205">TSConfigIsVisibleExt</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4008">get_conversion_oid</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4935">pg_opfamily_is_visible</a></td>
+              <td class="coverFnHi">264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2615">StatisticsObjIsVisible</a></td>
+              <td class="coverFnHi">280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2558">get_statistics_object_oid</a></td>
+              <td class="coverFnHi">318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3338">LookupNamespaceNoError</a></td>
+              <td class="coverFnHi">330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2356">CollationGetCollid</a></td>
+              <td class="coverFnHi">358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2390">CollationIsVisible</a></td>
+              <td class="coverFnHi">358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2402">CollationIsVisibleExt</a></td>
+              <td class="coverFnHi">358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4977">pg_statistics_obj_is_visible</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3411">LookupCreationNamespace</a></td>
+              <td class="coverFnHi">474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3442">CheckSetNamespace</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4607">RemoveTempRelationsCallback</a></td>
+              <td class="coverFnHi">552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4373">InitTempTableNamespace</a></td>
+              <td class="coverFnHi">574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2627">StatisticsObjIsVisibleExt</a></td>
+              <td class="coverFnHi">646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2137">OpclassIsVisible</a></td>
+              <td class="coverFnHi">686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2149">OpclassIsVisibleExt</a></td>
+              <td class="coverFnHi">704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4790">fetch_search_path</a></td>
+              <td class="coverFnHi">798</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3788">GetTempNamespaceState</a></td>
+              <td class="coverFnHi">804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3774">GetTempToastNamespace</a></td>
+              <td class="coverFnHi">880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4581">RemoveTempRelations</a></td>
+              <td class="coverFnHi">974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#5047">pg_my_temp_schema</a></td>
+              <td class="coverFnHi">1164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2239">OpfamilyIsVisible</a></td>
+              <td class="coverFnHi">1440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3577">NameListToString</a></td>
+              <td class="coverFnHi">1676</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4907">pg_operator_is_visible</a></td>
+              <td class="coverFnHi">1700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2251">OpfamilyIsVisibleExt</a></td>
+              <td class="coverFnHi">1704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2699">get_ts_parser_oid</a></td>
+              <td class="coverFnHi">1808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2990">get_ts_template_oid</a></td>
+              <td class="coverFnHi">1986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2206">OpfamilynameGetOpfid</a></td>
+              <td class="coverFnHi">2300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2032">OperatorIsVisible</a></td>
+              <td class="coverFnHi">2510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3804">SetTempNamespaceState</a></td>
+              <td class="coverFnHi">2592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2902">TSDictionaryIsVisible</a></td>
+              <td class="coverFnHi">3512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2914">TSDictionaryIsVisibleExt</a></td>
+              <td class="coverFnHi">3512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4879">pg_type_is_visible</a></td>
+              <td class="coverFnHi">3906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2044">OperatorIsVisibleExt</a></td>
+              <td class="coverFnHi">4210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#272">spcachekey_equal</a></td>
+              <td class="coverFnHi">5138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4345">AccessTempTableNamespace</a></td>
+              <td class="coverFnHi">6536</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4063">FindDefaultConversionProc</a></td>
+              <td class="coverFnHi">6688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4893">pg_function_is_visible</a></td>
+              <td class="coverFnHi">7380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2844">get_ts_dict_oid</a></td>
+              <td class="coverFnHi">7878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3954">get_collation_oid</a></td>
+              <td class="coverFnHi">8926</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2305">lookup_collation</a></td>
+              <td class="coverFnHi">10070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#327">spcache_lookup</a></td>
+              <td class="coverFnHi">14376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3135">get_ts_config_oid</a></td>
+              <td class="coverFnHi">14402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#2104">OpclassnameGetOpcid</a></td>
+              <td class="coverFnHi">15216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1871">OpernameGetCandidates</a></td>
+              <td class="coverFnHi">15378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1568">MatchNamedCall</a></td>
+              <td class="coverFnHi">16420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4640">check_search_path</a></td>
+              <td class="coverFnHi">16572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4865">pg_table_is_visible</a></td>
+              <td class="coverFnHi">16888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1679">FunctionIsVisible</a></td>
+              <td class="coverFnHi">17280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4541">AtEOSubXact_Namespace</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3693">isOtherTempNamespace</a></td>
+              <td class="coverFnHi">19186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#5053">pg_is_other_temp_schema</a></td>
+              <td class="coverFnHi">19186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4716">InitializeSearchPath</a></td>
+              <td class="coverFnHi">22112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1691">FunctionIsVisibleExt</a></td>
+              <td class="coverFnHi">24660</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4696">assign_search_path</a></td>
+              <td class="coverFnHi">26634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3470">QualifiedNameGetCreationNamespace</a></td>
+              <td class="coverFnHi">28930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4090">preprocessNamespacePath</a></td>
+              <td class="coverFnHi">30764</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4181">finalNamespacePath</a></td>
+              <td class="coverFnHi">30766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4227">cachedNamespacePath</a></td>
+              <td class="coverFnHi">34858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#357">spcache_insert</a></td>
+              <td class="coverFnHi">40042</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4767">NamespaceCallback</a></td>
+              <td class="coverFnHi">43456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3537">makeRangeVarFromNameList</a></td>
+              <td class="coverFnHi">46684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#304">spcache_init</a></td>
+              <td class="coverFnHi">49234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3835">GetSearchPathMatcher</a></td>
+              <td class="coverFnHi">51012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3632">isTempNamespace</a></td>
+              <td class="coverFnHi">53234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1768">OpernameGetOprid</a></td>
+              <td class="coverFnHi">76148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#252">spcachekey_hash</a></td>
+              <td class="coverFnHi">77002</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#722">RangeVarGetAndCheckCreationNamespace</a></td>
+              <td class="coverFnHi">94066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#829">RangeVarAdjustRelationPersistence</a></td>
+              <td class="coverFnHi">95628</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#637">RangeVarGetCreationNamespace</a></td>
+              <td class="coverFnHi">98712</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3670">isAnyTempNamespace</a></td>
+              <td class="coverFnHi">112840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3656">isTempOrTempToastNamespace</a></td>
+              <td class="coverFnHi">158780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#896">RelationIsVisible</a></td>
+              <td class="coverFnHi">255220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#908">RelationIsVisibleExt</a></td>
+              <td class="coverFnHi">272108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#991">TypenameGetTypidExtended</a></td>
+              <td class="coverFnHi">282162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#868">RelnameGetRelid</a></td>
+              <td class="coverFnHi">330838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3894">SearchPathMatchesCurrentEnvironment</a></td>
+              <td class="coverFnHi">417712</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1175">FuncnameGetCandidates</a></td>
+              <td class="coverFnHi">419608</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1023">TypeIsVisible</a></td>
+              <td class="coverFnHi">432624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#1035">TypeIsVisibleExt</a></td>
+              <td class="coverFnHi">436530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4495">AtEOXact_Namespace</a></td>
+              <td class="coverFnHi">519060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#424">RangeVarGetRelidExtended</a></td>
+              <td class="coverFnHi">561252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3368">LookupExplicitNamespace</a></td>
+              <td class="coverFnHi">581220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4830">fetch_search_path_array</a></td>
+              <td class="coverFnHi">608110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3518">get_namespace_oid</a></td>
+              <td class="coverFnHi">679556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3284">DeconstructQualifiedName</a></td>
+              <td class="coverFnHi">1702140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#4282">recomputeNamespacePath</a></td>
+              <td class="coverFnHi">2946548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="namespace.c.gcov.html#3644">isTempToastNamespace</a></td>
+              <td class="coverFnHi">5230116</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

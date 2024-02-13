@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/psql/command.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/psql</a> - command.c<span style="font-size: 80%;"> (<a href="command.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1465</td>
+            <td class="headerCovTableEntry">2290</td>
+            <td class="headerCovTableEntryLo">64.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">86</td>
+            <td class="headerCovTableEntry">96</td>
+            <td class="headerCovTableEntryMed">89.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="command.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#212">HandleSlashCmds</a></td>
+              <td class="coverFnHi">12888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3876">SyncVariables</a></td>
+              <td class="coverFnHi">14026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3917">UnsyncVariables</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4281">_align2string</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4337">_unicode_linestyle2string</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3751">connection_warnings</a></td>
+              <td class="coverFnHi">292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3223">copy_previous_query</a></td>
+              <td class="coverFnHi">1058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5720">count_lines_in_buf</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3197">discard_query_text</a></td>
+              <td class="coverFnHi">202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3292">do_connect</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4019">do_edit</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4367">do_pset</a></td>
+              <td class="coverFnHi">1910</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5116">do_shell</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5163">do_watch</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5410">echo_hidden_command</a></td>
+              <td class="coverFnHi">200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3937">editFile</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#285">exec_command</a></td>
+              <td class="coverFnHi">12888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#497">exec_command_C</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2573">exec_command_T</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#442">exec_command_a</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#461">exec_command_bind</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#583">exec_command_cd</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#530">exec_command_connect</a></td>
+              <td class="coverFnHi">294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#647">exec_command_conninfo</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#691">exec_command_copy</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#713">exec_command_copyright</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#725">exec_command_crosstabview</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#749">exec_command_d</a></td>
+              <td class="coverFnHi">6190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1015">exec_command_dfo</a></td>
+              <td class="coverFnHi">354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1269">exec_command_echo</a></td>
+              <td class="coverFnHi">750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1057">exec_command_edit</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1153">exec_command_ef_ev</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1764">exec_command_elif</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1840">exec_command_else</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1314">exec_command_encoding</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1905">exec_command_endif</a></td>
+              <td class="coverFnHi">166</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1352">exec_command_errverbose</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1382">exec_command_f</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1410">exec_command_g</a></td>
+              <td class="coverFnHi">194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1538">exec_command_gdesc</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1555">exec_command_getenv</a></td>
+              <td class="coverFnHi">272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1592">exec_command_gexec</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1609">exec_command_gset</a></td>
+              <td class="coverFnHi">640</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1638">exec_command_help</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1658">exec_command_html</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1718">exec_command_if</a></td>
+              <td class="coverFnHi">172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1677">exec_command_include</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1945">exec_command_list</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1973">exec_command_lo</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2051">exec_command_out</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2100">exec_command_password</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2074">exec_command_print</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2176">exec_command_prompt</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2253">exec_command_pset</a></td>
+              <td class="coverFnHi">1740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2308">exec_command_quit</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2322">exec_command_reset</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2340">exec_command_s</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2367">exec_command_set</a></td>
+              <td class="coverFnHi">926</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2420">exec_command_setenv</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2468">exec_command_sf_sv</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2956">exec_command_shell_escape</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2978">exec_command_slash_command_help</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2551">exec_command_t</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2595">exec_command_timing</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2627">exec_command_unset</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2759">exec_command_watch</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2657">exec_command_write</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2906">exec_command_x</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#2928">exec_command_z</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3049">gather_boolean_expression</a></td>
+              <td class="coverFnHi">208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5502">get_create_object_cmd</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3096">ignore_boolean_expression</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3129">ignore_slash_filepipe</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3112">ignore_slash_options</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3149">ignore_slash_whole_line</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3161">is_branching_command</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3079">is_true_boolean_expression</a></td>
+              <td class="coverFnHi">190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5442">lookup_object_oid</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5792">minimal_error_message</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3269">param_is_newly_set</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3835">printGSSInfo</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4720">printPsetInfo</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3810">printSSLInfo</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5750">print_with_linenumbers</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#1463">process_command_g_options</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4214">process_file</a></td>
+              <td class="coverFnHi">13284</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3241">prompt_for_password</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4982">pset_bool_string</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4989">pset_quoted_string</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5027">pset_value_string</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3009">read_connect_arg</a></td>
+              <td class="coverFnHi">1168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4956">restorePsetInfo</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4920">savePsetInfo</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#3177">save_query_text_state</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#4324">set_unicode_line_style</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="command.c.gcov.html#5662">strip_lineno_from_objdesc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

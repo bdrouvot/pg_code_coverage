@@ -1,0 +1,580 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pgbench/pgbench.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pgbench</a> - pgbench.c<span style="font-size: 80%;"> (<a href="pgbench.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2484</td>
+            <td class="headerCovTableEntry">2889</td>
+            <td class="headerCovTableEntryMed">86.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">120</td>
+            <td class="headerCovTableEntry">125</td>
+            <td class="headerCovTableEntryHi">96.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="pgbench.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5852">CheckConditional</a></td>
+              <td class="coverFnHi">464</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5842">ConditionError</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5305">GetTableInfo</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5902">ParseScript</a></td>
+              <td class="coverFnHi">534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1448">accumStats</a></td>
+              <td class="coverFnHi">7086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6190">addScript</a></td>
+              <td class="coverFnHi">468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1400">addToSimpleStats</a></td>
+              <td class="coverFnHi">8272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7801">add_socket_to_set</a></td>
+              <td class="coverFnHi">39554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3586">advanceConnectionState</a></td>
+              <td class="coverFnHi">15088</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3066">allocCStatePrepared</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7777">alloc_socket_set</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1933">assignVariables</a></td>
+              <td class="coverFnHi">6758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3222">canRetryError</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5200">checkInitSteps</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3044">chooseScript</a></td>
+              <td class="coverFnHi">4966</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7795">clear_socket_set</a></td>
+              <td class="coverFnHi">17212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2001">coerceToBool</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2070">coerceToDouble</a></td>
+              <td class="coverFnHi">208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2042">coerceToInt</a></td>
+              <td class="coverFnHi">13232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3035">commandError</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3025">commandFailed</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1593">compareVariableNames</a></td>
+              <td class="coverFnHi">106668</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1198">computeIterativeZipfian</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4736">createPartitions</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5546">create_sql_command</a></td>
+              <td class="coverFnHi">2116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3471">discardUntilSync</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4702">disconnect_all</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1528">doConnect</a></td>
+              <td class="coverFnHi">572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4543">doLog</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3425">doRetry</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1770">enlargeVariables</a></td>
+              <td class="coverFnHi">2026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2818">evalFunc</a></td>
+              <td class="coverFnHi">7028</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2129">evalLazyFunc</a></td>
+              <td class="coverFnHi">130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2246">evalStandardFunc</a></td>
+              <td class="coverFnHi">6902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2834">evaluateExpr</a></td>
+              <td class="coverFnHi">18244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3380">evaluateSleep</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4282">executeMetaCommand</a></td>
+              <td class="coverFnHi">4598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1497">executeStatement</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6117">findBuiltin</a></td>
+              <td class="coverFnHi">312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7685">finishCon</a></td>
+              <td class="coverFnHi">840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5575">free_command</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7789">free_socket_set</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1110">getExponentialRand</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4501">getFailures</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1134">getGaussianRand</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1242">getHashFnv1a</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1267">getHashMurmur2</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2877">getMetaCommand</a></td>
+              <td class="coverFnHi">964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1176">getPoissonRand</a></td>
+              <td class="coverFnHi">420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1969">getQueryParams</a></td>
+              <td class="coverFnHi">4514</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4512">getResultString</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3205">getSQLErrorStatus</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3511">getTransactionStatus</a></td>
+              <td class="coverFnHi">4872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1628">getVariable</a></td>
+              <td class="coverFnHi">5260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1228">getZipfianRand</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1099">getrand</a></td>
+              <td class="coverFnHi">5252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7701">handle_sig_alarm</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4928">initAccount</a></td>
+              <td class="coverFnHi">400000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4910">initBranch</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5174">initCreateFKeys</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5136">initCreatePKeys</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4805">initCreateTables</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4714">initDropTables</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5046">initGenerateDataClientSide</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5078">initGenerateDataServerSide</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4937">initPopulateTable</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1085">initRandomState</a></td>
+              <td class="coverFnHi">658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1391">initSimpleStats</a></td>
+              <td class="coverFnHi">3658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1431">initStats</a></td>
+              <td class="coverFnHi">974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4919">initTeller</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4900">initTruncateTables</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5123">initVacuum</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2122">isLazyFunc</a></td>
+              <td class="coverFnHi">7158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#948">is_an_int</a></td>
+              <td class="coverFnHi">852</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6105">listAvailableScripts</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1789">lookupCreateVariable</a></td>
+              <td class="coverFnHi">5954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1601">lookupVariable</a></td>
+              <td class="coverFnHi">15658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6614">main</a></td>
+              <td class="coverFnHi">328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1661">makeVariableValue</a></td>
+              <td class="coverFnHi">3856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1415">mergeSimpleStats</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5414">parseQuery</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6153">parseScriptWeight</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1886">parseVariable</a></td>
+              <td class="coverFnHi">3390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1300">permute</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#849">pg_time_now</a></td>
+              <td class="coverFnHi">12556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#859">pg_time_now_lazy</a></td>
+              <td class="coverFnHi">10472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5595">postprocess_sql_command</a></td>
+              <td class="coverFnHi">484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3086">prepareCommand</a></td>
+              <td class="coverFnHi">3484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3119">prepareCommandsInPipeline</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6211">printProgressReport</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6350">printResults</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6305">printSimpleStats</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3548">printVerboseErrorMessages</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6319">printVersion</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#4663">processXactStats</a></td>
+              <td class="coverFnHi">4886</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5632">process_backslash_command</a></td>
+              <td class="coverFnHi">964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6098">process_builtin</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6072">process_file</a></td>
+              <td class="coverFnHi">230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1826">putVariable</a></td>
+              <td class="coverFnHi">1734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1868">putVariableInt</a></td>
+              <td class="coverFnHi">842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1849">putVariableValue</a></td>
+              <td class="coverFnHi">4220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3238">readCommandResponse</a></td>
+              <td class="coverFnHi">11358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6039">read_file_contents</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1913">replaceVariable</a></td>
+              <td class="coverFnHi">2498</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5220">runInitSteps</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2919">runShellCommand</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#3152">sendCommand</a></td>
+              <td class="coverFnHi">11272</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2099">setBoolValue</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2115">setDoubleValue</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2107">setIntValue</a></td>
+              <td class="coverFnHi">8120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2091">setNullValue</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#6568">set_random_seed</a></td>
+              <td class="coverFnHi">332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7707">setalarm</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5511">skip_sql_comments</a></td>
+              <td class="coverFnHi">2116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7828">socket_has_input</a></td>
+              <td class="coverFnHi">46528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1056">strtodouble</a></td>
+              <td class="coverFnHi">132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#985">strtoint64</a></td>
+              <td class="coverFnHi">2440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#5475">syntax_error</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7385">threadRun</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1513">tryExecuteStatement</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#868">usage</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1735">valid_variable_name</a></td>
+              <td class="coverFnHi">2032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#2021">valueTruth</a></td>
+              <td class="coverFnHi">872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#1979">valueTypeName</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgbench.c.gcov.html#7811">wait_on_socket_set</a></td>
+              <td class="coverFnHi">8760</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

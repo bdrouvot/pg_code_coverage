@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/replication/logical/applyparallelworker.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/replication/logical</a> - applyparallelworker.c<span style="font-size: 80%;"> (<a href="applyparallelworker.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">367</td>
+            <td class="headerCovTableEntry">425</td>
+            <td class="headerCovTableEntryMed">86.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntryHi">97.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="applyparallelworker.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#999">HandleParallelApplyMessage</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1209">pa_switch_to_partial_serialize</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1061">HandleParallelApplyMessages</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#593">pa_free_worker_info</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#732">LogicalParallelApplyLoop</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#855">ParallelApplyWorkerMain</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#325">pa_setup_dsm</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#842">pa_shutdown</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1414">pa_stream_abort</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#987">HandleParallelApplyMessageInterrupt</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#640">pa_has_spooled_message_pending</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1496">pa_set_fileset_state</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#554">pa_free_worker</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1400">pa_reset_subtrans</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1272">pa_wait_for_xact_finish</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1242">pa_wait_for_xact_state</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1616">pa_xact_finish</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#402">pa_launch_parallel_worker</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1346">pa_savepoint_name</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1578">pa_unlock_transaction</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1305">pa_set_xact_state</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1571">pa_lock_transaction</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#656">pa_process_spooled_messages_if_required</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1516">pa_get_fileset_state</a></td>
+              <td class="coverFnHi">152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#468">pa_allocate_worker</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#263">pa_can_start</a></td>
+              <td class="coverFnHi">164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#620">pa_detach_all_error_mq</a></td>
+              <td class="coverFnHi">340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1589">pa_decr_and_wait_stream_block</a></td>
+              <td class="coverFnHi">504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1545">pa_unlock_stream</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1538">pa_lock_stream</a></td>
+              <td class="coverFnHi">546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1317">pa_get_xact_state</a></td>
+              <td class="coverFnHi">732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1332">pa_set_stream_apply_worker</a></td>
+              <td class="coverFnHi">1008</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#710">ProcessParallelApplyInterrupts</a></td>
+              <td class="coverFnHi">129006</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1144">pa_send_data</a></td>
+              <td class="coverFnHi">137788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#1360">pa_start_subtrans</a></td>
+              <td class="coverFnHi">137912</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="applyparallelworker.c.gcov.html#516">pa_find_worker</a></td>
+              <td class="coverFnHi">514200</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

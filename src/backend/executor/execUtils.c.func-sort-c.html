@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/executor/execUtils.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/executor</a> - execUtils.c<span style="font-size: 80%;"> (<a href="execUtils.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">370</td>
+            <td class="headerCovTableEntry">414</td>
+            <td class="headerCovTableEntryMed">89.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">39</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntryHi">92.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="execUtils.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#687">ExecRelationIsTargetRelation</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1061">GetAttributeByNum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#873">executor_errposition</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#998">GetAttributeByName</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1398">ExecGetResultRelCheckAsUser</a></td>
+              <td class="coverFnHi">338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#650">ExecAssignScanType</a></td>
+              <td class="coverFnHi">754</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1185">ExecGetReturningSlot</a></td>
+              <td class="coverFnHi">1090</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1270">ExecGetInsertedCols</a></td>
+              <td class="coverFnHi">1102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1163">ExecGetTriggerNewSlot</a></td>
+              <td class="coverFnHi">3192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#322">CreateWorkExprContext</a></td>
+              <td class="coverFnHi">7780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#358">CreateStandaloneExprContext</a></td>
+              <td class="coverFnHi">10854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1327">ExecGetAllUpdatedCols</a></td>
+              <td class="coverFnHi">14188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1141">ExecGetTriggerOldSlot</a></td>
+              <td class="coverFnHi">22372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1312">ExecGetExtraUpdatedCols</a></td>
+              <td class="coverFnHi">57256</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1291">ExecGetUpdatedCols</a></td>
+              <td class="coverFnHi">58560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1347">GetResultRTEPermissionInfo</a></td>
+              <td class="coverFnHi">60000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1209">ExecGetChildToRootMap</a></td>
+              <td class="coverFnHi">67600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#817">ExecInitResultRelation</a></td>
+              <td class="coverFnHi">106898</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#662">ExecCreateScanSlotFromOuterPlan</a></td>
+              <td class="coverFnHi">110314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#926">UnregisterExprContextCallback</a></td>
+              <td class="coverFnHi">114920</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#900">RegisterExprContextCallback</a></td>
+              <td class="coverFnHi">134346</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1122">ExecCleanTargetListLength</a></td>
+              <td class="coverFnHi">182372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#700">ExecOpenScanRelation</a></td>
+              <td class="coverFnHi">363634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#561">ExecConditionalAssignProjectionInfo</a></td>
+              <td class="coverFnHi">448532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#588">tlist_matches_tupdesc</a></td>
+              <td class="coverFnHi">448532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#765">ExecGetRangeTableRelation</a></td>
+              <td class="coverFnHi">481018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#505">ExecGetResultSlotOps</a></td>
+              <td class="coverFnHi">512202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#459">MakePerTupleExprContext</a></td>
+              <td class="coverFnHi">620350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#847">UpdateChangedParamSet</a></td>
+              <td class="coverFnHi">643530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#541">ExecAssignProjectionInfo</a></td>
+              <td class="coverFnHi">694424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#731">ExecInitRangeTable</a></td>
+              <td class="coverFnHi">878288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1235">ExecGetRootToChildMap</a></td>
+              <td class="coverFnHi">1006218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#192">FreeExecutorState</a></td>
+              <td class="coverFnHi">1145860</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#486">ExecAssignExprContext</a></td>
+              <td class="coverFnHi">1161992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#91">CreateExecutorState</a></td>
+              <td class="coverFnHi">1177634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#1112">ExecTargetListLength</a></td>
+              <td class="coverFnHi">1194102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#496">ExecGetResultType</a></td>
+              <td class="coverFnHi">1392156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#417">FreeExprContext</a></td>
+              <td class="coverFnHi">1863172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#307">CreateExprContext</a></td>
+              <td class="coverFnHi">1892478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#237">CreateExprContextInternal</a></td>
+              <td class="coverFnHi">1900258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#444">ReScanExprContext</a></td>
+              <td class="coverFnHi">3149202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execUtils.c.gcov.html#957">ShutdownExprContext</a></td>
+              <td class="coverFnHi">5012374</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/lockfuncs.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - lockfuncs.c<span style="font-size: 80%;"> (<a href="lockfuncs.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">296</td>
+            <td class="headerCovTableEntry">390</td>
+            <td class="headerCovTableEntryMed">75.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">19</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntryLo">73.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="lockfuncs.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#572">pg_safe_snapshot_blocking_pids</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#957">pg_try_advisory_lock_int4</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#998">pg_try_advisory_lock_shared_int4</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#810">pg_try_advisory_lock_shared_int8</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#791">pg_try_advisory_xact_lock_int8</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#1019">pg_try_advisory_xact_lock_shared_int4</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#830">pg_try_advisory_xact_lock_shared_int8</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#1059">pg_advisory_unlock_shared_int4</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#868">pg_advisory_unlock_shared_int8</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#938">pg_advisory_xact_lock_shared_int4</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#920">pg_advisory_lock_shared_int4</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#736">pg_advisory_lock_shared_int8</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#720">pg_advisory_xact_lock_int8</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#978">pg_try_advisory_xact_lock_int4</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#1039">pg_advisory_unlock_int4</a></td>
+              <td class="coverFnHi">94</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#885">pg_advisory_lock_int4</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#903">pg_advisory_xact_lock_int4</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#1077">pg_advisory_unlock_all</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#849">pg_advisory_unlock_int8</a></td>
+              <td class="coverFnHi">320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#703">pg_advisory_lock_int8</a></td>
+              <td class="coverFnHi">424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#771">pg_try_advisory_lock_int8</a></td>
+              <td class="coverFnHi">814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#465">pg_blocking_pids</a></td>
+              <td class="coverFnHi">2760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#614">pg_isolation_test_session_is_blocked</a></td>
+              <td class="coverFnHi">2760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#92">pg_lock_status</a></td>
+              <td class="coverFnHi">18610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#74">VXIDGetDatum</a></td>
+              <td class="coverFnHi">20932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lockfuncs.c.gcov.html#753">pg_advisory_xact_lock_shared_int8</a></td>
+              <td class="coverFnHi">40042</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/file/fd.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/file</a> - fd.c<span style="font-size: 80%;"> (<a href="fd.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">738</td>
+            <td class="headerCovTableEntry">1020</td>
+            <td class="headerCovTableEntryLo">72.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">89</td>
+            <td class="headerCovTableEntry">98</td>
+            <td class="headerCovTableEntryHi">90.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="fd.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1184">AcquireExternalFD</a></td>
+              <td class="coverFnHi">203782</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2841">AllocateDir</a></td>
+              <td class="coverFnHi">56818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2581">AllocateFile</a></td>
+              <td class="coverFnHi">114828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1412">AllocateVfd</a></td>
+              <td class="coverFnHi">1825258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3130">AtEOSubXact_Files</a></td>
+              <td class="coverFnHi">17674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3163">AtEOXact_Files</a></td>
+              <td class="coverFnHi">519406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1085">BasicOpenFile</a></td>
+              <td class="coverFnHi">44220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1107">BasicOpenFilePerm</a></td>
+              <td class="coverFnHi">2409974</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3177">BeforeShmemExit_Files</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3200">CleanupTempFiles</a></td>
+              <td class="coverFnHi">547092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2989">ClosePipeStream</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2807">CloseTransientFile</a></td>
+              <td class="coverFnHi">513350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1266">Delete</a></td>
+              <td class="coverFnHi">2216640</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1490">FileAccess</a></td>
+              <td class="coverFnHi">4938618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1976">FileClose</a></td>
+              <td class="coverFnHi">763482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2367">FileFallocate</a></td>
+              <td class="coverFnHi">998</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2475">FileGetRawDesc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2485">FileGetRawFlags</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2495">FileGetRawMode</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2459">FilePathName</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2076">FilePrefetch</a></td>
+              <td class="coverFnHi">260806</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2134">FileReadV</a></td>
+              <td class="coverFnHi">2983790</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2407">FileSize</a></td>
+              <td class="coverFnHi">4830626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2295">FileSync</a></td>
+              <td class="coverFnHi">29620</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2424">FileTruncate</a></td>
+              <td class="coverFnHi">826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2190">FileWriteV</a></td>
+              <td class="coverFnHi">1180888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2108">FileWriteback</a></td>
+              <td class="coverFnHi">110306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2322">FileZero</a></td>
+              <td class="coverFnHi">354694</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2740">FreeDesc</a></td>
+              <td class="coverFnHi">675132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2959">FreeDir</a></td>
+              <td class="coverFnHi">55316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2779">FreeFile</a></td>
+              <td class="coverFnHi">106184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1470">FreeVfd</a></td>
+              <td class="coverFnHi">1344522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3109">GetNextTempTableSpace</a></td>
+              <td class="coverFnHi">3858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3091">GetTempTablespaces</a></td>
+              <td class="coverFnHi">354</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#901">InitFileAccess</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#931">InitTemporaryFileAccess</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1311">Insert</a></td>
+              <td class="coverFnHi">2673198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1285">LruDelete</a></td>
+              <td class="coverFnHi">61492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1333">LruInsert</a></td>
+              <td class="coverFnHi">23866</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3911">MakePGDirectory</a></td>
+              <td class="coverFnHi">2346</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2684">OpenPipeStream</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1722">OpenTemporaryFile</a></td>
+              <td class="coverFnHi">3814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1802">OpenTemporaryFileInTablespace</a></td>
+              <td class="coverFnHi">3814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2631">OpenTransientFile</a></td>
+              <td class="coverFnHi">516466</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2640">OpenTransientFilePerm</a></td>
+              <td class="coverFnHi">516478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1658">PathNameCreateTemporaryDir</a></td>
+              <td class="coverFnHi">350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1859">PathNameCreateTemporaryFile</a></td>
+              <td class="coverFnHi">3334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1689">PathNameDeleteTemporaryDir</a></td>
+              <td class="coverFnHi">402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1930">PathNameDeleteTemporaryFile</a></td>
+              <td class="coverFnHi">6672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1573">PathNameOpenFile</a></td>
+              <td class="coverFnHi">1825258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1586">PathNameOpenFilePerm</a></td>
+              <td class="coverFnHi">1825258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1899">PathNameOpenTemporaryFile</a></td>
+              <td class="coverFnHi">8334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2907">ReadDir</a></td>
+              <td class="coverFnHi">1789746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2922">ReadDirExtended</a></td>
+              <td class="coverFnHi">3274426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1545">RegisterTemporaryFile</a></td>
+              <td class="coverFnHi">10680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1237">ReleaseExternalFD</a></td>
+              <td class="coverFnHi">273440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1380">ReleaseLruFile</a></td>
+              <td class="coverFnHi">61254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1402">ReleaseLruFiles</a></td>
+              <td class="coverFnHi">2841254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3272">RemovePgTempFiles</a></td>
+              <td class="coverFnHi">1246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3331">RemovePgTempFilesInDir</a></td>
+              <td class="coverFnHi">1366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3391">RemovePgTempRelationFiles</a></td>
+              <td class="coverFnHi">1364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3419">RemovePgTempRelationFilesInDbspace</a></td>
+              <td class="coverFnHi">3970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1526">ReportTemporaryFileUsage</a></td>
+              <td class="coverFnHi">6798</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#4046">ResOwnerPrintFile</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#4032">ResOwnerReleaseFile</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1219">ReserveExternalFD</a></td>
+              <td class="coverFnHi">303938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#375">ResourceOwnerForgetFile</a></td>
+              <td class="coverFnHi">10672</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#370">ResourceOwnerRememberFile</a></td>
+              <td class="coverFnHi">10680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3047">SetTempTablespaces</a></td>
+              <td class="coverFnHi">5210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3542">SyncDataDirectory</a></td>
+              <td class="coverFnHi">310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1777">TempTablespacePath</a></td>
+              <td class="coverFnHi">20000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3076">TempTablespacesAreSet</a></td>
+              <td class="coverFnHi">9386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#4022">assign_debug_io_direct</a></td>
+              <td class="coverFnHi">1584</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3940">check_debug_io_direct</a></td>
+              <td class="coverFnHi">1584</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3018">closeAllVfds</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#962">count_usable_fds</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3934">data_sync_elevel</a></td>
+              <td class="coverFnHi">25932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3757">datadir_fsync_fname</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3496">do_syncfs</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#780">durable_rename</a></td>
+              <td class="coverFnHi">4566</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#870">durable_unlink</a></td>
+              <td class="coverFnHi">254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#754">fsync_fname</a></td>
+              <td class="coverFnHi">25932</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3795">fsync_fname_ext</a></td>
+              <td class="coverFnHi">39818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3871">fsync_parent_path</a></td>
+              <td class="coverFnHi">4750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3447">looks_like_temp_rel_name</a></td>
+              <td class="coverFnHi">1659106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#478">pg_fdatasync</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#501">pg_file_exists</a></td>
+              <td class="coverFnHi">29662</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#523">pg_flush_data</a></td>
+              <td class="coverFnHi">147526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#384">pg_fsync</a></td>
+              <td class="coverFnHi">105228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#439">pg_fsync_no_writethrough</a></td>
+              <td class="coverFnHi">105228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#459">pg_fsync_writethrough</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#701">pg_ftruncate</a></td>
+              <td class="coverFnHi">826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#718">pg_truncate</a></td>
+              <td class="coverFnHi">361258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3719">pre_sync_fname</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#2506">reserveAllocatedDesc</a></td>
+              <td class="coverFnHi">688192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#1042">set_max_safe_fds</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3770">unlink_if_exists_fname</a></td>
+              <td class="coverFnHi">3230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fd.c.gcov.html#3656">walkdir</a></td>
+              <td class="coverFnHi">324</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

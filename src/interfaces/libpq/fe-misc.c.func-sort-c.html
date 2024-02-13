@@ -1,0 +1,220 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/interfaces/libpq/fe-misc.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/interfaces/libpq</a> - fe-misc.c<span style="font-size: 80%;"> (<a href="fe-misc.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">290</td>
+            <td class="headerCovTableEntry">400</td>
+            <td class="headerCovTableEntryLo">72.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntry">35</td>
+            <td class="headerCovTableEntryMed">88.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="fe-misc.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#62">PQlibVersion</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1279">libpq_ngettext</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#141">pqGets_append</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1023">pqWriteReady</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1294">libpq_append_error</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1013">pqReadReady</a></td>
+              <td class="coverFnHi">170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#164">pqGetnchar</a></td>
+              <td class="coverFnHi">828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1323">libpq_append_conn_error</a></td>
+              <td class="coverFnHi">830</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1204">PQenv2encoding</a></td>
+              <td class="coverFnHi">13872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#91">pqPutc</a></td>
+              <td class="coverFnHi">17366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1223">libpq_binddomain</a></td>
+              <td class="coverFnHi">47194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1272">libpq_gettext</a></td>
+              <td class="coverFnHi">47194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#252">pqPutInt</a></td>
+              <td class="coverFnHi">138448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#350">pqCheckInBufferSpace</a></td>
+              <td class="coverFnHi">307292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#151">pqPuts</a></td>
+              <td class="coverFnHi">587112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#201">pqPutnchar</a></td>
+              <td class="coverFnHi">591198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1185">PQmblenBounded</a></td>
+              <td class="coverFnHi">702448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#783">pqSendSome</a></td>
+              <td class="coverFnHi">713414</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#977">pqWait</a></td>
+              <td class="coverFnHi">789376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#990">pqWaitTimed</a></td>
+              <td class="coverFnHi">828028</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1037">pqSocketCheck</a></td>
+              <td class="coverFnHi">828198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1085">pqSocketPoll</a></td>
+              <td class="coverFnHi">828198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#516">pqPutMsgEnd</a></td>
+              <td class="coverFnHi">1169244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#457">pqPutMsgStart</a></td>
+              <td class="coverFnHi">1169244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#952">pqFlush</a></td>
+              <td class="coverFnHi">1314262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#493">pqPutMsgBytes</a></td>
+              <td class="coverFnHi">1334124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#564">pqReadData</a></td>
+              <td class="coverFnHi">1580196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#135">pqGets</a></td>
+              <td class="coverFnHi">2363344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#108">pqGets_internal</a></td>
+              <td class="coverFnHi">2363344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#286">pqCheckOutBufferSpace</a></td>
+              <td class="coverFnHi">2503392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#76">pqGetc</a></td>
+              <td class="coverFnHi">17024292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#186">pqSkipnchar</a></td>
+              <td class="coverFnHi">26489890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1175">PQmblen</a></td>
+              <td class="coverFnHi">48791816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#1195">PQdsplen</a></td>
+              <td class="coverFnHi">48793038</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-misc.c.gcov.html#215">pqGetInt</a></td>
+              <td class="coverFnHi">52667078</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

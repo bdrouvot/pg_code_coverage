@@ -1,0 +1,472 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/misc/guc.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/misc</a> - guc.c<span style="font-size: 80%;"> (<a href="guc.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1914</td>
+            <td class="headerCovTableEntry">2373</td>
+            <td class="headerCovTableEntryMed">80.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">95</td>
+            <td class="headerCovTableEntry">98</td>
+            <td class="headerCovTableEntryHi">96.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="guc.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4529">AlterSystemSetConfigFile</a></td>
+              <td class="coverFnHi">158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2243">AtEOXact_GUC</a></td>
+              <td class="coverFnHi">714876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2209">AtStart_GUC</a></td>
+              <td class="coverFnHi">519896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2527">BeginReportingGUCOptions</a></td>
+              <td class="coverFnHi">19706</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5049">DefineCustomBoolVariable</a></td>
+              <td class="coverFnHi">6848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5160">DefineCustomEnumVariable</a></td>
+              <td class="coverFnHi">3330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5075">DefineCustomIntVariable</a></td>
+              <td class="coverFnHi">82</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5105">DefineCustomRealVariable</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5135">DefineCustomStringVariable</a></td>
+              <td class="coverFnHi">6720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5871">EstimateGUCStateSpace</a></td>
+              <td class="coverFnHi">804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6411">GUCArrayAdd</a></td>
+              <td class="coverFnHi">1150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6489">GUCArrayDelete</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6559">GUCArrayReset</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6708">GUC_check_errcode</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4277">GetConfigOption</a></td>
+              <td class="coverFnHi">11452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5349">GetConfigOptionByName</a></td>
+              <td class="coverFnHi">8530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4374">GetConfigOptionFlags</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4327">GetConfigOptionResetString</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1523">InitializeGUCOptions</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1582">InitializeGUCOptionsFromEnvironment</a></td>
+              <td class="coverFnHi">2250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1637">InitializeOneGUCOption</a></td>
+              <td class="coverFnHi">667946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5196">MarkGUCPrefixReserved</a></td>
+              <td class="coverFnHi">3390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2229">NewGUCNestLevel</a></td>
+              <td class="coverFnHi">196242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6285">ParseLongOption</a></td>
+              <td class="coverFnHi">46560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#275">ProcessConfigFileInternal</a></td>
+              <td class="coverFnHi">3740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6379">ProcessGUCArray</a></td>
+              <td class="coverFnHi">6110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1754">RemoveGUCFromLists</a></td>
+              <td class="coverFnHi">64842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2577">ReportChangedGUCOptions</a></td>
+              <td class="coverFnHi">577142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2615">ReportGUCOption</a></td>
+              <td class="coverFnHi">430972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1997">ResetAllOptions</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6116">RestoreGUCState</a></td>
+              <td class="coverFnHi">2592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1777">SelectConfigFiles</a></td>
+              <td class="coverFnHi">1532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6024">SerializeGUCState</a></td>
+              <td class="coverFnHi">804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4254">SetConfigOption</a></td>
+              <td class="coverFnHi">197000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5382">ShowGUCOption</a></td>
+              <td class="coverFnHi">1855636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6322">TransformGUCArray</a></td>
+              <td class="coverFnHi">6160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1040">add_guc_variable</a></td>
+              <td class="coverFnHi">17026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1170">add_placeholder_variable</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1114">assignable_custom_variable_name</a></td>
+              <td class="coverFnHi">184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#896">build_guc_variables</a></td>
+              <td class="coverFnHi">1580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6721">call_bool_check_hook</a></td>
+              <td class="coverFnHi">305118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6873">call_enum_check_hook</a></td>
+              <td class="coverFnHi">122356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6755">call_int_check_hook</a></td>
+              <td class="coverFnHi">277800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6789">call_real_check_hook</a></td>
+              <td class="coverFnHi">46268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6823">call_string_check_hook</a></td>
+              <td class="coverFnHi">371978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5731">can_skip_gucvar</a></td>
+              <td class="coverFnHi">210998</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1429">check_GUC_init</a></td>
+              <td class="coverFnHi">603200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1403">check_GUC_name_for_parameter_acl</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3053">config_enum_get_options</a></td>
+              <td class="coverFnHi">149138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3027">config_enum_lookup_by_name</a></td>
+              <td class="coverFnHi">51298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3004">config_enum_lookup_by_value</a></td>
+              <td class="coverFnHi">483064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1367">convert_GUC_name_for_parameter_acl</a></td>
+              <td class="coverFnHi">350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2710">convert_int_from_base_unit</a></td>
+              <td class="coverFnHi">606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2752">convert_real_from_base_unit</a></td>
+              <td class="coverFnHi">268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2652">convert_to_base_unit</a></td>
+              <td class="coverFnHi">9144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4848">define_custom_variable</a></td>
+              <td class="coverFnHi">17020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#839">discard_stack_value</a></td>
+              <td class="coverFnHi">41950</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5902">do_serialize</a></td>
+              <td class="coverFnHi">79158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5932">do_serialize_binary</a></td>
+              <td class="coverFnHi">92518</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5771">estimate_variable_size</a></td>
+              <td class="coverFnHi">44260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#740">extra_field_used</a></td>
+              <td class="coverFnHi">248744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1228">find_option</a></td>
+              <td class="coverFnHi">681716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4206">get_config_handle</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2795">get_config_unit_name</a></td>
+              <td class="coverFnHi">1414716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5248">get_explain_guc_options</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#865">get_guc_variables</a></td>
+              <td class="coverFnHi">3828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#682">guc_free</a></td>
+              <td class="coverFnHi">890124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#631">guc_malloc</a></td>
+              <td class="coverFnHi">962658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1293">guc_name_compare</a></td>
+              <td class="coverFnHi">14010314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1323">guc_name_hash</a></td>
+              <td class="coverFnHi">1301948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1347">guc_name_match</a></td>
+              <td class="coverFnHi">681468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#645">guc_realloc</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6094">guc_restore_error_context_callback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#670">guc_strdup</a></td>
+              <td class="coverFnHi">785352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1281">guc_var_compare</a></td>
+              <td class="coverFnHi">12983816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4788">init_custom_variable</a></td>
+              <td class="coverFnHi">17020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3111">parse_and_validate_value</a></td>
+              <td class="coverFnHi">455620</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2852">parse_int</a></td>
+              <td class="coverFnHi">67690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2942">parse_real</a></td>
+              <td class="coverFnHi">7216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1986">pg_timezone_abbrev_initialize</a></td>
+              <td class="coverFnHi">2198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2128">push_old_value</a></td>
+              <td class="coverFnHi">100902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6057">read_gucstate</a></td>
+              <td class="coverFnHi">264948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6080">read_gucstate_binary</a></td>
+              <td class="coverFnHi">308080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4957">reapply_stacked_values</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4459">replace_auto_config_value</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#5947">serialize_variable</a></td>
+              <td class="coverFnHi">44260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3312">set_config_option</a></td>
+              <td class="coverFnHi">371162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3352">set_config_option_ext</a></td>
+              <td class="coverFnHi">88410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4221">set_config_sourcefile</a></td>
+              <td class="coverFnHi">97184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#3372">set_config_with_handle</a></td>
+              <td class="coverFnHi">459654</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#785">set_extra_field</a></td>
+              <td class="coverFnHi">1073992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#2105">set_guc_source</a></td>
+              <td class="coverFnHi">498416</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#805">set_stack_value</a></td>
+              <td class="coverFnHi">89810</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#724">set_string_field</a></td>
+              <td class="coverFnHi">515310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#701">string_field_used</a></td>
+              <td class="coverFnHi">622188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#1069">valid_custom_variable_name</a></td>
+              <td class="coverFnHi">176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#6631">validate_option_array_item</a></td>
+              <td class="coverFnHi">1176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="guc.c.gcov.html#4391">write_auto_conf_file</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

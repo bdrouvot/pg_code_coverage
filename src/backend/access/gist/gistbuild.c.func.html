@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/gist/gistbuild.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/gist</a> - gistbuild.c<span style="font-size: 80%;"> (<a href="gistbuild.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">421</td>
+            <td class="headerCovTableEntry">435</td>
+            <td class="headerCovTableEntryHi">96.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="gistbuild.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#851">calculatePagesPerBuffer</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#971">gistBufferingBuildInsert</a></td>
+              <td class="coverFnHi">35430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1287">gistBufferingFindCorrectParent</a></td>
+              <td class="coverFnHi">768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#884">gistBuildCallback</a></td>
+              <td class="coverFnHi">657958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1434">gistEmptyAllBuffers</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1489">gistGetMaxLevel</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1629">gistGetParent</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#690">gistInitBuffering</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1578">gistInitParentMap</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1608">gistMemorizeAllDownlinks</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1592">gistMemorizeParent</a></td>
+              <td class="coverFnHi">34926</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1361">gistProcessEmptyingQueue</a></td>
+              <td class="coverFnHi">35448</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#987">gistProcessItup</a></td>
+              <td class="coverFnHi">69762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#368">gistSortedBuildCallback</a></td>
+              <td class="coverFnHi">196144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#402">gist_indexsortbuild</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#643">gist_indexsortbuild_flush_ready_pages</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#488">gist_indexsortbuild_levelstate_add</a></td>
+              <td class="coverFnHi">197558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#521">gist_indexsortbuild_levelstate_flush</a></td>
+              <td class="coverFnHi">284</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#1118">gistbufferinginserttuples</a></td>
+              <td class="coverFnHi">105144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistbuild.c.gcov.html#181">gistbuild</a></td>
+              <td class="coverFnHi">736</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

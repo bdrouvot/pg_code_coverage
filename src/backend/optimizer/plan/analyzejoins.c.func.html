@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/plan/analyzejoins.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/plan</a> - analyzejoins.c<span style="font-size: 80%;"> (<a href="analyzejoins.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">739</td>
+            <td class="headerCovTableEntry">768</td>
+            <td class="headerCovTableEntryHi">96.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="analyzejoins.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#156">clause_sides_match_join</a></td>
+              <td class="coverFnHi">171070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1194">distinct_col_search</a></td>
+              <td class="coverFnHi">350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1234">innerrel_is_unique</a></td>
+              <td class="coverFnHi">524676</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1254">innerrel_is_unique_ext</a></td>
+              <td class="coverFnHi">530062</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1384">is_innerrel_unique_for</a></td>
+              <td class="coverFnHi">152130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#188">join_is_removable</a></td>
+              <td class="coverFnHi">45418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#2009">match_unique_clauses</a></td>
+              <td class="coverFnHi">680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1045">query_is_distinct_for</a></td>
+              <td class="coverFnHi">1726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1008">query_supports_distinctness</a></td>
+              <td class="coverFnHi">4244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#774">reduce_unique_semijoins</a></td>
+              <td class="coverFnHi">263994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#909">rel_is_distinct_for</a></td>
+              <td class="coverFnHi">160958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#850">rel_supports_distinctness</a></td>
+              <td class="coverFnHi">475510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#493">remove_leftjoinrel_from_query</a></td>
+              <td class="coverFnHi">8744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#666">remove_rel_from_eclass</a></td>
+              <td class="coverFnHi">12462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#720">remove_rel_from_joinlist</a></td>
+              <td class="coverFnHi">9608</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#358">remove_rel_from_query</a></td>
+              <td class="coverFnHi">9344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#609">remove_rel_from_restrictinfo</a></td>
+              <td class="coverFnHi">3724</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1713">remove_self_join_rel</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#2079">remove_self_joins_one_group</a></td>
+              <td class="coverFnHi">12054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#2247">remove_self_joins_recurse</a></td>
+              <td class="coverFnHi">82142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#92">remove_useless_joins</a></td>
+              <td class="coverFnHi">263994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#2421">remove_useless_self_joins</a></td>
+              <td class="coverFnHi">263994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1541">replace_relid</a></td>
+              <td class="coverFnHi">916246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1439">replace_varno</a></td>
+              <td class="coverFnHi">39916</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1455">replace_varno_walker</a></td>
+              <td class="coverFnHi">58298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1680">restrict_infos_logically_equal</a></td>
+              <td class="coverFnHi">556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#2374">self_join_candidates_cmp</a></td>
+              <td class="coverFnHi">108238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1944">split_selfjoin_quals</a></td>
+              <td class="coverFnHi">5386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="analyzejoins.c.gcov.html#1580">update_eclasses</a></td>
+              <td class="coverFnHi">906</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

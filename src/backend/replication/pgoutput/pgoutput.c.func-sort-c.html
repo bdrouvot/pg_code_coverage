@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/replication/pgoutput/pgoutput.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/replication/pgoutput</a> - pgoutput.c<span style="font-size: 80%;"> (<a href="pgoutput.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">725</td>
+            <td class="headerCovTableEntry">761</td>
+            <td class="headerCovTableEntryHi">95.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">40</td>
+            <td class="headerCovTableEntry">40</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="pgoutput.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1629">pgoutput_message</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#660">pgoutput_rollback_prepared_txn</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1561">pgoutput_truncate</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1857">pgoutput_stream_prepare_txn</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#793">create_estate_for_relation</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#615">pgoutput_begin_prepare_txn</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#632">pgoutput_prepare_txn</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#646">pgoutput_commit_prepared_txn</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1796">pgoutput_stream_abort</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#823">pgoutput_row_filter_exec_expr</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1829">pgoutput_stream_commit</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#846">pgoutput_ensure_entry_cxt</a></td>
+              <td class="coverFnHi">106</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#2231">cleanup_rel_sync_cache</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1941">set_schema_sent_in_streamed_txn</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1706">LoadPublications</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1129">init_tuple_slot</a></td>
+              <td class="coverFnHi">470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1014">pgoutput_column_list_init</a></td>
+              <td class="coverFnHi">470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#868">pgoutput_row_filter_init</a></td>
+              <td class="coverFnHi">470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1728">publication_invalidation_cb</a></td>
+              <td class="coverFnHi">488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#749">send_relation_and_attrs</a></td>
+              <td class="coverFnHi">598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1877">init_rel_sync_cache</a></td>
+              <td class="coverFnHi">626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#275">parse_output_parameters</a></td>
+              <td class="coverFnHi">626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#561">pgoutput_send_begin</a></td>
+              <td class="coverFnHi">696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#37">Pg_magic_func</a></td>
+              <td class="coverFnHi">814</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1693">pgoutput_shutdown</a></td>
+              <td class="coverFnHi">844</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#246">_PG_output_plugin_init</a></td>
+              <td class="coverFnHi">1138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#417">pgoutput_startup</a></td>
+              <td class="coverFnHi">1138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#583">pgoutput_commit_txn</a></td>
+              <td class="coverFnHi">1246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#547">pgoutput_begin_txn</a></td>
+              <td class="coverFnHi">1254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1743">pgoutput_stream_start</a></td>
+              <td class="coverFnHi">1274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1775">pgoutput_stream_stop</a></td>
+              <td class="coverFnHi">1274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#2317">rel_sync_cache_publication_cb</a></td>
+              <td class="coverFnHi">1380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#2343">send_repl_origin</a></td>
+              <td class="coverFnHi">2006</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#2266">rel_sync_cache_relation_cb</a></td>
+              <td class="coverFnHi">6222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1931">get_schema_sent_in_streamed_txn</a></td>
+              <td class="coverFnHi">351882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#678">maybe_send_schema</a></td>
+              <td class="coverFnHi">364162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1221">pgoutput_row_filter</a></td>
+              <td class="coverFnHi">364162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1402">pgoutput_change</a></td>
+              <td class="coverFnHi">366516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1962">get_rel_sync_entry</a></td>
+              <td class="coverFnHi">366552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pgoutput.c.gcov.html#1674">pgoutput_origin_filter</a></td>
+              <td class="coverFnHi">986880</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/bloom/blinsert.c</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/bloom</a> - blinsert.c<span style="font-size: 80%;"> (source / <a href="blinsert.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">111</td>
+            <td class="headerCovTableEntry">119</td>
+            <td class="headerCovTableEntryHi">93.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntry">7</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*-------------------------------------------------------------------------</a>
+<a name="2"><span class="lineNum">       2 </span>            :  *</a>
+<a name="3"><span class="lineNum">       3 </span>            :  * blinsert.c</a>
+<a name="4"><span class="lineNum">       4 </span>            :  *      Bloom index build and insert functions.</a>
+<a name="5"><span class="lineNum">       5 </span>            :  *</a>
+<a name="6"><span class="lineNum">       6 </span>            :  * Copyright (c) 2016-2024, PostgreSQL Global Development Group</a>
+<a name="7"><span class="lineNum">       7 </span>            :  *</a>
+<a name="8"><span class="lineNum">       8 </span>            :  * IDENTIFICATION</a>
+<a name="9"><span class="lineNum">       9 </span>            :  *    contrib/bloom/blinsert.c</a>
+<a name="10"><span class="lineNum">      10 </span>            :  *</a>
+<a name="11"><span class="lineNum">      11 </span>            :  *-------------------------------------------------------------------------</a>
+<a name="12"><span class="lineNum">      12 </span>            :  */</a>
+<a name="13"><span class="lineNum">      13 </span>            : #include &quot;postgres.h&quot;</a>
+<a name="14"><span class="lineNum">      14 </span>            : </a>
+<a name="15"><span class="lineNum">      15 </span>            : #include &quot;access/genam.h&quot;</a>
+<a name="16"><span class="lineNum">      16 </span>            : #include &quot;access/generic_xlog.h&quot;</a>
+<a name="17"><span class="lineNum">      17 </span>            : #include &quot;access/tableam.h&quot;</a>
+<a name="18"><span class="lineNum">      18 </span>            : #include &quot;bloom.h&quot;</a>
+<a name="19"><span class="lineNum">      19 </span>            : #include &quot;catalog/index.h&quot;</a>
+<a name="20"><span class="lineNum">      20 </span>            : #include &quot;miscadmin.h&quot;</a>
+<a name="21"><span class="lineNum">      21 </span>            : #include &quot;storage/bufmgr.h&quot;</a>
+<a name="22"><span class="lineNum">      22 </span>            : #include &quot;storage/indexfsm.h&quot;</a>
+<a name="23"><span class="lineNum">      23 </span>            : #include &quot;storage/smgr.h&quot;</a>
+<a name="24"><span class="lineNum">      24 </span>            : #include &quot;utils/memutils.h&quot;</a>
+<a name="25"><span class="lineNum">      25 </span>            : #include &quot;utils/rel.h&quot;</a>
+<a name="26"><span class="lineNum">      26 </span>            : </a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">        190 : PG_MODULE_MAGIC;</span></a>
+<a name="28"><span class="lineNum">      28 </span>            : </a>
+<a name="29"><span class="lineNum">      29 </span>            : /*</a>
+<a name="30"><span class="lineNum">      30 </span>            :  * State of bloom index build.  We accumulate one page data here before</a>
+<a name="31"><span class="lineNum">      31 </span>            :  * flushing it to buffer manager.</a>
+<a name="32"><span class="lineNum">      32 </span>            :  */</a>
+<a name="33"><span class="lineNum">      33 </span>            : typedef struct</a>
+<a name="34"><span class="lineNum">      34 </span>            : {</a>
+<a name="35"><span class="lineNum">      35 </span>            :     BloomState  blstate;        /* bloom index state */</a>
+<a name="36"><span class="lineNum">      36 </span>            :     int64       indtuples;      /* total number of tuples indexed */</a>
+<a name="37"><span class="lineNum">      37 </span>            :     MemoryContext tmpCtx;       /* temporary memory context reset after each</a>
+<a name="38"><span class="lineNum">      38 </span>            :                                  * tuple */</a>
+<a name="39"><span class="lineNum">      39 </span>            :     PGAlignedBlock data;        /* cached page */</a>
+<a name="40"><span class="lineNum">      40 </span>            :     int         count;          /* number of tuples in cached page */</a>
+<a name="41"><span class="lineNum">      41 </span>            : } BloomBuildState;</a>
+<a name="42"><span class="lineNum">      42 </span>            : </a>
+<a name="43"><span class="lineNum">      43 </span>            : /*</a>
+<a name="44"><span class="lineNum">      44 </span>            :  * Flush page cached in BloomBuildState.</a>
+<a name="45"><span class="lineNum">      45 </span>            :  */</a>
+<a name="46"><span class="lineNum">      46 </span>            : static void</a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">         72 : flushCachedPage(Relation index, BloomBuildState *buildstate)</span></a>
+<a name="48"><span class="lineNum">      48 </span>            : {</a>
+<a name="49"><span class="lineNum">      49 </span>            :     Page        page;</a>
+<a name="50"><span class="lineNum">      50 </span><span class="lineCov">         72 :     Buffer      buffer = BloomNewBuffer(index);</span></a>
+<a name="51"><span class="lineNum">      51 </span>            :     GenericXLogState *state;</a>
+<a name="52"><span class="lineNum">      52 </span>            : </a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineCov">         72 :     state = GenericXLogStart(index);</span></a>
+<a name="54"><span class="lineNum">      54 </span><span class="lineCov">         72 :     page = GenericXLogRegisterBuffer(state, buffer, GENERIC_XLOG_FULL_IMAGE);</span></a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineCov">         72 :     memcpy(page, buildstate-&gt;data.data, BLCKSZ);</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineCov">         72 :     GenericXLogFinish(state);</span></a>
+<a name="57"><span class="lineNum">      57 </span><span class="lineCov">         72 :     UnlockReleaseBuffer(buffer);</span></a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">         72 : }</span></a>
+<a name="59"><span class="lineNum">      59 </span>            : </a>
+<a name="60"><span class="lineNum">      60 </span>            : /*</a>
+<a name="61"><span class="lineNum">      61 </span>            :  * (Re)initialize cached page in BloomBuildState.</a>
+<a name="62"><span class="lineNum">      62 </span>            :  */</a>
+<a name="63"><span class="lineNum">      63 </span>            : static void</a>
+<a name="64"><span class="lineNum">      64 </span><span class="lineCov">         72 : initCachedPage(BloomBuildState *buildstate)</span></a>
+<a name="65"><span class="lineNum">      65 </span>            : {</a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">         72 :     BloomInitPage(buildstate-&gt;data.data, 0);</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">         72 :     buildstate-&gt;count = 0;</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">         72 : }</span></a>
+<a name="69"><span class="lineNum">      69 </span>            : </a>
+<a name="70"><span class="lineNum">      70 </span>            : /*</a>
+<a name="71"><span class="lineNum">      71 </span>            :  * Per-tuple callback for table_index_build_scan.</a>
+<a name="72"><span class="lineNum">      72 </span>            :  */</a>
+<a name="73"><span class="lineNum">      73 </span>            : static void</a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineCov">      37500 : bloomBuildCallback(Relation index, ItemPointer tid, Datum *values,</span></a>
+<a name="75"><span class="lineNum">      75 </span>            :                    bool *isnull, bool tupleIsAlive, void *state)</a>
+<a name="76"><span class="lineNum">      76 </span>            : {</a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">      37500 :     BloomBuildState *buildstate = (BloomBuildState *) state;</span></a>
+<a name="78"><span class="lineNum">      78 </span>            :     MemoryContext oldCtx;</a>
+<a name="79"><span class="lineNum">      79 </span>            :     BloomTuple *itup;</a>
+<a name="80"><span class="lineNum">      80 </span>            : </a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">      37500 :     oldCtx = MemoryContextSwitchTo(buildstate-&gt;tmpCtx);</span></a>
+<a name="82"><span class="lineNum">      82 </span>            : </a>
+<a name="83"><span class="lineNum">      83 </span><span class="lineCov">      37500 :     itup = BloomFormTuple(&amp;buildstate-&gt;blstate, tid, values, isnull);</span></a>
+<a name="84"><span class="lineNum">      84 </span>            : </a>
+<a name="85"><span class="lineNum">      85 </span>            :     /* Try to add next item to cached page */</a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">      37500 :     if (BloomPageAddItem(&amp;buildstate-&gt;blstate, buildstate-&gt;data.data, itup))</span></a>
+<a name="87"><span class="lineNum">      87 </span>            :     {</a>
+<a name="88"><span class="lineNum">      88 </span>            :         /* Next item was added successfully */</a>
+<a name="89"><span class="lineNum">      89 </span><span class="lineCov">      37438 :         buildstate-&gt;count++;</span></a>
+<a name="90"><span class="lineNum">      90 </span>            :     }</a>
+<a name="91"><span class="lineNum">      91 </span>            :     else</a>
+<a name="92"><span class="lineNum">      92 </span>            :     {</a>
+<a name="93"><span class="lineNum">      93 </span>            :         /* Cached page is full, flush it out and make a new one */</a>
+<a name="94"><span class="lineNum">      94 </span><span class="lineCov">         62 :         flushCachedPage(index, buildstate);</span></a>
+<a name="95"><span class="lineNum">      95 </span>            : </a>
+<a name="96"><span class="lineNum">      96 </span><span class="lineCov">         62 :         CHECK_FOR_INTERRUPTS();</span></a>
+<a name="97"><span class="lineNum">      97 </span>            : </a>
+<a name="98"><span class="lineNum">      98 </span><span class="lineCov">         62 :         initCachedPage(buildstate);</span></a>
+<a name="99"><span class="lineNum">      99 </span>            : </a>
+<a name="100"><span class="lineNum">     100 </span><span class="lineCov">         62 :         if (!BloomPageAddItem(&amp;buildstate-&gt;blstate, buildstate-&gt;data.data, itup))</span></a>
+<a name="101"><span class="lineNum">     101 </span>            :         {</a>
+<a name="102"><span class="lineNum">     102 </span>            :             /* We shouldn't be here since we're inserting to the empty page */</a>
+<a name="103"><span class="lineNum">     103 </span><span class="lineNoCov">          0 :             elog(ERROR, &quot;could not add new bloom tuple to empty page&quot;);</span></a>
+<a name="104"><span class="lineNum">     104 </span>            :         }</a>
+<a name="105"><span class="lineNum">     105 </span>            : </a>
+<a name="106"><span class="lineNum">     106 </span>            :         /* Next item was added successfully */</a>
+<a name="107"><span class="lineNum">     107 </span><span class="lineCov">         62 :         buildstate-&gt;count++;</span></a>
+<a name="108"><span class="lineNum">     108 </span>            :     }</a>
+<a name="109"><span class="lineNum">     109 </span>            : </a>
+<a name="110"><span class="lineNum">     110 </span>            :     /* Update total tuple count */</a>
+<a name="111"><span class="lineNum">     111 </span><span class="lineCov">      37500 :     buildstate-&gt;indtuples += 1;</span></a>
+<a name="112"><span class="lineNum">     112 </span>            : </a>
+<a name="113"><span class="lineNum">     113 </span><span class="lineCov">      37500 :     MemoryContextSwitchTo(oldCtx);</span></a>
+<a name="114"><span class="lineNum">     114 </span><span class="lineCov">      37500 :     MemoryContextReset(buildstate-&gt;tmpCtx);</span></a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineCov">      37500 : }</span></a>
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<a name="117"><span class="lineNum">     117 </span>            : /*</a>
+<a name="118"><span class="lineNum">     118 </span>            :  * Build a new bloom index.</a>
+<a name="119"><span class="lineNum">     119 </span>            :  */</a>
+<a name="120"><span class="lineNum">     120 </span>            : IndexBuildResult *</a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineCov">         10 : blbuild(Relation heap, Relation index, IndexInfo *indexInfo)</span></a>
+<a name="122"><span class="lineNum">     122 </span>            : {</a>
+<a name="123"><span class="lineNum">     123 </span>            :     IndexBuildResult *result;</a>
+<a name="124"><span class="lineNum">     124 </span>            :     double      reltuples;</a>
+<a name="125"><span class="lineNum">     125 </span>            :     BloomBuildState buildstate;</a>
+<a name="126"><span class="lineNum">     126 </span>            : </a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineCov">         10 :     if (RelationGetNumberOfBlocks(index) != 0)</span></a>
+<a name="128"><span class="lineNum">     128 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;index \&quot;%s\&quot; already contains data&quot;,</span></a>
+<a name="129"><span class="lineNum">     129 </span>            :              RelationGetRelationName(index));</a>
+<a name="130"><span class="lineNum">     130 </span>            : </a>
+<a name="131"><span class="lineNum">     131 </span>            :     /* Initialize the meta page */</a>
+<a name="132"><span class="lineNum">     132 </span><span class="lineCov">         10 :     BloomInitMetapage(index, MAIN_FORKNUM);</span></a>
+<a name="133"><span class="lineNum">     133 </span>            : </a>
+<a name="134"><span class="lineNum">     134 </span>            :     /* Initialize the bloom build state */</a>
+<a name="135"><span class="lineNum">     135 </span><span class="lineCov">         10 :     memset(&amp;buildstate, 0, sizeof(buildstate));</span></a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">         10 :     initBloomState(&amp;buildstate.blstate, index);</span></a>
+<a name="137"><span class="lineNum">     137 </span><span class="lineCov">         10 :     buildstate.tmpCtx = AllocSetContextCreate(CurrentMemoryContext,</span></a>
+<a name="138"><span class="lineNum">     138 </span>            :                                               &quot;Bloom build temporary context&quot;,</a>
+<a name="139"><span class="lineNum">     139 </span>            :                                               ALLOCSET_DEFAULT_SIZES);</a>
+<a name="140"><span class="lineNum">     140 </span><span class="lineCov">         10 :     initCachedPage(&amp;buildstate);</span></a>
+<a name="141"><span class="lineNum">     141 </span>            : </a>
+<a name="142"><span class="lineNum">     142 </span>            :     /* Do the heap scan */</a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">         10 :     reltuples = table_index_build_scan(heap, index, indexInfo, true, true,</span></a>
+<a name="144"><span class="lineNum">     144 </span>            :                                        bloomBuildCallback, (void *) &amp;buildstate,</a>
+<a name="145"><span class="lineNum">     145 </span>            :                                        NULL);</a>
+<a name="146"><span class="lineNum">     146 </span>            : </a>
+<a name="147"><span class="lineNum">     147 </span>            :     /* Flush last page if needed (it will be, unless heap was empty) */</a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">         10 :     if (buildstate.count &gt; 0)</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">         10 :         flushCachedPage(index, &amp;buildstate);</span></a>
+<a name="150"><span class="lineNum">     150 </span>            : </a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineCov">         10 :     MemoryContextDelete(buildstate.tmpCtx);</span></a>
+<a name="152"><span class="lineNum">     152 </span>            : </a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineCov">         10 :     result = (IndexBuildResult *) palloc(sizeof(IndexBuildResult));</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineCov">         10 :     result-&gt;heap_tuples = reltuples;</span></a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">         10 :     result-&gt;index_tuples = buildstate.indtuples;</span></a>
+<a name="156"><span class="lineNum">     156 </span>            : </a>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">         10 :     return result;</span></a>
+<a name="158"><span class="lineNum">     158 </span>            : }</a>
+<a name="159"><span class="lineNum">     159 </span>            : </a>
+<a name="160"><span class="lineNum">     160 </span>            : /*</a>
+<a name="161"><span class="lineNum">     161 </span>            :  * Build an empty bloom index in the initialization fork.</a>
+<a name="162"><span class="lineNum">     162 </span>            :  */</a>
+<a name="163"><span class="lineNum">     163 </span>            : void</a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">          2 : blbuildempty(Relation index)</span></a>
+<a name="165"><span class="lineNum">     165 </span>            : {</a>
+<a name="166"><span class="lineNum">     166 </span>            :     /* Initialize the meta page */</a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">          2 :     BloomInitMetapage(index, INIT_FORKNUM);</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">          2 : }</span></a>
+<a name="169"><span class="lineNum">     169 </span>            : </a>
+<a name="170"><span class="lineNum">     170 </span>            : /*</a>
+<a name="171"><span class="lineNum">     171 </span>            :  * Insert new tuple to the bloom index.</a>
+<a name="172"><span class="lineNum">     172 </span>            :  */</a>
+<a name="173"><span class="lineNum">     173 </span>            : bool</a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">     208000 : blinsert(Relation index, Datum *values, bool *isnull,</span></a>
+<a name="175"><span class="lineNum">     175 </span>            :          ItemPointer ht_ctid, Relation heapRel,</a>
+<a name="176"><span class="lineNum">     176 </span>            :          IndexUniqueCheck checkUnique,</a>
+<a name="177"><span class="lineNum">     177 </span>            :          bool indexUnchanged,</a>
+<a name="178"><span class="lineNum">     178 </span>            :          IndexInfo *indexInfo)</a>
+<a name="179"><span class="lineNum">     179 </span>            : {</a>
+<a name="180"><span class="lineNum">     180 </span>            :     BloomState  blstate;</a>
+<a name="181"><span class="lineNum">     181 </span>            :     BloomTuple *itup;</a>
+<a name="182"><span class="lineNum">     182 </span>            :     MemoryContext oldCtx;</a>
+<a name="183"><span class="lineNum">     183 </span>            :     MemoryContext insertCtx;</a>
+<a name="184"><span class="lineNum">     184 </span>            :     BloomMetaPageData *metaData;</a>
+<a name="185"><span class="lineNum">     185 </span>            :     Buffer      buffer,</a>
+<a name="186"><span class="lineNum">     186 </span>            :                 metaBuffer;</a>
+<a name="187"><span class="lineNum">     187 </span>            :     Page        page,</a>
+<a name="188"><span class="lineNum">     188 </span>            :                 metaPage;</a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">     208000 :     BlockNumber blkno = InvalidBlockNumber;</span></a>
+<a name="190"><span class="lineNum">     190 </span>            :     OffsetNumber nStart;</a>
+<a name="191"><span class="lineNum">     191 </span>            :     GenericXLogState *state;</a>
+<a name="192"><span class="lineNum">     192 </span>            : </a>
+<a name="193"><span class="lineNum">     193 </span><span class="lineCov">     208000 :     insertCtx = AllocSetContextCreate(CurrentMemoryContext,</span></a>
+<a name="194"><span class="lineNum">     194 </span>            :                                       &quot;Bloom insert temporary context&quot;,</a>
+<a name="195"><span class="lineNum">     195 </span>            :                                       ALLOCSET_DEFAULT_SIZES);</a>
+<a name="196"><span class="lineNum">     196 </span>            : </a>
+<a name="197"><span class="lineNum">     197 </span><span class="lineCov">     208000 :     oldCtx = MemoryContextSwitchTo(insertCtx);</span></a>
+<a name="198"><span class="lineNum">     198 </span>            : </a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">     208000 :     initBloomState(&amp;blstate, index);</span></a>
+<a name="200"><span class="lineNum">     200 </span><span class="lineCov">     208000 :     itup = BloomFormTuple(&amp;blstate, ht_ctid, values, isnull);</span></a>
+<a name="201"><span class="lineNum">     201 </span>            : </a>
+<a name="202"><span class="lineNum">     202 </span>            :     /*</a>
+<a name="203"><span class="lineNum">     203 </span>            :      * At first, try to insert new tuple to the first page in notFullPage</a>
+<a name="204"><span class="lineNum">     204 </span>            :      * array.  If successful, we don't need to modify the meta page.</a>
+<a name="205"><span class="lineNum">     205 </span>            :      */</a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">     208000 :     metaBuffer = ReadBuffer(index, BLOOM_METAPAGE_BLKNO);</span></a>
+<a name="207"><span class="lineNum">     207 </span><span class="lineCov">     208000 :     LockBuffer(metaBuffer, BUFFER_LOCK_SHARE);</span></a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">     208000 :     metaData = BloomPageGetMeta(BufferGetPage(metaBuffer));</span></a>
+<a name="209"><span class="lineNum">     209 </span>            : </a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineCov">     208000 :     if (metaData-&gt;nEnd &gt; metaData-&gt;nStart)</span></a>
+<a name="211"><span class="lineNum">     211 </span>            :     {</a>
+<a name="212"><span class="lineNum">     212 </span><span class="lineCov">     207998 :         blkno = metaData-&gt;notFullPage[metaData-&gt;nStart];</span></a>
+<a name="213"><span class="lineNum">     213 </span><span class="lineCov">     207998 :         Assert(blkno != InvalidBlockNumber);</span></a>
+<a name="214"><span class="lineNum">     214 </span>            : </a>
+<a name="215"><span class="lineNum">     215 </span>            :         /* Don't hold metabuffer lock while doing insert */</a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">     207998 :         LockBuffer(metaBuffer, BUFFER_LOCK_UNLOCK);</span></a>
+<a name="217"><span class="lineNum">     217 </span>            : </a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">     207998 :         buffer = ReadBuffer(index, blkno);</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">     207998 :         LockBuffer(buffer, BUFFER_LOCK_EXCLUSIVE);</span></a>
+<a name="220"><span class="lineNum">     220 </span>            : </a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">     207998 :         state = GenericXLogStart(index);</span></a>
+<a name="222"><span class="lineNum">     222 </span><span class="lineCov">     207998 :         page = GenericXLogRegisterBuffer(state, buffer, 0);</span></a>
+<a name="223"><span class="lineNum">     223 </span>            : </a>
+<a name="224"><span class="lineNum">     224 </span>            :         /*</a>
+<a name="225"><span class="lineNum">     225 </span>            :          * We might have found a page that was recently deleted by VACUUM.  If</a>
+<a name="226"><span class="lineNum">     226 </span>            :          * so, we can reuse it, but we must reinitialize it.</a>
+<a name="227"><span class="lineNum">     227 </span>            :          */</a>
+<a name="228"><span class="lineNum">     228 </span><span class="lineCov">     207998 :         if (PageIsNew(page) || BloomPageIsDeleted(page))</span></a>
+<a name="229"><span class="lineNum">     229 </span><span class="lineNoCov">          0 :             BloomInitPage(page, 0);</span></a>
+<a name="230"><span class="lineNum">     230 </span>            : </a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">     207998 :         if (BloomPageAddItem(&amp;blstate, page, itup))</span></a>
+<a name="232"><span class="lineNum">     232 </span>            :         {</a>
+<a name="233"><span class="lineNum">     233 </span>            :             /* Success!  Apply the change, clean up, and exit */</a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">     206484 :             GenericXLogFinish(state);</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">     206484 :             UnlockReleaseBuffer(buffer);</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">     206484 :             ReleaseBuffer(metaBuffer);</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">     206484 :             MemoryContextSwitchTo(oldCtx);</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">     206484 :             MemoryContextDelete(insertCtx);</span></a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineCov">     206484 :             return false;</span></a>
+<a name="240"><span class="lineNum">     240 </span>            :         }</a>
+<a name="241"><span class="lineNum">     241 </span>            : </a>
+<a name="242"><span class="lineNum">     242 </span>            :         /* Didn't fit, must try other pages */</a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineCov">       1514 :         GenericXLogAbort(state);</span></a>
+<a name="244"><span class="lineNum">     244 </span><span class="lineCov">       1514 :         UnlockReleaseBuffer(buffer);</span></a>
+<a name="245"><span class="lineNum">     245 </span>            :     }</a>
+<a name="246"><span class="lineNum">     246 </span>            :     else</a>
+<a name="247"><span class="lineNum">     247 </span>            :     {</a>
+<a name="248"><span class="lineNum">     248 </span>            :         /* No entries in notFullPage */</a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineCov">          2 :         LockBuffer(metaBuffer, BUFFER_LOCK_UNLOCK);</span></a>
+<a name="250"><span class="lineNum">     250 </span>            :     }</a>
+<a name="251"><span class="lineNum">     251 </span>            : </a>
+<a name="252"><span class="lineNum">     252 </span>            :     /*</a>
+<a name="253"><span class="lineNum">     253 </span>            :      * Try other pages in notFullPage array.  We will have to change nStart in</a>
+<a name="254"><span class="lineNum">     254 </span>            :      * metapage.  Thus, grab exclusive lock on metapage.</a>
+<a name="255"><span class="lineNum">     255 </span>            :      */</a>
+<a name="256"><span class="lineNum">     256 </span><span class="lineCov">       1516 :     LockBuffer(metaBuffer, BUFFER_LOCK_EXCLUSIVE);</span></a>
+<a name="257"><span class="lineNum">     257 </span>            : </a>
+<a name="258"><span class="lineNum">     258 </span>            :     /* nStart might have changed while we didn't have lock */</a>
+<a name="259"><span class="lineNum">     259 </span><span class="lineCov">       1516 :     nStart = metaData-&gt;nStart;</span></a>
+<a name="260"><span class="lineNum">     260 </span>            : </a>
+<a name="261"><span class="lineNum">     261 </span>            :     /* Skip first page if we already tried it above */</a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">       1516 :     if (nStart &lt; metaData-&gt;nEnd &amp;&amp;</span></a>
+<a name="263"><span class="lineNum">     263 </span><span class="lineCov">       1514 :         blkno == metaData-&gt;notFullPage[nStart])</span></a>
+<a name="264"><span class="lineNum">     264 </span><span class="lineCov">       1514 :         nStart++;</span></a>
+<a name="265"><span class="lineNum">     265 </span>            : </a>
+<a name="266"><span class="lineNum">     266 </span>            :     /*</a>
+<a name="267"><span class="lineNum">     267 </span>            :      * This loop iterates for each page we try from the notFullPage array, and</a>
+<a name="268"><span class="lineNum">     268 </span>            :      * will also initialize a GenericXLogState for the fallback case of having</a>
+<a name="269"><span class="lineNum">     269 </span>            :      * to allocate a new page.</a>
+<a name="270"><span class="lineNum">     270 </span>            :      */</a>
+<a name="271"><span class="lineNum">     271 </span>            :     for (;;)</a>
+<a name="272"><span class="lineNum">     272 </span>            :     {</a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">       1516 :         state = GenericXLogStart(index);</span></a>
+<a name="274"><span class="lineNum">     274 </span>            : </a>
+<a name="275"><span class="lineNum">     275 </span>            :         /* get modifiable copy of metapage */</a>
+<a name="276"><span class="lineNum">     276 </span><span class="lineCov">       1516 :         metaPage = GenericXLogRegisterBuffer(state, metaBuffer, 0);</span></a>
+<a name="277"><span class="lineNum">     277 </span><span class="lineCov">       1516 :         metaData = BloomPageGetMeta(metaPage);</span></a>
+<a name="278"><span class="lineNum">     278 </span>            : </a>
+<a name="279"><span class="lineNum">     279 </span><span class="lineCov">       1516 :         if (nStart &gt;= metaData-&gt;nEnd)</span></a>
+<a name="280"><span class="lineNum">     280 </span><span class="lineCov">        226 :             break;              /* no more entries in notFullPage array */</span></a>
+<a name="281"><span class="lineNum">     281 </span>            : </a>
+<a name="282"><span class="lineNum">     282 </span><span class="lineCov">       1290 :         blkno = metaData-&gt;notFullPage[nStart];</span></a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">       1290 :         Assert(blkno != InvalidBlockNumber);</span></a>
+<a name="284"><span class="lineNum">     284 </span>            : </a>
+<a name="285"><span class="lineNum">     285 </span><span class="lineCov">       1290 :         buffer = ReadBuffer(index, blkno);</span></a>
+<a name="286"><span class="lineNum">     286 </span><span class="lineCov">       1290 :         LockBuffer(buffer, BUFFER_LOCK_EXCLUSIVE);</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">       1290 :         page = GenericXLogRegisterBuffer(state, buffer, 0);</span></a>
+<a name="288"><span class="lineNum">     288 </span>            : </a>
+<a name="289"><span class="lineNum">     289 </span>            :         /* Basically same logic as above */</a>
+<a name="290"><span class="lineNum">     290 </span><span class="lineCov">       1290 :         if (PageIsNew(page) || BloomPageIsDeleted(page))</span></a>
+<a name="291"><span class="lineNum">     291 </span><span class="lineNoCov">          0 :             BloomInitPage(page, 0);</span></a>
+<a name="292"><span class="lineNum">     292 </span>            : </a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineCov">       1290 :         if (BloomPageAddItem(&amp;blstate, page, itup))</span></a>
+<a name="294"><span class="lineNum">     294 </span>            :         {</a>
+<a name="295"><span class="lineNum">     295 </span>            :             /* Success!  Apply the changes, clean up, and exit */</a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">       1290 :             metaData-&gt;nStart = nStart;</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">       1290 :             GenericXLogFinish(state);</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">       1290 :             UnlockReleaseBuffer(buffer);</span></a>
+<a name="299"><span class="lineNum">     299 </span><span class="lineCov">       1290 :             UnlockReleaseBuffer(metaBuffer);</span></a>
+<a name="300"><span class="lineNum">     300 </span><span class="lineCov">       1290 :             MemoryContextSwitchTo(oldCtx);</span></a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">       1290 :             MemoryContextDelete(insertCtx);</span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">       1290 :             return false;</span></a>
+<a name="303"><span class="lineNum">     303 </span>            :         }</a>
+<a name="304"><span class="lineNum">     304 </span>            : </a>
+<a name="305"><span class="lineNum">     305 </span>            :         /* Didn't fit, must try other pages */</a>
+<a name="306"><span class="lineNum">     306 </span><span class="lineNoCov">          0 :         GenericXLogAbort(state);</span></a>
+<a name="307"><span class="lineNum">     307 </span><span class="lineNoCov">          0 :         UnlockReleaseBuffer(buffer);</span></a>
+<a name="308"><span class="lineNum">     308 </span><span class="lineNoCov">          0 :         nStart++;</span></a>
+<a name="309"><span class="lineNum">     309 </span>            :     }</a>
+<a name="310"><span class="lineNum">     310 </span>            : </a>
+<a name="311"><span class="lineNum">     311 </span>            :     /*</a>
+<a name="312"><span class="lineNum">     312 </span>            :      * Didn't find place to insert in notFullPage array.  Allocate new page.</a>
+<a name="313"><span class="lineNum">     313 </span>            :      * (XXX is it good to do this while holding ex-lock on the metapage??)</a>
+<a name="314"><span class="lineNum">     314 </span>            :      */</a>
+<a name="315"><span class="lineNum">     315 </span><span class="lineCov">        226 :     buffer = BloomNewBuffer(index);</span></a>
+<a name="316"><span class="lineNum">     316 </span>            : </a>
+<a name="317"><span class="lineNum">     317 </span><span class="lineCov">        226 :     page = GenericXLogRegisterBuffer(state, buffer, GENERIC_XLOG_FULL_IMAGE);</span></a>
+<a name="318"><span class="lineNum">     318 </span><span class="lineCov">        226 :     BloomInitPage(page, 0);</span></a>
+<a name="319"><span class="lineNum">     319 </span>            : </a>
+<a name="320"><span class="lineNum">     320 </span><span class="lineCov">        226 :     if (!BloomPageAddItem(&amp;blstate, page, itup))</span></a>
+<a name="321"><span class="lineNum">     321 </span>            :     {</a>
+<a name="322"><span class="lineNum">     322 </span>            :         /* We shouldn't be here since we're inserting to an empty page */</a>
+<a name="323"><span class="lineNum">     323 </span><span class="lineNoCov">          0 :         elog(ERROR, &quot;could not add new bloom tuple to empty page&quot;);</span></a>
+<a name="324"><span class="lineNum">     324 </span>            :     }</a>
+<a name="325"><span class="lineNum">     325 </span>            : </a>
+<a name="326"><span class="lineNum">     326 </span>            :     /* Reset notFullPage array to contain just this new page */</a>
+<a name="327"><span class="lineNum">     327 </span><span class="lineCov">        226 :     metaData-&gt;nStart = 0;</span></a>
+<a name="328"><span class="lineNum">     328 </span><span class="lineCov">        226 :     metaData-&gt;nEnd = 1;</span></a>
+<a name="329"><span class="lineNum">     329 </span><span class="lineCov">        226 :     metaData-&gt;notFullPage[0] = BufferGetBlockNumber(buffer);</span></a>
+<a name="330"><span class="lineNum">     330 </span>            : </a>
+<a name="331"><span class="lineNum">     331 </span>            :     /* Apply the changes, clean up, and exit */</a>
+<a name="332"><span class="lineNum">     332 </span><span class="lineCov">        226 :     GenericXLogFinish(state);</span></a>
+<a name="333"><span class="lineNum">     333 </span>            : </a>
+<a name="334"><span class="lineNum">     334 </span><span class="lineCov">        226 :     UnlockReleaseBuffer(buffer);</span></a>
+<a name="335"><span class="lineNum">     335 </span><span class="lineCov">        226 :     UnlockReleaseBuffer(metaBuffer);</span></a>
+<a name="336"><span class="lineNum">     336 </span>            : </a>
+<a name="337"><span class="lineNum">     337 </span><span class="lineCov">        226 :     MemoryContextSwitchTo(oldCtx);</span></a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineCov">        226 :     MemoryContextDelete(insertCtx);</span></a>
+<a name="339"><span class="lineNum">     339 </span>            : </a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineCov">        226 :     return false;</span></a>
+<a name="341"><span class="lineNum">     341 </span>            : }</a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

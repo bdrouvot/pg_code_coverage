@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/postmaster/postmaster.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/postmaster</a> - postmaster.c<span style="font-size: 80%;"> (<a href="postmaster.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1106</td>
+            <td class="headerCovTableEntry">1510</td>
+            <td class="headerCovTableEntryLo">73.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">52</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntryMed">88.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="postmaster.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5641">BackgroundWorkerBlockSignals</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2303">SendNegotiateProtocolVersion</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5219">StartupPacketTimeoutHandler</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5210">dummy_handler</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5195">process_startup_packet_die</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4179">report_fork_failure_to_client</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1511">unlink_external_pid_file</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2324">processCancelRequest</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5396">StartAutovacuumWorker</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3974">sigquit_child</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2625">handle_pm_reload_request_signal</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2639">process_pm_reload_request</a></td>
+              <td class="coverFnHi">216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4032">TerminateChildren</a></td>
+              <td class="coverFnHi">554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5573">BackgroundWorkerInitializeConnection</a></td>
+              <td class="coverFnHi">578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5487">MaybeStartWalReceiver</a></td>
+              <td class="coverFnHi">662</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2710">handle_pm_shutdown_request_signal</a></td>
+              <td class="coverFnHi">1234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2738">process_pm_shutdown_request</a></td>
+              <td class="coverFnHi">1234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1480">CloseServerPorts</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5519">CreateOptsFile</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#6512">InitPostmasterDeathWatchHandle</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1714">ServerLoop</a></td>
+              <td class="coverFnHi">1240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4999">ExitPostmaster</a></td>
+              <td class="coverFnHi">1244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1577">checkControlFile</a></td>
+              <td class="coverFnHi">1248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#582">PostmasterMain</a></td>
+              <td class="coverFnHi">1252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1523">getInstallationPaths</a></td>
+              <td class="coverFnHi">1252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3988">SignalSomeChildren</a></td>
+              <td class="coverFnHi">2130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1691">ConfigurePostmasterWaitSet</a></td>
+              <td class="coverFnHi">2546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3407">HandleChildCrash</a></td>
+              <td class="coverFnHi">3086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5607">BackgroundWorkerInitializeConnectionByOid</a></td>
+              <td class="coverFnHi">3294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5997">PostmasterMarkPIDForWorkerNotify</a></td>
+              <td class="coverFnHi">3330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5647">BackgroundWorkerUnblockSignals</a></td>
+              <td class="coverFnHi">4020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5814">assign_backendlist_entry</a></td>
+              <td class="coverFnHi">4386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5680">do_start_bgworker</a></td>
+              <td class="coverFnHi">4386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5033">process_pm_pmsignal</a></td>
+              <td class="coverFnHi">4824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2611">handle_pm_pmsignal_signal</a></td>
+              <td class="coverFnHi">5092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5285">StartChildProcess</a></td>
+              <td class="coverFnHi">5312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5772">bgworker_should_start_now</a></td>
+              <td class="coverFnHi">5826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3944">signal_child</a></td>
+              <td class="coverFnHi">8254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5878">maybe_start_bgworkers</a></td>
+              <td class="coverFnHi">10206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4440">BackendRun</a></td>
+              <td class="coverFnHi">19554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4214">BackendInitialize</a></td>
+              <td class="coverFnHi">19856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1938">ProcessStartupPacket</a></td>
+              <td class="coverFnHi">19856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#4065">BackendStartup</a></td>
+              <td class="coverFnHi">20160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2446">ConnCreate</a></td>
+              <td class="coverFnHi">20160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2477">ConnFree</a></td>
+              <td class="coverFnHi">20160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3323">CleanupBackend</a></td>
+              <td class="coverFnHi">20170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3588">LogChildExit</a></td>
+              <td class="coverFnHi">24068</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3228">CleanupBackgroundWorker</a></td>
+              <td class="coverFnHi">24556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5229">RandomCancelKey</a></td>
+              <td class="coverFnHi">24556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2390">canAcceptConnections</a></td>
+              <td class="coverFnHi">24556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2494">ClosePostmasterPorts</a></td>
+              <td class="coverFnHi">27838</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2568">InitProcessGlobals</a></td>
+              <td class="coverFnHi">29418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2903">process_pm_child_exit</a></td>
+              <td class="coverFnHi">29970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#2889">handle_pm_child_exit_signal</a></td>
+              <td class="coverFnHi">30060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5239">CountChildren</a></td>
+              <td class="coverFnHi">31554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5563">MaxLivePostmasterChildren</a></td>
+              <td class="coverFnHi">31678</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#3654">PostmasterStateMachine</a></td>
+              <td class="coverFnHi">33104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#5506">MaybeStartWalSummarizer</a></td>
+              <td class="coverFnHi">56250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="postmaster.c.gcov.html#1606">DetermineSleepTime</a></td>
+              <td class="coverFnHi">56398</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

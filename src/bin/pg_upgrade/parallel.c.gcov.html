@@ -1,0 +1,425 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pg_upgrade/parallel.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pg_upgrade</a> - parallel.c<span style="font-size: 80%;"> (source / <a href="parallel.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">14</td>
+            <td class="headerCovTableEntry">44</td>
+            <td class="headerCovTableEntryLo">31.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*</a>
+<a name="2"><span class="lineNum">       2 </span>            :  *  parallel.c</a>
+<a name="3"><span class="lineNum">       3 </span>            :  *</a>
+<a name="4"><span class="lineNum">       4 </span>            :  *  multi-process support</a>
+<a name="5"><span class="lineNum">       5 </span>            :  *</a>
+<a name="6"><span class="lineNum">       6 </span>            :  *  Copyright (c) 2010-2024, PostgreSQL Global Development Group</a>
+<a name="7"><span class="lineNum">       7 </span>            :  *  src/bin/pg_upgrade/parallel.c</a>
+<a name="8"><span class="lineNum">       8 </span>            :  */</a>
+<a name="9"><span class="lineNum">       9 </span>            : </a>
+<a name="10"><span class="lineNum">      10 </span>            : #include &quot;postgres_fe.h&quot;</a>
+<a name="11"><span class="lineNum">      11 </span>            : </a>
+<a name="12"><span class="lineNum">      12 </span>            : #include &lt;sys/wait.h&gt;</a>
+<a name="13"><span class="lineNum">      13 </span>            : #ifdef WIN32</a>
+<a name="14"><span class="lineNum">      14 </span>            : #include &lt;io.h&gt;</a>
+<a name="15"><span class="lineNum">      15 </span>            : #endif</a>
+<a name="16"><span class="lineNum">      16 </span>            : </a>
+<a name="17"><span class="lineNum">      17 </span>            : #include &quot;pg_upgrade.h&quot;</a>
+<a name="18"><span class="lineNum">      18 </span>            : </a>
+<a name="19"><span class="lineNum">      19 </span>            : static int  parallel_jobs;</a>
+<a name="20"><span class="lineNum">      20 </span>            : </a>
+<a name="21"><span class="lineNum">      21 </span>            : #ifdef WIN32</a>
+<a name="22"><span class="lineNum">      22 </span>            : /*</a>
+<a name="23"><span class="lineNum">      23 </span>            :  *  Array holding all active threads.  There can't be any gaps/zeros so</a>
+<a name="24"><span class="lineNum">      24 </span>            :  *  it can be passed to WaitForMultipleObjects().  We use two arrays</a>
+<a name="25"><span class="lineNum">      25 </span>            :  *  so the thread_handles array can be passed to WaitForMultipleObjects().</a>
+<a name="26"><span class="lineNum">      26 </span>            :  */</a>
+<a name="27"><span class="lineNum">      27 </span>            : HANDLE     *thread_handles;</a>
+<a name="28"><span class="lineNum">      28 </span>            : </a>
+<a name="29"><span class="lineNum">      29 </span>            : typedef struct</a>
+<a name="30"><span class="lineNum">      30 </span>            : {</a>
+<a name="31"><span class="lineNum">      31 </span>            :     char       *log_file;</a>
+<a name="32"><span class="lineNum">      32 </span>            :     char       *opt_log_file;</a>
+<a name="33"><span class="lineNum">      33 </span>            :     char       *cmd;</a>
+<a name="34"><span class="lineNum">      34 </span>            : } exec_thread_arg;</a>
+<a name="35"><span class="lineNum">      35 </span>            : </a>
+<a name="36"><span class="lineNum">      36 </span>            : typedef struct</a>
+<a name="37"><span class="lineNum">      37 </span>            : {</a>
+<a name="38"><span class="lineNum">      38 </span>            :     DbInfoArr  *old_db_arr;</a>
+<a name="39"><span class="lineNum">      39 </span>            :     DbInfoArr  *new_db_arr;</a>
+<a name="40"><span class="lineNum">      40 </span>            :     char       *old_pgdata;</a>
+<a name="41"><span class="lineNum">      41 </span>            :     char       *new_pgdata;</a>
+<a name="42"><span class="lineNum">      42 </span>            :     char       *old_tablespace;</a>
+<a name="43"><span class="lineNum">      43 </span>            : } transfer_thread_arg;</a>
+<a name="44"><span class="lineNum">      44 </span>            : </a>
+<a name="45"><span class="lineNum">      45 </span>            : exec_thread_arg **exec_thread_args;</a>
+<a name="46"><span class="lineNum">      46 </span>            : transfer_thread_arg **transfer_thread_args;</a>
+<a name="47"><span class="lineNum">      47 </span>            : </a>
+<a name="48"><span class="lineNum">      48 </span>            : /* track current thread_args struct so reap_child() can be used for all cases */</a>
+<a name="49"><span class="lineNum">      49 </span>            : void      **cur_thread_args;</a>
+<a name="50"><span class="lineNum">      50 </span>            : </a>
+<a name="51"><span class="lineNum">      51 </span>            : DWORD       win32_exec_prog(exec_thread_arg *args);</a>
+<a name="52"><span class="lineNum">      52 </span>            : DWORD       win32_transfer_all_new_dbs(transfer_thread_arg *args);</a>
+<a name="53"><span class="lineNum">      53 </span>            : #endif</a>
+<a name="54"><span class="lineNum">      54 </span>            : </a>
+<a name="55"><span class="lineNum">      55 </span>            : /*</a>
+<a name="56"><span class="lineNum">      56 </span>            :  *  parallel_exec_prog</a>
+<a name="57"><span class="lineNum">      57 </span>            :  *</a>
+<a name="58"><span class="lineNum">      58 </span>            :  *  This has the same API as exec_prog, except it does parallel execution,</a>
+<a name="59"><span class="lineNum">      59 </span>            :  *  and therefore must throw errors and doesn't return an error status.</a>
+<a name="60"><span class="lineNum">      60 </span>            :  */</a>
+<a name="61"><span class="lineNum">      61 </span>            : void</a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">         38 : parallel_exec_prog(const char *log_file, const char *opt_log_file,</span></a>
+<a name="63"><span class="lineNum">      63 </span>            :                    const char *fmt,...)</a>
+<a name="64"><span class="lineNum">      64 </span>            : {</a>
+<a name="65"><span class="lineNum">      65 </span>            :     va_list     args;</a>
+<a name="66"><span class="lineNum">      66 </span>            :     char        cmd[MAX_STRING];</a>
+<a name="67"><span class="lineNum">      67 </span>            : </a>
+<a name="68"><span class="lineNum">      68 </span>            : #ifndef WIN32</a>
+<a name="69"><span class="lineNum">      69 </span>            :     pid_t       child;</a>
+<a name="70"><span class="lineNum">      70 </span>            : #else</a>
+<a name="71"><span class="lineNum">      71 </span>            :     HANDLE      child;</a>
+<a name="72"><span class="lineNum">      72 </span>            :     exec_thread_arg *new_arg;</a>
+<a name="73"><span class="lineNum">      73 </span>            : #endif</a>
+<a name="74"><span class="lineNum">      74 </span>            : </a>
+<a name="75"><span class="lineNum">      75 </span><span class="lineCov">         38 :     va_start(args, fmt);</span></a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineCov">         38 :     vsnprintf(cmd, sizeof(cmd), fmt, args);</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineCov">         38 :     va_end(args);</span></a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineCov">         38 :     if (user_opts.jobs &lt;= 1)</span></a>
+<a name="80"><span class="lineNum">      80 </span>            :         /* exit_on_error must be true to allow jobs */</a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineCov">         38 :         exec_prog(log_file, opt_log_file, true, true, &quot;%s&quot;, cmd);</span></a>
+<a name="82"><span class="lineNum">      82 </span>            :     else</a>
+<a name="83"><span class="lineNum">      83 </span>            :     {</a>
+<a name="84"><span class="lineNum">      84 </span>            :         /* parallel */</a>
+<a name="85"><span class="lineNum">      85 </span>            : #ifdef WIN32</a>
+<a name="86"><span class="lineNum">      86 </span>            :         if (thread_handles == NULL)</a>
+<a name="87"><span class="lineNum">      87 </span>            :             thread_handles = pg_malloc(user_opts.jobs * sizeof(HANDLE));</a>
+<a name="88"><span class="lineNum">      88 </span>            : </a>
+<a name="89"><span class="lineNum">      89 </span>            :         if (exec_thread_args == NULL)</a>
+<a name="90"><span class="lineNum">      90 </span>            :         {</a>
+<a name="91"><span class="lineNum">      91 </span>            :             int         i;</a>
+<a name="92"><span class="lineNum">      92 </span>            : </a>
+<a name="93"><span class="lineNum">      93 </span>            :             exec_thread_args = pg_malloc(user_opts.jobs * sizeof(exec_thread_arg *));</a>
+<a name="94"><span class="lineNum">      94 </span>            : </a>
+<a name="95"><span class="lineNum">      95 </span>            :             /*</a>
+<a name="96"><span class="lineNum">      96 </span>            :              * For safety and performance, we keep the args allocated during</a>
+<a name="97"><span class="lineNum">      97 </span>            :              * the entire life of the process, and we don't free the args in a</a>
+<a name="98"><span class="lineNum">      98 </span>            :              * thread different from the one that allocated it.</a>
+<a name="99"><span class="lineNum">      99 </span>            :              */</a>
+<a name="100"><span class="lineNum">     100 </span>            :             for (i = 0; i &lt; user_opts.jobs; i++)</a>
+<a name="101"><span class="lineNum">     101 </span>            :                 exec_thread_args[i] = pg_malloc0(sizeof(exec_thread_arg));</a>
+<a name="102"><span class="lineNum">     102 </span>            :         }</a>
+<a name="103"><span class="lineNum">     103 </span>            : </a>
+<a name="104"><span class="lineNum">     104 </span>            :         cur_thread_args = (void **) exec_thread_args;</a>
+<a name="105"><span class="lineNum">     105 </span>            : #endif</a>
+<a name="106"><span class="lineNum">     106 </span>            :         /* harvest any dead children */</a>
+<a name="107"><span class="lineNum">     107 </span><span class="lineNoCov">          0 :         while (reap_child(false) == true)</span></a>
+<a name="108"><span class="lineNum">     108 </span>            :             ;</a>
+<a name="109"><span class="lineNum">     109 </span>            : </a>
+<a name="110"><span class="lineNum">     110 </span>            :         /* must we wait for a dead child? */</a>
+<a name="111"><span class="lineNum">     111 </span><span class="lineNoCov">          0 :         if (parallel_jobs &gt;= user_opts.jobs)</span></a>
+<a name="112"><span class="lineNum">     112 </span><span class="lineNoCov">          0 :             reap_child(true);</span></a>
+<a name="113"><span class="lineNum">     113 </span>            : </a>
+<a name="114"><span class="lineNum">     114 </span>            :         /* set this before we start the job */</a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineNoCov">          0 :         parallel_jobs++;</span></a>
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<a name="117"><span class="lineNum">     117 </span>            :         /* Ensure stdio state is quiesced before forking */</a>
+<a name="118"><span class="lineNum">     118 </span><span class="lineNoCov">          0 :         fflush(NULL);</span></a>
+<a name="119"><span class="lineNum">     119 </span>            : </a>
+<a name="120"><span class="lineNum">     120 </span>            : #ifndef WIN32</a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineNoCov">          0 :         child = fork();</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :         if (child == 0)</span></a>
+<a name="123"><span class="lineNum">     123 </span>            :             /* use _exit to skip atexit() functions */</a>
+<a name="124"><span class="lineNum">     124 </span><span class="lineNoCov">          0 :             _exit(!exec_prog(log_file, opt_log_file, true, true, &quot;%s&quot;, cmd));</span></a>
+<a name="125"><span class="lineNum">     125 </span><span class="lineNoCov">          0 :         else if (child &lt; 0)</span></a>
+<a name="126"><span class="lineNum">     126 </span>            :             /* fork failed */</a>
+<a name="127"><span class="lineNum">     127 </span><span class="lineNoCov">          0 :             pg_fatal(&quot;could not create worker process: %s&quot;, strerror(errno));</span></a>
+<a name="128"><span class="lineNum">     128 </span>            : #else</a>
+<a name="129"><span class="lineNum">     129 </span>            :         /* empty array element are always at the end */</a>
+<a name="130"><span class="lineNum">     130 </span>            :         new_arg = exec_thread_args[parallel_jobs - 1];</a>
+<a name="131"><span class="lineNum">     131 </span>            : </a>
+<a name="132"><span class="lineNum">     132 </span>            :         /* Can only pass one pointer into the function, so use a struct */</a>
+<a name="133"><span class="lineNum">     133 </span>            :         pg_free(new_arg-&gt;log_file);</a>
+<a name="134"><span class="lineNum">     134 </span>            :         new_arg-&gt;log_file = pg_strdup(log_file);</a>
+<a name="135"><span class="lineNum">     135 </span>            :         pg_free(new_arg-&gt;opt_log_file);</a>
+<a name="136"><span class="lineNum">     136 </span>            :         new_arg-&gt;opt_log_file = opt_log_file ? pg_strdup(opt_log_file) : NULL;</a>
+<a name="137"><span class="lineNum">     137 </span>            :         pg_free(new_arg-&gt;cmd);</a>
+<a name="138"><span class="lineNum">     138 </span>            :         new_arg-&gt;cmd = pg_strdup(cmd);</a>
+<a name="139"><span class="lineNum">     139 </span>            : </a>
+<a name="140"><span class="lineNum">     140 </span>            :         child = (HANDLE) _beginthreadex(NULL, 0, (void *) win32_exec_prog,</a>
+<a name="141"><span class="lineNum">     141 </span>            :                                         new_arg, 0, NULL);</a>
+<a name="142"><span class="lineNum">     142 </span>            :         if (child == 0)</a>
+<a name="143"><span class="lineNum">     143 </span>            :             pg_fatal(&quot;could not create worker thread: %s&quot;, strerror(errno));</a>
+<a name="144"><span class="lineNum">     144 </span>            : </a>
+<a name="145"><span class="lineNum">     145 </span>            :         thread_handles[parallel_jobs - 1] = child;</a>
+<a name="146"><span class="lineNum">     146 </span>            : #endif</a>
+<a name="147"><span class="lineNum">     147 </span>            :     }</a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">         38 : }</span></a>
+<a name="149"><span class="lineNum">     149 </span>            : </a>
+<a name="150"><span class="lineNum">     150 </span>            : </a>
+<a name="151"><span class="lineNum">     151 </span>            : #ifdef WIN32</a>
+<a name="152"><span class="lineNum">     152 </span>            : DWORD</a>
+<a name="153"><span class="lineNum">     153 </span>            : win32_exec_prog(exec_thread_arg *args)</a>
+<a name="154"><span class="lineNum">     154 </span>            : {</a>
+<a name="155"><span class="lineNum">     155 </span>            :     int         ret;</a>
+<a name="156"><span class="lineNum">     156 </span>            : </a>
+<a name="157"><span class="lineNum">     157 </span>            :     ret = !exec_prog(args-&gt;log_file, args-&gt;opt_log_file, true, true, &quot;%s&quot;, args-&gt;cmd);</a>
+<a name="158"><span class="lineNum">     158 </span>            : </a>
+<a name="159"><span class="lineNum">     159 </span>            :     /* terminates thread */</a>
+<a name="160"><span class="lineNum">     160 </span>            :     return ret;</a>
+<a name="161"><span class="lineNum">     161 </span>            : }</a>
+<a name="162"><span class="lineNum">     162 </span>            : #endif</a>
+<a name="163"><span class="lineNum">     163 </span>            : </a>
+<a name="164"><span class="lineNum">     164 </span>            : </a>
+<a name="165"><span class="lineNum">     165 </span>            : /*</a>
+<a name="166"><span class="lineNum">     166 </span>            :  *  parallel_transfer_all_new_dbs</a>
+<a name="167"><span class="lineNum">     167 </span>            :  *</a>
+<a name="168"><span class="lineNum">     168 </span>            :  *  This has the same API as transfer_all_new_dbs, except it does parallel execution</a>
+<a name="169"><span class="lineNum">     169 </span>            :  *  by transferring multiple tablespaces in parallel</a>
+<a name="170"><span class="lineNum">     170 </span>            :  */</a>
+<a name="171"><span class="lineNum">     171 </span>            : void</a>
+<a name="172"><span class="lineNum">     172 </span><span class="lineCov">          6 : parallel_transfer_all_new_dbs(DbInfoArr *old_db_arr, DbInfoArr *new_db_arr,</span></a>
+<a name="173"><span class="lineNum">     173 </span>            :                               char *old_pgdata, char *new_pgdata,</a>
+<a name="174"><span class="lineNum">     174 </span>            :                               char *old_tablespace)</a>
+<a name="175"><span class="lineNum">     175 </span>            : {</a>
+<a name="176"><span class="lineNum">     176 </span>            : #ifndef WIN32</a>
+<a name="177"><span class="lineNum">     177 </span>            :     pid_t       child;</a>
+<a name="178"><span class="lineNum">     178 </span>            : #else</a>
+<a name="179"><span class="lineNum">     179 </span>            :     HANDLE      child;</a>
+<a name="180"><span class="lineNum">     180 </span>            :     transfer_thread_arg *new_arg;</a>
+<a name="181"><span class="lineNum">     181 </span>            : #endif</a>
+<a name="182"><span class="lineNum">     182 </span>            : </a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineCov">          6 :     if (user_opts.jobs &lt;= 1)</span></a>
+<a name="184"><span class="lineNum">     184 </span><span class="lineCov">          6 :         transfer_all_new_dbs(old_db_arr, new_db_arr, old_pgdata, new_pgdata, NULL);</span></a>
+<a name="185"><span class="lineNum">     185 </span>            :     else</a>
+<a name="186"><span class="lineNum">     186 </span>            :     {</a>
+<a name="187"><span class="lineNum">     187 </span>            :         /* parallel */</a>
+<a name="188"><span class="lineNum">     188 </span>            : #ifdef WIN32</a>
+<a name="189"><span class="lineNum">     189 </span>            :         if (thread_handles == NULL)</a>
+<a name="190"><span class="lineNum">     190 </span>            :             thread_handles = pg_malloc(user_opts.jobs * sizeof(HANDLE));</a>
+<a name="191"><span class="lineNum">     191 </span>            : </a>
+<a name="192"><span class="lineNum">     192 </span>            :         if (transfer_thread_args == NULL)</a>
+<a name="193"><span class="lineNum">     193 </span>            :         {</a>
+<a name="194"><span class="lineNum">     194 </span>            :             int         i;</a>
+<a name="195"><span class="lineNum">     195 </span>            : </a>
+<a name="196"><span class="lineNum">     196 </span>            :             transfer_thread_args = pg_malloc(user_opts.jobs * sizeof(transfer_thread_arg *));</a>
+<a name="197"><span class="lineNum">     197 </span>            : </a>
+<a name="198"><span class="lineNum">     198 </span>            :             /*</a>
+<a name="199"><span class="lineNum">     199 </span>            :              * For safety and performance, we keep the args allocated during</a>
+<a name="200"><span class="lineNum">     200 </span>            :              * the entire life of the process, and we don't free the args in a</a>
+<a name="201"><span class="lineNum">     201 </span>            :              * thread different from the one that allocated it.</a>
+<a name="202"><span class="lineNum">     202 </span>            :              */</a>
+<a name="203"><span class="lineNum">     203 </span>            :             for (i = 0; i &lt; user_opts.jobs; i++)</a>
+<a name="204"><span class="lineNum">     204 </span>            :                 transfer_thread_args[i] = pg_malloc0(sizeof(transfer_thread_arg));</a>
+<a name="205"><span class="lineNum">     205 </span>            :         }</a>
+<a name="206"><span class="lineNum">     206 </span>            : </a>
+<a name="207"><span class="lineNum">     207 </span>            :         cur_thread_args = (void **) transfer_thread_args;</a>
+<a name="208"><span class="lineNum">     208 </span>            : #endif</a>
+<a name="209"><span class="lineNum">     209 </span>            :         /* harvest any dead children */</a>
+<a name="210"><span class="lineNum">     210 </span><span class="lineNoCov">          0 :         while (reap_child(false) == true)</span></a>
+<a name="211"><span class="lineNum">     211 </span>            :             ;</a>
+<a name="212"><span class="lineNum">     212 </span>            : </a>
+<a name="213"><span class="lineNum">     213 </span>            :         /* must we wait for a dead child? */</a>
+<a name="214"><span class="lineNum">     214 </span><span class="lineNoCov">          0 :         if (parallel_jobs &gt;= user_opts.jobs)</span></a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineNoCov">          0 :             reap_child(true);</span></a>
+<a name="216"><span class="lineNum">     216 </span>            : </a>
+<a name="217"><span class="lineNum">     217 </span>            :         /* set this before we start the job */</a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineNoCov">          0 :         parallel_jobs++;</span></a>
+<a name="219"><span class="lineNum">     219 </span>            : </a>
+<a name="220"><span class="lineNum">     220 </span>            :         /* Ensure stdio state is quiesced before forking */</a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineNoCov">          0 :         fflush(NULL);</span></a>
+<a name="222"><span class="lineNum">     222 </span>            : </a>
+<a name="223"><span class="lineNum">     223 </span>            : #ifndef WIN32</a>
+<a name="224"><span class="lineNum">     224 </span><span class="lineNoCov">          0 :         child = fork();</span></a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineNoCov">          0 :         if (child == 0)</span></a>
+<a name="226"><span class="lineNum">     226 </span>            :         {</a>
+<a name="227"><span class="lineNum">     227 </span><span class="lineNoCov">          0 :             transfer_all_new_dbs(old_db_arr, new_db_arr, old_pgdata, new_pgdata,</span></a>
+<a name="228"><span class="lineNum">     228 </span>            :                                  old_tablespace);</a>
+<a name="229"><span class="lineNum">     229 </span>            :             /* if we take another exit path, it will be non-zero */</a>
+<a name="230"><span class="lineNum">     230 </span>            :             /* use _exit to skip atexit() functions */</a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineNoCov">          0 :             _exit(0);</span></a>
+<a name="232"><span class="lineNum">     232 </span>            :         }</a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :         else if (child &lt; 0)</span></a>
+<a name="234"><span class="lineNum">     234 </span>            :             /* fork failed */</a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineNoCov">          0 :             pg_fatal(&quot;could not create worker process: %s&quot;, strerror(errno));</span></a>
+<a name="236"><span class="lineNum">     236 </span>            : #else</a>
+<a name="237"><span class="lineNum">     237 </span>            :         /* empty array element are always at the end */</a>
+<a name="238"><span class="lineNum">     238 </span>            :         new_arg = transfer_thread_args[parallel_jobs - 1];</a>
+<a name="239"><span class="lineNum">     239 </span>            : </a>
+<a name="240"><span class="lineNum">     240 </span>            :         /* Can only pass one pointer into the function, so use a struct */</a>
+<a name="241"><span class="lineNum">     241 </span>            :         new_arg-&gt;old_db_arr = old_db_arr;</a>
+<a name="242"><span class="lineNum">     242 </span>            :         new_arg-&gt;new_db_arr = new_db_arr;</a>
+<a name="243"><span class="lineNum">     243 </span>            :         pg_free(new_arg-&gt;old_pgdata);</a>
+<a name="244"><span class="lineNum">     244 </span>            :         new_arg-&gt;old_pgdata = pg_strdup(old_pgdata);</a>
+<a name="245"><span class="lineNum">     245 </span>            :         pg_free(new_arg-&gt;new_pgdata);</a>
+<a name="246"><span class="lineNum">     246 </span>            :         new_arg-&gt;new_pgdata = pg_strdup(new_pgdata);</a>
+<a name="247"><span class="lineNum">     247 </span>            :         pg_free(new_arg-&gt;old_tablespace);</a>
+<a name="248"><span class="lineNum">     248 </span>            :         new_arg-&gt;old_tablespace = old_tablespace ? pg_strdup(old_tablespace) : NULL;</a>
+<a name="249"><span class="lineNum">     249 </span>            : </a>
+<a name="250"><span class="lineNum">     250 </span>            :         child = (HANDLE) _beginthreadex(NULL, 0, (void *) win32_transfer_all_new_dbs,</a>
+<a name="251"><span class="lineNum">     251 </span>            :                                         new_arg, 0, NULL);</a>
+<a name="252"><span class="lineNum">     252 </span>            :         if (child == 0)</a>
+<a name="253"><span class="lineNum">     253 </span>            :             pg_fatal(&quot;could not create worker thread: %s&quot;, strerror(errno));</a>
+<a name="254"><span class="lineNum">     254 </span>            : </a>
+<a name="255"><span class="lineNum">     255 </span>            :         thread_handles[parallel_jobs - 1] = child;</a>
+<a name="256"><span class="lineNum">     256 </span>            : #endif</a>
+<a name="257"><span class="lineNum">     257 </span>            :     }</a>
+<a name="258"><span class="lineNum">     258 </span><span class="lineCov">          6 : }</span></a>
+<a name="259"><span class="lineNum">     259 </span>            : </a>
+<a name="260"><span class="lineNum">     260 </span>            : </a>
+<a name="261"><span class="lineNum">     261 </span>            : #ifdef WIN32</a>
+<a name="262"><span class="lineNum">     262 </span>            : DWORD</a>
+<a name="263"><span class="lineNum">     263 </span>            : win32_transfer_all_new_dbs(transfer_thread_arg *args)</a>
+<a name="264"><span class="lineNum">     264 </span>            : {</a>
+<a name="265"><span class="lineNum">     265 </span>            :     transfer_all_new_dbs(args-&gt;old_db_arr, args-&gt;new_db_arr, args-&gt;old_pgdata,</a>
+<a name="266"><span class="lineNum">     266 </span>            :                          args-&gt;new_pgdata, args-&gt;old_tablespace);</a>
+<a name="267"><span class="lineNum">     267 </span>            : </a>
+<a name="268"><span class="lineNum">     268 </span>            :     /* terminates thread */</a>
+<a name="269"><span class="lineNum">     269 </span>            :     return 0;</a>
+<a name="270"><span class="lineNum">     270 </span>            : }</a>
+<a name="271"><span class="lineNum">     271 </span>            : #endif</a>
+<a name="272"><span class="lineNum">     272 </span>            : </a>
+<a name="273"><span class="lineNum">     273 </span>            : </a>
+<a name="274"><span class="lineNum">     274 </span>            : /*</a>
+<a name="275"><span class="lineNum">     275 </span>            :  *  collect status from a completed worker child</a>
+<a name="276"><span class="lineNum">     276 </span>            :  */</a>
+<a name="277"><span class="lineNum">     277 </span>            : bool</a>
+<a name="278"><span class="lineNum">     278 </span><span class="lineCov">         14 : reap_child(bool wait_for_child)</span></a>
+<a name="279"><span class="lineNum">     279 </span>            : {</a>
+<a name="280"><span class="lineNum">     280 </span>            : #ifndef WIN32</a>
+<a name="281"><span class="lineNum">     281 </span>            :     int         work_status;</a>
+<a name="282"><span class="lineNum">     282 </span>            :     pid_t       child;</a>
+<a name="283"><span class="lineNum">     283 </span>            : #else</a>
+<a name="284"><span class="lineNum">     284 </span>            :     int         thread_num;</a>
+<a name="285"><span class="lineNum">     285 </span>            :     DWORD       res;</a>
+<a name="286"><span class="lineNum">     286 </span>            : #endif</a>
+<a name="287"><span class="lineNum">     287 </span>            : </a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">         14 :     if (user_opts.jobs &lt;= 1 || parallel_jobs == 0)</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">         14 :         return false;</span></a>
+<a name="290"><span class="lineNum">     290 </span>            : </a>
+<a name="291"><span class="lineNum">     291 </span>            : #ifndef WIN32</a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineNoCov">          0 :     child = waitpid(-1, &amp;work_status, wait_for_child ? 0 : WNOHANG);</span></a>
+<a name="293"><span class="lineNum">     293 </span><span class="lineNoCov">          0 :     if (child == (pid_t) -1)</span></a>
+<a name="294"><span class="lineNum">     294 </span><span class="lineNoCov">          0 :         pg_fatal(&quot;%s() failed: %s&quot;, &quot;waitpid&quot;, strerror(errno));</span></a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineNoCov">          0 :     if (child == 0)</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineNoCov">          0 :         return false;           /* no children, or no dead children */</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineNoCov">          0 :     if (work_status != 0)</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineNoCov">          0 :         pg_fatal(&quot;child process exited abnormally: status %d&quot;, work_status);</span></a>
+<a name="299"><span class="lineNum">     299 </span>            : #else</a>
+<a name="300"><span class="lineNum">     300 </span>            :     /* wait for one to finish */</a>
+<a name="301"><span class="lineNum">     301 </span>            :     thread_num = WaitForMultipleObjects(parallel_jobs, thread_handles,</a>
+<a name="302"><span class="lineNum">     302 </span>            :                                         false, wait_for_child ? INFINITE : 0);</a>
+<a name="303"><span class="lineNum">     303 </span>            : </a>
+<a name="304"><span class="lineNum">     304 </span>            :     if (thread_num == WAIT_TIMEOUT || thread_num == WAIT_FAILED)</a>
+<a name="305"><span class="lineNum">     305 </span>            :         return false;</a>
+<a name="306"><span class="lineNum">     306 </span>            : </a>
+<a name="307"><span class="lineNum">     307 </span>            :     /* compute thread index in active_threads */</a>
+<a name="308"><span class="lineNum">     308 </span>            :     thread_num -= WAIT_OBJECT_0;</a>
+<a name="309"><span class="lineNum">     309 </span>            : </a>
+<a name="310"><span class="lineNum">     310 </span>            :     /* get the result */</a>
+<a name="311"><span class="lineNum">     311 </span>            :     GetExitCodeThread(thread_handles[thread_num], &amp;res);</a>
+<a name="312"><span class="lineNum">     312 </span>            :     if (res != 0)</a>
+<a name="313"><span class="lineNum">     313 </span>            :         pg_fatal(&quot;child worker exited abnormally: %s&quot;, strerror(errno));</a>
+<a name="314"><span class="lineNum">     314 </span>            : </a>
+<a name="315"><span class="lineNum">     315 </span>            :     /* dispose of handle to stop leaks */</a>
+<a name="316"><span class="lineNum">     316 </span>            :     CloseHandle(thread_handles[thread_num]);</a>
+<a name="317"><span class="lineNum">     317 </span>            : </a>
+<a name="318"><span class="lineNum">     318 </span>            :     /* Move last slot into dead child's position */</a>
+<a name="319"><span class="lineNum">     319 </span>            :     if (thread_num != parallel_jobs - 1)</a>
+<a name="320"><span class="lineNum">     320 </span>            :     {</a>
+<a name="321"><span class="lineNum">     321 </span>            :         void       *tmp_args;</a>
+<a name="322"><span class="lineNum">     322 </span>            : </a>
+<a name="323"><span class="lineNum">     323 </span>            :         thread_handles[thread_num] = thread_handles[parallel_jobs - 1];</a>
+<a name="324"><span class="lineNum">     324 </span>            : </a>
+<a name="325"><span class="lineNum">     325 </span>            :         /*</a>
+<a name="326"><span class="lineNum">     326 </span>            :          * Move last active thread arg struct into the now-dead slot, and the</a>
+<a name="327"><span class="lineNum">     327 </span>            :          * now-dead slot to the end for reuse by the next thread. Though the</a>
+<a name="328"><span class="lineNum">     328 </span>            :          * thread struct is in use by another thread, we can safely swap the</a>
+<a name="329"><span class="lineNum">     329 </span>            :          * struct pointers within the array.</a>
+<a name="330"><span class="lineNum">     330 </span>            :          */</a>
+<a name="331"><span class="lineNum">     331 </span>            :         tmp_args = cur_thread_args[thread_num];</a>
+<a name="332"><span class="lineNum">     332 </span>            :         cur_thread_args[thread_num] = cur_thread_args[parallel_jobs - 1];</a>
+<a name="333"><span class="lineNum">     333 </span>            :         cur_thread_args[parallel_jobs - 1] = tmp_args;</a>
+<a name="334"><span class="lineNum">     334 </span>            :     }</a>
+<a name="335"><span class="lineNum">     335 </span>            : #endif</a>
+<a name="336"><span class="lineNum">     336 </span>            : </a>
+<a name="337"><span class="lineNum">     337 </span>            :     /* do this after job has been removed */</a>
+<a name="338"><span class="lineNum">     338 </span><span class="lineNoCov">          0 :     parallel_jobs--;</span></a>
+<a name="339"><span class="lineNum">     339 </span>            : </a>
+<a name="340"><span class="lineNum">     340 </span><span class="lineNoCov">          0 :     return true;</span></a>
+<a name="341"><span class="lineNum">     341 </span>            : }</a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

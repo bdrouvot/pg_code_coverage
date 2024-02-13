@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/include/access/tableam.h - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/include/access</a> - tableam.h<span style="font-size: 80%;"> (<a href="tableam.h.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">150</td>
+            <td class="headerCovTableEntry">158</td>
+            <td class="headerCovTableEntryHi">94.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntry">49</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="tableam.h.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#899">table_beginscan</a></td>
+              <td class="coverFnHi">164942</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#996">table_beginscan_analyze</a></td>
+              <td class="coverFnHi">12124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#944">table_beginscan_bm</a></td>
+              <td class="coverFnHi">20216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#960">table_beginscan_sampling</a></td>
+              <td class="coverFnHi">146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#923">table_beginscan_strat</a></td>
+              <td class="coverFnHi">280472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#983">table_beginscan_tid</a></td>
+              <td class="coverFnHi">652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1077">table_beginscan_tidrange</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1007">table_endscan</a></td>
+              <td class="coverFnHi">550152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1588">table_finish_bulk_insert</a></td>
+              <td class="coverFnHi">3622</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1803">table_index_build_range_scan</a></td>
+              <td class="coverFnHi">2934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1770">table_index_build_scan</a></td>
+              <td class="coverFnHi">41858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1349">table_index_delete_tuples</a></td>
+              <td class="coverFnHi">9738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1185">table_index_fetch_begin</a></td>
+              <td class="coverFnHi">21544884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1204">table_index_fetch_end</a></td>
+              <td class="coverFnHi">21543456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1195">table_index_fetch_reset</a></td>
+              <td class="coverFnHi">15777588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1234">table_index_fetch_tuple</a></td>
+              <td class="coverFnHi">29980418</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1834">table_index_validate_scan</a></td>
+              <td class="coverFnHi">602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1450">table_multi_insert</a></td>
+              <td class="coverFnHi">2292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1167">table_parallelscan_reinitialize</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1644">table_relation_copy_data</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1671">table_relation_copy_for_cluster</a></td>
+              <td class="coverFnHi">496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1932">table_relation_estimate_size</a></td>
+              <td class="coverFnHi">369286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1911">table_relation_fetch_toast_slice</a></td>
+              <td class="coverFnHi">15956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1872">table_relation_needs_toast_table</a></td>
+              <td class="coverFnHi">40824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1632">table_relation_nontransactional_truncate</a></td>
+              <td class="coverFnHi">524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1614">table_relation_set_new_filelocator</a></td>
+              <td class="coverFnHi">53630</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1863">table_relation_size</a></td>
+              <td class="coverFnHi">1996060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1882">table_relation_toast_am</a></td>
+              <td class="coverFnHi">14572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1700">table_relation_vacuum</a></td>
+              <td class="coverFnHi">16778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1016">table_rescan</a></td>
+              <td class="coverFnHi">953696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1031">table_rescan_set_params</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1098">table_rescan_tidrange</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1715">table_scan_analyze_next_block</a></td>
+              <td class="coverFnHi">87230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1733">table_scan_analyze_next_tuple</a></td>
+              <td class="coverFnHi">7962786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1956">table_scan_bitmap_next_block</a></td>
+              <td class="coverFnHi">367270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1980">table_scan_bitmap_next_tuple</a></td>
+              <td class="coverFnHi">6106366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1048">table_scan_getnextslot</a></td>
+              <td class="coverFnHi">73682692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1114">table_scan_getnextslot_tidrange</a></td>
+              <td class="coverFnHi">5940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#2007">table_scan_sample_next_block</a></td>
+              <td class="coverFnHi">12908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#2029">table_scan_sample_next_tuple</a></td>
+              <td class="coverFnHi">253892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1428">table_tuple_complete_speculative</a></td>
+              <td class="coverFnHi">4020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1484">table_tuple_delete</a></td>
+              <td class="coverFnHi">1606146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1281">table_tuple_fetch_row_version</a></td>
+              <td class="coverFnHi">608882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1395">table_tuple_insert</a></td>
+              <td class="coverFnHi">13638650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1414">table_tuple_insert_speculative</a></td>
+              <td class="coverFnHi">4026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1573">table_tuple_lock</a></td>
+              <td class="coverFnHi">164428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1328">table_tuple_satisfies_snapshot</a></td>
+              <td class="coverFnHi">192060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1307">table_tuple_tid_valid</a></td>
+              <td class="coverFnHi">278</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="tableam.h.gcov.html#1528">table_tuple_update</a></td>
+              <td class="coverFnHi">373460</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

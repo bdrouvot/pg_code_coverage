@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/executor/execTuples.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/executor</a> - execTuples.c<span style="font-size: 80%;"> (<a href="execTuples.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">720</td>
+            <td class="headerCovTableEntry">768</td>
+            <td class="headerCovTableEntryHi">93.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">79</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntryHi">96.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="execTuples.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#336">tts_heap_getsysattr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#511">tts_minimal_getsysattr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#127">tts_virtual_getsomeattrs</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1603">ExecStoreHeapTupleDatum</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#138">tts_virtual_getsysattr</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#421">tts_heap_copy_heap_tuple</a></td>
+              <td class="coverFnHi">684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#696">tts_buffer_heap_getsysattr</a></td>
+              <td class="coverFnHi">1268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#396">tts_heap_copyslot</a></td>
+              <td class="coverFnHi">1796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2027">ExecTypeSetColNames</a></td>
+              <td class="coverFnHi">3612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#433">tts_heap_copy_minimal_tuple</a></td>
+              <td class="coverFnHi">5320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2083">TupleDescGetAttInMetadata</a></td>
+              <td class="coverFnHi">7496</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1865">slot_getmissingattrs</a></td>
+              <td class="coverFnHi">7670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1994">ExecTypeFromExprList</a></td>
+              <td class="coverFnHi">12154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2300">do_text_output_multiline</a></td>
+              <td class="coverFnHi">21302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2252">begin_tup_output_tupdesc</a></td>
+              <td class="coverFnHi">26132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2330">end_tup_output</a></td>
+              <td class="coverFnHi">26132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1844">ExecInitNullTupleSlot</a></td>
+              <td class="coverFnHi">37098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1286">ExecSetSlotDescriptor</a></td>
+              <td class="coverFnHi">59910</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1720">ExecFetchSlotHeapTupleDatum</a></td>
+              <td class="coverFnHi">62002</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2068">BlessTupleDesc</a></td>
+              <td class="coverFnHi">64254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1947">ExecCleanTypeFromTL</a></td>
+              <td class="coverFnHi">108264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#250">tts_virtual_copyslot</a></td>
+              <td class="coverFnHi">135920</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2272">do_tup_output</a></td>
+              <td class="coverFnHi">138928</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#478">tts_minimal_release</a></td>
+              <td class="coverFnHi">279834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#466">tts_minimal_init</a></td>
+              <td class="coverFnHi">334946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1828">ExecInitExtraTupleSlot</a></td>
+              <td class="coverFnHi">435032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1808">ExecInitScanTupleSlot</a></td>
+              <td class="coverFnHi">557650</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1796">ExecInitResultTupleSlotTL</a></td>
+              <td class="coverFnHi">611072</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1573">ExecStoreAllNullTuple</a></td>
+              <td class="coverFnHi">626128</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1776">ExecInitResultSlot</a></td>
+              <td class="coverFnHi">816938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1415">ExecStorePinnedBufferHeapTuple</a></td>
+              <td class="coverFnHi">833808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1188">ExecResetTupleTable</a></td>
+              <td class="coverFnHi">858928</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#595">tts_minimal_copy_heap_tuple</a></td>
+              <td class="coverFnHi">873270</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#571">tts_minimal_copyslot</a></td>
+              <td class="coverFnHi">951134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1752">ExecInitResultTypeTL</a></td>
+              <td class="coverFnHi">1168576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1935">ExecTypeFromTL</a></td>
+              <td class="coverFnHi">1194102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#100">tts_virtual_release</a></td>
+              <td class="coverFnHi">1223940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#95">tts_virtual_init</a></td>
+              <td class="coverFnHi">1249490</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1953">ExecTypeFromTLInternal</a></td>
+              <td class="coverFnHi">1302366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2132">BuildTupleFromCStrings</a></td>
+              <td class="coverFnHi">1432826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#523">tts_minimal_materialize</a></td>
+              <td class="coverFnHi">1530102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#2221">HeapTupleHeaderGetDatum</a></td>
+              <td class="coverFnHi">1606470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1466">ExecForceStoreHeapTuple</a></td>
+              <td class="coverFnHi">1723942</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1168">ExecAllocTableSlot</a></td>
+              <td class="coverFnHi">1831324</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#606">tts_minimal_copy_minimal_tuple</a></td>
+              <td class="coverFnHi">2482978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#843">tts_buffer_heap_copy_minimal_tuple</a></td>
+              <td class="coverFnHi">2527816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#409">tts_heap_get_heap_tuple</a></td>
+              <td class="coverFnHi">2789570</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#356">tts_heap_materialize</a></td>
+              <td class="coverFnHi">2791528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#302">tts_heap_release</a></td>
+              <td class="coverFnHi">3298976</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#297">tts_heap_init</a></td>
+              <td class="coverFnHi">3299824</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1349">ExecStoreHeapTuple</a></td>
+              <td class="coverFnHi">3818372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#444">tts_heap_store_tuple</a></td>
+              <td class="coverFnHi">3818372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#157">tts_virtual_materialize</a></td>
+              <td class="coverFnHi">4341390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#584">tts_minimal_get_minimal_tuple</a></td>
+              <td class="coverFnHi">5187046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1509">ExecForceStoreMinimalTuple</a></td>
+              <td class="coverFnHi">7370788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#830">tts_buffer_heap_copy_heap_tuple</a></td>
+              <td class="coverFnHi">7819230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#326">tts_heap_getsomeattrs</a></td>
+              <td class="coverFnHi">8265772</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#307">tts_heap_clear</a></td>
+              <td class="coverFnHi">8515412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#775">tts_buffer_heap_copyslot</a></td>
+              <td class="coverFnHi">10591990</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#272">tts_virtual_copy_heap_tuple</a></td>
+              <td class="coverFnHi">13404014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1689">ExecFetchSlotMinimalTuple</a></td>
+              <td class="coverFnHi">20423970</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#651">tts_buffer_heap_release</a></td>
+              <td class="coverFnHi">22782546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#646">tts_buffer_heap_init</a></td>
+              <td class="coverFnHi">22792454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1549">ExecStoreVirtualTuple</a></td>
+              <td class="coverFnHi">22818906</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#716">tts_buffer_heap_materialize</a></td>
+              <td class="coverFnHi">25396008</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#282">tts_virtual_copy_minimal_tuple</a></td>
+              <td class="coverFnHi">25515168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1251">ExecDropSingleTupleTableSlot</a></td>
+              <td class="coverFnHi">25539172</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1235">MakeSingleTupleTableSlot</a></td>
+              <td class="coverFnHi">25845248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1109">MakeTupleTableSlot</a></td>
+              <td class="coverFnHi">27676714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#817">tts_buffer_heap_get_heap_tuple</a></td>
+              <td class="coverFnHi">28828686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1641">ExecFetchSlotHeapTuple</a></td>
+              <td class="coverFnHi">34595980</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#501">tts_minimal_getsomeattrs</a></td>
+              <td class="coverFnHi">43272360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#656">tts_buffer_heap_clear</a></td>
+              <td class="coverFnHi">43596656</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1443">ExecStoreMinimalTuple</a></td>
+              <td class="coverFnHi">49152188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#617">tts_minimal_store_tuple</a></td>
+              <td class="coverFnHi">53852760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#483">tts_minimal_clear</a></td>
+              <td class="coverFnHi">63965590</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#105">tts_virtual_clear</a></td>
+              <td class="coverFnHi">77465390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#686">tts_buffer_heap_getsomeattrs</a></td>
+              <td class="coverFnHi">103258694</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1389">ExecStoreBufferHeapTuple</a></td>
+              <td class="coverFnHi">119956316</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#856">tts_buffer_heap_store_tuple</a></td>
+              <td class="coverFnHi">120796652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#1899">slot_getsomeattrs_int</a></td>
+              <td class="coverFnHi">153282444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="execTuples.c.gcov.html#922">slot_deform_heap_tuple</a></td>
+              <td class="coverFnHi">154796826</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

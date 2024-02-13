@@ -1,0 +1,338 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/rmgrdesc/nbtdesc.c</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/rmgrdesc</a> - nbtdesc.c<span style="font-size: 80%;"> (source / <a href="nbtdesc.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry">138</td>
+            <td class="headerCovTableEntryLo">58.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntry">3</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*-------------------------------------------------------------------------</a>
+<a name="2"><span class="lineNum">       2 </span>            :  *</a>
+<a name="3"><span class="lineNum">       3 </span>            :  * nbtdesc.c</a>
+<a name="4"><span class="lineNum">       4 </span>            :  *    rmgr descriptor routines for access/nbtree/nbtxlog.c</a>
+<a name="5"><span class="lineNum">       5 </span>            :  *</a>
+<a name="6"><span class="lineNum">       6 </span>            :  * Portions Copyright (c) 1996-2024, PostgreSQL Global Development Group</a>
+<a name="7"><span class="lineNum">       7 </span>            :  * Portions Copyright (c) 1994, Regents of the University of California</a>
+<a name="8"><span class="lineNum">       8 </span>            :  *</a>
+<a name="9"><span class="lineNum">       9 </span>            :  *</a>
+<a name="10"><span class="lineNum">      10 </span>            :  * IDENTIFICATION</a>
+<a name="11"><span class="lineNum">      11 </span>            :  *    src/backend/access/rmgrdesc/nbtdesc.c</a>
+<a name="12"><span class="lineNum">      12 </span>            :  *</a>
+<a name="13"><span class="lineNum">      13 </span>            :  *-------------------------------------------------------------------------</a>
+<a name="14"><span class="lineNum">      14 </span>            :  */</a>
+<a name="15"><span class="lineNum">      15 </span>            : #include &quot;postgres.h&quot;</a>
+<a name="16"><span class="lineNum">      16 </span>            : </a>
+<a name="17"><span class="lineNum">      17 </span>            : #include &quot;access/nbtxlog.h&quot;</a>
+<a name="18"><span class="lineNum">      18 </span>            : #include &quot;access/rmgrdesc_utils.h&quot;</a>
+<a name="19"><span class="lineNum">      19 </span>            : </a>
+<a name="20"><span class="lineNum">      20 </span>            : static void delvacuum_desc(StringInfo buf, char *block_data,</a>
+<a name="21"><span class="lineNum">      21 </span>            :                            uint16 ndeleted, uint16 nupdated);</a>
+<a name="22"><span class="lineNum">      22 </span>            : </a>
+<a name="23"><span class="lineNum">      23 </span>            : void</a>
+<a name="24"><span class="lineNum">      24 </span><span class="lineCov">        220 : btree_desc(StringInfo buf, XLogReaderState *record)</span></a>
+<a name="25"><span class="lineNum">      25 </span>            : {</a>
+<a name="26"><span class="lineNum">      26 </span><span class="lineCov">        220 :     char       *rec = XLogRecGetData(record);</span></a>
+<a name="27"><span class="lineNum">      27 </span><span class="lineCov">        220 :     uint8       info = XLogRecGetInfo(record) &amp; ~XLR_INFO_MASK;</span></a>
+<a name="28"><span class="lineNum">      28 </span>            : </a>
+<a name="29"><span class="lineNum">      29 </span><span class="lineCov">        220 :     switch (info)</span></a>
+<a name="30"><span class="lineNum">      30 </span>            :     {</a>
+<a name="31"><span class="lineNum">      31 </span><span class="lineCov">        200 :         case XLOG_BTREE_INSERT_LEAF:</span></a>
+<a name="32"><span class="lineNum">      32 </span>            :         case XLOG_BTREE_INSERT_UPPER:</a>
+<a name="33"><span class="lineNum">      33 </span>            :         case XLOG_BTREE_INSERT_META:</a>
+<a name="34"><span class="lineNum">      34 </span>            :         case XLOG_BTREE_INSERT_POST:</a>
+<a name="35"><span class="lineNum">      35 </span>            :             {</a>
+<a name="36"><span class="lineNum">      36 </span><span class="lineCov">        200 :                 xl_btree_insert *xlrec = (xl_btree_insert *) rec;</span></a>
+<a name="37"><span class="lineNum">      37 </span>            : </a>
+<a name="38"><span class="lineNum">      38 </span><span class="lineCov">        200 :                 appendStringInfo(buf, &quot;off: %u&quot;, xlrec-&gt;offnum);</span></a>
+<a name="39"><span class="lineNum">      39 </span><span class="lineCov">        200 :                 break;</span></a>
+<a name="40"><span class="lineNum">      40 </span>            :             }</a>
+<a name="41"><span class="lineNum">      41 </span><span class="lineCov">          6 :         case XLOG_BTREE_SPLIT_L:</span></a>
+<a name="42"><span class="lineNum">      42 </span>            :         case XLOG_BTREE_SPLIT_R:</a>
+<a name="43"><span class="lineNum">      43 </span>            :             {</a>
+<a name="44"><span class="lineNum">      44 </span><span class="lineCov">          6 :                 xl_btree_split *xlrec = (xl_btree_split *) rec;</span></a>
+<a name="45"><span class="lineNum">      45 </span>            : </a>
+<a name="46"><span class="lineNum">      46 </span><span class="lineCov">          6 :                 appendStringInfo(buf, &quot;level: %u, firstrightoff: %d, newitemoff: %d, postingoff: %d&quot;,</span></a>
+<a name="47"><span class="lineNum">      47 </span><span class="lineCov">          6 :                                  xlrec-&gt;level, xlrec-&gt;firstrightoff,</span></a>
+<a name="48"><span class="lineNum">      48 </span><span class="lineCov">          6 :                                  xlrec-&gt;newitemoff, xlrec-&gt;postingoff);</span></a>
+<a name="49"><span class="lineNum">      49 </span><span class="lineCov">          6 :                 break;</span></a>
+<a name="50"><span class="lineNum">      50 </span>            :             }</a>
+<a name="51"><span class="lineNum">      51 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_DEDUP:</span></a>
+<a name="52"><span class="lineNum">      52 </span>            :             {</a>
+<a name="53"><span class="lineNum">      53 </span><span class="lineNoCov">          0 :                 xl_btree_dedup *xlrec = (xl_btree_dedup *) rec;</span></a>
+<a name="54"><span class="lineNum">      54 </span>            : </a>
+<a name="55"><span class="lineNum">      55 </span><span class="lineNoCov">          0 :                 appendStringInfo(buf, &quot;nintervals: %u&quot;, xlrec-&gt;nintervals);</span></a>
+<a name="56"><span class="lineNum">      56 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="57"><span class="lineNum">      57 </span>            :             }</a>
+<a name="58"><span class="lineNum">      58 </span><span class="lineCov">          4 :         case XLOG_BTREE_VACUUM:</span></a>
+<a name="59"><span class="lineNum">      59 </span>            :             {</a>
+<a name="60"><span class="lineNum">      60 </span><span class="lineCov">          4 :                 xl_btree_vacuum *xlrec = (xl_btree_vacuum *) rec;</span></a>
+<a name="61"><span class="lineNum">      61 </span>            : </a>
+<a name="62"><span class="lineNum">      62 </span><span class="lineCov">          4 :                 appendStringInfo(buf, &quot;ndeleted: %u, nupdated: %u&quot;,</span></a>
+<a name="63"><span class="lineNum">      63 </span><span class="lineCov">          4 :                                  xlrec-&gt;ndeleted, xlrec-&gt;nupdated);</span></a>
+<a name="64"><span class="lineNum">      64 </span>            : </a>
+<a name="65"><span class="lineNum">      65 </span><span class="lineCov">          4 :                 if (XLogRecHasBlockData(record, 0))</span></a>
+<a name="66"><span class="lineNum">      66 </span><span class="lineCov">          4 :                     delvacuum_desc(buf, XLogRecGetBlockData(record, 0, NULL),</span></a>
+<a name="67"><span class="lineNum">      67 </span><span class="lineCov">          4 :                                    xlrec-&gt;ndeleted, xlrec-&gt;nupdated);</span></a>
+<a name="68"><span class="lineNum">      68 </span><span class="lineCov">          4 :                 break;</span></a>
+<a name="69"><span class="lineNum">      69 </span>            :             }</a>
+<a name="70"><span class="lineNum">      70 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_DELETE:</span></a>
+<a name="71"><span class="lineNum">      71 </span>            :             {</a>
+<a name="72"><span class="lineNum">      72 </span><span class="lineNoCov">          0 :                 xl_btree_delete *xlrec = (xl_btree_delete *) rec;</span></a>
+<a name="73"><span class="lineNum">      73 </span>            : </a>
+<a name="74"><span class="lineNum">      74 </span><span class="lineNoCov">          0 :                 appendStringInfo(buf, &quot;snapshotConflictHorizon: %u, ndeleted: %u, nupdated: %u, isCatalogRel: %c&quot;,</span></a>
+<a name="75"><span class="lineNum">      75 </span>            :                                  xlrec-&gt;snapshotConflictHorizon,</a>
+<a name="76"><span class="lineNum">      76 </span><span class="lineNoCov">          0 :                                  xlrec-&gt;ndeleted, xlrec-&gt;nupdated,</span></a>
+<a name="77"><span class="lineNum">      77 </span><span class="lineNoCov">          0 :                                  xlrec-&gt;isCatalogRel ? 'T' : 'F');</span></a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span><span class="lineNoCov">          0 :                 if (XLogRecHasBlockData(record, 0))</span></a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 :                     delvacuum_desc(buf, XLogRecGetBlockData(record, 0, NULL),</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineNoCov">          0 :                                    xlrec-&gt;ndeleted, xlrec-&gt;nupdated);</span></a>
+<a name="82"><span class="lineNum">      82 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="83"><span class="lineNum">      83 </span>            :             }</a>
+<a name="84"><span class="lineNum">      84 </span><span class="lineCov">          4 :         case XLOG_BTREE_MARK_PAGE_HALFDEAD:</span></a>
+<a name="85"><span class="lineNum">      85 </span>            :             {</a>
+<a name="86"><span class="lineNum">      86 </span><span class="lineCov">          4 :                 xl_btree_mark_page_halfdead *xlrec = (xl_btree_mark_page_halfdead *) rec;</span></a>
+<a name="87"><span class="lineNum">      87 </span>            : </a>
+<a name="88"><span class="lineNum">      88 </span><span class="lineCov">          4 :                 appendStringInfo(buf, &quot;topparent: %u, leaf: %u, left: %u, right: %u&quot;,</span></a>
+<a name="89"><span class="lineNum">      89 </span>            :                                  xlrec-&gt;topparent, xlrec-&gt;leafblk, xlrec-&gt;leftblk, xlrec-&gt;rightblk);</a>
+<a name="90"><span class="lineNum">      90 </span><span class="lineCov">          4 :                 break;</span></a>
+<a name="91"><span class="lineNum">      91 </span>            :             }</a>
+<a name="92"><span class="lineNum">      92 </span><span class="lineCov">          4 :         case XLOG_BTREE_UNLINK_PAGE_META:</span></a>
+<a name="93"><span class="lineNum">      93 </span>            :         case XLOG_BTREE_UNLINK_PAGE:</a>
+<a name="94"><span class="lineNum">      94 </span>            :             {</a>
+<a name="95"><span class="lineNum">      95 </span><span class="lineCov">          4 :                 xl_btree_unlink_page *xlrec = (xl_btree_unlink_page *) rec;</span></a>
+<a name="96"><span class="lineNum">      96 </span>            : </a>
+<a name="97"><span class="lineNum">      97 </span><span class="lineCov">          4 :                 appendStringInfo(buf, &quot;left: %u, right: %u, level: %u, safexid: %u:%u, &quot;,</span></a>
+<a name="98"><span class="lineNum">      98 </span>            :                                  xlrec-&gt;leftsib, xlrec-&gt;rightsib, xlrec-&gt;level,</a>
+<a name="99"><span class="lineNum">      99 </span><span class="lineCov">          4 :                                  EpochFromFullTransactionId(xlrec-&gt;safexid),</span></a>
+<a name="100"><span class="lineNum">     100 </span><span class="lineCov">          4 :                                  XidFromFullTransactionId(xlrec-&gt;safexid));</span></a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineCov">          4 :                 appendStringInfo(buf, &quot;leafleft: %u, leafright: %u, leaftopparent: %u&quot;,</span></a>
+<a name="102"><span class="lineNum">     102 </span>            :                                  xlrec-&gt;leafleftsib, xlrec-&gt;leafrightsib,</a>
+<a name="103"><span class="lineNum">     103 </span>            :                                  xlrec-&gt;leaftopparent);</a>
+<a name="104"><span class="lineNum">     104 </span><span class="lineCov">          4 :                 break;</span></a>
+<a name="105"><span class="lineNum">     105 </span>            :             }</a>
+<a name="106"><span class="lineNum">     106 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_NEWROOT:</span></a>
+<a name="107"><span class="lineNum">     107 </span>            :             {</a>
+<a name="108"><span class="lineNum">     108 </span><span class="lineNoCov">          0 :                 xl_btree_newroot *xlrec = (xl_btree_newroot *) rec;</span></a>
+<a name="109"><span class="lineNum">     109 </span>            : </a>
+<a name="110"><span class="lineNum">     110 </span><span class="lineNoCov">          0 :                 appendStringInfo(buf, &quot;level: %u&quot;, xlrec-&gt;level);</span></a>
+<a name="111"><span class="lineNum">     111 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="112"><span class="lineNum">     112 </span>            :             }</a>
+<a name="113"><span class="lineNum">     113 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_REUSE_PAGE:</span></a>
+<a name="114"><span class="lineNum">     114 </span>            :             {</a>
+<a name="115"><span class="lineNum">     115 </span><span class="lineNoCov">          0 :                 xl_btree_reuse_page *xlrec = (xl_btree_reuse_page *) rec;</span></a>
+<a name="116"><span class="lineNum">     116 </span>            : </a>
+<a name="117"><span class="lineNum">     117 </span><span class="lineNoCov">          0 :                 appendStringInfo(buf, &quot;rel: %u/%u/%u, snapshotConflictHorizon: %u:%u, isCatalogRel: %c&quot;,</span></a>
+<a name="118"><span class="lineNum">     118 </span>            :                                  xlrec-&gt;locator.spcOid, xlrec-&gt;locator.dbOid,</a>
+<a name="119"><span class="lineNum">     119 </span>            :                                  xlrec-&gt;locator.relNumber,</a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineNoCov">          0 :                                  EpochFromFullTransactionId(xlrec-&gt;snapshotConflictHorizon),</span></a>
+<a name="121"><span class="lineNum">     121 </span><span class="lineNoCov">          0 :                                  XidFromFullTransactionId(xlrec-&gt;snapshotConflictHorizon),</span></a>
+<a name="122"><span class="lineNum">     122 </span><span class="lineNoCov">          0 :                                  xlrec-&gt;isCatalogRel ? 'T' : 'F');</span></a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineNoCov">          0 :                 break;</span></a>
+<a name="124"><span class="lineNum">     124 </span>            :             }</a>
+<a name="125"><span class="lineNum">     125 </span><span class="lineCov">          2 :         case XLOG_BTREE_META_CLEANUP:</span></a>
+<a name="126"><span class="lineNum">     126 </span>            :             {</a>
+<a name="127"><span class="lineNum">     127 </span>            :                 xl_btree_metadata *xlrec;</a>
+<a name="128"><span class="lineNum">     128 </span>            : </a>
+<a name="129"><span class="lineNum">     129 </span><span class="lineCov">          2 :                 xlrec = (xl_btree_metadata *) XLogRecGetBlockData(record, 0,</span></a>
+<a name="130"><span class="lineNum">     130 </span>            :                                                                   NULL);</a>
+<a name="131"><span class="lineNum">     131 </span><span class="lineCov">          2 :                 appendStringInfo(buf, &quot;last_cleanup_num_delpages: %u&quot;,</span></a>
+<a name="132"><span class="lineNum">     132 </span>            :                                  xlrec-&gt;last_cleanup_num_delpages);</a>
+<a name="133"><span class="lineNum">     133 </span><span class="lineCov">          2 :                 break;</span></a>
+<a name="134"><span class="lineNum">     134 </span>            :             }</a>
+<a name="135"><span class="lineNum">     135 </span>            :     }</a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">        220 : }</span></a>
+<a name="137"><span class="lineNum">     137 </span>            : </a>
+<a name="138"><span class="lineNum">     138 </span>            : const char *</a>
+<a name="139"><span class="lineNum">     139 </span><span class="lineCov">        220 : btree_identify(uint8 info)</span></a>
+<a name="140"><span class="lineNum">     140 </span>            : {</a>
+<a name="141"><span class="lineNum">     141 </span><span class="lineCov">        220 :     const char *id = NULL;</span></a>
+<a name="142"><span class="lineNum">     142 </span>            : </a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">        220 :     switch (info &amp; ~XLR_INFO_MASK)</span></a>
+<a name="144"><span class="lineNum">     144 </span>            :     {</a>
+<a name="145"><span class="lineNum">     145 </span><span class="lineCov">        196 :         case XLOG_BTREE_INSERT_LEAF:</span></a>
+<a name="146"><span class="lineNum">     146 </span><span class="lineCov">        196 :             id = &quot;INSERT_LEAF&quot;;</span></a>
+<a name="147"><span class="lineNum">     147 </span><span class="lineCov">        196 :             break;</span></a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineCov">          4 :         case XLOG_BTREE_INSERT_UPPER:</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineCov">          4 :             id = &quot;INSERT_UPPER&quot;;</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineCov">          4 :             break;</span></a>
+<a name="151"><span class="lineNum">     151 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_INSERT_META:</span></a>
+<a name="152"><span class="lineNum">     152 </span><span class="lineNoCov">          0 :             id = &quot;INSERT_META&quot;;</span></a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="154"><span class="lineNum">     154 </span><span class="lineCov">          2 :         case XLOG_BTREE_SPLIT_L:</span></a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">          2 :             id = &quot;SPLIT_L&quot;;</span></a>
+<a name="156"><span class="lineNum">     156 </span><span class="lineCov">          2 :             break;</span></a>
+<a name="157"><span class="lineNum">     157 </span><span class="lineCov">          4 :         case XLOG_BTREE_SPLIT_R:</span></a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">          4 :             id = &quot;SPLIT_R&quot;;</span></a>
+<a name="159"><span class="lineNum">     159 </span><span class="lineCov">          4 :             break;</span></a>
+<a name="160"><span class="lineNum">     160 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_INSERT_POST:</span></a>
+<a name="161"><span class="lineNum">     161 </span><span class="lineNoCov">          0 :             id = &quot;INSERT_POST&quot;;</span></a>
+<a name="162"><span class="lineNum">     162 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="163"><span class="lineNum">     163 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_DEDUP:</span></a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineNoCov">          0 :             id = &quot;DEDUP&quot;;</span></a>
+<a name="165"><span class="lineNum">     165 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">          4 :         case XLOG_BTREE_VACUUM:</span></a>
+<a name="167"><span class="lineNum">     167 </span><span class="lineCov">          4 :             id = &quot;VACUUM&quot;;</span></a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">          4 :             break;</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_DELETE:</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineNoCov">          0 :             id = &quot;DELETE&quot;;</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="172"><span class="lineNum">     172 </span><span class="lineCov">          4 :         case XLOG_BTREE_MARK_PAGE_HALFDEAD:</span></a>
+<a name="173"><span class="lineNum">     173 </span><span class="lineCov">          4 :             id = &quot;MARK_PAGE_HALFDEAD&quot;;</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">          4 :             break;</span></a>
+<a name="175"><span class="lineNum">     175 </span><span class="lineCov">          2 :         case XLOG_BTREE_UNLINK_PAGE:</span></a>
+<a name="176"><span class="lineNum">     176 </span><span class="lineCov">          2 :             id = &quot;UNLINK_PAGE&quot;;</span></a>
+<a name="177"><span class="lineNum">     177 </span><span class="lineCov">          2 :             break;</span></a>
+<a name="178"><span class="lineNum">     178 </span><span class="lineCov">          2 :         case XLOG_BTREE_UNLINK_PAGE_META:</span></a>
+<a name="179"><span class="lineNum">     179 </span><span class="lineCov">          2 :             id = &quot;UNLINK_PAGE_META&quot;;</span></a>
+<a name="180"><span class="lineNum">     180 </span><span class="lineCov">          2 :             break;</span></a>
+<a name="181"><span class="lineNum">     181 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_NEWROOT:</span></a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineNoCov">          0 :             id = &quot;NEWROOT&quot;;</span></a>
+<a name="183"><span class="lineNum">     183 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="184"><span class="lineNum">     184 </span><span class="lineNoCov">          0 :         case XLOG_BTREE_REUSE_PAGE:</span></a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineNoCov">          0 :             id = &quot;REUSE_PAGE&quot;;</span></a>
+<a name="186"><span class="lineNum">     186 </span><span class="lineNoCov">          0 :             break;</span></a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">          2 :         case XLOG_BTREE_META_CLEANUP:</span></a>
+<a name="188"><span class="lineNum">     188 </span><span class="lineCov">          2 :             id = &quot;META_CLEANUP&quot;;</span></a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">          2 :             break;</span></a>
+<a name="190"><span class="lineNum">     190 </span>            :     }</a>
+<a name="191"><span class="lineNum">     191 </span>            : </a>
+<a name="192"><span class="lineNum">     192 </span><span class="lineCov">        220 :     return id;</span></a>
+<a name="193"><span class="lineNum">     193 </span>            : }</a>
+<a name="194"><span class="lineNum">     194 </span>            : </a>
+<a name="195"><span class="lineNum">     195 </span>            : static void</a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">          4 : delvacuum_desc(StringInfo buf, char *block_data,</span></a>
+<a name="197"><span class="lineNum">     197 </span>            :                uint16 ndeleted, uint16 nupdated)</a>
+<a name="198"><span class="lineNum">     198 </span>            : {</a>
+<a name="199"><span class="lineNum">     199 </span>            :     OffsetNumber *deletedoffsets;</a>
+<a name="200"><span class="lineNum">     200 </span>            :     OffsetNumber *updatedoffsets;</a>
+<a name="201"><span class="lineNum">     201 </span>            :     xl_btree_update *updates;</a>
+<a name="202"><span class="lineNum">     202 </span>            : </a>
+<a name="203"><span class="lineNum">     203 </span>            :     /* Output deleted page offset number array */</a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">          4 :     appendStringInfoString(buf, &quot;, deleted:&quot;);</span></a>
+<a name="205"><span class="lineNum">     205 </span><span class="lineCov">          4 :     deletedoffsets = (OffsetNumber *) block_data;</span></a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">          4 :     array_desc(buf, deletedoffsets, sizeof(OffsetNumber), ndeleted,</span></a>
+<a name="207"><span class="lineNum">     207 </span>            :                &amp;offset_elem_desc, NULL);</a>
+<a name="208"><span class="lineNum">     208 </span>            : </a>
+<a name="209"><span class="lineNum">     209 </span>            :     /*</a>
+<a name="210"><span class="lineNum">     210 </span>            :      * Output updates as an array of &quot;update objects&quot;, where each element</a>
+<a name="211"><span class="lineNum">     211 </span>            :      * contains a page offset number from updated array.  (This is not the</a>
+<a name="212"><span class="lineNum">     212 </span>            :      * most literal representation of the underlying physical data structure</a>
+<a name="213"><span class="lineNum">     213 </span>            :      * that we could use.  Readability seems more important here.)</a>
+<a name="214"><span class="lineNum">     214 </span>            :      */</a>
+<a name="215"><span class="lineNum">     215 </span><span class="lineCov">          4 :     appendStringInfoString(buf, &quot;, updated: [&quot;);</span></a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">          4 :     updatedoffsets = (OffsetNumber *) (block_data + ndeleted *</span></a>
+<a name="217"><span class="lineNum">     217 </span>            :                                        sizeof(OffsetNumber));</a>
+<a name="218"><span class="lineNum">     218 </span><span class="lineCov">          4 :     updates = (xl_btree_update *) ((char *) updatedoffsets +</span></a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">          4 :                                    nupdated *</span></a>
+<a name="220"><span class="lineNum">     220 </span>            :                                    sizeof(OffsetNumber));</a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">          4 :     for (int i = 0; i &lt; nupdated; i++)</span></a>
+<a name="222"><span class="lineNum">     222 </span>            :     {</a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineNoCov">          0 :         OffsetNumber off = updatedoffsets[i];</span></a>
+<a name="224"><span class="lineNum">     224 </span>            : </a>
+<a name="225"><span class="lineNum">     225 </span><span class="lineNoCov">          0 :         Assert(OffsetNumberIsValid(off));</span></a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineNoCov">          0 :         Assert(updates-&gt;ndeletedtids &gt; 0);</span></a>
+<a name="227"><span class="lineNum">     227 </span>            : </a>
+<a name="228"><span class="lineNum">     228 </span>            :         /*</a>
+<a name="229"><span class="lineNum">     229 </span>            :          * &quot;ptid&quot; is the symbol name used when building each xl_btree_update's</a>
+<a name="230"><span class="lineNum">     230 </span>            :          * array of offsets into a posting list tuple's ItemPointerData array.</a>
+<a name="231"><span class="lineNum">     231 </span>            :          * xl_btree_update describes a subset of the existing TIDs to delete.</a>
+<a name="232"><span class="lineNum">     232 </span>            :          */</a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineNoCov">          0 :         appendStringInfo(buf, &quot;{ off: %u, nptids: %u, ptids: [&quot;,</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineNoCov">          0 :                          off, updates-&gt;ndeletedtids);</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineNoCov">          0 :         for (int p = 0; p &lt; updates-&gt;ndeletedtids; p++)</span></a>
+<a name="236"><span class="lineNum">     236 </span>            :         {</a>
+<a name="237"><span class="lineNum">     237 </span>            :             uint16     *ptid;</a>
+<a name="238"><span class="lineNum">     238 </span>            : </a>
+<a name="239"><span class="lineNum">     239 </span><span class="lineNoCov">          0 :             ptid = (uint16 *) ((char *) updates + SizeOfBtreeUpdate) + p;</span></a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineNoCov">          0 :             appendStringInfo(buf, &quot;%u&quot;, *ptid);</span></a>
+<a name="241"><span class="lineNum">     241 </span>            : </a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineNoCov">          0 :             if (p &lt; updates-&gt;ndeletedtids - 1)</span></a>
+<a name="243"><span class="lineNum">     243 </span><span class="lineNoCov">          0 :                 appendStringInfoString(buf, &quot;, &quot;);</span></a>
+<a name="244"><span class="lineNum">     244 </span>            :         }</a>
+<a name="245"><span class="lineNum">     245 </span><span class="lineNoCov">          0 :         appendStringInfoString(buf, &quot;] }&quot;);</span></a>
+<a name="246"><span class="lineNum">     246 </span><span class="lineNoCov">          0 :         if (i &lt; nupdated - 1)</span></a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineNoCov">          0 :             appendStringInfoString(buf, &quot;, &quot;);</span></a>
+<a name="248"><span class="lineNum">     248 </span>            : </a>
+<a name="249"><span class="lineNum">     249 </span><span class="lineNoCov">          0 :         updates = (xl_btree_update *)</span></a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineNoCov">          0 :             ((char *) updates + SizeOfBtreeUpdate +</span></a>
+<a name="251"><span class="lineNum">     251 </span><span class="lineNoCov">          0 :              updates-&gt;ndeletedtids * sizeof(uint16));</span></a>
+<a name="252"><span class="lineNum">     252 </span>            :     }</a>
+<a name="253"><span class="lineNum">     253 </span><span class="lineCov">          4 :     appendStringInfoChar(buf, ']');</span></a>
+<a name="254"><span class="lineNum">     254 </span><span class="lineCov">          4 : }</span></a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

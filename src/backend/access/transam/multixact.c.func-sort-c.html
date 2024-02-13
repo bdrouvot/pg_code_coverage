@@ -1,0 +1,320 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/transam/multixact.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/transam</a> - multixact.c<span style="font-size: 80%;"> (<a href="multixact.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">625</td>
+            <td class="headerCovTableEntry">862</td>
+            <td class="headerCovTableEntryLo">72.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">50</td>
+            <td class="headerCovTableEntry">60</td>
+            <td class="headerCovTableEntryMed">83.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="multixact.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3141">MultiXactMemberPagePrecedes</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2893">PerformMembersTruncation</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2921">PerformOffsetsTruncation</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2870">SlruScanDirCbFindEarliest</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3213">WriteMTruncateXlogRec</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3424">multixactmemberssyncfiletag</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3415">multixactoffsetssyncfiletag</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1655">mxid_to_string</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1632">mxstatus_to_string</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3350">pg_get_multixact_members</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3238">multixact_redo</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1777">multixact_twophase_recover</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2740">find_multixact_start</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3199">WriteMZeroPageXlogRec</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1975">MaybeExtendOffsetSlru</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1813">multixact_twophase_postabort</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1894">BootStrapMultiXact</a></td>
+              <td class="coverFnHi">64</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1947">ZeroMultiXactMemberPage</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1931">ZeroMultiXactOffsetPage</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1798">multixact_twophase_postcommit</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2946">TruncateMultiXact</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#438">MultiXactIdExpand</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2367">MultiXactAdvanceNextMXact</a></td>
+              <td class="coverFnHi">322</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3187">MultiXactOffsetPrecedes</a></td>
+              <td class="coverFnHi">322</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2392">MultiXactAdvanceOldest</a></td>
+              <td class="coverFnHi">368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2439">ExtendMultiXactMember</a></td>
+              <td class="coverFnHi">550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2409">ExtendMultiXactOffset</a></td>
+              <td class="coverFnHi">550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#956">GetNewMultiXactId</a></td>
+              <td class="coverFnHi">550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#862">RecordNewMultiXact</a></td>
+              <td class="coverFnHi">554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1714">AtPrepare_MultiXact</a></td>
+              <td class="coverFnHi">762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1728">PostPrepare_MultiXact</a></td>
+              <td class="coverFnHi">762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1587">mXactCachePut</a></td>
+              <td class="coverFnHi">1056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2692">MultiXactOffsetWouldWrap</a></td>
+              <td class="coverFnHi">1100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2033">TrimMultiXact</a></td>
+              <td class="coverFnHi">1244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2008">StartupMultiXact</a></td>
+              <td class="coverFnHi">1312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2565">SetOffsetVacuumLimit</a></td>
+              <td class="coverFnHi">1358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2138">MultiXactGetCheckptMulti</a></td>
+              <td class="coverFnHi">1410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2184">MultiXactSetNextMXact</a></td>
+              <td class="coverFnHi">1426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2160">CheckPointMultiXact</a></td>
+              <td class="coverFnHi">1476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1842">MultiXactShmemInit</a></td>
+              <td class="coverFnHi">1522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#681">MultiXactIdSetOldestVisible</a></td>
+              <td class="coverFnHi">1842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#550">MultiXactIdIsRunning</a></td>
+              <td class="coverFnHi">1962</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#385">MultiXactIdCreate</a></td>
+              <td class="coverFnHi">2064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#766">MultiXactIdCreateFromMembers</a></td>
+              <td class="coverFnHi">2258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1497">mXactCacheGetBySet</a></td>
+              <td class="coverFnHi">2258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2218">SetMultiXactIdLimit</a></td>
+              <td class="coverFnHi">2734</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1825">MultiXactShmemSize</a></td>
+              <td class="coverFnHi">2854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#742">ReadMultiXactIdRange</a></td>
+              <td class="coverFnHi">3044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1467">mxactMemberComparator</a></td>
+              <td class="coverFnHi">3924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1223">GetMultiXactIdMembers</a></td>
+              <td class="coverFnHi">6146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1540">mXactCacheGetById</a></td>
+              <td class="coverFnHi">6146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3175">MultiXactIdPrecedesOrEquals</a></td>
+              <td class="coverFnHi">8212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2830">MultiXactMemberFreezeThreshold</a></td>
+              <td class="coverFnHi">17356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2778">ReadMultiXactCounts</a></td>
+              <td class="coverFnHi">17356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#722">ReadNextMultiXactId</a></td>
+              <td class="coverFnHi">38698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3121">MultiXactOffsetPagePrecedes</a></td>
+              <td class="coverFnHi">59358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#2512">GetOldestMultiXactId</a></td>
+              <td class="coverFnHi">72310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#1686">AtEOXact_MultiXact</a></td>
+              <td class="coverFnHi">518298</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#3161">MultiXactIdPrecedes</a></td>
+              <td class="coverFnHi">872004</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="multixact.c.gcov.html#624">MultiXactIdSetOldestMember</a></td>
+              <td class="coverFnHi">3380664</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

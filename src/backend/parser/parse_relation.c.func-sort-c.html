@@ -1,0 +1,316 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/parser/parse_relation.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/parser</a> - parse_relation.c<span style="font-size: 80%;"> (<a href="parse_relation.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1110</td>
+            <td class="headerCovTableEntry">1216</td>
+            <td class="headerCovTableEntryHi">91.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntry">59</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="parse_relation.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3801">rte_visible_if_qualified</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#238">scanNameSpaceForRelid</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3016">expandRelation</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3781">rte_visible_if_lateral</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3589">errorMissingRTE</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#354">searchRangeTableForRel</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3753">findNSItemForRTE</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2049">addRangeTableEntryForTableFunc</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#311">isFutureCTE</a></td>
+              <td class="coverFnHi">292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3660">errorMissingColumn</a></td>
+              <td class="coverFnHi">344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#950">searchRangeTableForCol</a></td>
+              <td class="coverFnHi">344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2469">addRangeTableEntryForENR</a></td>
+              <td class="coverFnHi">442</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#508">GetNSItemByRangeTablePosn</a></td>
+              <td class="coverFnHi">1216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3252">get_rte_attribute_name</a></td>
+              <td class="coverFnHi">1390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#585">updateFuzzyAttrMatchState</a></td>
+              <td class="coverFnHi">2250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3570">attnumCollationId</a></td>
+              <td class="coverFnHi">4528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2317">addRangeTableEntryForCTE</a></td>
+              <td class="coverFnHi">5608</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#555">GetCTEForRTE</a></td>
+              <td class="coverFnHi">7230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2135">addRangeTableEntryForValues</a></td>
+              <td class="coverFnHi">8874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3041">expandTupleDesc</a></td>
+              <td class="coverFnHi">10652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3528">attnumAttName</a></td>
+              <td class="coverFnHi">11276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3819">isQueryUsingTempRelation</a></td>
+              <td class="coverFnHi">11550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1252">chooseScalarFunctionAlias</a></td>
+              <td class="coverFnHi">17112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3454">get_parse_rowmark</a></td>
+              <td class="coverFnHi">18732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2663">expandRTE</a></td>
+              <td class="coverFnHi">19600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1733">addRangeTableEntryForFunction</a></td>
+              <td class="coverFnHi">37546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1636">addRangeTableEntryForSubquery</a></td>
+              <td class="coverFnHi">40556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3478">attnameAttNum</a></td>
+              <td class="coverFnHi">40886</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3186">expandNSItemAttrs</a></td>
+              <td class="coverFnHi">55222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1352">buildNSItemFromLists</a></td>
+              <td class="coverFnHi">55240</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3122">expandNSItemVars</a></td>
+              <td class="coverFnHi">59590</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2218">addRangeTableEntryForJoin</a></td>
+              <td class="coverFnHi">76982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3509">specialAttNum</a></td>
+              <td class="coverFnHi">87400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2623">addNSItemToQuery</a></td>
+              <td class="coverFnHi">105800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1565">addRangeTableEntryForRelation</a></td>
+              <td class="coverFnHi">146010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#280">scanNameSpaceForCTE</a></td>
+              <td class="coverFnHi">161098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3550">attnumTypeId</a></td>
+              <td class="coverFnHi">176302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3434">get_tle_by_resno</a></td>
+              <td class="coverFnHi">208134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#333">scanNameSpaceForENR</a></td>
+              <td class="coverFnHi">218358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1468">addRangeTableEntry</a></td>
+              <td class="coverFnHi">318310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#2579">isLockedRefname</a></td>
+              <td class="coverFnHi">330524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#432">checkNameSpaceConflicts</a></td>
+              <td class="coverFnHi">373918</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1416">parserOpenTable</a></td>
+              <td class="coverFnHi">392264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3290">get_rte_attribute_is_dropped</a></td>
+              <td class="coverFnHi">457006</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1292">buildNSItemFromTupleDesc</a></td>
+              <td class="coverFnHi">502016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1175">buildRelationAliases</a></td>
+              <td class="coverFnHi">502022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#881">colNameToVar</a></td>
+              <td class="coverFnHi">531214</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#535">GetRTEByRangeTablePosn</a></td>
+              <td class="coverFnHi">602012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#127">refnameNamespaceItem</a></td>
+              <td class="coverFnHi">890592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#198">scanNameSpaceForRefname</a></td>
+              <td class="coverFnHi">930716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3825">isQueryUsingTempRelation_walker</a></td>
+              <td class="coverFnHi">979070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3869">addRTEPermissionInfo</a></td>
+              <td class="coverFnHi">1191020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#481">check_lateral_ref_ok</a></td>
+              <td class="coverFnHi">1355148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#678">scanNSItemForColumn</a></td>
+              <td class="coverFnHi">1431382</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#798">scanRTEForColumn</a></td>
+              <td class="coverFnHi">1431766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1148">markVarForSelectPriv</a></td>
+              <td class="coverFnHi">1524442</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1064">markRTEForSelectPriv</a></td>
+              <td class="coverFnHi">1524454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#3898">getRTEPermissionInfo</a></td>
+              <td class="coverFnHi">3024702</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_relation.c.gcov.html#1033">markNullableIfNeeded</a></td>
+              <td class="coverFnHi">4489954</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

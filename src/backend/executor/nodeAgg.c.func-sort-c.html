@@ -1,0 +1,308 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/executor/nodeAgg.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/executor</a> - nodeAgg.c<span style="font-size: 80%;"> (<a href="nodeAgg.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1428</td>
+            <td class="headerCovTableEntry">1507</td>
+            <td class="headerCovTableEntryHi">94.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">57</td>
+            <td class="headerCovTableEntryHi">98.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="nodeAgg.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4588">AggGetTempMemoryContext</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#948">process_ordered_aggregate_multi</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4741">ExecAggRetrieveInstrumentation</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4554">AggGetAggref</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4614">AggStateIsShared</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4682">ExecAggEstimate</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4703">ExecAggInitializeDSM</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4653">AggRegisterCallback</a></td>
+              <td class="coverFnHi">660</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4728">ExecAggInitializeWorker</a></td>
+              <td class="coverFnHi">1532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1502">build_hash_table</a></td>
+              <td class="coverFnHi">6892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1965">hash_choose_num_buckets</a></td>
+              <td class="coverFnHi">6892</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1396">find_cols</a></td>
+              <td class="coverFnHi">7780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1562">find_hash_columns</a></td>
+              <td class="coverFnHi">7780</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#3092">hashagg_spill_finish</a></td>
+              <td class="coverFnHi">12636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2893">hashagg_spill_init</a></td>
+              <td class="coverFnHi">12636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2539">agg_fill_hash_table</a></td>
+              <td class="coverFnHi">14020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#3058">hashagg_finish_initial_spills</a></td>
+              <td class="coverFnHi">14146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1467">build_hash_tables</a></td>
+              <td class="coverFnHi">14366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1145">finalize_partialaggregate</a></td>
+              <td class="coverFnHi">14704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1990">hash_choose_num_partitions</a></td>
+              <td class="coverFnHi">15066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4287">GetAggInitVal</a></td>
+              <td class="coverFnHi">18810</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1881">hash_agg_enter_spill_mode</a></td>
+              <td class="coverFnHi">26472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2990">hashagg_batch_new</a></td>
+              <td class="coverFnHi">27012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1693">hash_agg_entry_size</a></td>
+              <td class="coverFnHi">30188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1916">hash_agg_update_metrics</a></td>
+              <td class="coverFnHi">41158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2593">agg_refill_hash_table</a></td>
+              <td class="coverFnHi">41982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4363">ExecReScanAgg</a></td>
+              <td class="coverFnHi">42004</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4303">ExecEndAgg</a></td>
+              <td class="coverFnHi">42772</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#3172">ExecInitAgg</a></td>
+              <td class="coverFnHi">42884</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4037">build_pertrans_for_aggref</a></td>
+              <td class="coverFnHi">45014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#3132">hashagg_reset_spill_state</a></td>
+              <td class="coverFnHi">50470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#847">process_ordered_aggregate_single</a></td>
+              <td class="coverFnHi">53550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1797">hash_agg_set_limits</a></td>
+              <td class="coverFnHi">55222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1740">hashagg_recompile_expressions</a></td>
+              <td class="coverFnHi">61182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#476">initialize_phase</a></td>
+              <td class="coverFnHi">76560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1419">find_cols_walker</a></td>
+              <td class="coverFnHi">83488</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2193">agg_retrieve_direct</a></td>
+              <td class="coverFnHi">233254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#664">initialize_aggregates</a></td>
+              <td class="coverFnHi">288964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2745">agg_retrieve_hash_table</a></td>
+              <td class="coverFnHi">413876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1855">hash_agg_check_limits</a></td>
+              <td class="coverFnHi">414562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2044">initialize_hash_entry</a></td>
+              <td class="coverFnHi">414562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2770">agg_retrieve_hash_table_in_memory</a></td>
+              <td class="coverFnHi">440888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2924">hashagg_spill_tuple</a></td>
+              <td class="coverFnHi">674868</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2157">ExecAgg</a></td>
+              <td class="coverFnHi">701292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#3009">hashagg_batch_read</a></td>
+              <td class="coverFnHi">701880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#705">advance_transition_function</a></td>
+              <td class="coverFnHi">705888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1370">project_aggregates</a></td>
+              <td class="coverFnHi">719550</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1293">finalize_aggregates</a></td>
+              <td class="coverFnHi">719562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1248">prepare_projection_slot</a></td>
+              <td class="coverFnHi">719562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1045">finalize_aggregate</a></td>
+              <td class="coverFnHi">1025046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#577">initialize_aggregate</a></td>
+              <td class="coverFnHi">1036078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#4510">AggCheckCallContext</a></td>
+              <td class="coverFnHi">4572562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#2094">lookup_hash_entries</a></td>
+              <td class="coverFnHi">5320462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#1203">prepare_hash_slot</a></td>
+              <td class="coverFnHi">6129626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#454">select_current_set</a></td>
+              <td class="coverFnHi">6273104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#546">fetch_input_tuple</a></td>
+              <td class="coverFnHi">24912494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeAgg.c.gcov.html#815">advance_aggregates</a></td>
+              <td class="coverFnHi">25073530</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

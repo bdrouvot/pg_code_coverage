@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/regex/regc_nfa.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/regex</a> - regc_nfa.c<span style="font-size: 80%;"> (<a href="regc_nfa.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1209</td>
+            <td class="headerCovTableEntry">1329</td>
+            <td class="headerCovTableEntryHi">91.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">60</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntryHi">98.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="regc_nfa.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3609">dumpnfa</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#685">sortouts</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1417">removeconstraints</a></td>
+              <td class="coverFnHi">202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1522">single_color_transition</a></td>
+              <td class="coverFnHi">254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#531">changearctarget</a></td>
+              <td class="coverFnHi">320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1254">cloneouts</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2549">breakconstraintloop</a></td>
+              <td class="coverFnHi">412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#590">findarc</a></td>
+              <td class="coverFnHi">558</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1436">removetraverse</a></td>
+              <td class="coverFnHi">562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#487">changearcsource</a></td>
+              <td class="coverFnHi">588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3432">check_in_colors_match</a></td>
+              <td class="coverFnHi">2400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3378">check_out_colors_match</a></td>
+              <td class="coverFnHi">3086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2695">clonesuccessorstates</a></td>
+              <td class="coverFnHi">3622</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3596">freecnfa</a></td>
+              <td class="coverFnHi">4288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#727">sortouts_cmp</a></td>
+              <td class="coverFnHi">5492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3240">checkmatchall_recurse</a></td>
+              <td class="coverFnHi">8420</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1279">delsub</a></td>
+              <td class="coverFnHi">9376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1165">copyouts</a></td>
+              <td class="coverFnHi">13618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1353">dupnfa</a></td>
+              <td class="coverFnHi">13726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3060">checkmatchall</a></td>
+              <td class="coverFnHi">17340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3477">compact</a></td>
+              <td class="coverFnHi">17434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3014">analyze</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2361">fixconstraintloops</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2067">fixempties</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1591">optimize</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1631">pullback</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1802">pushfwd</a></td>
+              <td class="coverFnHi">17440</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1552">specialcolors</a></td>
+              <td class="coverFnHi">17446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#105">freenfa</a></td>
+              <td class="coverFnHi">17684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#45">newnfa</a></td>
+              <td class="coverFnHi">17684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#880">copyins</a></td>
+              <td class="coverFnHi">18286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2340">hasconstraintout</a></td>
+              <td class="coverFnHi">25262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1302">deltraverse</a></td>
+              <td class="coverFnHi">27482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#618">sortins</a></td>
+              <td class="coverFnHi">30614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2927">cleanup</a></td>
+              <td class="coverFnHi">34880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#210">newfstate</a></td>
+              <td class="coverFnHi">35368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1882">push</a></td>
+              <td class="coverFnHi">65326</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1064">moveouts</a></td>
+              <td class="coverFnHi">67082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1711">pull</a></td>
+              <td class="coverFnHi">92602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#224">dropstate</a></td>
+              <td class="coverFnHi">204988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#240">freestate</a></td>
+              <td class="coverFnHi">214000</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3568">carcsort</a></td>
+              <td class="coverFnHi">215526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#573">hasnonemptyout</a></td>
+              <td class="coverFnHi">218352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#776">moveins</a></td>
+              <td class="coverFnHi">245030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#969">mergeins</a></td>
+              <td class="coverFnHi">249284</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1377">duptraverse</a></td>
+              <td class="coverFnHi">366574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1978">combine</a></td>
+              <td class="coverFnHi">383600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2460">findconstraintloop</a></td>
+              <td class="coverFnHi">401378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#135">newstate</a></td>
+              <td class="coverFnHi">485692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#606">cparc</a></td>
+              <td class="coverFnHi">1471520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#416">freearc</a></td>
+              <td class="coverFnHi">1561376</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2962">markreachable</a></td>
+              <td class="coverFnHi">1714646</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2988">markcanreach</a></td>
+              <td class="coverFnHi">1715552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#279">newarc</a></td>
+              <td class="coverFnHi">1839392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#1485">cleartraverse</a></td>
+              <td class="coverFnHi">2081528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2322">isconstraintarc</a></td>
+              <td class="coverFnHi">2521074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#2294">emptyreachable</a></td>
+              <td class="coverFnHi">15236194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#3575">carc_cmp</a></td>
+              <td class="coverFnHi">15437504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#366">allocarc</a></td>
+              <td class="coverFnHi">17370478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#321">createarc</a></td>
+              <td class="coverFnHi">17370478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="regc_nfa.c.gcov.html#660">sortins_cmp</a></td>
+              <td class="coverFnHi">75786018</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

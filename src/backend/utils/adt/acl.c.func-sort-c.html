@@ -1,0 +1,740 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/acl.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - acl.c<span style="font-size: 80%;"> (<a href="acl.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1118</td>
+            <td class="headerCovTableEntry">1858</td>
+            <td class="headerCovTableEntryLo">60.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">103</td>
+            <td class="headerCovTableEntry">165</td>
+            <td class="headerCovTableEntryLo">62.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="acl.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1578">aclcontains</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1558">aclinsert</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1568">aclremove</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3111">convert_database_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3123">convert_database_priv_string</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3726">convert_language_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3738">convert_language_priv_string</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4328">convert_tablespace_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4340">convert_tablespace_priv_string</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5228">count_one_bits</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2388">has_any_column_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2448">has_any_column_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2421">has_any_column_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2325">has_any_column_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2353">has_any_column_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2295">has_any_column_privilege_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2724">has_column_privilege_id_id_attnum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2699">has_column_privilege_id_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2674">has_column_privilege_id_name_attnum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2647">has_column_privilege_id_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2622">has_column_privilege_name_id_attnum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2595">has_column_privilege_name_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2568">has_column_privilege_name_name_attnum</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2539">has_column_privilege_name_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3031">has_database_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3082">has_database_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3059">has_database_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2977">has_database_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3001">has_database_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2951">has_database_privilege_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3437">has_function_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3488">has_function_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3465">has_function_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3383">has_function_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3407">has_function_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3646">has_language_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3697">has_language_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3674">has_language_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3592">has_language_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3616">has_language_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3566">has_language_privilege_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3846">has_schema_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3897">has_schema_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3874">has_schema_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3792">has_schema_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3816">has_schema_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2229">has_sequence_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2201">has_sequence_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2129">has_sequence_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4248">has_tablespace_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4299">has_tablespace_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4276">has_tablespace_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4194">has_tablespace_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4218">has_tablespace_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4168">has_tablespace_privilege_name_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4447">has_type_privilege_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4498">has_type_privilege_id_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4475">has_type_privilege_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4393">has_type_privilege_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4417">has_type_privilege_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4762">pg_has_role_id_name</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4716">pg_has_role_name_id</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4619">has_parameter_privilege_id_name</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4605">has_parameter_privilege_name</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2804">has_column_privilege_id_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3237">has_foreign_data_wrapper_privilege_id</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3288">has_foreign_data_wrapper_privilege_id_id</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3265">has_foreign_data_wrapper_privilege_id_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3183">has_foreign_data_wrapper_privilege_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3207">has_foreign_data_wrapper_privilege_name_id</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2100">has_sequence_privilege_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4099">has_server_privilege_id_id</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4076">has_server_privilege_id_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3994">has_server_privilege_name</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4018">has_server_privilege_name_id</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4527">convert_type_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4548">convert_type_priv_string</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3157">has_foreign_data_wrapper_privilege_name_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3968">has_server_privilege_name_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4367">has_type_privilege_name_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#754">hash_aclitem_extended</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5138">is_member_of_role</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2748">has_column_privilege_name_name</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2069">has_sequence_privilege_name_name</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1600">makeaclitem</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4692">pg_has_role_name</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2859">convert_column_name</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3317">convert_foreign_data_wrapper_name</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4128">convert_server_name</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1908">has_table_privilege_name_id</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2777">has_column_privilege_name_attnum</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1985">has_table_privilege_id_id</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4666">pg_has_role_name_name</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3329">convert_foreign_data_wrapper_priv_string</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5463">get_rolespec_name</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1962">has_table_privilege_id_name</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3926">convert_schema_name</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3938">convert_schema_priv_string</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3766">has_schema_privilege_name_name</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1085">aclnewowner</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#420">make_empty_acl</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1884">has_table_privilege_name</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4576">has_param_priv_byname</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4048">has_server_privilege_id</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4589">has_parameter_privilege_name_name</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4785">pg_has_role_id_id</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1188">check_circularity</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4637">convert_parameter_priv_string</a></td>
+              <td class="coverFnHi">88</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1268">recursive_revoke</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1700">convert_aclright_to_string</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#587">aclitemin</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#245">aclparse</a></td>
+              <td class="coverFnHi">108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4140">convert_server_priv_string</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2166">has_sequence_privilege_id</a></td>
+              <td class="coverFnHi">114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1936">has_table_privilege_id</a></td>
+              <td class="coverFnHi">116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2262">convert_sequence_priv_string</a></td>
+              <td class="coverFnHi">138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1754">aclexplode</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3517">convert_function_name</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3538">convert_function_priv_string</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#3357">has_function_privilege_name_name</a></td>
+              <td class="coverFnHi">168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1858">has_table_privilege_name_name</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#473">aclmerge</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#141">getid</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#696">aclitemComparator</a></td>
+              <td class="coverFnHi">218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1443">aclmask_direct</a></td>
+              <td class="coverFnHi">234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2012">convert_table_name</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5213">select_best_admin</a></td>
+              <td class="coverFnHi">426</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2027">convert_table_priv_string</a></td>
+              <td class="coverFnHi">452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5485">check_rolespec_name</a></td>
+              <td class="coverFnHi">480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#531">aclequal</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5362">get_role_oid_or_public</a></td>
+              <td class="coverFnHi">562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5417">get_rolespec_tuple</a></td>
+              <td class="coverFnHi">616</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#517">aclitemsort</a></td>
+              <td class="coverFnHi">764</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5166">is_member_of_role_nosuper</a></td>
+              <td class="coverFnHi">856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5115">check_can_set_role</a></td>
+              <td class="coverFnHi">1766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2831">has_column_privilege_id_attnum</a></td>
+              <td class="coverFnHi">1800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2499">column_privilege_check</a></td>
+              <td class="coverFnHi">1842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#2917">convert_column_priv_string</a></td>
+              <td class="coverFnHi">1842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5188">is_admin_of_role</a></td>
+              <td class="coverFnHi">2712</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#429">aclcopy</a></td>
+              <td class="coverFnHi">6954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5378">get_rolespec_oid</a></td>
+              <td class="coverFnHi">8612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#449">aclconcat</a></td>
+              <td class="coverFnHi">14796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#685">aclitem_match</a></td>
+              <td class="coverFnHi">14936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#740">hash_aclitem</a></td>
+              <td class="coverFnHi">16596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4868">initialize_acl</a></td>
+              <td class="coverFnHi">22188</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5268">select_best_grantor</a></td>
+              <td class="coverFnHi">27402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#964">aclupdate</a></td>
+              <td class="coverFnHi">27802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1506">aclmembers</a></td>
+              <td class="coverFnHi">30484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4933">roles_is_member_of</a></td>
+              <td class="coverFnHi">31210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5344">get_role_oid</a></td>
+              <td class="coverFnHi">31220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4898">RoleMembershipCacheCallback</a></td>
+              <td class="coverFnHi">52404</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1354">aclmask</a></td>
+              <td class="coverFnHi">85964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4740">pg_has_role_id</a></td>
+              <td class="coverFnHi">92704</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4815">convert_role_priv_string</a></td>
+              <td class="coverFnHi">92842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#4838">pg_role_aclcheck</a></td>
+              <td class="coverFnHi">92842</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#1652">convert_any_priv_string</a></td>
+              <td class="coverFnHi">95770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#720">aclitem_eq</a></td>
+              <td class="coverFnHi">127086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#562">check_acl</a></td>
+              <td class="coverFnHi">131464</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#892">acldefault_sql</a></td>
+              <td class="coverFnHi">297948</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5058">has_privs_of_role</a></td>
+              <td class="coverFnHi">329818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#775">acldefault</a></td>
+              <td class="coverFnHi">364016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#398">allocacl</a></td>
+              <td class="coverFnHi">413702</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#5092">member_can_set_role</a></td>
+              <td class="coverFnHi">597282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#618">aclitemout</a></td>
+              <td class="coverFnHi">749872</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="acl.c.gcov.html#193">putid</a></td>
+              <td class="coverFnHi">1173278</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

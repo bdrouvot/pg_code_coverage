@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/executor/nodeHash.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/executor</a> - nodeHash.c<span style="font-size: 80%;"> (<a href="nodeHash.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1121</td>
+            <td class="headerCovTableEntry">1173</td>
+            <td class="headerCovTableEntryHi">95.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">54</td>
+            <td class="headerCovTableEntry">55</td>
+            <td class="headerCovTableEntryHi">98.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="nodeHash.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#674">ExecChooseHashTableSize</a></td>
+              <td class="coverFnHi">538168</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#412">ExecEndHash</a></td>
+              <td class="coverFnHi">28944</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#90">ExecHash</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2849">ExecHashAccumInstrumentation</a></td>
+              <td class="coverFnHi">330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2374">ExecHashBuildSkewHash</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2733">ExecHashEstimate</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1931">ExecHashGetBucketAndBatch</a></td>
+              <td class="coverFnHi">35975356</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1823">ExecHashGetHashValue</a></td>
+              <td class="coverFnHi">26386022</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2527">ExecHashGetSkewBucket</a></td>
+              <td class="coverFnHi">25695268</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#915">ExecHashIncreaseNumBatches</a></td>
+              <td class="coverFnHi">829158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1461">ExecHashIncreaseNumBuckets</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2752">ExecHashInitializeDSM</a></td>
+              <td class="coverFnHi">192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2777">ExecHashInitializeWorker</a></td>
+              <td class="coverFnHi">546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2619">ExecHashRemoveNextSkewBucket</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2818">ExecHashRetrieveInstrumentation</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2573">ExecHashSkewTableInsert</a></td>
+              <td class="coverFnHi">588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#431">ExecHashTableCreate</a></td>
+              <td class="coverFnHi">19444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#882">ExecHashTableDestroy</a></td>
+              <td class="coverFnHi">19360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3373">ExecHashTableDetach</a></td>
+              <td class="coverFnHi">18300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3281">ExecHashTableDetachBatch</a></td>
+              <td class="coverFnHi">19260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1623">ExecHashTableInsert</a></td>
+              <td class="coverFnHi">12392952</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2298">ExecHashTableReset</a></td>
+              <td class="coverFnHi">1626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2326">ExecHashTableResetMatchFlags</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#359">ExecInitHash</a></td>
+              <td class="coverFnHi">29028</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3176">ExecParallelHashCloseBatchAccessors</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3197">ExecParallelHashEnsureBatchAccessors</a></td>
+              <td class="coverFnHi">960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3423">ExecParallelHashFirstTuple</a></td>
+              <td class="coverFnHi">2774430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1079">ExecParallelHashIncreaseNumBatches</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1524">ExecParallelHashIncreaseNumBuckets</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3096">ExecParallelHashJoinSetUpBatches</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1431">ExecParallelHashMergeCounters</a></td>
+              <td class="coverFnHi">368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3439">ExecParallelHashNextTuple</a></td>
+              <td class="coverFnHi">3812846</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3492">ExecParallelHashPopChunkQueue</a></td>
+              <td class="coverFnHi">1174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3453">ExecParallelHashPushTuple</a></td>
+              <td class="coverFnHi">2936538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1304">ExecParallelHashRepartitionFirst</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1371">ExecParallelHashRepartitionRest</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3261">ExecParallelHashTableAlloc</a></td>
+              <td class="coverFnHi">790</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1713">ExecParallelHashTableInsert</a></td>
+              <td class="coverFnHi">2160120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1779">ExecParallelHashTableInsertCurrentBatch</a></td>
+              <td class="coverFnHi">1081582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3471">ExecParallelHashTableSetCurrentBatch</a></td>
+              <td class="coverFnHi">2210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2948">ExecParallelHashTupleAlloc</a></td>
+              <td class="coverFnHi">2378996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3533">ExecParallelHashTuplePrealloc</a></td>
+              <td class="coverFnHi">1796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2096">ExecParallelPrepHashTableForUnmatched</a></td>
+              <td class="coverFnHi">102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2024">ExecParallelScanHashBucket</a></td>
+              <td class="coverFnHi">4200054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2235">ExecParallelScanHashTableForUnmatched</a></td>
+              <td class="coverFnHi">120072</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2075">ExecPrepHashTableForUnmatched</a></td>
+              <td class="coverFnHi">4870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2352">ExecReScanHash</a></td>
+              <td class="coverFnHi">1232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#1963">ExecScanHashBucket</a></td>
+              <td class="coverFnHi">17701552</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2161">ExecScanHashTableForUnmatched</a></td>
+              <td class="coverFnHi">310380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2803">ExecShutdownHash</a></td>
+              <td class="coverFnHi">25666</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#104">MultiExecHash</a></td>
+              <td class="coverFnHi">19444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#213">MultiExecParallelHash</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#137">MultiExecPrivateHash</a></td>
+              <td class="coverFnHi">19048</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#2868">dense_alloc</a></td>
+              <td class="coverFnHi">9314616</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="nodeHash.c.gcov.html#3594">get_hash_memory_limit</a></td>
+              <td class="coverFnHi">1059096</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

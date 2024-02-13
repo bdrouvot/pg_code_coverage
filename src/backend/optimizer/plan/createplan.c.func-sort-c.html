@@ -1,0 +1,536 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/plan/createplan.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/plan</a> - createplan.c<span style="font-size: 80%;"> (<a href="createplan.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">2317</td>
+            <td class="headerCovTableEntry">2419</td>
+            <td class="headerCovTableEntryHi">95.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">113</td>
+            <td class="headerCovTableEntry">114</td>
+            <td class="headerCovTableEntryHi">99.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="createplan.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4271">create_customscan_plan</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6394">make_sort_from_sortclauses</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6678">make_unique_from_sortclauses</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2116">inject_projection_plan</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5457">bitmap_subplan_mark_shared</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6506">materialize_finished_plan</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5897">make_bitmap_and</a></td>
+              <td class="coverFnHi">104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2148">change_plan_targetlist</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3631">create_tidrangescan_plan</a></td>
+              <td class="coverFnHi">202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5643">make_tidrangescan</a></td>
+              <td class="coverFnHi">202</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3798">create_tablefuncscan_plan</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5703">make_tablefuncscan</a></td>
+              <td class="coverFnHi">222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6443">make_sort_from_groupcols</a></td>
+              <td class="coverFnHi">228</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2949">create_samplescan_plan</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5504">make_samplescan</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2237">create_group_plan</a></td>
+              <td class="coverFnHi">276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6648">make_group</a></td>
+              <td class="coverFnHi">276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5912">make_bitmap_or</a></td>
+              <td class="coverFnHi">288</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1953">create_gather_merge_plan</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2546">create_minmaxagg_plan</a></td>
+              <td class="coverFnHi">334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1433">create_merge_append_plan</a></td>
+              <td class="coverFnHi">400</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3980">create_namedtuplestorescan_plan</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5762">make_namedtuplestorescan</a></td>
+              <td class="coverFnHi">436</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1716">create_unique_plan</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2715">create_setop_plan</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6862">make_setop</a></td>
+              <td class="coverFnHi">600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3534">create_tidscan_plan</a></td>
+              <td class="coverFnHi">636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5624">make_tidscan</a></td>
+              <td class="coverFnHi">636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2210">create_incrementalsort_plan</a></td>
+              <td class="coverFnHi">686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6077">make_incrementalsort</a></td>
+              <td class="coverFnHi">686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6360">make_incrementalsort_from_pathkeys</a></td>
+              <td class="coverFnHi">686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2388">create_groupingsets_plan</a></td>
+              <td class="coverFnHi">716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2751">create_recursiveunion_plan</a></td>
+              <td class="coverFnHi">808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4056">create_worktablescan_plan</a></td>
+              <td class="coverFnHi">808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5841">make_recursive_union</a></td>
+              <td class="coverFnHi">808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5782">make_worktablescan</a></td>
+              <td class="coverFnHi">808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1915">create_gather_plan</a></td>
+              <td class="coverFnHi">902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6833">make_gather</a></td>
+              <td class="coverFnHi">902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1662">create_memoize_plan</a></td>
+              <td class="coverFnHi">1246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6547">make_memoize</a></td>
+              <td class="coverFnHi">1246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4019">create_resultscan_plan</a></td>
+              <td class="coverFnHi">1250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2350">remap_groupColIdx</a></td>
+              <td class="coverFnHi">1534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2276">create_upper_unique_plan</a></td>
+              <td class="coverFnHi">1776</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6727">make_unique_from_pathkeys</a></td>
+              <td class="coverFnHi">1776</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4116">create_foreignscan_plan</a></td>
+              <td class="coverFnHi">1964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5801">make_foreignscan</a></td>
+              <td class="coverFnHi">1964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2612">create_windowagg_plan</a></td>
+              <td class="coverFnHi">2424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6606">make_windowagg</a></td>
+              <td class="coverFnHi">2424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3885">create_ctescan_plan</a></td>
+              <td class="coverFnHi">3236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5741">make_ctescan</a></td>
+              <td class="coverFnHi">3236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1634">create_material_plan</a></td>
+              <td class="coverFnHi">3494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6484">make_material</a></td>
+              <td class="coverFnHi">3720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2850">create_limit_plan</a></td>
+              <td class="coverFnHi">3988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6939">make_limit</a></td>
+              <td class="coverFnHi">4358</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4418">create_mergejoin_plan</a></td>
+              <td class="coverFnHi">5534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6006">make_mergejoin</a></td>
+              <td class="coverFnHi">5534</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2787">create_lockrows_plan</a></td>
+              <td class="coverFnHi">6722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6918">make_lockrows</a></td>
+              <td class="coverFnHi">6722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3841">create_valuesscan_plan</a></td>
+              <td class="coverFnHi">7396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5722">make_valuesscan</a></td>
+              <td class="coverFnHi">7396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5425">label_sort_with_costsize</a></td>
+              <td class="coverFnHi">7868</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1018">create_gating_plan</a></td>
+              <td class="coverFnHi">8084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1608">create_project_set_plan</a></td>
+              <td class="coverFnHi">8234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6988">make_project_set</a></td>
+              <td class="coverFnHi">8234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5554">make_indexonlyscan</a></td>
+              <td class="coverFnHi">12802</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1212">create_append_plan</a></td>
+              <td class="coverFnHi">19596</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3196">create_bitmap_scan_plan</a></td>
+              <td class="coverFnHi">19940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5604">make_bitmap_heapscan</a></td>
+              <td class="coverFnHi">19940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3696">create_subqueryscan_plan</a></td>
+              <td class="coverFnHi">19978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5662">make_subqueryscan</a></td>
+              <td class="coverFnHi">19978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5583">make_bitmap_indexscan</a></td>
+              <td class="coverFnHi">20386</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3326">create_bitmap_subplan</a></td>
+              <td class="coverFnHi">20778</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1136">mark_async_capable_plan</a></td>
+              <td class="coverFnHi">25828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4725">create_hashjoin_plan</a></td>
+              <td class="coverFnHi">28492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5983">make_hash</a></td>
+              <td class="coverFnHi">28492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5952">make_hashjoin</a></td>
+              <td class="coverFnHi">28492</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5217">get_switched_clauses</a></td>
+              <td class="coverFnHi">34026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2304">create_agg_plan</a></td>
+              <td class="coverFnHi">36714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5403">copy_plan_costsize</a></td>
+              <td class="coverFnHi">36758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6572">make_agg</a></td>
+              <td class="coverFnHi">38732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3755">create_functionscan_plan</a></td>
+              <td class="coverFnHi">38800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5682">make_functionscan</a></td>
+              <td class="coverFnHi">38800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2176">create_sort_plan</a></td>
+              <td class="coverFnHi">50600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6325">make_sort_from_pathkeys</a></td>
+              <td class="coverFnHi">58394</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6047">make_sort</a></td>
+              <td class="coverFnHi">58696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6143">prepare_sort_from_pathkeys</a></td>
+              <td class="coverFnHi">61890</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2810">create_modifytable_plan</a></td>
+              <td class="coverFnHi">72402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#7007">make_modifytable</a></td>
+              <td class="coverFnHi">72402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4342">create_nestloop_plan</a></td>
+              <td class="coverFnHi">76762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5927">make_nestloop</a></td>
+              <td class="coverFnHi">76762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1077">create_join_plan</a></td>
+              <td class="coverFnHi">110788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5523">make_indexscan</a></td>
+              <td class="coverFnHi">142306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#3000">create_indexscan_plan</a></td>
+              <td class="coverFnHi">155108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5042">fix_indexorderby_references</a></td>
+              <td class="coverFnHi">155108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5001">fix_indexqual_references</a></td>
+              <td class="coverFnHi">155108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5071">fix_indexqual_clause</a></td>
+              <td class="coverFnHi">168088</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5142">fix_indexqual_operand</a></td>
+              <td class="coverFnHi">168160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2911">create_seqscan_plan</a></td>
+              <td class="coverFnHi">174472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5487">make_seqscan</a></td>
+              <td class="coverFnHi">174472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#1583">create_group_result_plan</a></td>
+              <td class="coverFnHi">189198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#6967">make_result</a></td>
+              <td class="coverFnHi">201480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4914">replace_nestloop_params</a></td>
+              <td class="coverFnHi">304330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#7234">is_projection_capable_plan</a></td>
+              <td class="coverFnHi">311154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#2014">create_projection_plan</a></td>
+              <td class="coverFnHi">321634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#555">create_scan_plan</a></td>
+              <td class="coverFnHi">404314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#333">create_plan</a></td>
+              <td class="coverFnHi">457368</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#998">get_gating_quals</a></td>
+              <td class="coverFnHi">515102</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#861">use_physical_tlist</a></td>
+              <td class="coverFnHi">661776</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#7184">is_projection_capable_path</a></td>
+              <td class="coverFnHi">693784</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5294">order_qual_clauses</a></td>
+              <td class="coverFnHi">780158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#821">build_path_tlist</a></td>
+              <td class="coverFnHi">882638</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#5388">copy_generic_path_info</a></td>
+              <td class="coverFnHi">938904</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#4921">replace_nestloop_params_mutator</a></td>
+              <td class="coverFnHi">1118980</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="createplan.c.gcov.html#384">create_plan_recurse</a></td>
+              <td class="coverFnHi">1238644</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/transam/xlogreader.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/transam</a> - xlogreader.c<span style="font-size: 80%;"> (<a href="xlogreader.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">607</td>
+            <td class="headerCovTableEntry">762</td>
+            <td class="headerCovTableEntryMed">79.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntryHi">96.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="xlogreader.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1662">DecodeXLogRecord</a></td>
+              <td class="coverFnHi">9622410</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1629">DecodeXLogRecordRequiredSpace</a></td>
+              <td class="coverFnHi">19272714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1000">ReadPageInternal</a></td>
+              <td class="coverFnHi">19281146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1595">ResetDecoder</a></td>
+              <td class="coverFnHi">5562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#2056">RestoreBlockImage</a></td>
+              <td class="coverFnHi">74720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1193">ValidXLogRecord</a></td>
+              <td class="coverFnHi">9622412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1127">ValidXLogRecordHeader</a></td>
+              <td class="coverFnHi">9622968</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#207">WALOpenSegmentInit</a></td>
+              <td class="coverFnHi">4428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1503">WALRead</a></td>
+              <td class="coverFnHi">80644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#231">XLogBeginRead</a></td>
+              <td class="coverFnHi">5562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#528">XLogDecodeNextRecord</a></td>
+              <td class="coverFnHi">9653012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1383">XLogFindNextRecord</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#325">XLogNextRecord</a></td>
+              <td class="coverFnHi">9626728</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#966">XLogReadAhead</a></td>
+              <td class="coverFnHi">9653012</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#389">XLogReadRecord</a></td>
+              <td class="coverFnHi">4427232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#438">XLogReadRecordAlloc</a></td>
+              <td class="coverFnHi">9622676</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#106">XLogReaderAllocate</a></td>
+              <td class="coverFnHi">4428</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#161">XLogReaderFree</a></td>
+              <td class="coverFnHi">3626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1113">XLogReaderInvalReadState</a></td>
+              <td class="coverFnHi">8508</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1365">XLogReaderResetError</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#90">XLogReaderSetDecodeBuffer</a></td>
+              <td class="coverFnHi">1312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1224">XLogReaderValidatePageHeader</a></td>
+              <td class="coverFnHi">322456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#2025">XLogRecGetBlockData</a></td>
+              <td class="coverFnHi">6452808</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1971">XLogRecGetBlockTag</a></td>
+              <td class="coverFnHi">6173930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#1997">XLogRecGetBlockTagExtended</a></td>
+              <td class="coverFnHi">11935840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#2167">XLogRecGetFullXid</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#249">XLogReleasePreviousRecord</a></td>
+              <td class="coverFnHi">19253804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#190">allocate_recordbuf</a></td>
+              <td class="coverFnHi">4460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="xlogreader.c.gcov.html#71">report_invalid_record</a></td>
+              <td class="coverFnHi">386</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/parser/parse_clause.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/parser</a> - parse_clause.c<span style="font-size: 80%;"> (<a href="parse_clause.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">986</td>
+            <td class="headerCovTableEntry">1055</td>
+            <td class="headerCovTableEntryHi">93.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntry">41</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="parse_clause.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3529">addTargetToGroupList</a></td>
+              <td class="coverFnHi">14178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3386">addTargetToSortList</a></td>
+              <td class="coverFnHi">81770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3584">assignSortGroupRef</a></td>
+              <td class="coverFnHi">96602</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1658">buildMergedJoinVar</a></td>
+              <td class="coverFnHi">1658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1632">buildVarFromNSColumn</a></td>
+              <td class="coverFnHi">2961430</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1917">checkExprIsVarFree</a></td>
+              <td class="coverFnHi">6856</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1942">checkTargetlistEntrySQL92</a></td>
+              <td class="coverFnHi">52848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#255">extractRemainingColumns</a></td>
+              <td class="coverFnHi">138320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1998">findTargetlistEntrySQL92</a></td>
+              <td class="coverFnHi">84878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2164">findTargetlistEntrySQL99</a></td>
+              <td class="coverFnHi">37084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3652">findWindowClause</a></td>
+              <td class="coverFnHi">564</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2250">flatten_grouping_sets</a></td>
+              <td class="coverFnHi">434626</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1009">getNSItemForSpecialRelationTypes</a></td>
+              <td class="coverFnHi">324360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3169">get_matching_location</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1766">markRelsAsNulledBy</a></td>
+              <td class="coverFnHi">42064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3194">resolve_unique_index_expr</a></td>
+              <td class="coverFnHi">1262</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1807">setNamespaceColumnVisibility</a></td>
+              <td class="coverFnHi">68980</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1824">setNamespaceLateralState</a></td>
+              <td class="coverFnHi">885864</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#180">setTargetTable</a></td>
+              <td class="coverFnHi">73958</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3625">targetIsInSortList</a></td>
+              <td class="coverFnHi">100344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2978">transformDistinctClause</a></td>
+              <td class="coverFnHi">3118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3062">transformDistinctOnClause</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3679">transformFrameOffset</a></td>
+              <td class="coverFnHi">5184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#114">transformFromClause</a></td>
+              <td class="coverFnHi">445198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1052">transformFromClauseItem</a></td>
+              <td class="coverFnHi">443964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2624">transformGroupClause</a></td>
+              <td class="coverFnHi">424632</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2359">transformGroupClauseExpr</a></td>
+              <td class="coverFnHi">8258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2467">transformGroupClauseList</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2520">transformGroupingSet</a></td>
+              <td class="coverFnHi">1014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#367">transformJoinOnClause</a></td>
+              <td class="coverFnHi">67446</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#308">transformJoinUsingClause</a></td>
+              <td class="coverFnHi">1458</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1873">transformLimitClause</a></td>
+              <td class="coverFnHi">868972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#3290">transformOnConflictArbiter</a></td>
+              <td class="coverFnHi">1472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#465">transformRangeFunction</a></td>
+              <td class="coverFnHi">37714</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#407">transformRangeSubselect</a></td>
+              <td class="coverFnHi">12214</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#688">transformRangeTableFunc</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#906">transformRangeTableSample</a></td>
+              <td class="coverFnHi">230</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2724">transformSortClause</a></td>
+              <td class="coverFnHi">474764</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#397">transformTableEntry</a></td>
+              <td class="coverFnHi">318310</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#1846">transformWhereClause</a></td>
+              <td class="coverFnHi">935192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_clause.c.gcov.html#2757">transformWindowDefinitions</a></td>
+              <td class="coverFnHi">421956</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

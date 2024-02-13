@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pg_dump/pg_backup_directory.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pg_dump</a> - pg_backup_directory.c<span style="font-size: 80%;"> (<a href="pg_backup_directory.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">240</td>
+            <td class="headerCovTableEntry">293</td>
+            <td class="headerCovTableEntryMed">81.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntry">27</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="pg_backup_directory.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#713">_EndLOs</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#431">_LoadLOs</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#644">_StartLOs</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#755">_PrepParallelRestore</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#683">_EndLO</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#665">_StartLO</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#623">_ReopenArchive</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#105">InitArchiveFmt_Directory</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#572">_CloseArchive</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#815">_Clone</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#837">_DeClone</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#866">_WorkerJobRestoreDirectory</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#849">_WorkerJobDumpDirectory</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#366">_EndData</a></td>
+              <td class="coverFnHi">212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#319">_StartData</a></td>
+              <td class="coverFnHi">212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#412">_PrintTocData</a></td>
+              <td class="coverFnHi">220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#381">_PrintFileData</a></td>
+              <td class="coverFnHi">226</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#729">setFilePath</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#301">_PrintExtraToc</a></td>
+              <td class="coverFnHi">1742</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#230">_ArchiveEntry</a></td>
+              <td class="coverFnHi">1982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#257">_WriteExtraToc</a></td>
+              <td class="coverFnHi">1982</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#278">_ReadExtraToc</a></td>
+              <td class="coverFnHi">2538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#524">_WriteBuf</a></td>
+              <td class="coverFnHi">22332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#546">_ReadBuf</a></td>
+              <td class="coverFnHi">28562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#343">_WriteData</a></td>
+              <td class="coverFnHi">48412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#485">_WriteByte</a></td>
+              <td class="coverFnHi">185606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_directory.c.gcov.html#511">_ReadByte</a></td>
+              <td class="coverFnHi">237484</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

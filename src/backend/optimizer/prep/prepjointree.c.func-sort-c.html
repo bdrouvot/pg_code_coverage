@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/optimizer/prep/prepjointree.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/optimizer/prep</a> - prepjointree.c<span style="font-size: 80%;"> (<a href="prepjointree.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1097</td>
+            <td class="headerCovTableEntry">1177</td>
+            <td class="headerCovTableEntryHi">93.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntry">43</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="prepjointree.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3081">report_reduced_full_join</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3599">find_dependent_phvs</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3624">find_dependent_phvs_in_jointree</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3865">get_relids_for_join</a></td>
+              <td class="coverFnHi">346</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2510">pullup_replace_vars_subquery</a></td>
+              <td class="coverFnHi">372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3524">remove_result_refs</a></td>
+              <td class="coverFnHi">618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1622">pull_up_simple_values</a></td>
+              <td class="coverFnHi">1208</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1295">pull_up_simple_union_all</a></td>
+              <td class="coverFnHi">1452</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3882">find_jointree_node_for_rel</a></td>
+              <td class="coverFnHi">1688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3732">substitute_phv_relids</a></td>
+              <td class="coverFnHi">1708</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3563">find_dependent_phvs_walker</a></td>
+              <td class="coverFnHi">2294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2008">jointree_contains_lateral_outer_refs</a></td>
+              <td class="coverFnHi">3306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1447">make_setop_translation_list</a></td>
+              <td class="coverFnHi">4220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3760">fix_append_rel_relids</a></td>
+              <td class="coverFnHi">4360</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2537">flatten_simple_union_all</a></td>
+              <td class="coverFnHi">5362</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1960">is_safe_append_member</a></td>
+              <td class="coverFnHi">6618</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1377">pull_up_union_leaf_queries</a></td>
+              <td class="coverFnHi">6654</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1889">is_simple_union_all</a></td>
+              <td class="coverFnHi">8266</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1717">is_simple_values</a></td>
+              <td class="coverFnHi">8616</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1917">is_simple_union_all_recurse</a></td>
+              <td class="coverFnHi">12634</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#955">pull_up_simple_subquery</a></td>
+              <td class="coverFnHi">27562</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2656">reduce_outer_joins</a></td>
+              <td class="coverFnHi">28078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#291">pull_up_sublinks</a></td>
+              <td class="coverFnHi">28476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2083">perform_pullup_replace_vars</a></td>
+              <td class="coverFnHi">28984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1776">pull_up_constant_function</a></td>
+              <td class="coverFnHi">39130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3494">get_result_relid</a></td>
+              <td class="coverFnHi">61846</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#1485">is_simple_subquery</a></td>
+              <td class="coverFnHi">63390</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2191">replace_vars_in_jointree</a></td>
+              <td class="coverFnHi">67056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3804">get_relids_in_jointree</a></td>
+              <td class="coverFnHi">68108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2807">reduce_outer_joins_pass2</a></td>
+              <td class="coverFnHi">72880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#475">pull_up_sublinks_qual_recurse</a></td>
+              <td class="coverFnHi">85314</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2307">pullup_replace_vars_callback</a></td>
+              <td class="coverFnHi">89578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#318">pull_up_sublinks_jointree_recurse</a></td>
+              <td class="coverFnHi">94922</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2297">pullup_replace_vars</a></td>
+              <td class="coverFnHi">120458</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#2729">reduce_outer_joins_pass1</a></td>
+              <td class="coverFnHi">160658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3688">substitute_phv_relids_walker</a></td>
+              <td class="coverFnHi">176052</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3150">remove_useless_result_rtes</a></td>
+              <td class="coverFnHi">218364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#150">transform_MERGE_to_join</a></td>
+              <td class="coverFnHi">460836</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#766">pull_up_subqueries</a></td>
+              <td class="coverFnHi">488392</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#725">preprocess_function_rtes</a></td>
+              <td class="coverFnHi">488398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#233">replace_empty_jointree</a></td>
+              <td class="coverFnHi">491462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#3223">remove_useless_results_recurse</a></td>
+              <td class="coverFnHi">543548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="prepjointree.c.gcov.html#810">pull_up_subqueries_recurse</a></td>
+              <td class="coverFnHi">1175574</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

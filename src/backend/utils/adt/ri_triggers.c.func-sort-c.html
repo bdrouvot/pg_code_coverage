@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/ri_triggers.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - ri_triggers.c<span style="font-size: 80%;"> (<a href="ri_triggers.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">782</td>
+            <td class="headerCovTableEntry">853</td>
+            <td class="headerCovTableEntryHi">91.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntry">42</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="ri_triggers.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#572">RI_FKey_restrict_del</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#609">RI_FKey_restrict_upd</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1946">ri_GenerateQualCollation</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#986">RI_FKey_setnull_upd</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1016">RI_FKey_setdefault_upd</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1001">RI_FKey_setdefault_del</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1661">RI_PartitionRemove_Check</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#971">RI_FKey_setnull_del</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#744">RI_FKey_cascade_del</a></td>
+              <td class="coverFnHi">160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#850">RI_FKey_cascade_upd</a></td>
+              <td class="coverFnHi">204</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1032">ri_set</a></td>
+              <td class="coverFnHi">260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#589">RI_FKey_noaction_upd</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#552">RI_FKey_noaction_del</a></td>
+              <td class="coverFnHi">306</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2680">ri_InitHashTables</a></td>
+              <td class="coverFnHi">412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#441">RI_FKey_check_upd</a></td>
+              <td class="coverFnHi">424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#462">ri_Check_Pk_Match</a></td>
+              <td class="coverFnHi">738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2873">ri_AttributesEqual</a></td>
+              <td class="coverFnHi">746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2915">ri_HashCompareOp</a></td>
+              <td class="coverFnHi">746</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#625">ri_restrict</a></td>
+              <td class="coverFnHi">774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2485">ri_ReportViolation</a></td>
+              <td class="coverFnHi">868</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1366">RI_Initial_Check</a></td>
+              <td class="coverFnHi">950</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1259">RI_FKey_fk_upd_check_required</a></td>
+              <td class="coverFnHi">1020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2201">get_ri_constraint_root</a></td>
+              <td class="coverFnHi">1332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1227">RI_FKey_pk_upd_check_required</a></td>
+              <td class="coverFnHi">1984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2802">ri_KeysEqual</a></td>
+              <td class="coverFnHi">1996</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2768">ri_HashPreparedPlan</a></td>
+              <td class="coverFnHi">3030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2276">ri_PlanCheck</a></td>
+              <td class="coverFnHi">3030</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#425">RI_FKey_check_ins</a></td>
+              <td class="coverFnHi">3680</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#240">RI_FKey_check</a></td>
+              <td class="coverFnHi">4104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1917">ri_GenerateQual</a></td>
+              <td class="coverFnHi">4954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1900">quoteRelationName</a></td>
+              <td class="coverFnHi">5078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2019">ri_CheckTrigger</a></td>
+              <td class="coverFnHi">5370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1987">ri_BuildQueryKey</a></td>
+              <td class="coverFnHi">5840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2716">ri_FetchPreparedPlan</a></td>
+              <td class="coverFnHi">5840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2319">ri_PerformCheck</a></td>
+              <td class="coverFnHi">5840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2456">ri_ExtractValues</a></td>
+              <td class="coverFnHi">6044</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#3008">RI_FKey_trigger_type</a></td>
+              <td class="coverFnHi">7462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2643">ri_NullCheck</a></td>
+              <td class="coverFnHi">7810</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2065">ri_FetchConstraintInfo</a></td>
+              <td class="coverFnHi">9542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2119">ri_LoadConstraintInfo</a></td>
+              <td class="coverFnHi">9542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#1880">quoteOneName</a></td>
+              <td class="coverFnHi">20312</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="ri_triggers.c.gcov.html#2235">InvalidateConstraintCacheCallBack</a></td>
+              <td class="coverFnHi">47810</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

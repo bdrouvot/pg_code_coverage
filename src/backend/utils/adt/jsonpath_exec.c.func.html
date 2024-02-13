@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/utils/adt/jsonpath_exec.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/utils/adt</a> - jsonpath_exec.c<span style="font-size: 80%;"> (<a href="jsonpath_exec.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1261</td>
+            <td class="headerCovTableEntry">1365</td>
+            <td class="headerCovTableEntryHi">92.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">62</td>
+            <td class="headerCovTableEntry">66</td>
+            <td class="headerCovTableEntryHi">93.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="jsonpath_exec.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3218">JsonValueListAppend</a></td>
+              <td class="coverFnHi">260148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3250">JsonValueListGetList</a></td>
+              <td class="coverFnHi">2652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3244">JsonValueListHead</a></td>
+              <td class="coverFnHi">103068</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3259">JsonValueListInitIterator</a></td>
+              <td class="coverFnHi">196092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3238">JsonValueListIsEmpty</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3232">JsonValueListLength</a></td>
+              <td class="coverFnHi">103218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3285">JsonValueListNext</a></td>
+              <td class="coverFnHi">304158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2937">JsonbArraySize</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3306">JsonbInitBinary</a></td>
+              <td class="coverFnHi">195408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3319">JsonbType</a></td>
+              <td class="coverFnHi">274608</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2792">appendBoolResult</a></td>
+              <td class="coverFnHi">102162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2965">binaryCompareStrings</a></td>
+              <td class="coverFnHi">3456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3383">castTimeToTimeTz</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3371">checkTimezoneIsUsedForCast</a></td>
+              <td class="coverFnHi">1332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3395">cmpDateToTimestamp</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3404">cmpDateToTimestampTz</a></td>
+              <td class="coverFnHi">162</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3415">cmpTimestampToTimestampTz</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3428">compareDatetime</a></td>
+              <td class="coverFnHi">3624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3053">compareItems</a></td>
+              <td class="coverFnHi">18756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3149">compareNumeric</a></td>
+              <td class="coverFnHi">1164</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2986">compareStrings</a></td>
+              <td class="coverFnHi">3456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3157">copyJsonbValue</a></td>
+              <td class="coverFnHi">114408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2915">countVariablesFromJsonb</a></td>
+              <td class="coverFnHi">192372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1821">executeAnyItem</a></td>
+              <td class="coverFnHi">2292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1992">executeBinaryArithmExpr</a></td>
+              <td class="coverFnHi">366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1667">executeBoolItem</a></td>
+              <td class="coverFnHi">175140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2954">executeComparison</a></td>
+              <td class="coverFnHi">18756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2226">executeDateTimeMethod</a></td>
+              <td class="coverFnHi">8424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#623">executeItem</a></td>
+              <td class="coverFnHi">579084</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1615">executeItemOptUnwrapResult</a></td>
+              <td class="coverFnHi">193986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1650">executeItemOptUnwrapResultNoThrow</a></td>
+              <td class="coverFnHi">193074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#635">executeItemOptUnwrapTarget</a></td>
+              <td class="coverFnHi">585432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1564">executeItemUnwrapTargetArray</a></td>
+              <td class="coverFnHi">1740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#567">executeJsonPath</a></td>
+              <td class="coverFnHi">192372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2682">executeKeyValueMethod</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2154">executeLikeRegex</a></td>
+              <td class="coverFnHi">396</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1800">executeNestedBoolItem</a></td>
+              <td class="coverFnHi">20652</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1584">executeNextItem</a></td>
+              <td class="coverFnHi">424878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2185">executeNumericItemMethod</a></td>
+              <td class="coverFnHi">258</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#1912">executePredicate</a></td>
+              <td class="coverFnHi">57150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2130">executeStartsWith</a></td>
+              <td class="coverFnHi">174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2063">executeUnaryArithmExpr</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3171">getArrayIndex</a></td>
+              <td class="coverFnHi">318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2820">getJsonPathItem</a></td>
+              <td class="coverFnHi">57756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2853">getJsonPathVariable</a></td>
+              <td class="coverFnHi">5250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#2885">getJsonPathVariableFromJsonb</a></td>
+              <td class="coverFnHi">5250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3343">getScalar</a></td>
+              <td class="coverFnHi">10416</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#315">jsonb_path_exists</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#287">jsonb_path_exists_internal</a></td>
+              <td class="coverFnHi">86040</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#332">jsonb_path_exists_opr</a></td>
+              <td class="coverFnHi">85986</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#321">jsonb_path_exists_tz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#385">jsonb_path_match</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#344">jsonb_path_match_internal</a></td>
+              <td class="coverFnHi">97914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#402">jsonb_path_match_opr</a></td>
+              <td class="coverFnHi">97788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#391">jsonb_path_match_tz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#462">jsonb_path_query</a></td>
+              <td class="coverFnHi">5760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#495">jsonb_path_query_array</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#479">jsonb_path_query_array_internal</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#501">jsonb_path_query_array_tz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#531">jsonb_path_query_first</a></td>
+              <td class="coverFnHi">4374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#512">jsonb_path_query_first_internal</a></td>
+              <td class="coverFnHi">4374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#537">jsonb_path_query_first_tz</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#414">jsonb_path_query_internal</a></td>
+              <td class="coverFnHi">7242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#468">jsonb_path_query_tz</a></td>
+              <td class="coverFnHi">1482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3206">setBaseObject</a></td>
+              <td class="coverFnHi">209844</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="jsonpath_exec.c.gcov.html#3354">wrapItemsInArray</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

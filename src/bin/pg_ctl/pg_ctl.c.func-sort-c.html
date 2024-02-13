@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pg_ctl/pg_ctl.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pg_ctl</a> - pg_ctl.c<span style="font-size: 80%;"> (<a href="pg_ctl.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">458</td>
+            <td class="headerCovTableEntry">698</td>
+            <td class="headerCovTableEntryLo">65.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">28</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntryHi">93.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="pg_ctl.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#847">trap_sigint_during_startup</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#772">unlimit_core_size</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1953">do_advice</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1961">do_help</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#892">do_init</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1255">do_logrotate</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1336">do_status</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1393">do_kill</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#2063">set_sig</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#199">write_stderr</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#744">wait_for_postmaster_promote</a></td>
+              <td class="coverFnHi">68</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1174">do_promote</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1072">do_restart</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1312">postmaster_is_alive</a></td>
+              <td class="coverFnHi">84</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1137">do_reload</a></td>
+              <td class="coverFnHi">184</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#2171">get_control_dbstate</a></td>
+              <td class="coverFnHi">250</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#2035">set_mode</a></td>
+              <td class="coverFnHi">984</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#865">find_other_exec_or_die</a></td>
+              <td class="coverFnHi">1014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#792">read_post_opts</a></td>
+              <td class="coverFnHi">1096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#437">start_postmaster</a></td>
+              <td class="coverFnHi">1096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#590">wait_for_postmaster_start</a></td>
+              <td class="coverFnHi">1096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#921">do_start</a></td>
+              <td class="coverFnHi">1098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#1013">do_stop</a></td>
+              <td class="coverFnHi">1154</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#707">wait_for_postmaster_stop</a></td>
+              <td class="coverFnHi">1234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#2113">adjust_data_dir</a></td>
+              <td class="coverFnHi">2532</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#2190">main</a></td>
+              <td class="coverFnHi">2610</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#407">free_readfile</a></td>
+              <td class="coverFnHi">2816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#311">readfile</a></td>
+              <td class="coverFnHi">2816</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#243">get_pgpid</a></td>
+              <td class="coverFnHi">5662</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_ctl.c.gcov.html#233">print_msg</a></td>
+              <td class="coverFnHi">9732</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

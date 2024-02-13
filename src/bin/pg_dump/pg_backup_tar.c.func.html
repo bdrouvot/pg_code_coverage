@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/bin/pg_dump/pg_backup_tar.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/bin/pg_dump</a> - pg_backup_tar.c<span style="font-size: 80%;"> (<a href="pg_backup_tar.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">360</td>
+            <td class="headerCovTableEntry">430</td>
+            <td class="headerCovTableEntryMed">83.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="pg_backup_tar.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#119">InitArchiveFmt_Tar</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#236">_ArchiveEntry</a></td>
+              <td class="coverFnHi">586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#752">_CloseArchive</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#551">_EndData</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#905">_EndLO</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#919">_EndLOs</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#645">_LoadLOs</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#287">_PrintExtraToc</a></td>
+              <td class="coverFnHi">1140</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#564">_PrintFileData</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#591">_PrintTocData</a></td>
+              <td class="coverFnHi">124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#740">_ReadBuf</a></td>
+              <td class="coverFnHi">6540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#714">_ReadByte</a></td>
+              <td class="coverFnHi">54588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#267">_ReadExtraToc</a></td>
+              <td class="coverFnHi">586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#296">_StartData</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#879">_StartLO</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#862">_StartLOs</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#729">_WriteBuf</a></td>
+              <td class="coverFnHi">6540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#701">_WriteByte</a></td>
+              <td class="coverFnHi">54588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#542">_WriteData</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#256">_WriteExtraToc</a></td>
+              <td class="coverFnHi">586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#840">_scriptOut</a></td>
+              <td class="coverFnHi">3364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#997">_tarAddFile</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#1123">_tarGetHeader</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#1049">_tarPositionTo</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#464">_tarReadRaw</a></td>
+              <td class="coverFnHi">90070</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#1195">_tarWriteHeader</a></td>
+              <td class="coverFnHi">74</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#971">isValidTarHeader</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#400">tarClose</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#304">tarOpen</a></td>
+              <td class="coverFnHi">144</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#937">tarPrintf</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#513">tarRead</a></td>
+              <td class="coverFnHi">61260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="pg_backup_tar.c.gcov.html#531">tarWrite</a></td>
+              <td class="coverFnHi">64626</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

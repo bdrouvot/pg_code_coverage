@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/access/gist/gistutil.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/access/gist</a> - gistutil.c<span style="font-size: 80%;"> (<a href="gistutil.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">278</td>
+            <td class="headerCovTableEntry">312</td>
+            <td class="headerCovTableEntryMed">89.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntry">29</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="gistutil.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#772">GISTInitBuffer</a></td>
+              <td class="coverFnHi">28220</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#1080">GistTranslateStratnum</a></td>
+              <td class="coverFnHi">242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#595">gistCompressValues</a></td>
+              <td class="coverFnHi">1970930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#295">gistDeCompressAtt</a></td>
+              <td class="coverFnHi">3853206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#645">gistFetchAtt</a></td>
+              <td class="coverFnHi">105434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#666">gistFetchTuple</a></td>
+              <td class="coverFnHi">530222</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#574">gistFormTuple</a></td>
+              <td class="coverFnHi">1774786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#1015">gistGetFakeLSN</a></td>
+              <td class="coverFnHi">82</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#280">gistKeyIsEQ</a></td>
+              <td class="coverFnHi">1262504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#154">gistMakeUnionItVec</a></td>
+              <td class="coverFnHi">5502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#232">gistMakeUnionKey</a></td>
+              <td class="coverFnHi">1462016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#823">gistNewBuffer</a></td>
+              <td class="coverFnHi">26388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#887">gistPageRecyclable</a></td>
+              <td class="coverFnHi">2018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#1065">gist_stratnum_identity</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#784">gistcheckpage</a></td>
+              <td class="coverFnHi">2199896</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#373">gistchoose</a></td>
+              <td class="coverFnHi">1244740</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#546">gistdentryinit</a></td>
+              <td class="coverFnHi">54824206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#94">gistextractpage</a></td>
+              <td class="coverFnHi">26434</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#33">gistfillbuffer</a></td>
+              <td class="coverFnHi">1159930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#126">gistfillitupvec</a></td>
+              <td class="coverFnHi">52566</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#78">gistfitpage</a></td>
+              <td class="coverFnHi">53056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#315">gistgetadjusted</a></td>
+              <td class="coverFnHi">1274482</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#756">gistinitpage</a></td>
+              <td class="coverFnHi">30868</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#113">gistjoinvector</a></td>
+              <td class="coverFnHi">26150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#58">gistnospace</a></td>
+              <td class="coverFnHi">1717862</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#911">gistoptions</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#723">gistpenalty</a></td>
+              <td class="coverFnHi">45891056</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#932">gistproperty</a></td>
+              <td class="coverFnHi">468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="gistutil.c.gcov.html#218">gistunion</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

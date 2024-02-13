@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/interfaces/libpq/fe-connect.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/interfaces/libpq</a> - fe-connect.c<span style="font-size: 80%;"> (<a href="fe-connect.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1447</td>
+            <td class="headerCovTableEntry">2536</td>
+            <td class="headerCovTableEntryLo">57.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">83</td>
+            <td class="headerCovTableEntry">100</td>
+            <td class="headerCovTableEntryMed">83.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="fe-connect.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6873">PQbackendPID</a></td>
+              <td class="coverFnHi">1302</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6927">PQclientEncoding</a></td>
+              <td class="coverFnHi">327286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1769">PQconndefaults</a></td>
+              <td class="coverFnHi">134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2486">PQconnectPoll</a></td>
+              <td class="coverFnHi">62456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#850">PQconnectStart</a></td>
+              <td class="coverFnHi">1656</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#769">PQconnectStartParams</a></td>
+              <td class="coverFnHi">19424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#722">PQconnectdb</a></td>
+              <td class="coverFnHi">1614</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#667">PQconnectdbParams</a></td>
+              <td class="coverFnHi">17182</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6890">PQconnectionNeedsPassword</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6916">PQconnectionUsedGSSAPI</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6905">PQconnectionUsedPassword</a></td>
+              <td class="coverFnHi">512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6628">PQconninfo</a></td>
+              <td class="coverFnHi">520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6672">PQconninfoFree</a></td>
+              <td class="coverFnHi">57336</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5420">PQconninfoParse</a></td>
+              <td class="coverFnHi">1858</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6685">PQdb</a></td>
+              <td class="coverFnHi">31432</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6839">PQerrorMessage</a></td>
+              <td class="coverFnHi">908</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4560">PQfinish</a></td>
+              <td class="coverFnHi">20760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6718">PQhost</a></td>
+              <td class="coverFnHi">14292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6741">PQhostaddr</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6778">PQoptions</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6804">PQparameterStatus</a></td>
+              <td class="coverFnHi">598844</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6701">PQpass</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#738">PQping</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#685">PQpingParams</a></td>
+              <td class="coverFnHi">768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6881">PQpipelineStatus</a></td>
+              <td class="coverFnHi">38978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6754">PQport</a></td>
+              <td class="coverFnHi">14292</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6819">PQprotocolVersion</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7442">PQregisterThreadLock</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4574">PQreset</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4626">PQresetPoll</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4607">PQresetStart</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6829">PQserverVersion</a></td>
+              <td class="coverFnHi">39934</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6935">PQsetClientEncoding</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6989">PQsetErrorContextVisibility</a></td>
+              <td class="coverFnHi">14068</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6977">PQsetErrorVerbosity</a></td>
+              <td class="coverFnHi">14206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7018">PQsetNoticeProcessor</a></td>
+              <td class="coverFnHi">15424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7001">PQsetNoticeReceiver</a></td>
+              <td class="coverFnHi">252</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1807">PQsetdbLogin</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6865">PQsocket</a></td>
+              <td class="coverFnHi">352224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6786">PQstatus</a></td>
+              <td class="coverFnHi">402956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6794">PQtransactionStatus</a></td>
+              <td class="coverFnHi">319542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6770">PQtty</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6693">PQuser</a></td>
+              <td class="coverFnHi">14050</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2037">connectFailureMessage</a></td>
+              <td class="coverFnHi">484</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1922">connectNoDelay</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#936">connectOptions1</a></td>
+              <td class="coverFnHi">1656</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5869">conninfo_add_defaults</a></td>
+              <td class="coverFnHi">21210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5711">conninfo_array_parse</a></td>
+              <td class="coverFnHi">19424</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6610">conninfo_find</a></td>
+              <td class="coverFnHi">901720</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6520">conninfo_getval</a></td>
+              <td class="coverFnHi">843174</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5442">conninfo_init</a></td>
+              <td class="coverFnHi">37016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5535">conninfo_parse</a></td>
+              <td class="coverFnHi">16820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6546">conninfo_storeval</a></td>
+              <td class="coverFnHi">58546</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6431">conninfo_uri_decode</a></td>
+              <td class="coverFnHi">254</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6004">conninfo_uri_parse</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6057">conninfo_uri_parse_options</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6298">conninfo_uri_parse_params</a></td>
+              <td class="coverFnHi">48</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#973">count_comma_separated_elems</a></td>
+              <td class="coverFnHi">21076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7056">defaultNoticeProcessor</a></td>
+              <td class="coverFnHi">126</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7041">defaultNoticeReceiver</a></td>
+              <td class="coverFnHi">21548</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7425">default_threadlock</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1981">emitHostIdentityInfo</a></td>
+              <td class="coverFnHi">21094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#896">fillPGconn</a></td>
+              <td class="coverFnHi">21076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4332">freePGconn</a></td>
+              <td class="coverFnHi">20760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1948">getHostaddr</a></td>
+              <td class="coverFnHi">21094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#6499">get_hexdigit</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4169">internal_ping</a></td>
+              <td class="coverFnHi">768</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4720">ldapServiceLookup</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1032">libpq_prng_init</a></td>
+              <td class="coverFnHi">110</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5242">parseServiceFile</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5174">parseServiceInfo</a></td>
+              <td class="coverFnHi">21210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#997">parse_comma_separated_list</a></td>
+              <td class="coverFnHi">42826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5481">parse_connection_string</a></td>
+              <td class="coverFnHi">16938</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7105">passwordFromFile</a></td>
+              <td class="coverFnHi">21134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7245">pgpassfileWarning</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4521">pqClosePGconn</a></td>
+              <td class="coverFnHi">20760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2350">pqConnectDBComplete</a></td>
+              <td class="coverFnHi">19216</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2280">pqConnectDBStart</a></td>
+              <td class="coverFnHi">21060</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#1059">pqConnectOptions2</a></td>
+              <td class="coverFnHi">21076</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#458">pqDropConnection</a></td>
+              <td class="coverFnHi">42980</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#571">pqDropServerData</a></td>
+              <td class="coverFnHi">42338</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#545">pqFreeCommandQueue</a></td>
+              <td class="coverFnHi">85960</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7347">pqGetHomeDirectory</a></td>
+              <td class="coverFnHi">20560</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4233">pqMakeEmptyPGconn</a></td>
+              <td class="coverFnHi">21080</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4668">pqPacketSend</a></td>
+              <td class="coverFnHi">20698</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7374">pqParseIntParam</a></td>
+              <td class="coverFnHi">21104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4412">pqReleaseConnHosts</a></td>
+              <td class="coverFnHi">20760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7068">pwdfMatchesString</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5524">recognized_connection_string</a></td>
+              <td class="coverFnHi">17744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4480">release_conn_addrinfo</a></td>
+              <td class="coverFnHi">62014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4494">sendTerminateConn</a></td>
+              <td class="coverFnHi">20790</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2144">setKeepalivesCount</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2075">setKeepalivesIdle</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2109">setKeepalivesInterval</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2241">setTCPUserTimeout</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7294">sslVerifyProtocolRange</a></td>
+              <td class="coverFnHi">21062</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#7268">sslVerifyProtocolVersion</a></td>
+              <td class="coverFnHi">84248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#4441">store_conn_addrinfo</a></td>
+              <td class="coverFnHi">21094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#5501">uri_prefix_length</a></td>
+              <td class="coverFnHi">34800</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="fe-connect.c.gcov.html#2057">useKeepalives</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

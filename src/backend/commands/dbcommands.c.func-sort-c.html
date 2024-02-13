@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/commands/dbcommands.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/commands</a> - dbcommands.c<span style="font-size: 80%;"> (<a href="dbcommands.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">863</td>
+            <td class="headerCovTableEntry">1067</td>
+            <td class="headerCovTableEntryMed">80.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">26</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntryMed">86.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="dbcommands.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#1805">RenameDatabase</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#1544">createdb_failure_callback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3010">errdetail_busy_db</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2223">movedb_failure_callback</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2436">AlterDatabaseRefreshColl</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#1903">movedb</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2265">AlterDatabase</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3154">recovery_create_dbdir</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2545">AlterDatabaseOwner</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2877">remove_dbtablespaces</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2655">pg_database_collation_actual_version</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3183">dbase_redo</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2240">DropDatabase</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#1583">dropdb</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#549">CreateDatabaseUsingFileCopy</a></td>
+              <td class="coverFnHi">134</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#147">CreateDatabaseUsingWalLog</a></td>
+              <td class="coverFnHi">372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#249">ScanSourceDatabasePgClass</a></td>
+              <td class="coverFnHi">372</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#455">CreateDirAndVersionFile</a></td>
+              <td class="coverFnHi">408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2967">check_db_file_conflict</a></td>
+              <td class="coverFnHi">506</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3121">database_is_invalid_oid</a></td>
+              <td class="coverFnHi">522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#669">createdb</a></td>
+              <td class="coverFnHi">530</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#1506">check_encoding_locale_matches</a></td>
+              <td class="coverFnHi">542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2852">have_createdb_privilege</a></td>
+              <td class="coverFnHi">582</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2694">get_db_info</a></td>
+              <td class="coverFnHi">624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#2519">AlterDatabaseSet</a></td>
+              <td class="coverFnHi">1008</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3040">get_database_oid</a></td>
+              <td class="coverFnHi">2054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#327">ScanSourceDatabasePgClassPage</a></td>
+              <td class="coverFnHi">5248</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3087">get_database_name</a></td>
+              <td class="coverFnHi">23046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#3111">database_is_invalid_form</a></td>
+              <td class="coverFnHi">24972</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="dbcommands.c.gcov.html#390">ScanSourceDatabasePgClassTuple</a></td>
+              <td class="coverFnHi">154406</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

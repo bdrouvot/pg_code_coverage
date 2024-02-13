@@ -1,0 +1,888 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/btree_gin/btree_gin.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/btree_gin</a> - btree_gin.c<span style="font-size: 80%;"> (<a href="btree_gin.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">179</td>
+            <td class="headerCovTableEntry">192</td>
+            <td class="headerCovTableEntryHi">93.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">202</td>
+            <td class="headerCovTableEntry">202</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="btree_gin.c.func-sort-c.html"><img src="../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#18">Pg_magic_func</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#107">gin_btree_compare_prefix</a></td>
+              <td class="coverFnHi">878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#173">gin_btree_consistent</a></td>
+              <td class="coverFnHi">774</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#54">gin_btree_extract_query</a></td>
+              <td class="coverFnHi">648</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#31">gin_btree_extract_value</a></td>
+              <td class="coverFnHi">200352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">gin_compare_prefix_anyenum</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">gin_compare_prefix_bit</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">gin_compare_prefix_bool</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">gin_compare_prefix_bpchar</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">gin_compare_prefix_bytea</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">gin_compare_prefix_char</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">gin_compare_prefix_cidr</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">gin_compare_prefix_date</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">gin_compare_prefix_float4</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">gin_compare_prefix_float8</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">gin_compare_prefix_inet</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">gin_compare_prefix_int2</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">gin_compare_prefix_int4</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">gin_compare_prefix_int8</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">gin_compare_prefix_interval</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">gin_compare_prefix_macaddr</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">gin_compare_prefix_macaddr8</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">gin_compare_prefix_money</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">gin_compare_prefix_name</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">gin_compare_prefix_numeric</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">gin_compare_prefix_oid</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">gin_compare_prefix_text</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">gin_compare_prefix_time</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">gin_compare_prefix_timestamp</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">gin_compare_prefix_timestamptz</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">gin_compare_prefix_timetz</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">gin_compare_prefix_uuid</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">gin_compare_prefix_varbit</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#446">gin_enum_cmp</a></td>
+              <td class="coverFnHi">400104</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">gin_extract_query_anyenum</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">gin_extract_query_bit</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">gin_extract_query_bool</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">gin_extract_query_bpchar</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">gin_extract_query_bytea</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">gin_extract_query_char</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">gin_extract_query_cidr</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">gin_extract_query_date</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">gin_extract_query_float4</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">gin_extract_query_float8</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">gin_extract_query_inet</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">gin_extract_query_int2</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">gin_extract_query_int4</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">gin_extract_query_int8</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">gin_extract_query_interval</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">gin_extract_query_macaddr</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">gin_extract_query_macaddr8</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">gin_extract_query_money</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">gin_extract_query_name</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">gin_extract_query_numeric</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">gin_extract_query_oid</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">gin_extract_query_text</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">gin_extract_query_time</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">gin_extract_query_timestamp</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">gin_extract_query_timestamptz</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">gin_extract_query_timetz</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">gin_extract_query_uuid</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">gin_extract_query_varbit</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">gin_extract_value_anyenum</a></td>
+              <td class="coverFnHi">200016</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">gin_extract_value_bit</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">gin_extract_value_bool</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">gin_extract_value_bpchar</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">gin_extract_value_bytea</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">gin_extract_value_char</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">gin_extract_value_cidr</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">gin_extract_value_date</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">gin_extract_value_float4</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">gin_extract_value_float8</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">gin_extract_value_inet</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">gin_extract_value_int2</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">gin_extract_value_int4</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">gin_extract_value_int8</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">gin_extract_value_interval</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">gin_extract_value_macaddr</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">gin_extract_value_macaddr8</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">gin_extract_value_money</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">gin_extract_value_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">gin_extract_value_numeric</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">gin_extract_value_oid</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">gin_extract_value_text</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">gin_extract_value_time</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">gin_extract_value_timestamp</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">gin_extract_value_timestamptz</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">gin_extract_value_timetz</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">gin_extract_value_uuid</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">gin_extract_value_varbit</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#399">gin_numeric_cmp</a></td>
+              <td class="coverFnHi">86</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#365">leftmostvalue_bit</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#505">leftmostvalue_bool</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#355">leftmostvalue_char</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#295">leftmostvalue_date</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#473">leftmostvalue_enum</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#232">leftmostvalue_float4</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#240">leftmostvalue_float8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#335">leftmostvalue_inet</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#208">leftmostvalue_int2</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#216">leftmostvalue_int4</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#224">leftmostvalue_int8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#303">leftmostvalue_interval</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#315">leftmostvalue_macaddr</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#325">leftmostvalue_macaddr8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#248">leftmostvalue_money</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#495">leftmostvalue_name</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#424">leftmostvalue_numeric</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#256">leftmostvalue_oid</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#345">leftmostvalue_text</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#274">leftmostvalue_time</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#264">leftmostvalue_timestamp</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#282">leftmostvalue_timetz</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#481">leftmostvalue_uuid</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#376">leftmostvalue_varbit</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#171">pg_finfo_gin_btree_consistent</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">pg_finfo_gin_compare_prefix_anyenum</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">pg_finfo_gin_compare_prefix_bit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">pg_finfo_gin_compare_prefix_bool</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">pg_finfo_gin_compare_prefix_bpchar</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">pg_finfo_gin_compare_prefix_bytea</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">pg_finfo_gin_compare_prefix_char</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">pg_finfo_gin_compare_prefix_cidr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">pg_finfo_gin_compare_prefix_date</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">pg_finfo_gin_compare_prefix_float4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">pg_finfo_gin_compare_prefix_float8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">pg_finfo_gin_compare_prefix_inet</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">pg_finfo_gin_compare_prefix_int2</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">pg_finfo_gin_compare_prefix_int4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">pg_finfo_gin_compare_prefix_int8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">pg_finfo_gin_compare_prefix_interval</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">pg_finfo_gin_compare_prefix_macaddr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">pg_finfo_gin_compare_prefix_macaddr8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">pg_finfo_gin_compare_prefix_money</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">pg_finfo_gin_compare_prefix_name</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">pg_finfo_gin_compare_prefix_numeric</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">pg_finfo_gin_compare_prefix_oid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">pg_finfo_gin_compare_prefix_text</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">pg_finfo_gin_compare_prefix_time</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">pg_finfo_gin_compare_prefix_timestamp</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">pg_finfo_gin_compare_prefix_timestamptz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">pg_finfo_gin_compare_prefix_timetz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">pg_finfo_gin_compare_prefix_uuid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">pg_finfo_gin_compare_prefix_varbit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#443">pg_finfo_gin_enum_cmp</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">pg_finfo_gin_extract_query_anyenum</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">pg_finfo_gin_extract_query_bit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">pg_finfo_gin_extract_query_bool</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">pg_finfo_gin_extract_query_bpchar</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">pg_finfo_gin_extract_query_bytea</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">pg_finfo_gin_extract_query_char</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">pg_finfo_gin_extract_query_cidr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">pg_finfo_gin_extract_query_date</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">pg_finfo_gin_extract_query_float4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">pg_finfo_gin_extract_query_float8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">pg_finfo_gin_extract_query_inet</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">pg_finfo_gin_extract_query_int2</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">pg_finfo_gin_extract_query_int4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">pg_finfo_gin_extract_query_int8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">pg_finfo_gin_extract_query_interval</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">pg_finfo_gin_extract_query_macaddr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">pg_finfo_gin_extract_query_macaddr8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">pg_finfo_gin_extract_query_money</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">pg_finfo_gin_extract_query_name</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">pg_finfo_gin_extract_query_numeric</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">pg_finfo_gin_extract_query_oid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">pg_finfo_gin_extract_query_text</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">pg_finfo_gin_extract_query_time</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">pg_finfo_gin_extract_query_timestamp</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">pg_finfo_gin_extract_query_timestamptz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">pg_finfo_gin_extract_query_timetz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">pg_finfo_gin_extract_query_uuid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">pg_finfo_gin_extract_query_varbit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#478">pg_finfo_gin_extract_value_anyenum</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#373">pg_finfo_gin_extract_value_bit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#510">pg_finfo_gin_extract_value_bool</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#352">pg_finfo_gin_extract_value_bpchar</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#362">pg_finfo_gin_extract_value_bytea</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#360">pg_finfo_gin_extract_value_char</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#342">pg_finfo_gin_extract_value_cidr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#300">pg_finfo_gin_extract_value_date</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#237">pg_finfo_gin_extract_value_float4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#245">pg_finfo_gin_extract_value_float8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#340">pg_finfo_gin_extract_value_inet</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#213">pg_finfo_gin_extract_value_int2</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#221">pg_finfo_gin_extract_value_int4</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#229">pg_finfo_gin_extract_value_int8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#312">pg_finfo_gin_extract_value_interval</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#322">pg_finfo_gin_extract_value_macaddr</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#332">pg_finfo_gin_extract_value_macaddr8</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#253">pg_finfo_gin_extract_value_money</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#502">pg_finfo_gin_extract_value_name</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#429">pg_finfo_gin_extract_value_numeric</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#261">pg_finfo_gin_extract_value_oid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#350">pg_finfo_gin_extract_value_text</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#279">pg_finfo_gin_extract_value_time</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#269">pg_finfo_gin_extract_value_timestamp</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#271">pg_finfo_gin_extract_value_timestamptz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#292">pg_finfo_gin_extract_value_timetz</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#492">pg_finfo_gin_extract_value_uuid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#384">pg_finfo_gin_extract_value_varbit</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_gin.c.gcov.html#396">pg_finfo_gin_numeric_cmp</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

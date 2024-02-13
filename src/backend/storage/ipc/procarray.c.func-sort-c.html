@@ -1,0 +1,388 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/ipc/procarray.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/ipc</a> - procarray.c<span style="font-size: 80%;"> (<a href="procarray.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1210</td>
+            <td class="headerCovTableEntry">1404</td>
+            <td class="headerCovTableEntryMed">86.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">68</td>
+            <td class="headerCovTableEntry">77</td>
+            <td class="headerCovTableEntryMed">88.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="procarray.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3539">CountDBConnections</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3610">CountUserBackends</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4198">GlobalVisTestNonRemovableFullHorizon</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4209">GlobalVisTestNonRemovableHorizon</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4887">KnownAssignedXidExists</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#5026">KnownAssignedXidsGet</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#5169">KnownAssignedXidsReset</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3456">MinimumActiveBackends</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1619">TransactionIdIsActive</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3738">TerminateOtherDBBackends</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3401">CancelVirtualTransaction</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3201">IsBackendPid</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3407">SignalVirtualTransaction</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4237">GlobalVisCheckRemovableXid</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3057">HaveVirtualXIDsDelayingChkpt</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3570">CancelDBBackends</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3509">CountDBBackends</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2521">ProcArrayInstallImportedXmin</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2032">GetReplicationHorizons</a></td>
+              <td class="coverFnHi">40</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1303">ProcArrayApplyXidAssignment</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3875">ProcArrayGetReplicationSlotXmin</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3166">BackendXidGetPid</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4435">ExpireAllKnownAssignedTransactionIds</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1020">ProcArrayInitRecovery</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#5131">KnownAssignedXidsDisplay</a></td>
+              <td class="coverFnHi">152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#5096">KnownAssignedXidsGetOldestXmin</a></td>
+              <td class="coverFnHi">320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4223">GlobalVisCheckRemovableFullXid</a></td>
+              <td class="coverFnHi">334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4455">ExpireOldKnownAssignedTransactionIds</a></td>
+              <td class="coverFnHi">406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1051">ProcArrayApplyRecoveryInfo</a></td>
+              <td class="coverFnHi">406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2848">GetOldestActiveTransactionId</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4948">KnownAssignedXidsRemovePreceding</a></td>
+              <td class="coverFnHi">554</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#790">ProcArrayGroupClearXid</a></td>
+              <td class="coverFnHi">574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3660">CountOtherDBBackends</a></td>
+              <td class="coverFnHi">576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3234">GetCurrentVirtualXIDs</a></td>
+              <td class="coverFnHi">686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#904">ProcArrayClearTransaction</a></td>
+              <td class="coverFnHi">762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2913">GetOldestSafeDecodingTransactionId</a></td>
+              <td class="coverFnHi">1086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3898">XidCacheRemoveRunningXids</a></td>
+              <td class="coverFnHi">1274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2673">GetRunningTransactionData</a></td>
+              <td class="coverFnHi">1350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2019">GetOldestTransactionIdConsideredRunning</a></td>
+              <td class="coverFnHi">1422</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#417">CreateSharedProcArray</a></td>
+              <td class="coverFnHi">1522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#5040">KnownAssignedXidsGetAndSetXmin</a></td>
+              <td class="coverFnHi">1834</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3011">GetVirtualXIDsDelayingChkpt</a></td>
+              <td class="coverFnHi">2820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#375">ProcArrayShmemSize</a></td>
+              <td class="coverFnHi">2854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2600">ProcArrayInstallRestoredXmin</a></td>
+              <td class="coverFnHi">2924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3850">ProcArraySetReplicationSlotXmin</a></td>
+              <td class="coverFnHi">3506</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3106">BackendPidGetProc</a></td>
+              <td class="coverFnHi">9142</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3129">BackendPidGetProcWithLock</a></td>
+              <td class="coverFnHi">11902</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#3327">GetConflictingVirtualXIDs</a></td>
+              <td class="coverFnHi">17196</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4477">KnownAssignedTransactionIdsIdleMaintenance</a></td>
+              <td class="coverFnHi">24804</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#563">ProcArrayRemove</a></td>
+              <td class="coverFnHi">24900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#467">ProcArrayAdd</a></td>
+              <td class="coverFnHi">24954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4409">ExpireTreeKnownAssignedTransactionIds</a></td>
+              <td class="coverFnHi">37600</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4926">KnownAssignedXidsRemoveTree</a></td>
+              <td class="coverFnHi">37642</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#986">MaintainLatestCompletedXidRecovery</a></td>
+              <td class="coverFnHi">37748</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4695">KnownAssignedXidsAdd</a></td>
+              <td class="coverFnHi">39954</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4900">KnownAssignedXidsRemove</a></td>
+              <td class="coverFnHi">42924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4799">KnownAssignedXidsSearch</a></td>
+              <td class="coverFnHi">42924</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2065">GetMaxSnapshotSubxidCount</a></td>
+              <td class="coverFnHi">52156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2054">GetMaxSnapshotXidCount</a></td>
+              <td class="coverFnHi">52474</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4578">KnownAssignedXidsCompress</a></td>
+              <td class="coverFnHi">62852</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1990">GetOldestNonRemovableTransactionId</a></td>
+              <td class="coverFnHi">64684</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4112">GlobalVisUpdate</a></td>
+              <td class="coverFnHi">90064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1720">ComputeXidHorizons</a></td>
+              <td class="coverFnHi">156210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4073">GlobalVisUpdateApply</a></td>
+              <td class="coverFnHi">156210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#729">ProcArrayEndTransactionInternal</a></td>
+              <td class="coverFnHi">203024</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#964">MaintainLatestCompletedXid</a></td>
+              <td class="coverFnHi">205066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#665">ProcArrayEndTransaction</a></td>
+              <td class="coverFnHi">518670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4054">GlobalVisTestShouldUpdate</a></td>
+              <td class="coverFnHi">760186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2162">GetSnapshotData</a></td>
+              <td class="coverFnHi">3027378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#2080">GetSnapshotDataReuse</a></td>
+              <td class="coverFnHi">3027378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4340">RecordKnownAssignedTransactionIds</a></td>
+              <td class="coverFnHi">4660716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1387">TransactionIdIsInProgress</a></td>
+              <td class="coverFnHi">10322454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4171">GlobalVisTestIsRemovableXid</a></td>
+              <td class="coverFnHi">18517048</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4129">GlobalVisTestIsRemovableFullXid</a></td>
+              <td class="coverFnHi">18517382</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4258">FullXidRelativeTo</a></td>
+              <td class="coverFnHi">21455894</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#4014">GlobalVisTestFor</a></td>
+              <td class="coverFnHi">26886232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="procarray.c.gcov.html#1956">GlobalVisHorizonKindForRel</a></td>
+              <td class="coverFnHi">26950916</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/btree_gist/btree_utils_var.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/btree_gist</a> - btree_utils_var.c<span style="font-size: 80%;"> (<a href="btree_utils_var.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">268</td>
+            <td class="headerCovTableEntry">278</td>
+            <td class="headerCovTableEntryHi">96.4 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntry">20</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="btree_utils_var.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#303">gbt_var_fetch</a></td>
+              <td class="coverFnHi">12</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#29">pg_finfo_gbt_var_decompress</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#30">pg_finfo_gbt_var_fetch</a></td>
+              <td class="coverFnHi">18</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#456">gbt_var_picksplit</a></td>
+              <td class="coverFnHi">112</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#189">gbt_var_node_pf_match</a></td>
+              <td class="coverFnHi">352</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#202">gbt_var_node_truncate</a></td>
+              <td class="coverFnHi">3192</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#359">gbt_var_same</a></td>
+              <td class="coverFnHi">13520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#320">gbt_var_union</a></td>
+              <td class="coverFnHi">13622</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#72">gbt_var_key_from_datum</a></td>
+              <td class="coverFnHi">16524</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#279">gbt_var_compress</a></td>
+              <td class="coverFnHi">16812</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#167">gbt_bytea_pf_match</a></td>
+              <td class="coverFnHi">19234</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#376">gbt_var_penalty</a></td>
+              <td class="coverFnHi">28472</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#119">gbt_var_node_cp_len</a></td>
+              <td class="coverFnHi">41328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#552">gbt_var_consistent</a></td>
+              <td class="coverFnHi">52114</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#88">gbt_var_key_copy</a></td>
+              <td class="coverFnHi">91490</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#231">gbt_var_bin_union</a></td>
+              <td class="coverFnHi">96480</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#441">gbt_vsrt_cmp</a></td>
+              <td class="coverFnHi">107732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#104">gbt_var_leaf2node</a></td>
+              <td class="coverFnHi">124820</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#34">gbt_var_decompress</a></td>
+              <td class="coverFnHi">169116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="btree_utils_var.c.gcov.html#55">gbt_var_key_readable</a></td>
+              <td class="coverFnHi">681628</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

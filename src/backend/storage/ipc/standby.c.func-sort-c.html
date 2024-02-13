@@ -1,0 +1,204 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/ipc/standby.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/ipc</a> - standby.c<span style="font-size: 80%;"> (<a href="standby.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">349</td>
+            <td class="headerCovTableEntry">390</td>
+            <td class="headerCovTableEntryMed">89.5 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">30</td>
+            <td class="headerCovTableEntry">31</td>
+            <td class="headerCovTableEntryHi">96.8 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="standby.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#510">ResolveRecoveryConflictWithSnapshotFullXid</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#903">CheckRecoveryConflictDeadlock</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#537">ResolveRecoveryConflictWithTablespace</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#952">StandbyLockTimeoutHandler</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#943">StandbyTimeoutHandler</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#621">ResolveRecoveryConflictWithLock</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#875">SendRecoveryConflictWithBufferPin</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#934">StandbyDeadLockHandler</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#272">LogRecoveryConflict</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#567">ResolveRecoveryConflictWithDatabase</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1483">get_recovery_conflict_desc</a></td>
+              <td class="coverFnHi">20</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#791">ResolveRecoveryConflictWithBufferPin</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#232">WaitExceedsMaxStandbyDelay</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#199">GetStandbyLimitTime</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#94">InitRecoveryTransactionEnvironment</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1104">StandbyReleaseAllLocks</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#159">ShutdownRecoveryTransactionEnvironment</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1125">StandbyReleaseOldLocks</a></td>
+              <td class="coverFnHi">406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1344">LogCurrentRunningXacts</a></td>
+              <td class="coverFnHi">1350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1284">LogStandbySnapshot</a></td>
+              <td class="coverFnHi">1350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1461">LogStandbyInvalidations</a></td>
+              <td class="coverFnHi">11674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#358">ResolveRecoveryConflictWithVirtualXIDs</a></td>
+              <td class="coverFnHi">17198</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1033">StandbyReleaseXidEntryLocks</a></td>
+              <td class="coverFnHi">18238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1090">StandbyReleaseLockTree</a></td>
+              <td class="coverFnHi">18586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1066">StandbyReleaseLocks</a></td>
+              <td class="coverFnHi">19574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#466">ResolveRecoveryConflictWithSnapshot</a></td>
+              <td class="coverFnHi">21412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#984">StandbyAcquireAccessExclusiveLock</a></td>
+              <td class="coverFnHi">40078</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1158">standby_redo</a></td>
+              <td class="coverFnHi">41682</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1422">LogAccessExclusiveLock</a></td>
+              <td class="coverFnHi">148332</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1404">LogAccessExclusiveLocks</a></td>
+              <td class="coverFnHi">148378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="standby.c.gcov.html#1439">LogAccessExclusiveLockPrepare</a></td>
+              <td class="coverFnHi">148756</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

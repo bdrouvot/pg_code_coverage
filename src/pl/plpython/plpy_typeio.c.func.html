@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/pl/plpython/plpy_typeio.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/pl/plpython</a> - plpy_typeio.c<span style="font-size: 80%;"> (<a href="plpy_typeio.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">542</td>
+            <td class="headerCovTableEntry">558</td>
+            <td class="headerCovTableEntryHi">97.1 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntry">36</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="plpy_typeio.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#548">PLyBool_FromBool</a></td>
+              <td class="coverFnHi">242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#626">PLyBytes_FromBytea</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#568">PLyDecimal_FromNumeric</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#779">PLyDict_FromComposite</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#813">PLyDict_FromTuple</a></td>
+              <td class="coverFnHi">486</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#556">PLyFloat_FromFloat4</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#562">PLyFloat_FromFloat8</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1482">PLyGenericObject_ToComposite</a></td>
+              <td class="coverFnHi">50</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#665">PLyList_FromArray</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#705">PLyList_FromArray_recurse</a></td>
+              <td class="coverFnHi">96</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#602">PLyLong_FromInt16</a></td>
+              <td class="coverFnHi">14</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#608">PLyLong_FromInt32</a></td>
+              <td class="coverFnHi">792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#614">PLyLong_FromInt64</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#620">PLyLong_FromOid</a></td>
+              <td class="coverFnHi">4</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1340">PLyMapping_ToComposite</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1022">PLyObject_AsString</a></td>
+              <td class="coverFnHi">3158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#653">PLyObject_FromTransform</a></td>
+              <td class="coverFnHi">70</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#877">PLyObject_ToBool</a></td>
+              <td class="coverFnHi">46</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#895">PLyObject_ToBytea</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#939">PLyObject_ToComposite</a></td>
+              <td class="coverFnHi">578</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1097">PLyObject_ToDomain</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1072">PLyObject_ToScalar</a></td>
+              <td class="coverFnHi">3194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1114">PLyObject_ToTransform</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1131">PLySequence_ToArray</a></td>
+              <td class="coverFnHi">116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1191">PLySequence_ToArray_recurse</a></td>
+              <td class="coverFnHi">510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1405">PLySequence_ToComposite</a></td>
+              <td class="coverFnHi">264</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#640">PLyUnicode_FromScalar</a></td>
+              <td class="coverFnHi">964</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#1279">PLyUnicode_ToComposite</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#79">PLy_input_convert</a></td>
+              <td class="coverFnHi">1170</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#132">PLy_input_from_tuple</a></td>
+              <td class="coverFnHi">388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#416">PLy_input_setup_func</a></td>
+              <td class="coverFnHi">914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#163">PLy_input_setup_tuple</a></td>
+              <td class="coverFnHi">370</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#118">PLy_output_convert</a></td>
+              <td class="coverFnHi">1132</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#294">PLy_output_setup_func</a></td>
+              <td class="coverFnHi">940</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#259">PLy_output_setup_record</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="plpy_typeio.c.gcov.html#213">PLy_output_setup_tuple</a></td>
+              <td class="coverFnHi">302</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

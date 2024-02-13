@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/lmgr/proc.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/lmgr</a> - proc.c<span style="font-size: 80%;"> (<a href="proc.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">515</td>
+            <td class="headerCovTableEntry">562</td>
+            <td class="headerCovTableEntryHi">91.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntry">25</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="proc.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#998">AuxiliaryPidGetProc</a></td>
+              <td class="coverFnHi">3758</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#950">AuxiliaryProcKill</a></td>
+              <td class="coverFnHi">3538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1857">BecomeLockGroupLeader</a></td>
+              <td class="coverFnHi">1064</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1887">BecomeLockGroupMember</a></td>
+              <td class="coverFnHi">2592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1718">CheckDeadLock</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1804">CheckDeadLockAlert</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#664">GetStartupBufferPinWaitBufId</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#680">HaveNFreeProcs</a></td>
+              <td class="coverFnHi">200</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#517">InitAuxiliaryProcess</a></td>
+              <td class="coverFnHi">3538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#155">InitProcGlobal</a></td>
+              <td class="coverFnHi">1522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#295">InitProcess</a></td>
+              <td class="coverFnHi">24160</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#482">InitProcessPhase2</a></td>
+              <td class="coverFnHi">24138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#706">IsWaitingForLock</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#723">LockErrorCleanup</a></td>
+              <td class="coverFnHi">572276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#120">ProcGlobalSemas</a></td>
+              <td class="coverFnHi">2854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#98">ProcGlobalShmemSize</a></td>
+              <td class="coverFnHi">2854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#827">ProcKill</a></td>
+              <td class="coverFnHi">24156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1670">ProcLockWakeup</a></td>
+              <td class="coverFnHi">2032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#799">ProcReleaseLocks</a></td>
+              <td class="coverFnHi">519444</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1842">ProcSendSignal</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1037">ProcSleep</a></td>
+              <td class="coverFnHi">2086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1830">ProcWaitForSignal</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#1642">ProcWakeup</a></td>
+              <td class="coverFnHi">1994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#816">RemoveProcFromArray</a></td>
+              <td class="coverFnHi">24138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="proc.c.gcov.html#652">SetStartupBufferPinWaitBufId</a></td>
+              <td class="coverFnHi">44</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

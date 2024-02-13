@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/catalog</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - src/backend/catalog</td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">12365</td>
+            <td class="headerCovTableEntry">13845</td>
+            <td class="headerCovTableEntryMed">89.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">540</td>
+            <td class="headerCovTableEntry">564</td>
+            <td class="headerCovTableEntryHi">95.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">	    Rating:
+            <span class="coverLegendCovLo" title="Coverage rates below 75 % are classified as low">low: &lt; 75 %</span>
+            <span class="coverLegendCovMed" title="Coverage rates between 75 % and 90 % are classified as medium">medium: &gt;= 75 %</span>
+            <span class="coverLegendCovHi" title="Coverage rates of 90 % and more are classified as high">high: &gt;= 90 %</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="80%" cellpadding=1 cellspacing=1 border=0>
+
+    <tr>
+      <td width="50%"><br></td>
+      <td width="10%"></td>
+      <td width="10%"></td>
+      <td width="10%"></td>
+      <td width="10%"></td>
+      <td width="10%"></td>
+    </tr>
+
+    <tr>
+      <td class="tableHead">Filename <span class="tableHeadSort"><a href="index.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by name" title="Sort by name" border=0></a></span></td>
+      <td class="tableHead" colspan=3>Line Coverage <span class="tableHeadSort"><a href="index-sort-l.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by line coverage" title="Sort by line coverage" border=0></a></span></td>
+      <td class="tableHead" colspan=2>Functions <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function coverage" title="Sort by function coverage" border=0></span></td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="objectaccess.c.gcov.html">objectaccess.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../ruby.png" width=49 height=10 alt="48.5%"><img src="../../../snow.png" width=51 height=10 alt="48.5%"></td></tr></table>
+      </td>
+      <td class="coverPerLo">48.5&nbsp;%</td>
+      <td class="coverNumLo">33 / 68</td>
+      <td class="coverPerLo">41.7&nbsp;%</td>
+      <td class="coverNumLo">5 / 12</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="namespace.c.gcov.html">namespace.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=85 height=10 alt="85.1%"><img src="../../../snow.png" width=15 height=10 alt="85.1%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">85.1&nbsp;%</td>
+      <td class="coverNumMed">1305 / 1534</td>
+      <td class="coverPerHi">90.9&nbsp;%</td>
+      <td class="coverNumHi">100 / 110</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="catalog.c.gcov.html">catalog.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=78 height=10 alt="77.7%"><img src="../../../snow.png" width=22 height=10 alt="77.7%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">77.7&nbsp;%</td>
+      <td class="coverNumMed">129 / 166</td>
+      <td class="coverPerHi">93.3&nbsp;%</td>
+      <td class="coverNumHi">14 / 15</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="aclchk.c.gcov.html">aclchk.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=81 height=10 alt="80.8%"><img src="../../../snow.png" width=19 height=10 alt="80.8%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">80.8&nbsp;%</td>
+      <td class="coverNumMed">1450 / 1795</td>
+      <td class="coverPerHi">94.7&nbsp;%</td>
+      <td class="coverNumHi">54 / 57</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="objectaddress.c.gcov.html">objectaddress.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=89 height=10 alt="89.1%"><img src="../../../snow.png" width=11 height=10 alt="89.1%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">89.1&nbsp;%</td>
+      <td class="coverNumMed">2142 / 2403</td>
+      <td class="coverPerHi">96.1&nbsp;%</td>
+      <td class="coverNumHi">49 / 51</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="heap.c.gcov.html">heap.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=95 height=10 alt="94.9%"><img src="../../../snow.png" width=5 height=10 alt="94.9%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">94.9&nbsp;%</td>
+      <td class="coverNumHi">981 / 1034</td>
+      <td class="coverPerHi">97.6&nbsp;%</td>
+      <td class="coverNumHi">40 / 41</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_namespace.c.gcov.html">pg_namespace.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=97 height=10 alt="97.1%"><img src="../../../snow.png" width=3 height=10 alt="97.1%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">97.1&nbsp;%</td>
+      <td class="coverNumHi">33 / 34</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">1 / 1</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_cast.c.gcov.html">pg_cast.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=92 height=10 alt="91.9%"><img src="../../../snow.png" width=8 height=10 alt="91.9%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">91.9&nbsp;%</td>
+      <td class="coverNumHi">34 / 37</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">1 / 1</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_collation.c.gcov.html">pg_collation.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=89 height=10 alt="88.9%"><img src="../../../snow.png" width=11 height=10 alt="88.9%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">88.9&nbsp;%</td>
+      <td class="coverNumMed">64 / 72</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">1 / 1</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_class.c.gcov.html">pg_class.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=92 height=10 alt="91.7%"><img src="../../../snow.png" width=8 height=10 alt="91.7%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">91.7&nbsp;%</td>
+      <td class="coverNumHi">22 / 24</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">1 / 1</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_range.c.gcov.html">pg_range.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=96 height=10 alt="95.6%"><img src="../../../snow.png" width=4 height=10 alt="95.6%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">95.6&nbsp;%</td>
+      <td class="coverNumHi">43 / 45</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">2 / 2</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_aggregate.c.gcov.html">pg_aggregate.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=81 height=10 alt="81.0%"><img src="../../../snow.png" width=19 height=10 alt="81.0%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">81.0&nbsp;%</td>
+      <td class="coverNumMed">209 / 258</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">2 / 2</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_parameter_acl.c.gcov.html">pg_parameter_acl.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=96 height=10 alt="95.8%"><img src="../../../snow.png" width=4 height=10 alt="95.8%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">95.8&nbsp;%</td>
+      <td class="coverNumHi">23 / 24</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">2 / 2</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_conversion.c.gcov.html">pg_conversion.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=98 height=10 alt="98.1%"><img src="../../../snow.png" width=2 height=10 alt="98.1%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">98.1&nbsp;%</td>
+      <td class="coverNumHi">52 / 53</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">2 / 2</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_largeobject.c.gcov.html">pg_largeobject.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=98 height=10 alt="97.7%"><img src="../../../snow.png" width=2 height=10 alt="97.7%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">97.7&nbsp;%</td>
+      <td class="coverNumHi">43 / 44</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">3 / 3</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_db_role_setting.c.gcov.html">pg_db_role_setting.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=99 height=10 alt="98.7%"><img src="../../../snow.png" width=1 height=10 alt="98.7%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">98.7&nbsp;%</td>
+      <td class="coverNumHi">75 / 76</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">3 / 3</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_attrdef.c.gcov.html">pg_attrdef.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=96 height=10 alt="96.2%"><img src="../../../snow.png" width=4 height=10 alt="96.2%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">96.2&nbsp;%</td>
+      <td class="coverNumHi">125 / 130</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">5 / 5</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_type.c.gcov.html">pg_type.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=94 height=10 alt="93.6%"><img src="../../../snow.png" width=6 height=10 alt="93.6%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">93.6&nbsp;%</td>
+      <td class="coverNumHi">263 / 281</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">7 / 7</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="toasting.c.gcov.html">toasting.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=96 height=10 alt="95.8%"><img src="../../../snow.png" width=4 height=10 alt="95.8%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">95.8&nbsp;%</td>
+      <td class="coverNumHi">114 / 119</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">7 / 7</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_inherits.c.gcov.html">pg_inherits.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=94 height=10 alt="93.8%"><img src="../../../snow.png" width=6 height=10 alt="93.8%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">93.8&nbsp;%</td>
+      <td class="coverNumHi">151 / 161</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">9 / 9</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_operator.c.gcov.html">pg_operator.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=90 height=10 alt="89.6%"><img src="../../../snow.png" width=10 height=10 alt="89.6%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">89.6&nbsp;%</td>
+      <td class="coverNumMed">232 / 259</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">9 / 9</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_proc.c.gcov.html">pg_proc.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=88 height=10 alt="87.5%"><img src="../../../snow.png" width=12 height=10 alt="87.5%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">87.5&nbsp;%</td>
+      <td class="coverNumMed">358 / 409</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">9 / 9</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="partition.c.gcov.html">partition.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=96 height=10 alt="96.3%"><img src="../../../snow.png" width=4 height=10 alt="96.3%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">96.3&nbsp;%</td>
+      <td class="coverNumHi">103 / 107</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">10 / 10</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="indexing.c.gcov.html">indexing.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=95 height=10 alt="95.5%"><img src="../../../snow.png" width=5 height=10 alt="95.5%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">95.5&nbsp;%</td>
+      <td class="coverNumHi">84 / 88</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">10 / 10</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_subscription.c.gcov.html">pg_subscription.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=95 height=10 alt="95.0%"><img src="../../../snow.png" width=5 height=10 alt="95.0%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">95.0&nbsp;%</td>
+      <td class="coverNumHi">170 / 179</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">11 / 11</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_enum.c.gcov.html">pg_enum.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=94 height=10 alt="93.9%"><img src="../../../snow.png" width=6 height=10 alt="93.9%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">93.9&nbsp;%</td>
+      <td class="coverNumHi">215 / 229</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">12 / 12</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_depend.c.gcov.html">pg_depend.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=98 height=10 alt="98.0%"><img src="../../../snow.png" width=2 height=10 alt="98.0%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">98.0&nbsp;%</td>
+      <td class="coverNumHi">295 / 301</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">19 / 19</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="storage.c.gcov.html">storage.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=97 height=10 alt="97.2%"><img src="../../../snow.png" width=3 height=10 alt="97.2%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">97.2&nbsp;%</td>
+      <td class="coverNumHi">316 / 325</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">19 / 19</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_shdepend.c.gcov.html">pg_shdepend.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../amber.png" width=81 height=10 alt="80.8%"><img src="../../../snow.png" width=19 height=10 alt="80.8%"></td></tr></table>
+      </td>
+      <td class="coverPerMed">80.8&nbsp;%</td>
+      <td class="coverNumMed">382 / 473</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">20 / 20</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_constraint.c.gcov.html">pg_constraint.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=95 height=10 alt="94.9%"><img src="../../../snow.png" width=5 height=10 alt="94.9%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">94.9&nbsp;%</td>
+      <td class="coverNumHi">539 / 568</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">21 / 21</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="pg_publication.c.gcov.html">pg_publication.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=99 height=10 alt="98.6%"><img src="../../../snow.png" width=1 height=10 alt="98.6%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">98.6&nbsp;%</td>
+      <td class="coverNumHi">411 / 417</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">26 / 26</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="dependency.c.gcov.html">dependency.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=91 height=10 alt="91.0%"><img src="../../../snow.png" width=9 height=10 alt="91.0%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">91.0&nbsp;%</td>
+      <td class="coverNumHi">851 / 935</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">28 / 28</td>
+    </tr>
+    <tr>
+      <td class="coverFile"><a href="index.c.gcov.html">index.c</a></td>
+      <td class="coverBar" align="center">
+        <table border=0 cellspacing=0 cellpadding=1><tr><td class="coverBarOutline"><img src="../../../emerald.png" width=93 height=10 alt="93.4%"><img src="../../../snow.png" width=7 height=10 alt="93.4%"></td></tr></table>
+      </td>
+      <td class="coverPerHi">93.4&nbsp;%</td>
+      <td class="coverNumHi">1118 / 1197</td>
+      <td class="coverPerHi">100.0&nbsp;%</td>
+      <td class="coverNumHi">38 / 38</td>
+    </tr>
+  </table>
+  </center>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

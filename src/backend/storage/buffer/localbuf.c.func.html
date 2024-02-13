@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/buffer/localbuf.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/buffer</a> - localbuf.c<span style="font-size: 80%;"> (<a href="localbuf.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">229</td>
+            <td class="headerCovTableEntry">261</td>
+            <td class="headerCovTableEntryMed">87.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="localbuf.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#818">AtEOXact_LocalBuffers</a></td>
+              <td class="coverFnHi">519406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#829">AtProcExit_LocalBuffers</a></td>
+              <td class="coverFnHi">27686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#785">CheckForLocalBufferLeaks</a></td>
+              <td class="coverFnHi">547092</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#536">DropRelationAllLocalBuffers</a></td>
+              <td class="coverFnHi">5722</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#488">DropRelationLocalBuffers</a></td>
+              <td class="coverFnHi">692</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#312">ExtendBufferedRelLocal</a></td>
+              <td class="coverFnHi">17476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#727">GetLocalBufferStorage</a></td>
+              <td class="coverFnHi">29046</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#177">GetLocalVictimBuffer</a></td>
+              <td class="coverFnHi">31536</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#579">InitLocalBuffers</a></td>
+              <td class="coverFnHi">478</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#290">LimitAdditionalLocalPins</a></td>
+              <td class="coverFnHi">17476</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#116">LocalBufferAlloc</a></td>
+              <td class="coverFnHi">2102528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#448">MarkLocalBufferDirty</a></td>
+              <td class="coverFnHi">3233018</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#654">PinLocalBuffer</a></td>
+              <td class="coverFnHi">2126468</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#68">PrefetchLocalBuffer</a></td>
+              <td class="coverFnHi">12572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#680">UnpinLocalBuffer</a></td>
+              <td class="coverFnHi">2816988</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#687">UnpinLocalBufferNoOwner</a></td>
+              <td class="coverFnHi">2817694</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="localbuf.c.gcov.html#703">check_temp_buffers</a></td>
+              <td class="coverFnHi">1588</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

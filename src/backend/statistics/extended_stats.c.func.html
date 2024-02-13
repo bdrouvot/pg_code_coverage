@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/statistics/extended_stats.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/statistics</a> - extended_stats.c<span style="font-size: 80%;"> (<a href="extended_stats.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">738</td>
+            <td class="headerCovTableEntry">803</td>
+            <td class="headerCovTableEntryHi">91.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">33</td>
+            <td class="headerCovTableEntryHi">97.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="extended_stats.c.func-sort-c.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#113">BuildRelationExtStatistics</a></td>
+              <td class="coverFnHi">7674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#266">ComputeExtStatisticsRows</a></td>
+              <td class="coverFnHi">11130</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#940">build_attnums_array</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2269">build_expr_data</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#985">build_sorted_items</a></td>
+              <td class="coverFnHi">756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1208">choose_best_statistics</a></td>
+              <td class="coverFnHi">978</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#926">compare_datums_simple</a></td>
+              <td class="coverFnHi">234756</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#918">compare_scalars_simple</a></td>
+              <td class="coverFnHi">187380</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2109">compute_expr_stats</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#527">examine_attribute</a></td>
+              <td class="coverFnHi">576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#606">examine_expression</a></td>
+              <td class="coverFnHi">576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2054">examine_opclause_args</a></td>
+              <td class="coverFnHi">2232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2253">expr_fetch_func</a></td>
+              <td class="coverFnHi">399594</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#423">fetch_statentries_for_relation</a></td>
+              <td class="coverFnHi">18792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1117">has_stats_of_kind</a></td>
+              <td class="coverFnHi">3648</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#692">lookup_var_attr_stats</a></td>
+              <td class="coverFnHi">732</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2471">make_build_data</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#850">multi_sort_add_dimension</a></td>
+              <td class="coverFnHi">2994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#864">multi_sort_compare</a></td>
+              <td class="coverFnHi">16133010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#889">multi_sort_compare_dim</a></td>
+              <td class="coverFnHi">1472580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#898">multi_sort_compare_dims</a></td>
+              <td class="coverFnHi">1504218</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#831">multi_sort_init</a></td>
+              <td class="coverFnHi">1260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2294">serialize_expr_stats</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1167">stat_covers_expressions</a></td>
+              <td class="coverFnHi">2388</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1140">stat_find_expression</a></td>
+              <td class="coverFnHi">516</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2003">statext_clauselist_selectivity</a></td>
+              <td class="coverFnHi">1878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#348">statext_compute_stattarget</a></td>
+              <td class="coverFnHi">708</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#2424">statext_expressions_load</a></td>
+              <td class="coverFnHi">1644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1571">statext_is_compatible_clause</a></td>
+              <td class="coverFnHi">1374</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1327">statext_is_compatible_clause_internal</a></td>
+              <td class="coverFnHi">2364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#390">statext_is_kind_built</a></td>
+              <td class="coverFnHi">7344</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#1715">statext_mcv_clauselist_selectivity</a></td>
+              <td class="coverFnHi">1878</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="extended_stats.c.gcov.html#761">statext_store</a></td>
+              <td class="coverFnHi">348</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

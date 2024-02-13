@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/replication/logical/worker.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/replication/logical</a> - worker.c<span style="font-size: 80%;"> (<a href="worker.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1481</td>
+            <td class="headerCovTableEntry">1594</td>
+            <td class="headerCovTableEntryHi">92.9 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntry">82</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="worker.c.func.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4728">DisableSubscriptionAndExit</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1992">ensure_last_message</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1241">apply_handle_rollback_prepared</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4345">stream_open_and_write_change</a></td>
+              <td class="coverFnHi">10</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1431">apply_handle_origin</a></td>
+              <td class="coverFnHi">16</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1294">apply_handle_stream_prepare</a></td>
+              <td class="coverFnHi">22</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1131">apply_handle_prepare</a></td>
+              <td class="coverFnHi">26</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1065">apply_handle_begin_prepare</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1752">stream_abort_internal</a></td>
+              <td class="coverFnHi">28</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3167">apply_handle_truncate</a></td>
+              <td class="coverFnHi">34</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2347">apply_handle_type</a></td>
+              <td class="coverFnHi">36</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1192">apply_handle_commit_prepared</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1094">apply_handle_prepare_internal</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4813">stop_skipping_changes</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2024">apply_spooled_messages</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4228">stream_cleanup_files</a></td>
+              <td class="coverFnHi">62</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1835">apply_handle_stream_abort</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3854">apply_worker_exit</a></td>
+              <td class="coverFnHi">82</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4428">TwoPhaseTransactionGid</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2154">apply_handle_stream_commit</a></td>
+              <td class="coverFnHi">122</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2916">apply_handle_tuple_routing</a></td>
+              <td class="coverFnHi">146</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4014">subscription_change_cb</a></td>
+              <td class="coverFnHi">150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4480">run_apply_worker</a></td>
+              <td class="coverFnHi">334</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4708">ApplyWorkerMain</a></td>
+              <td class="coverFnHi">340</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#5012">LogicalRepWorkersWakeupAtCommit</a></td>
+              <td class="coverFnHi">378</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3501">LogicalRepApplyLoop</a></td>
+              <td class="coverFnHi">624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4361">set_stream_options</a></td>
+              <td class="coverFnHi">624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4448">start_apply</a></td>
+              <td class="coverFnHi">624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#5058">set_apply_error_context_origin</a></td>
+              <td class="coverFnHi">644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4667">SetupApplyOrSyncWorker</a></td>
+              <td class="coverFnHi">674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4078">subxact_info_read</a></td>
+              <td class="coverFnHi">688</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4584">InitializeLogRepWorker</a></td>
+              <td class="coverFnHi">694</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4252">stream_open_file</a></td>
+              <td class="coverFnHi">726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1452">stream_start_internal</a></td>
+              <td class="coverFnHi">726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1626">stream_stop_internal</a></td>
+              <td class="coverFnHi">726</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1039">apply_handle_commit</a></td>
+              <td class="coverFnHi">738</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4029">subxact_info_write</a></td>
+              <td class="coverFnHi">744</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4411">cleanup_subxact_info</a></td>
+              <td class="coverFnHi">752</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4297">stream_close_file</a></td>
+              <td class="coverFnHi">786</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1014">apply_handle_begin</a></td>
+              <td class="coverFnHi">788</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2324">apply_handle_relation</a></td>
+              <td class="coverFnHi">796</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2264">apply_handle_commit_internal</a></td>
+              <td class="coverFnHi">818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4786">maybe_start_skipping_changes</a></td>
+              <td class="coverFnHi">870</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4214">changes_filename</a></td>
+              <td class="coverFnHi">876</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4835">clear_subscription_skip_lsn</a></td>
+              <td class="coverFnHi">914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3459">store_flush_position</a></td>
+              <td class="coverFnHi">946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4916">apply_error_callback</a></td>
+              <td class="coverFnHi">1260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4207">subxact_filename</a></td>
+              <td class="coverFnHi">1494</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1649">apply_handle_stream_stop</a></td>
+              <td class="coverFnHi">1674</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#1490">apply_handle_stream_start</a></td>
+              <td class="coverFnHi">1676</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#451">ReplicationOriginNameForLogicalRep</a></td>
+              <td class="coverFnHi">2054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4996">reset_apply_error_context_info</a></td>
+              <td class="coverFnHi">2700</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4776">IsLogicalParallelApplyWorker</a></td>
+              <td class="coverFnHi">5212</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4988">set_apply_error_context_xact</a></td>
+              <td class="coverFnHi">5460</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4767">IsLogicalWorker</a></td>
+              <td class="coverFnHi">5956</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3885">maybe_reread_subscription</a></td>
+              <td class="coverFnHi">7636</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2660">apply_handle_update_internal</a></td>
+              <td class="coverFnHi">63818</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#921">slot_modify_data</a></td>
+              <td class="coverFnHi">63828</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3415">get_flush_position</a></td>
+              <td class="coverFnHi">69074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3765">send_feedback</a></td>
+              <td class="coverFnHi">69074</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2815">apply_handle_delete_internal</a></td>
+              <td class="coverFnHi">80612</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2543">apply_handle_update</a></td>
+              <td class="coverFnHi">132286</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2869">FindReplTupleInLocalRel</a></td>
+              <td class="coverFnHi">144454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2502">check_relation_updatable</a></td>
+              <td class="coverFnHi">144512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#763">slot_fill_defaults</a></td>
+              <td class="coverFnHi">152462</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2480">apply_handle_insert_internal</a></td>
+              <td class="coverFnHi">152464</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2727">apply_handle_delete</a></td>
+              <td class="coverFnHi">163840</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4129">subxact_info_add</a></td>
+              <td class="coverFnHi">205026</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#4315">stream_write_change</a></td>
+              <td class="coverFnHi">215108</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#732">finish_edata</a></td>
+              <td class="coverFnHi">296880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#675">create_edata_for_relation</a></td>
+              <td class="coverFnHi">296914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#820">slot_store_data</a></td>
+              <td class="coverFnHi">296914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#491">should_apply_changes_for_rel</a></td>
+              <td class="coverFnHi">297066</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#554">end_replication_step</a></td>
+              <td class="coverFnHi">297914</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#531">begin_replication_step</a></td>
+              <td class="coverFnHi">297968</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2394">apply_handle_insert</a></td>
+              <td class="coverFnHi">372592</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3485">UpdateWorkerStats</a></td>
+              <td class="coverFnHi">372936</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#2362">TargetPrivilegesCheck</a></td>
+              <td class="coverFnHi">441412</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#5026">AtEOXact_LogicalRepWorkers</a></td>
+              <td class="coverFnHi">519398</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#582">handle_streamed_transaction</a></td>
+              <td class="coverFnHi">649580</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#5073">get_transaction_apply_action</a></td>
+              <td class="coverFnHi">653150</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="worker.c.gcov.html#3295">apply_dispatch</a></td>
+              <td class="coverFnHi">674798</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

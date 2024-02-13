@@ -1,0 +1,312 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/storage/lmgr/lock.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../index.html">top level</a> - <a href="index.html">src/backend/storage/lmgr</a> - lock.c<span style="font-size: 80%;"> (<a href="lock.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1180</td>
+            <td class="headerCovTableEntry">1326</td>
+            <td class="headerCovTableEntryMed">89.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">58</td>
+            <td class="headerCovTableEntryHi">96.6 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><img src="../../../../glass.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><a href="lock.c.func-sort-c.html"><img src="../../../../updown.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></a></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1726">AbortStrongLockAcquire</a></td>
+              <td class="coverFnHi">573538</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3253">AtPrepare_Locks</a></td>
+              <td class="coverFnHi">766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1690">BeginStrongLockAcquire</a></td>
+              <td class="coverFnHi">288280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1330">CheckAndSetLockHeld</a></td>
+              <td class="coverFnHi">50599658</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3165">CheckForSessionAndXactLocks</a></td>
+              <td class="coverFnHi">766</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1604">CleanUpLock</a></td>
+              <td class="coverFnHi">3179556</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#569">DoLockModesConflict</a></td>
+              <td class="coverFnHi">245156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2749">FastPathGetRelationLockEntry</a></td>
+              <td class="coverFnHi">782</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2594">FastPathGrantRelationLock</a></td>
+              <td class="coverFnHi">21737572</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2661">FastPathTransferRelationLocks</a></td>
+              <td class="coverFnHi">288280</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2631">FastPathUnGrantRelationLock</a></td>
+              <td class="coverFnHi">22391294</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1716">FinishStrongLockAcquire</a></td>
+              <td class="coverFnHi">3217330</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3762">GetBlockerStatusData</a></td>
+              <td class="coverFnHi">2760</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2853">GetLockConflicts</a></td>
+              <td class="coverFnHi">2568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#609">GetLockMethodLocalHash</a></td>
+              <td class="coverFnHi">11716</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3570">GetLockStatusData</a></td>
+              <td class="coverFnHi">568</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#485">GetLockTagsMethodTable</a></td>
+              <td class="coverFnHi">2194</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4019">GetLockmodeName</a></td>
+              <td class="coverFnHi">18098</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#473">GetLocksMethodTable</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3937">GetRunningTransactionLocks</a></td>
+              <td class="coverFnHi">1350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3842">GetSingleProcBlockerStatusData</a></td>
+              <td class="coverFnHi">2848</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1755">GrantAwaitedLock</a></td>
+              <td class="coverFnHi">1994</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1524">GrantLock</a></td>
+              <td class="coverFnHi">3220690</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1658">GrantLockLocal</a></td>
+              <td class="coverFnHi">27884236</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#391">InitLocks</a></td>
+              <td class="coverFnHi">1522</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#733">LockAcquire</a></td>
+              <td class="coverFnHi">869032</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#757">LockAcquireExtended</a></td>
+              <td class="coverFnHi">27885594</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1395">LockCheckConflicts</a></td>
+              <td class="coverFnHi">3220696</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#620">LockHasWaiters</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#584">LockHeldByMe</a></td>
+              <td class="coverFnHi">6513930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2518">LockReassignCurrentOwner</a></td>
+              <td class="coverFnHi">569020</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2548">LockReassignOwner</a></td>
+              <td class="coverFnHi">762096</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3061">LockRefindAndRelease</a></td>
+              <td class="coverFnHi">4176</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1923">LockRelease</a></td>
+              <td class="coverFnHi">24676366</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2128">LockReleaseAll</a></td>
+              <td class="coverFnHi">1063710</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2423">LockReleaseCurrentOwner</a></td>
+              <td class="coverFnHi">9320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2393">LockReleaseSession</a></td>
+              <td class="coverFnHi">238</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3533">LockShmemSize</a></td>
+              <td class="coverFnHi">2854</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#503">LockTagHashCode</a></td>
+              <td class="coverFnHi">25839206</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4620">LockWaiterCount</a></td>
+              <td class="coverFnHi">107750</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1768">MarkLockClear</a></td>
+              <td class="coverFnHi">24231454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#3349">PostPrepare_Locks</a></td>
+              <td class="coverFnHi">762</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#551">ProcLockHashCode</a></td>
+              <td class="coverFnHi">6180576</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#2458">ReleaseLockIfHeld</a></td>
+              <td class="coverFnHi">5686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1867">RemoveFromWaitQueue</a></td>
+              <td class="coverFnHi">92</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1342">RemoveLocalLock</a></td>
+              <td class="coverFnHi">24956260</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1149">SetupLockInTable</a></td>
+              <td class="coverFnHi">3221886</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1547">UnGrantLock</a></td>
+              <td class="coverFnHi">3220542</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4509">VirtualXactLock</a></td>
+              <td class="coverFnHi">624</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4409">VirtualXactLockTableCleanup</a></td>
+              <td class="coverFnHi">520276</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4386">VirtualXactLockTableInsert</a></td>
+              <td class="coverFnHi">519588</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#1783">WaitOnLock</a></td>
+              <td class="coverFnHi">2086</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4458">XactLockForVirtualXact</a></td>
+              <td class="coverFnHi">544</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4362">lock_twophase_postabort</a></td>
+              <td class="coverFnHi">244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4336">lock_twophase_postcommit</a></td>
+              <td class="coverFnHi">1770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4123">lock_twophase_recover</a></td>
+              <td class="coverFnHi">158</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#4304">lock_twophase_standby_recover</a></td>
+              <td class="coverFnLo">0</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="lock.c.gcov.html#520">proclock_hash</a></td>
+              <td class="coverFnHi">1678</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

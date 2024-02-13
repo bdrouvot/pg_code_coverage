@@ -1,0 +1,655 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/fuzzystrmatch/daitch_mokotoff.c</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/fuzzystrmatch</a> - daitch_mokotoff.c<span style="font-size: 80%;"> (source / <a href="daitch_mokotoff.c.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">155</td>
+            <td class="headerCovTableEntry">162</td>
+            <td class="headerCovTableEntryHi">95.7 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : /*</a>
+<a name="2"><span class="lineNum">       2 </span>            :  * Daitch-Mokotoff Soundex</a>
+<a name="3"><span class="lineNum">       3 </span>            :  *</a>
+<a name="4"><span class="lineNum">       4 </span>            :  * Copyright (c) 2023-2024, PostgreSQL Global Development Group</a>
+<a name="5"><span class="lineNum">       5 </span>            :  *</a>
+<a name="6"><span class="lineNum">       6 </span>            :  * This module was originally sponsored by Finance Norway /</a>
+<a name="7"><span class="lineNum">       7 </span>            :  * Trafikkforsikringsforeningen, and implemented by Dag Lem &lt;dag@nimrod.no&gt;</a>
+<a name="8"><span class="lineNum">       8 </span>            :  *</a>
+<a name="9"><span class="lineNum">       9 </span>            :  * The implementation of the Daitch-Mokotoff Soundex System aims at correctness</a>
+<a name="10"><span class="lineNum">      10 </span>            :  * and high performance, and can be summarized as follows:</a>
+<a name="11"><span class="lineNum">      11 </span>            :  *</a>
+<a name="12"><span class="lineNum">      12 </span>            :  * - The processing of each phoneme is initiated by an O(1) table lookup.</a>
+<a name="13"><span class="lineNum">      13 </span>            :  * - For phonemes containing more than one character, a coding tree is traversed</a>
+<a name="14"><span class="lineNum">      14 </span>            :  *   to process the complete phoneme.</a>
+<a name="15"><span class="lineNum">      15 </span>            :  * - The (alternate) soundex codes are produced digit by digit in-place in</a>
+<a name="16"><span class="lineNum">      16 </span>            :  *   another tree structure.</a>
+<a name="17"><span class="lineNum">      17 </span>            :  *</a>
+<a name="18"><span class="lineNum">      18 </span>            :  * References:</a>
+<a name="19"><span class="lineNum">      19 </span>            :  *</a>
+<a name="20"><span class="lineNum">      20 </span>            :  * https://www.avotaynu.com/soundex.htm</a>
+<a name="21"><span class="lineNum">      21 </span>            :  * https://www.jewishgen.org/InfoFiles/Soundex.html</a>
+<a name="22"><span class="lineNum">      22 </span>            :  * https://familypedia.fandom.com/wiki/Daitch-Mokotoff_Soundex</a>
+<a name="23"><span class="lineNum">      23 </span>            :  * https://stevemorse.org/census/soundex.html (dmlat.php, dmsoundex.php)</a>
+<a name="24"><span class="lineNum">      24 </span>            :  * https://github.com/apache/commons-codec/ (dmrules.txt, DaitchMokotoffSoundex.java)</a>
+<a name="25"><span class="lineNum">      25 </span>            :  * https://metacpan.org/pod/Text::Phonetic (DaitchMokotoff.pm)</a>
+<a name="26"><span class="lineNum">      26 </span>            :  *</a>
+<a name="27"><span class="lineNum">      27 </span>            :  * A few notes on other implementations:</a>
+<a name="28"><span class="lineNum">      28 </span>            :  *</a>
+<a name="29"><span class="lineNum">      29 </span>            :  * - All other known implementations have the same unofficial rules for &quot;UE&quot;,</a>
+<a name="30"><span class="lineNum">      30 </span>            :  *   these are also adapted by this implementation (0, 1, NC).</a>
+<a name="31"><span class="lineNum">      31 </span>            :  * - The only other known implementation which is capable of generating all</a>
+<a name="32"><span class="lineNum">      32 </span>            :  *   correct soundex codes in all cases is the JOS Soundex Calculator at</a>
+<a name="33"><span class="lineNum">      33 </span>            :  *   https://www.jewishgen.org/jos/jossound.htm</a>
+<a name="34"><span class="lineNum">      34 </span>            :  * - &quot;J&quot; is considered (only) a vowel in dmlat.php</a>
+<a name="35"><span class="lineNum">      35 </span>            :  * - The official rules for &quot;RS&quot; are commented out in dmlat.php</a>
+<a name="36"><span class="lineNum">      36 </span>            :  * - Identical code digits for adjacent letters are not collapsed correctly in</a>
+<a name="37"><span class="lineNum">      37 </span>            :  *   dmsoundex.php when double digit codes are involved. E.g. &quot;BESST&quot; yields</a>
+<a name="38"><span class="lineNum">      38 </span>            :  *   744300 instead of 743000 as for &quot;BEST&quot;.</a>
+<a name="39"><span class="lineNum">      39 </span>            :  * - &quot;J&quot; is considered (only) a consonant in DaitchMokotoffSoundex.java</a>
+<a name="40"><span class="lineNum">      40 </span>            :  * - &quot;Y&quot; is not considered a vowel in DaitchMokotoffSoundex.java</a>
+<a name="41"><span class="lineNum">      41 </span>            : */</a>
+<a name="42"><span class="lineNum">      42 </span>            : </a>
+<a name="43"><span class="lineNum">      43 </span>            : #include &quot;postgres.h&quot;</a>
+<a name="44"><span class="lineNum">      44 </span>            : </a>
+<a name="45"><span class="lineNum">      45 </span>            : #include &quot;catalog/pg_type.h&quot;</a>
+<a name="46"><span class="lineNum">      46 </span>            : #include &quot;mb/pg_wchar.h&quot;</a>
+<a name="47"><span class="lineNum">      47 </span>            : #include &quot;utils/array.h&quot;</a>
+<a name="48"><span class="lineNum">      48 </span>            : #include &quot;utils/builtins.h&quot;</a>
+<a name="49"><span class="lineNum">      49 </span>            : #include &quot;utils/memutils.h&quot;</a>
+<a name="50"><span class="lineNum">      50 </span>            : </a>
+<a name="51"><span class="lineNum">      51 </span>            : </a>
+<a name="52"><span class="lineNum">      52 </span>            : /*</a>
+<a name="53"><span class="lineNum">      53 </span>            :  * The soundex coding chart table is adapted from</a>
+<a name="54"><span class="lineNum">      54 </span>            :  * https://www.jewishgen.org/InfoFiles/Soundex.html</a>
+<a name="55"><span class="lineNum">      55 </span>            :  * See daitch_mokotoff_header.pl for details.</a>
+<a name="56"><span class="lineNum">      56 </span>            : */</a>
+<a name="57"><span class="lineNum">      57 </span>            : </a>
+<a name="58"><span class="lineNum">      58 </span>            : /* Generated coding chart table */</a>
+<a name="59"><span class="lineNum">      59 </span>            : #include &quot;daitch_mokotoff.h&quot;</a>
+<a name="60"><span class="lineNum">      60 </span>            : </a>
+<a name="61"><span class="lineNum">      61 </span>            : #define DM_CODE_DIGITS 6</a>
+<a name="62"><span class="lineNum">      62 </span>            : </a>
+<a name="63"><span class="lineNum">      63 </span>            : /* Node in soundex code tree */</a>
+<a name="64"><span class="lineNum">      64 </span>            : typedef struct dm_node</a>
+<a name="65"><span class="lineNum">      65 </span>            : {</a>
+<a name="66"><span class="lineNum">      66 </span>            :     int         soundex_length; /* Length of generated soundex code */</a>
+<a name="67"><span class="lineNum">      67 </span>            :     char        soundex[DM_CODE_DIGITS];    /* Soundex code */</a>
+<a name="68"><span class="lineNum">      68 </span>            :     int         is_leaf;        /* Candidate for complete soundex code */</a>
+<a name="69"><span class="lineNum">      69 </span>            :     int         last_update;    /* Letter number for last update of node */</a>
+<a name="70"><span class="lineNum">      70 </span>            :     char        code_digit;     /* Last code digit, 0 - 9 */</a>
+<a name="71"><span class="lineNum">      71 </span>            : </a>
+<a name="72"><span class="lineNum">      72 </span>            :     /*</a>
+<a name="73"><span class="lineNum">      73 </span>            :      * One or two alternate code digits leading to this node. If there are two</a>
+<a name="74"><span class="lineNum">      74 </span>            :      * digits, one of them is always an 'X'. Repeated code digits and 'X' lead</a>
+<a name="75"><span class="lineNum">      75 </span>            :      * back to the same node.</a>
+<a name="76"><span class="lineNum">      76 </span>            :      */</a>
+<a name="77"><span class="lineNum">      77 </span>            :     char        prev_code_digits[2];</a>
+<a name="78"><span class="lineNum">      78 </span>            :     /* One or two alternate code digits moving forward. */</a>
+<a name="79"><span class="lineNum">      79 </span>            :     char        next_code_digits[2];</a>
+<a name="80"><span class="lineNum">      80 </span>            :     /* ORed together code index(es) used to reach current node. */</a>
+<a name="81"><span class="lineNum">      81 </span>            :     int         prev_code_index;</a>
+<a name="82"><span class="lineNum">      82 </span>            :     int         next_code_index;</a>
+<a name="83"><span class="lineNum">      83 </span>            :     /* Possible nodes branching out from this node - digits 0-9. */</a>
+<a name="84"><span class="lineNum">      84 </span>            :     struct dm_node *children[10];</a>
+<a name="85"><span class="lineNum">      85 </span>            :     /* Next node in linked list. Alternating index for each iteration. */</a>
+<a name="86"><span class="lineNum">      86 </span>            :     struct dm_node *next[2];</a>
+<a name="87"><span class="lineNum">      87 </span>            : } dm_node;</a>
+<a name="88"><span class="lineNum">      88 </span>            : </a>
+<a name="89"><span class="lineNum">      89 </span>            : /* Template for new node in soundex code tree. */</a>
+<a name="90"><span class="lineNum">      90 </span>            : static const dm_node start_node = {</a>
+<a name="91"><span class="lineNum">      91 </span>            :     .soundex_length = 0,</a>
+<a name="92"><span class="lineNum">      92 </span>            :     .soundex = &quot;000000&quot;,      /* Six digits */</a>
+<a name="93"><span class="lineNum">      93 </span>            :     .is_leaf = 0,</a>
+<a name="94"><span class="lineNum">      94 </span>            :     .last_update = 0,</a>
+<a name="95"><span class="lineNum">      95 </span>            :     .code_digit = '\0',</a>
+<a name="96"><span class="lineNum">      96 </span>            :     .prev_code_digits = {'\0', '\0'},</a>
+<a name="97"><span class="lineNum">      97 </span>            :     .next_code_digits = {'\0', '\0'},</a>
+<a name="98"><span class="lineNum">      98 </span>            :     .prev_code_index = 0,</a>
+<a name="99"><span class="lineNum">      99 </span>            :     .next_code_index = 0,</a>
+<a name="100"><span class="lineNum">     100 </span>            :     .children = {NULL},</a>
+<a name="101"><span class="lineNum">     101 </span>            :     .next = {NULL}</a>
+<a name="102"><span class="lineNum">     102 </span>            : };</a>
+<a name="103"><span class="lineNum">     103 </span>            : </a>
+<a name="104"><span class="lineNum">     104 </span>            : /* Dummy soundex codes at end of input. */</a>
+<a name="105"><span class="lineNum">     105 </span>            : static const dm_codes end_codes[2] =</a>
+<a name="106"><span class="lineNum">     106 </span>            : {</a>
+<a name="107"><span class="lineNum">     107 </span>            :     {</a>
+<a name="108"><span class="lineNum">     108 </span>            :         &quot;X&quot;, &quot;X&quot;, &quot;X&quot;</a>
+<a name="109"><span class="lineNum">     109 </span>            :     }</a>
+<a name="110"><span class="lineNum">     110 </span>            : };</a>
+<a name="111"><span class="lineNum">     111 </span>            : </a>
+<a name="112"><span class="lineNum">     112 </span>            : /* Mapping from ISO8859-1 to upper-case ASCII, covering the range 0x60..0xFF. */</a>
+<a name="113"><span class="lineNum">     113 </span>            : static const char iso8859_1_to_ascii_upper[] =</a>
+<a name="114"><span class="lineNum">     114 </span>            : &quot;`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~                                  !                             ?AAAAAAECEEEEIIIIDNOOOOO*OUUUUYDSAAAAAAECEEEEIIIIDNOOOOO/OUUUUYDY&quot;;</a>
+<a name="115"><span class="lineNum">     115 </span>            : </a>
+<a name="116"><span class="lineNum">     116 </span>            : /* Internal C implementation */</a>
+<a name="117"><span class="lineNum">     117 </span>            : static bool daitch_mokotoff_coding(const char *word, ArrayBuildState *soundex);</a>
+<a name="118"><span class="lineNum">     118 </span>            : </a>
+<a name="119"><span class="lineNum">     119 </span>            : </a>
+<a name="120"><span class="lineNum">     120 </span><span class="lineCov">          6 : PG_FUNCTION_INFO_V1(daitch_mokotoff);</span></a>
+<a name="121"><span class="lineNum">     121 </span>            : </a>
+<a name="122"><span class="lineNum">     122 </span>            : Datum</a>
+<a name="123"><span class="lineNum">     123 </span><span class="lineCov">         70 : daitch_mokotoff(PG_FUNCTION_ARGS)</span></a>
+<a name="124"><span class="lineNum">     124 </span>            : {</a>
+<a name="125"><span class="lineNum">     125 </span><span class="lineCov">         70 :     text       *arg = PG_GETARG_TEXT_PP(0);</span></a>
+<a name="126"><span class="lineNum">     126 </span>            :     Datum       retval;</a>
+<a name="127"><span class="lineNum">     127 </span>            :     char       *string;</a>
+<a name="128"><span class="lineNum">     128 </span>            :     ArrayBuildState *soundex;</a>
+<a name="129"><span class="lineNum">     129 </span>            :     MemoryContext old_ctx,</a>
+<a name="130"><span class="lineNum">     130 </span>            :                 tmp_ctx;</a>
+<a name="131"><span class="lineNum">     131 </span>            : </a>
+<a name="132"><span class="lineNum">     132 </span>            :     /* Work in a temporary context to simplify cleanup. */</a>
+<a name="133"><span class="lineNum">     133 </span><span class="lineCov">         70 :     tmp_ctx = AllocSetContextCreate(CurrentMemoryContext,</span></a>
+<a name="134"><span class="lineNum">     134 </span>            :                                     &quot;daitch_mokotoff temporary context&quot;,</a>
+<a name="135"><span class="lineNum">     135 </span>            :                                     ALLOCSET_DEFAULT_SIZES);</a>
+<a name="136"><span class="lineNum">     136 </span><span class="lineCov">         70 :     old_ctx = MemoryContextSwitchTo(tmp_ctx);</span></a>
+<a name="137"><span class="lineNum">     137 </span>            : </a>
+<a name="138"><span class="lineNum">     138 </span>            :     /* We must convert the string to UTF-8 if it isn't already. */</a>
+<a name="139"><span class="lineNum">     139 </span><span class="lineCov">         70 :     string = pg_server_to_any(text_to_cstring(arg), VARSIZE_ANY_EXHDR(arg),</span></a>
+<a name="140"><span class="lineNum">     140 </span>            :                               PG_UTF8);</a>
+<a name="141"><span class="lineNum">     141 </span>            : </a>
+<a name="142"><span class="lineNum">     142 </span>            :     /* The result is built in this ArrayBuildState. */</a>
+<a name="143"><span class="lineNum">     143 </span><span class="lineCov">         70 :     soundex = initArrayResult(TEXTOID, tmp_ctx, false);</span></a>
+<a name="144"><span class="lineNum">     144 </span>            : </a>
+<a name="145"><span class="lineNum">     145 </span><span class="lineCov">         70 :     if (!daitch_mokotoff_coding(string, soundex))</span></a>
+<a name="146"><span class="lineNum">     146 </span>            :     {</a>
+<a name="147"><span class="lineNum">     147 </span>            :         /* No encodable characters in input */</a>
+<a name="148"><span class="lineNum">     148 </span><span class="lineNoCov">          0 :         MemoryContextSwitchTo(old_ctx);</span></a>
+<a name="149"><span class="lineNum">     149 </span><span class="lineNoCov">          0 :         MemoryContextDelete(tmp_ctx);</span></a>
+<a name="150"><span class="lineNum">     150 </span><span class="lineNoCov">          0 :         PG_RETURN_NULL();</span></a>
+<a name="151"><span class="lineNum">     151 </span>            :     }</a>
+<a name="152"><span class="lineNum">     152 </span>            : </a>
+<a name="153"><span class="lineNum">     153 </span><span class="lineCov">         70 :     retval = makeArrayResult(soundex, old_ctx);</span></a>
+<a name="154"><span class="lineNum">     154 </span>            : </a>
+<a name="155"><span class="lineNum">     155 </span><span class="lineCov">         70 :     MemoryContextSwitchTo(old_ctx);</span></a>
+<a name="156"><span class="lineNum">     156 </span><span class="lineCov">         70 :     MemoryContextDelete(tmp_ctx);</span></a>
+<a name="157"><span class="lineNum">     157 </span>            : </a>
+<a name="158"><span class="lineNum">     158 </span><span class="lineCov">         70 :     PG_RETURN_DATUM(retval);</span></a>
+<a name="159"><span class="lineNum">     159 </span>            : }</a>
+<a name="160"><span class="lineNum">     160 </span>            : </a>
+<a name="161"><span class="lineNum">     161 </span>            : </a>
+<a name="162"><span class="lineNum">     162 </span>            : /* Initialize soundex code tree node for next code digit. */</a>
+<a name="163"><span class="lineNum">     163 </span>            : static void</a>
+<a name="164"><span class="lineNum">     164 </span><span class="lineCov">       1328 : initialize_node(dm_node *node, int last_update)</span></a>
+<a name="165"><span class="lineNum">     165 </span>            : {</a>
+<a name="166"><span class="lineNum">     166 </span><span class="lineCov">       1328 :     if (node-&gt;last_update &lt; last_update)</span></a>
+<a name="167"><span class="lineNum">     167 </span>            :     {</a>
+<a name="168"><span class="lineNum">     168 </span><span class="lineCov">        926 :         node-&gt;prev_code_digits[0] = node-&gt;next_code_digits[0];</span></a>
+<a name="169"><span class="lineNum">     169 </span><span class="lineCov">        926 :         node-&gt;prev_code_digits[1] = node-&gt;next_code_digits[1];</span></a>
+<a name="170"><span class="lineNum">     170 </span><span class="lineCov">        926 :         node-&gt;next_code_digits[0] = '\0';</span></a>
+<a name="171"><span class="lineNum">     171 </span><span class="lineCov">        926 :         node-&gt;next_code_digits[1] = '\0';</span></a>
+<a name="172"><span class="lineNum">     172 </span><span class="lineCov">        926 :         node-&gt;prev_code_index = node-&gt;next_code_index;</span></a>
+<a name="173"><span class="lineNum">     173 </span><span class="lineCov">        926 :         node-&gt;next_code_index = 0;</span></a>
+<a name="174"><span class="lineNum">     174 </span><span class="lineCov">        926 :         node-&gt;is_leaf = 0;</span></a>
+<a name="175"><span class="lineNum">     175 </span><span class="lineCov">        926 :         node-&gt;last_update = last_update;</span></a>
+<a name="176"><span class="lineNum">     176 </span>            :     }</a>
+<a name="177"><span class="lineNum">     177 </span><span class="lineCov">       1328 : }</span></a>
+<a name="178"><span class="lineNum">     178 </span>            : </a>
+<a name="179"><span class="lineNum">     179 </span>            : </a>
+<a name="180"><span class="lineNum">     180 </span>            : /* Update soundex code tree node with next code digit. */</a>
+<a name="181"><span class="lineNum">     181 </span>            : static void</a>
+<a name="182"><span class="lineNum">     182 </span><span class="lineCov">        802 : add_next_code_digit(dm_node *node, int code_index, char code_digit)</span></a>
+<a name="183"><span class="lineNum">     183 </span>            : {</a>
+<a name="184"><span class="lineNum">     184 </span>            :     /* OR in index 1 or 2. */</a>
+<a name="185"><span class="lineNum">     185 </span><span class="lineCov">        802 :     node-&gt;next_code_index |= code_index;</span></a>
+<a name="186"><span class="lineNum">     186 </span>            : </a>
+<a name="187"><span class="lineNum">     187 </span><span class="lineCov">        802 :     if (!node-&gt;next_code_digits[0])</span></a>
+<a name="188"><span class="lineNum">     188 </span><span class="lineCov">        720 :         node-&gt;next_code_digits[0] = code_digit;</span></a>
+<a name="189"><span class="lineNum">     189 </span><span class="lineCov">         82 :     else if (node-&gt;next_code_digits[0] != code_digit)</span></a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineCov">          4 :         node-&gt;next_code_digits[1] = code_digit;</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineCov">        802 : }</span></a>
+<a name="192"><span class="lineNum">     192 </span>            : </a>
+<a name="193"><span class="lineNum">     193 </span>            : </a>
+<a name="194"><span class="lineNum">     194 </span>            : /* Mark soundex code tree node as leaf. */</a>
+<a name="195"><span class="lineNum">     195 </span>            : static void</a>
+<a name="196"><span class="lineNum">     196 </span><span class="lineCov">        776 : set_leaf(dm_node *first_node[2], dm_node *last_node[2],</span></a>
+<a name="197"><span class="lineNum">     197 </span>            :          dm_node *node, int ix_node)</a>
+<a name="198"><span class="lineNum">     198 </span>            : {</a>
+<a name="199"><span class="lineNum">     199 </span><span class="lineCov">        776 :     if (!node-&gt;is_leaf)</span></a>
+<a name="200"><span class="lineNum">     200 </span>            :     {</a>
+<a name="201"><span class="lineNum">     201 </span><span class="lineCov">        698 :         node-&gt;is_leaf = 1;</span></a>
+<a name="202"><span class="lineNum">     202 </span>            : </a>
+<a name="203"><span class="lineNum">     203 </span><span class="lineCov">        698 :         if (first_node[ix_node] == NULL)</span></a>
+<a name="204"><span class="lineNum">     204 </span><span class="lineCov">        436 :             first_node[ix_node] = node;</span></a>
+<a name="205"><span class="lineNum">     205 </span>            :         else</a>
+<a name="206"><span class="lineNum">     206 </span><span class="lineCov">        262 :             last_node[ix_node]-&gt;next[ix_node] = node;</span></a>
+<a name="207"><span class="lineNum">     207 </span>            : </a>
+<a name="208"><span class="lineNum">     208 </span><span class="lineCov">        698 :         last_node[ix_node] = node;</span></a>
+<a name="209"><span class="lineNum">     209 </span><span class="lineCov">        698 :         node-&gt;next[ix_node] = NULL;</span></a>
+<a name="210"><span class="lineNum">     210 </span>            :     }</a>
+<a name="211"><span class="lineNum">     211 </span><span class="lineCov">        776 : }</span></a>
+<a name="212"><span class="lineNum">     212 </span>            : </a>
+<a name="213"><span class="lineNum">     213 </span>            : </a>
+<a name="214"><span class="lineNum">     214 </span>            : /* Find next node corresponding to code digit, or create a new node. */</a>
+<a name="215"><span class="lineNum">     215 </span>            : static dm_node *</a>
+<a name="216"><span class="lineNum">     216 </span><span class="lineCov">        512 : find_or_create_child_node(dm_node *parent, char code_digit,</span></a>
+<a name="217"><span class="lineNum">     217 </span>            :                           ArrayBuildState *soundex)</a>
+<a name="218"><span class="lineNum">     218 </span>            : {</a>
+<a name="219"><span class="lineNum">     219 </span><span class="lineCov">        512 :     int         i = code_digit - '0';</span></a>
+<a name="220"><span class="lineNum">     220 </span><span class="lineCov">        512 :     dm_node   **nodes = parent-&gt;children;</span></a>
+<a name="221"><span class="lineNum">     221 </span><span class="lineCov">        512 :     dm_node    *node = nodes[i];</span></a>
+<a name="222"><span class="lineNum">     222 </span>            : </a>
+<a name="223"><span class="lineNum">     223 </span><span class="lineCov">        512 :     if (node)</span></a>
+<a name="224"><span class="lineNum">     224 </span>            :     {</a>
+<a name="225"><span class="lineNum">     225 </span>            :         /* Found existing child node. Skip completed nodes. */</a>
+<a name="226"><span class="lineNum">     226 </span><span class="lineCov">         42 :         return node-&gt;soundex_length &lt; DM_CODE_DIGITS ? node : NULL;</span></a>
+<a name="227"><span class="lineNum">     227 </span>            :     }</a>
+<a name="228"><span class="lineNum">     228 </span>            : </a>
+<a name="229"><span class="lineNum">     229 </span>            :     /* Create new child node. */</a>
+<a name="230"><span class="lineNum">     230 </span><span class="lineCov">        470 :     node = palloc_object(dm_node);</span></a>
+<a name="231"><span class="lineNum">     231 </span><span class="lineCov">        470 :     nodes[i] = node;</span></a>
+<a name="232"><span class="lineNum">     232 </span>            : </a>
+<a name="233"><span class="lineNum">     233 </span><span class="lineCov">        470 :     *node = start_node;</span></a>
+<a name="234"><span class="lineNum">     234 </span><span class="lineCov">        470 :     memcpy(node-&gt;soundex, parent-&gt;soundex, sizeof(parent-&gt;soundex));</span></a>
+<a name="235"><span class="lineNum">     235 </span><span class="lineCov">        470 :     node-&gt;soundex_length = parent-&gt;soundex_length;</span></a>
+<a name="236"><span class="lineNum">     236 </span><span class="lineCov">        470 :     node-&gt;soundex[node-&gt;soundex_length++] = code_digit;</span></a>
+<a name="237"><span class="lineNum">     237 </span><span class="lineCov">        470 :     node-&gt;code_digit = code_digit;</span></a>
+<a name="238"><span class="lineNum">     238 </span><span class="lineCov">        470 :     node-&gt;next_code_index = node-&gt;prev_code_index;</span></a>
+<a name="239"><span class="lineNum">     239 </span>            : </a>
+<a name="240"><span class="lineNum">     240 </span><span class="lineCov">        470 :     if (node-&gt;soundex_length &lt; DM_CODE_DIGITS)</span></a>
+<a name="241"><span class="lineNum">     241 </span>            :     {</a>
+<a name="242"><span class="lineNum">     242 </span><span class="lineCov">        438 :         return node;</span></a>
+<a name="243"><span class="lineNum">     243 </span>            :     }</a>
+<a name="244"><span class="lineNum">     244 </span>            :     else</a>
+<a name="245"><span class="lineNum">     245 </span>            :     {</a>
+<a name="246"><span class="lineNum">     246 </span>            :         /* Append completed soundex code to output array. */</a>
+<a name="247"><span class="lineNum">     247 </span><span class="lineCov">         32 :         text       *out = cstring_to_text_with_len(node-&gt;soundex,</span></a>
+<a name="248"><span class="lineNum">     248 </span>            :                                                    DM_CODE_DIGITS);</a>
+<a name="249"><span class="lineNum">     249 </span>            : </a>
+<a name="250"><span class="lineNum">     250 </span><span class="lineCov">         32 :         accumArrayResult(soundex,</span></a>
+<a name="251"><span class="lineNum">     251 </span>            :                          PointerGetDatum(out),</a>
+<a name="252"><span class="lineNum">     252 </span>            :                          false,</a>
+<a name="253"><span class="lineNum">     253 </span>            :                          TEXTOID,</a>
+<a name="254"><span class="lineNum">     254 </span>            :                          CurrentMemoryContext);</a>
+<a name="255"><span class="lineNum">     255 </span><span class="lineCov">         32 :         return NULL;</span></a>
+<a name="256"><span class="lineNum">     256 </span>            :     }</a>
+<a name="257"><span class="lineNum">     257 </span>            : }</a>
+<a name="258"><span class="lineNum">     258 </span>            : </a>
+<a name="259"><span class="lineNum">     259 </span>            : </a>
+<a name="260"><span class="lineNum">     260 </span>            : /* Update node for next code digit(s). */</a>
+<a name="261"><span class="lineNum">     261 </span>            : static void</a>
+<a name="262"><span class="lineNum">     262 </span><span class="lineCov">        848 : update_node(dm_node *first_node[2], dm_node *last_node[2],</span></a>
+<a name="263"><span class="lineNum">     263 </span>            :             dm_node *node, int ix_node,</a>
+<a name="264"><span class="lineNum">     264 </span>            :             int letter_no, int prev_code_index, int next_code_index,</a>
+<a name="265"><span class="lineNum">     265 </span>            :             const char *next_code_digits, int digit_no,</a>
+<a name="266"><span class="lineNum">     266 </span>            :             ArrayBuildState *soundex)</a>
+<a name="267"><span class="lineNum">     267 </span>            : {</a>
+<a name="268"><span class="lineNum">     268 </span>            :     int         i;</a>
+<a name="269"><span class="lineNum">     269 </span><span class="lineCov">        848 :     char        next_code_digit = next_code_digits[digit_no];</span></a>
+<a name="270"><span class="lineNum">     270 </span><span class="lineCov">        848 :     int         num_dirty_nodes = 0;</span></a>
+<a name="271"><span class="lineNum">     271 </span>            :     dm_node    *dirty_nodes[2];</a>
+<a name="272"><span class="lineNum">     272 </span>            : </a>
+<a name="273"><span class="lineNum">     273 </span><span class="lineCov">        848 :     initialize_node(node, letter_no);</span></a>
+<a name="274"><span class="lineNum">     274 </span>            : </a>
+<a name="275"><span class="lineNum">     275 </span><span class="lineCov">        848 :     if (node-&gt;prev_code_index &amp;&amp; !(node-&gt;prev_code_index &amp; prev_code_index))</span></a>
+<a name="276"><span class="lineNum">     276 </span>            :     {</a>
+<a name="277"><span class="lineNum">     277 </span>            :         /*</a>
+<a name="278"><span class="lineNum">     278 </span>            :          * If the sound (vowel / consonant) of this letter encoding doesn't</a>
+<a name="279"><span class="lineNum">     279 </span>            :          * correspond to the coding index of the previous letter, we skip this</a>
+<a name="280"><span class="lineNum">     280 </span>            :          * letter encoding. Note that currently, only &quot;J&quot; can be either a</a>
+<a name="281"><span class="lineNum">     281 </span>            :          * vowel or a consonant.</a>
+<a name="282"><span class="lineNum">     282 </span>            :          */</a>
+<a name="283"><span class="lineNum">     283 </span><span class="lineCov">         16 :         return;</span></a>
+<a name="284"><span class="lineNum">     284 </span>            :     }</a>
+<a name="285"><span class="lineNum">     285 </span>            : </a>
+<a name="286"><span class="lineNum">     286 </span><span class="lineCov">        832 :     if (next_code_digit == 'X' ||</span></a>
+<a name="287"><span class="lineNum">     287 </span><span class="lineCov">        518 :         (digit_no == 0 &amp;&amp;</span></a>
+<a name="288"><span class="lineNum">     288 </span><span class="lineCov">        518 :          (node-&gt;prev_code_digits[0] == next_code_digit ||</span></a>
+<a name="289"><span class="lineNum">     289 </span><span class="lineCov">        486 :           node-&gt;prev_code_digits[1] == next_code_digit)))</span></a>
+<a name="290"><span class="lineNum">     290 </span>            :     {</a>
+<a name="291"><span class="lineNum">     291 </span>            :         /* The code digit is the same as one of the previous (i.e. not added). */</a>
+<a name="292"><span class="lineNum">     292 </span><span class="lineCov">        322 :         dirty_nodes[num_dirty_nodes++] = node;</span></a>
+<a name="293"><span class="lineNum">     293 </span>            :     }</a>
+<a name="294"><span class="lineNum">     294 </span>            : </a>
+<a name="295"><span class="lineNum">     295 </span><span class="lineCov">        832 :     if (next_code_digit != 'X' &amp;&amp;</span></a>
+<a name="296"><span class="lineNum">     296 </span><span class="lineCov">        518 :         (digit_no &gt; 0 ||</span></a>
+<a name="297"><span class="lineNum">     297 </span><span class="lineCov">        518 :          node-&gt;prev_code_digits[0] != next_code_digit ||</span></a>
+<a name="298"><span class="lineNum">     298 </span><span class="lineCov">         32 :          node-&gt;prev_code_digits[1]))</span></a>
+<a name="299"><span class="lineNum">     299 </span>            :     {</a>
+<a name="300"><span class="lineNum">     300 </span>            :         /* The code digit is different from one of the previous (i.e. added). */</a>
+<a name="301"><span class="lineNum">     301 </span><span class="lineCov">        512 :         node = find_or_create_child_node(node, next_code_digit, soundex);</span></a>
+<a name="302"><span class="lineNum">     302 </span><span class="lineCov">        512 :         if (node)</span></a>
+<a name="303"><span class="lineNum">     303 </span>            :         {</a>
+<a name="304"><span class="lineNum">     304 </span><span class="lineCov">        480 :             initialize_node(node, letter_no);</span></a>
+<a name="305"><span class="lineNum">     305 </span><span class="lineCov">        480 :             dirty_nodes[num_dirty_nodes++] = node;</span></a>
+<a name="306"><span class="lineNum">     306 </span>            :         }</a>
+<a name="307"><span class="lineNum">     307 </span>            :     }</a>
+<a name="308"><span class="lineNum">     308 </span>            : </a>
+<a name="309"><span class="lineNum">     309 </span><span class="lineCov">       1634 :     for (i = 0; i &lt; num_dirty_nodes; i++)</span></a>
+<a name="310"><span class="lineNum">     310 </span>            :     {</a>
+<a name="311"><span class="lineNum">     311 </span>            :         /* Add code digit leading to the current node. */</a>
+<a name="312"><span class="lineNum">     312 </span><span class="lineCov">        802 :         add_next_code_digit(dirty_nodes[i], next_code_index, next_code_digit);</span></a>
+<a name="313"><span class="lineNum">     313 </span>            : </a>
+<a name="314"><span class="lineNum">     314 </span><span class="lineCov">        802 :         if (next_code_digits[++digit_no])</span></a>
+<a name="315"><span class="lineNum">     315 </span>            :         {</a>
+<a name="316"><span class="lineNum">     316 </span><span class="lineCov">         26 :             update_node(first_node, last_node, dirty_nodes[i], ix_node,</span></a>
+<a name="317"><span class="lineNum">     317 </span>            :                         letter_no, prev_code_index, next_code_index,</a>
+<a name="318"><span class="lineNum">     318 </span>            :                         next_code_digits, digit_no,</a>
+<a name="319"><span class="lineNum">     319 </span>            :                         soundex);</a>
+<a name="320"><span class="lineNum">     320 </span>            :         }</a>
+<a name="321"><span class="lineNum">     321 </span>            :         else</a>
+<a name="322"><span class="lineNum">     322 </span>            :         {</a>
+<a name="323"><span class="lineNum">     323 </span>            :             /* Add incomplete leaf node to linked list. */</a>
+<a name="324"><span class="lineNum">     324 </span><span class="lineCov">        776 :             set_leaf(first_node, last_node, dirty_nodes[i], ix_node);</span></a>
+<a name="325"><span class="lineNum">     325 </span>            :         }</a>
+<a name="326"><span class="lineNum">     326 </span>            :     }</a>
+<a name="327"><span class="lineNum">     327 </span>            : }</a>
+<a name="328"><span class="lineNum">     328 </span>            : </a>
+<a name="329"><span class="lineNum">     329 </span>            : </a>
+<a name="330"><span class="lineNum">     330 </span>            : /* Update soundex tree leaf nodes. */</a>
+<a name="331"><span class="lineNum">     331 </span>            : static void</a>
+<a name="332"><span class="lineNum">     332 </span><span class="lineCov">        446 : update_leaves(dm_node *first_node[2], int *ix_node, int letter_no,</span></a>
+<a name="333"><span class="lineNum">     333 </span>            :               const dm_codes *codes, const dm_codes *next_codes,</a>
+<a name="334"><span class="lineNum">     334 </span>            :               ArrayBuildState *soundex)</a>
+<a name="335"><span class="lineNum">     335 </span>            : {</a>
+<a name="336"><span class="lineNum">     336 </span>            :     int         i,</a>
+<a name="337"><span class="lineNum">     337 </span>            :                 j,</a>
+<a name="338"><span class="lineNum">     338 </span>            :                 code_index;</a>
+<a name="339"><span class="lineNum">     339 </span>            :     dm_node    *node,</a>
+<a name="340"><span class="lineNum">     340 </span>            :                *last_node[2];</a>
+<a name="341"><span class="lineNum">     341 </span>            :     const dm_code *code,</a>
+<a name="342"><span class="lineNum">     342 </span>            :                *next_code;</a>
+<a name="343"><span class="lineNum">     343 </span><span class="lineCov">        446 :     int         ix_node_next = (*ix_node + 1) &amp; 1;  /* Alternating index: 0, 1 */</span></a>
+<a name="344"><span class="lineNum">     344 </span>            : </a>
+<a name="345"><span class="lineNum">     345 </span>            :     /* Initialize for new linked list of leaves. */</a>
+<a name="346"><span class="lineNum">     346 </span><span class="lineCov">        446 :     first_node[ix_node_next] = NULL;</span></a>
+<a name="347"><span class="lineNum">     347 </span><span class="lineCov">        446 :     last_node[ix_node_next] = NULL;</span></a>
+<a name="348"><span class="lineNum">     348 </span>            : </a>
+<a name="349"><span class="lineNum">     349 </span>            :     /* Process all nodes. */</a>
+<a name="350"><span class="lineNum">     350 </span><span class="lineCov">       1086 :     for (node = first_node[*ix_node]; node; node = node-&gt;next[*ix_node])</span></a>
+<a name="351"><span class="lineNum">     351 </span>            :     {</a>
+<a name="352"><span class="lineNum">     352 </span>            :         /* One or two alternate code sequences. */</a>
+<a name="353"><span class="lineNum">     353 </span><span class="lineCov">       1380 :         for (i = 0; i &lt; 2 &amp;&amp; (code = codes[i]) &amp;&amp; code[0][0]; i++)</span></a>
+<a name="354"><span class="lineNum">     354 </span>            :         {</a>
+<a name="355"><span class="lineNum">     355 </span>            :             /* Coding for previous letter - before vowel: 1, all other: 2 */</a>
+<a name="356"><span class="lineNum">     356 </span><span class="lineCov">        740 :             int         prev_code_index = (code[0][0] &gt; '1') + 1;</span></a>
+<a name="357"><span class="lineNum">     357 </span>            : </a>
+<a name="358"><span class="lineNum">     358 </span>            :             /* One or two alternate next code sequences. */</a>
+<a name="359"><span class="lineNum">     359 </span><span class="lineCov">       1562 :             for (j = 0; j &lt; 2 &amp;&amp; (next_code = next_codes[j]) &amp;&amp; next_code[0][0]; j++)</span></a>
+<a name="360"><span class="lineNum">     360 </span>            :             {</a>
+<a name="361"><span class="lineNum">     361 </span>            :                 /* Determine which code to use. */</a>
+<a name="362"><span class="lineNum">     362 </span><span class="lineCov">        822 :                 if (letter_no == 0)</span></a>
+<a name="363"><span class="lineNum">     363 </span>            :                 {</a>
+<a name="364"><span class="lineNum">     364 </span>            :                     /* This is the first letter. */</a>
+<a name="365"><span class="lineNum">     365 </span><span class="lineCov">         96 :                     code_index = 0;</span></a>
+<a name="366"><span class="lineNum">     366 </span>            :                 }</a>
+<a name="367"><span class="lineNum">     367 </span><span class="lineCov">        726 :                 else if (next_code[0][0] &lt;= '1')</span></a>
+<a name="368"><span class="lineNum">     368 </span>            :                 {</a>
+<a name="369"><span class="lineNum">     369 </span>            :                     /* The next letter is a vowel. */</a>
+<a name="370"><span class="lineNum">     370 </span><span class="lineCov">        194 :                     code_index = 1;</span></a>
+<a name="371"><span class="lineNum">     371 </span>            :                 }</a>
+<a name="372"><span class="lineNum">     372 </span>            :                 else</a>
+<a name="373"><span class="lineNum">     373 </span>            :                 {</a>
+<a name="374"><span class="lineNum">     374 </span>            :                     /* All other cases. */</a>
+<a name="375"><span class="lineNum">     375 </span><span class="lineCov">        532 :                     code_index = 2;</span></a>
+<a name="376"><span class="lineNum">     376 </span>            :                 }</a>
+<a name="377"><span class="lineNum">     377 </span>            : </a>
+<a name="378"><span class="lineNum">     378 </span>            :                 /* One or two sequential code digits. */</a>
+<a name="379"><span class="lineNum">     379 </span><span class="lineCov">        822 :                 update_node(first_node, last_node, node, ix_node_next,</span></a>
+<a name="380"><span class="lineNum">     380 </span>            :                             letter_no, prev_code_index, code_index,</a>
+<a name="381"><span class="lineNum">     381 </span><span class="lineCov">        822 :                             code[code_index], 0,</span></a>
+<a name="382"><span class="lineNum">     382 </span>            :                             soundex);</a>
+<a name="383"><span class="lineNum">     383 </span>            :             }</a>
+<a name="384"><span class="lineNum">     384 </span>            :         }</a>
+<a name="385"><span class="lineNum">     385 </span>            :     }</a>
+<a name="386"><span class="lineNum">     386 </span>            : </a>
+<a name="387"><span class="lineNum">     387 </span><span class="lineCov">        446 :     *ix_node = ix_node_next;</span></a>
+<a name="388"><span class="lineNum">     388 </span><span class="lineCov">        446 : }</span></a>
+<a name="389"><span class="lineNum">     389 </span>            : </a>
+<a name="390"><span class="lineNum">     390 </span>            : </a>
+<a name="391"><span class="lineNum">     391 </span>            : /*</a>
+<a name="392"><span class="lineNum">     392 </span>            :  * Return next character, converted from UTF-8 to uppercase ASCII.</a>
+<a name="393"><span class="lineNum">     393 </span>            :  * *ix is the current string index and is incremented by the character length.</a>
+<a name="394"><span class="lineNum">     394 </span>            :  */</a>
+<a name="395"><span class="lineNum">     395 </span>            : static char</a>
+<a name="396"><span class="lineNum">     396 </span><span class="lineCov">        906 : read_char(const unsigned char *str, int *ix)</span></a>
+<a name="397"><span class="lineNum">     397 </span>            : {</a>
+<a name="398"><span class="lineNum">     398 </span>            :     /* Substitute character for skipped code points. */</a>
+<a name="399"><span class="lineNum">     399 </span><span class="lineCov">        906 :     const char  na = '\x1a';</span></a>
+<a name="400"><span class="lineNum">     400 </span>            :     pg_wchar    c;</a>
+<a name="401"><span class="lineNum">     401 </span>            : </a>
+<a name="402"><span class="lineNum">     402 </span>            :     /* Decode UTF-8 character to ISO 10646 code point. */</a>
+<a name="403"><span class="lineNum">     403 </span><span class="lineCov">        906 :     str += *ix;</span></a>
+<a name="404"><span class="lineNum">     404 </span><span class="lineCov">        906 :     c = utf8_to_unicode(str);</span></a>
+<a name="405"><span class="lineNum">     405 </span>            : </a>
+<a name="406"><span class="lineNum">     406 </span>            :     /* Advance *ix, but (for safety) not if we've reached end of string. */</a>
+<a name="407"><span class="lineNum">     407 </span><span class="lineCov">        906 :     if (c)</span></a>
+<a name="408"><span class="lineNum">     408 </span><span class="lineCov">        788 :         *ix += pg_utf_mblen(str);</span></a>
+<a name="409"><span class="lineNum">     409 </span>            : </a>
+<a name="410"><span class="lineNum">     410 </span>            :     /* Convert. */</a>
+<a name="411"><span class="lineNum">     411 </span><span class="lineCov">        906 :     if (c &gt;= (unsigned char) '[' &amp;&amp; c &lt;= (unsigned char) ']')</span></a>
+<a name="412"><span class="lineNum">     412 </span>            :     {</a>
+<a name="413"><span class="lineNum">     413 </span>            :         /* ASCII characters [, \, and ] are reserved for conversions below. */</a>
+<a name="414"><span class="lineNum">     414 </span><span class="lineNoCov">          0 :         return na;</span></a>
+<a name="415"><span class="lineNum">     415 </span>            :     }</a>
+<a name="416"><span class="lineNum">     416 </span><span class="lineCov">        906 :     else if (c &lt; 0x60)</span></a>
+<a name="417"><span class="lineNum">     417 </span>            :     {</a>
+<a name="418"><span class="lineNum">     418 </span>            :         /* Other non-lowercase ASCII characters can be used as-is. */</a>
+<a name="419"><span class="lineNum">     419 </span><span class="lineCov">        308 :         return (char) c;</span></a>
+<a name="420"><span class="lineNum">     420 </span>            :     }</a>
+<a name="421"><span class="lineNum">     421 </span><span class="lineCov">        598 :     else if (c &lt; 0x100)</span></a>
+<a name="422"><span class="lineNum">     422 </span>            :     {</a>
+<a name="423"><span class="lineNum">     423 </span>            :         /* ISO-8859-1 code point; convert to upper-case ASCII via table. */</a>
+<a name="424"><span class="lineNum">     424 </span><span class="lineCov">        590 :         return iso8859_1_to_ascii_upper[c - 0x60];</span></a>
+<a name="425"><span class="lineNum">     425 </span>            :     }</a>
+<a name="426"><span class="lineNum">     426 </span>            :     else</a>
+<a name="427"><span class="lineNum">     427 </span>            :     {</a>
+<a name="428"><span class="lineNum">     428 </span>            :         /* Conversion of non-ASCII characters in the coding chart. */</a>
+<a name="429"><span class="lineNum">     429 </span><span class="lineCov">          8 :         switch (c)</span></a>
+<a name="430"><span class="lineNum">     430 </span>            :         {</a>
+<a name="431"><span class="lineNum">     431 </span><span class="lineCov">          2 :             case 0x0104:        /* LATIN CAPITAL LETTER A WITH OGONEK */</span></a>
+<a name="432"><span class="lineNum">     432 </span>            :             case 0x0105:        /* LATIN SMALL LETTER A WITH OGONEK */</a>
+<a name="433"><span class="lineNum">     433 </span><span class="lineCov">          2 :                 return '[';</span></a>
+<a name="434"><span class="lineNum">     434 </span><span class="lineCov">          2 :             case 0x0118:        /* LATIN CAPITAL LETTER E WITH OGONEK */</span></a>
+<a name="435"><span class="lineNum">     435 </span>            :             case 0x0119:        /* LATIN SMALL LETTER E WITH OGONEK */</a>
+<a name="436"><span class="lineNum">     436 </span><span class="lineCov">          2 :                 return '\\';</span></a>
+<a name="437"><span class="lineNum">     437 </span><span class="lineCov">          4 :             case 0x0162:        /* LATIN CAPITAL LETTER T WITH CEDILLA */</span></a>
+<a name="438"><span class="lineNum">     438 </span>            :             case 0x0163:        /* LATIN SMALL LETTER T WITH CEDILLA */</a>
+<a name="439"><span class="lineNum">     439 </span>            :             case 0x021A:        /* LATIN CAPITAL LETTER T WITH COMMA BELOW */</a>
+<a name="440"><span class="lineNum">     440 </span>            :             case 0x021B:        /* LATIN SMALL LETTER T WITH COMMA BELOW */</a>
+<a name="441"><span class="lineNum">     441 </span><span class="lineCov">          4 :                 return ']';</span></a>
+<a name="442"><span class="lineNum">     442 </span><span class="lineNoCov">          0 :             default:</span></a>
+<a name="443"><span class="lineNum">     443 </span><span class="lineNoCov">          0 :                 return na;</span></a>
+<a name="444"><span class="lineNum">     444 </span>            :         }</a>
+<a name="445"><span class="lineNum">     445 </span>            :     }</a>
+<a name="446"><span class="lineNum">     446 </span>            : }</a>
+<a name="447"><span class="lineNum">     447 </span>            : </a>
+<a name="448"><span class="lineNum">     448 </span>            : </a>
+<a name="449"><span class="lineNum">     449 </span>            : /* Read next ASCII character, skipping any characters not in [A-\]]. */</a>
+<a name="450"><span class="lineNum">     450 </span>            : static char</a>
+<a name="451"><span class="lineNum">     451 </span><span class="lineCov">        898 : read_valid_char(const char *str, int *ix)</span></a>
+<a name="452"><span class="lineNum">     452 </span>            : {</a>
+<a name="453"><span class="lineNum">     453 </span>            :     char        c;</a>
+<a name="454"><span class="lineNum">     454 </span>            : </a>
+<a name="455"><span class="lineNum">     455 </span><span class="lineCov">        906 :     while ((c = read_char((const unsigned char *) str, ix)) != '\0')</span></a>
+<a name="456"><span class="lineNum">     456 </span>            :     {</a>
+<a name="457"><span class="lineNum">     457 </span><span class="lineCov">        788 :         if (c &gt;= 'A' &amp;&amp; c &lt;= ']')</span></a>
+<a name="458"><span class="lineNum">     458 </span><span class="lineCov">        780 :             break;</span></a>
+<a name="459"><span class="lineNum">     459 </span>            :     }</a>
+<a name="460"><span class="lineNum">     460 </span>            : </a>
+<a name="461"><span class="lineNum">     461 </span><span class="lineCov">        898 :     return c;</span></a>
+<a name="462"><span class="lineNum">     462 </span>            : }</a>
+<a name="463"><span class="lineNum">     463 </span>            : </a>
+<a name="464"><span class="lineNum">     464 </span>            : </a>
+<a name="465"><span class="lineNum">     465 </span>            : /* Return sound coding for &quot;letter&quot; (letter sequence) */</a>
+<a name="466"><span class="lineNum">     466 </span>            : static const dm_codes *</a>
+<a name="467"><span class="lineNum">     467 </span><span class="lineCov">        516 : read_letter(const char *str, int *ix)</span></a>
+<a name="468"><span class="lineNum">     468 </span>            : {</a>
+<a name="469"><span class="lineNum">     469 </span>            :     char        c,</a>
+<a name="470"><span class="lineNum">     470 </span>            :                 cmp;</a>
+<a name="471"><span class="lineNum">     471 </span>            :     int         i,</a>
+<a name="472"><span class="lineNum">     472 </span>            :                 j;</a>
+<a name="473"><span class="lineNum">     473 </span>            :     const dm_letter *letters;</a>
+<a name="474"><span class="lineNum">     474 </span>            :     const dm_codes *codes;</a>
+<a name="475"><span class="lineNum">     475 </span>            : </a>
+<a name="476"><span class="lineNum">     476 </span>            :     /* First letter in sequence. */</a>
+<a name="477"><span class="lineNum">     477 </span><span class="lineCov">        516 :     if ((c = read_valid_char(str, ix)) == '\0')</span></a>
+<a name="478"><span class="lineNum">     478 </span><span class="lineCov">         70 :         return NULL;</span></a>
+<a name="479"><span class="lineNum">     479 </span>            : </a>
+<a name="480"><span class="lineNum">     480 </span><span class="lineCov">        446 :     letters = &amp;letter_[c - 'A'];</span></a>
+<a name="481"><span class="lineNum">     481 </span><span class="lineCov">        446 :     codes = letters-&gt;codes;</span></a>
+<a name="482"><span class="lineNum">     482 </span><span class="lineCov">        446 :     i = *ix;</span></a>
+<a name="483"><span class="lineNum">     483 </span>            : </a>
+<a name="484"><span class="lineNum">     484 </span>            :     /* Any subsequent letters in sequence. */</a>
+<a name="485"><span class="lineNum">     485 </span><span class="lineCov">        530 :     while ((letters = letters-&gt;letters) &amp;&amp; (c = read_valid_char(str, &amp;i)))</span></a>
+<a name="486"><span class="lineNum">     486 </span>            :     {</a>
+<a name="487"><span class="lineNum">     487 </span><span class="lineCov">       1216 :         for (j = 0; (cmp = letters[j].letter); j++)</span></a>
+<a name="488"><span class="lineNum">     488 </span>            :         {</a>
+<a name="489"><span class="lineNum">     489 </span><span class="lineCov">        966 :             if (cmp == c)</span></a>
+<a name="490"><span class="lineNum">     490 </span>            :             {</a>
+<a name="491"><span class="lineNum">     491 </span>            :                 /* Letter found. */</a>
+<a name="492"><span class="lineNum">     492 </span><span class="lineCov">         84 :                 letters = &amp;letters[j];</span></a>
+<a name="493"><span class="lineNum">     493 </span><span class="lineCov">         84 :                 if (letters-&gt;codes)</span></a>
+<a name="494"><span class="lineNum">     494 </span>            :                 {</a>
+<a name="495"><span class="lineNum">     495 </span>            :                     /* Coding for letter sequence found. */</a>
+<a name="496"><span class="lineNum">     496 </span><span class="lineCov">         80 :                     codes = letters-&gt;codes;</span></a>
+<a name="497"><span class="lineNum">     497 </span><span class="lineCov">         80 :                     *ix = i;</span></a>
+<a name="498"><span class="lineNum">     498 </span>            :                 }</a>
+<a name="499"><span class="lineNum">     499 </span><span class="lineCov">         84 :                 break;</span></a>
+<a name="500"><span class="lineNum">     500 </span>            :             }</a>
+<a name="501"><span class="lineNum">     501 </span>            :         }</a>
+<a name="502"><span class="lineNum">     502 </span><span class="lineCov">        334 :         if (!cmp)</span></a>
+<a name="503"><span class="lineNum">     503 </span>            :         {</a>
+<a name="504"><span class="lineNum">     504 </span>            :             /* The sequence of letters has no coding. */</a>
+<a name="505"><span class="lineNum">     505 </span><span class="lineCov">        250 :             break;</span></a>
+<a name="506"><span class="lineNum">     506 </span>            :         }</a>
+<a name="507"><span class="lineNum">     507 </span>            :     }</a>
+<a name="508"><span class="lineNum">     508 </span>            : </a>
+<a name="509"><span class="lineNum">     509 </span><span class="lineCov">        446 :     return codes;</span></a>
+<a name="510"><span class="lineNum">     510 </span>            : }</a>
+<a name="511"><span class="lineNum">     511 </span>            : </a>
+<a name="512"><span class="lineNum">     512 </span>            : </a>
+<a name="513"><span class="lineNum">     513 </span>            : /*</a>
+<a name="514"><span class="lineNum">     514 </span>            :  * Generate all Daitch-Mokotoff soundex codes for word,</a>
+<a name="515"><span class="lineNum">     515 </span>            :  * adding them to the &quot;soundex&quot; ArrayBuildState.</a>
+<a name="516"><span class="lineNum">     516 </span>            :  * Returns false if string has no encodable characters, else true.</a>
+<a name="517"><span class="lineNum">     517 </span>            :  */</a>
+<a name="518"><span class="lineNum">     518 </span>            : static bool</a>
+<a name="519"><span class="lineNum">     519 </span><span class="lineCov">         70 : daitch_mokotoff_coding(const char *word, ArrayBuildState *soundex)</span></a>
+<a name="520"><span class="lineNum">     520 </span>            : {</a>
+<a name="521"><span class="lineNum">     521 </span><span class="lineCov">         70 :     int         i = 0;</span></a>
+<a name="522"><span class="lineNum">     522 </span><span class="lineCov">         70 :     int         letter_no = 0;</span></a>
+<a name="523"><span class="lineNum">     523 </span><span class="lineCov">         70 :     int         ix_node = 0;</span></a>
+<a name="524"><span class="lineNum">     524 </span>            :     const dm_codes *codes,</a>
+<a name="525"><span class="lineNum">     525 </span>            :                *next_codes;</a>
+<a name="526"><span class="lineNum">     526 </span>            :     dm_node    *first_node[2],</a>
+<a name="527"><span class="lineNum">     527 </span>            :                *node;</a>
+<a name="528"><span class="lineNum">     528 </span>            : </a>
+<a name="529"><span class="lineNum">     529 </span>            :     /* First letter. */</a>
+<a name="530"><span class="lineNum">     530 </span><span class="lineCov">         70 :     if (!(codes = read_letter(word, &amp;i)))</span></a>
+<a name="531"><span class="lineNum">     531 </span>            :     {</a>
+<a name="532"><span class="lineNum">     532 </span>            :         /* No encodable character in input. */</a>
+<a name="533"><span class="lineNum">     533 </span><span class="lineNoCov">          0 :         return false;</span></a>
+<a name="534"><span class="lineNum">     534 </span>            :     }</a>
+<a name="535"><span class="lineNum">     535 </span>            : </a>
+<a name="536"><span class="lineNum">     536 </span>            :     /* Starting point. */</a>
+<a name="537"><span class="lineNum">     537 </span><span class="lineCov">         70 :     first_node[ix_node] = palloc_object(dm_node);</span></a>
+<a name="538"><span class="lineNum">     538 </span><span class="lineCov">         70 :     *first_node[ix_node] = start_node;</span></a>
+<a name="539"><span class="lineNum">     539 </span>            : </a>
+<a name="540"><span class="lineNum">     540 </span>            :     /*</a>
+<a name="541"><span class="lineNum">     541 </span>            :      * Loop until either the word input is exhausted, or all generated soundex</a>
+<a name="542"><span class="lineNum">     542 </span>            :      * codes are completed to six digits.</a>
+<a name="543"><span class="lineNum">     543 </span>            :      */</a>
+<a name="544"><span class="lineNum">     544 </span><span class="lineCov">        516 :     while (codes &amp;&amp; first_node[ix_node])</span></a>
+<a name="545"><span class="lineNum">     545 </span>            :     {</a>
+<a name="546"><span class="lineNum">     546 </span><span class="lineCov">        446 :         next_codes = read_letter(word, &amp;i);</span></a>
+<a name="547"><span class="lineNum">     547 </span>            : </a>
+<a name="548"><span class="lineNum">     548 </span>            :         /* Update leaf nodes. */</a>
+<a name="549"><span class="lineNum">     549 </span><span class="lineCov">        446 :         update_leaves(first_node, &amp;ix_node, letter_no,</span></a>
+<a name="550"><span class="lineNum">     550 </span>            :                       codes, next_codes ? next_codes : end_codes,</a>
+<a name="551"><span class="lineNum">     551 </span>            :                       soundex);</a>
+<a name="552"><span class="lineNum">     552 </span>            : </a>
+<a name="553"><span class="lineNum">     553 </span><span class="lineCov">        446 :         codes = next_codes;</span></a>
+<a name="554"><span class="lineNum">     554 </span><span class="lineCov">        446 :         letter_no++;</span></a>
+<a name="555"><span class="lineNum">     555 </span>            :     }</a>
+<a name="556"><span class="lineNum">     556 </span>            : </a>
+<a name="557"><span class="lineNum">     557 </span>            :     /* Append all remaining (incomplete) soundex codes to output array. */</a>
+<a name="558"><span class="lineNum">     558 </span><span class="lineCov">        198 :     for (node = first_node[ix_node]; node; node = node-&gt;next[ix_node])</span></a>
+<a name="559"><span class="lineNum">     559 </span>            :     {</a>
+<a name="560"><span class="lineNum">     560 </span><span class="lineCov">        128 :         text       *out = cstring_to_text_with_len(node-&gt;soundex,</span></a>
+<a name="561"><span class="lineNum">     561 </span>            :                                                    DM_CODE_DIGITS);</a>
+<a name="562"><span class="lineNum">     562 </span>            : </a>
+<a name="563"><span class="lineNum">     563 </span><span class="lineCov">        128 :         accumArrayResult(soundex,</span></a>
+<a name="564"><span class="lineNum">     564 </span>            :                          PointerGetDatum(out),</a>
+<a name="565"><span class="lineNum">     565 </span>            :                          false,</a>
+<a name="566"><span class="lineNum">     566 </span>            :                          TEXTOID,</a>
+<a name="567"><span class="lineNum">     567 </span>            :                          CurrentMemoryContext);</a>
+<a name="568"><span class="lineNum">     568 </span>            :     }</a>
+<a name="569"><span class="lineNum">     569 </span>            : </a>
+<a name="570"><span class="lineNum">     570 </span><span class="lineCov">         70 :     return true;</span></a>
+<a name="571"><span class="lineNum">     571 </span>            : }</a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

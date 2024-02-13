@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - contrib/postgres_fdw/deparse.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../index.html">top level</a> - <a href="index.html">contrib/postgres_fdw</a> - deparse.c<span style="font-size: 80%;"> (<a href="deparse.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1309</td>
+            <td class="headerCovTableEntry">1483</td>
+            <td class="headerCovTableEntryMed">88.3 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntry">61</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="deparse.c.func.html"><img src="../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3432">deparseDistinctExpr</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3165">deparseSubscriptingRef</a></td>
+              <td class="coverFnHi">2</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3629">deparseArrayExpr</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3450">deparseScalarArrayOpExpr</a></td>
+              <td class="coverFnHi">8</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2644">deparseTruncateSql</a></td>
+              <td class="coverFnHi">24</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2360">deparseDeleteSql</a></td>
+              <td class="coverFnHi">32</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3579">deparseCaseExpr</a></td>
+              <td class="coverFnHi">42</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2154">rebuildInsertSql</a></td>
+              <td class="coverFnHi">52</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3546">deparseNullTest</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3132">deparseParam</a></td>
+              <td class="coverFnHi">56</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3821">printRemoteParam</a></td>
+              <td class="coverFnHi">58</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3747">appendAggOrderBy</a></td>
+              <td class="coverFnHi">60</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3495">deparseRelabelType</a></td>
+              <td class="coverFnHi">66</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1715">deparseSubqueryTargetList</a></td>
+              <td class="coverFnHi">72</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3508">deparseBoolExpr</a></td>
+              <td class="coverFnHi">76</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2519">deparseAnalyzeInfoSql</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2497">deparseAnalyzeSizeSql</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2559">deparseAnalyzeSql</a></td>
+              <td class="coverFnHi">80</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2274">deparseDirectUpdateSql</a></td>
+              <td class="coverFnHi">90</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2214">deparseUpdateSql</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3211">deparseFuncExpr</a></td>
+              <td class="coverFnHi">116</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2389">deparseDirectDeleteSql</a></td>
+              <td class="coverFnHi">118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#4155">get_relation_column_alias_ids</a></td>
+              <td class="coverFnHi">232</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3985">appendLimitClause</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2081">deparseInsertSql</a></td>
+              <td class="coverFnHi">282</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#4048">deparseSortGroupClause</a></td>
+              <td class="coverFnHi">290</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3860">appendGroupByClause</a></td>
+              <td class="coverFnHi">318</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3847">printRemotePlaceholder</a></td>
+              <td class="coverFnHi">408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3655">deparseAggref</a></td>
+              <td class="coverFnHi">512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1080">is_foreign_param</a></td>
+              <td class="coverFnHi">540</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#4013">appendFunctionName</a></td>
+              <td class="coverFnHi">586</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2440">deparseReturningList</a></td>
+              <td class="coverFnHi">606</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2847">deparseStringLiteral</a></td>
+              <td class="coverFnHi">644</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1155">deparse_type_name</a></td>
+              <td class="coverFnHi">1054</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3908">appendOrderByClause</a></td>
+              <td class="coverFnHi">1406</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1121">is_foreign_pathkey</a></td>
+              <td class="coverFnHi">1470</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1174">build_tlist_to_deparse</a></td>
+              <td class="coverFnHi">1510</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1679">deparseExplicitTargetList</a></td>
+              <td class="coverFnHi">1526</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3776">appendOrderBySuffix</a></td>
+              <td class="coverFnHi">1730</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1639">get_jointype_name</a></td>
+              <td class="coverFnHi">2010</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3369">isPlainForeignVar</a></td>
+              <td class="coverFnHi">2880</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1403">deparseTargetList</a></td>
+              <td class="coverFnHi">3504</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1569">appendConditions</a></td>
+              <td class="coverFnHi">3512</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3018">deparseConst</a></td>
+              <td class="coverFnHi">3520</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2006">deparseRangeTblRef</a></td>
+              <td class="coverFnHi">3528</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1371">deparseFromExpr</a></td>
+              <td class="coverFnHi">4402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1479">deparseLockingClause</a></td>
+              <td class="coverFnHi">4402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1313">deparseSelectSql</a></td>
+              <td class="coverFnHi">4402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1231">deparseSelectStmtForRel</a></td>
+              <td class="coverFnHi">4402</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#216">classifyConditions</a></td>
+              <td class="coverFnHi">4686</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1606">appendWhereClause</a></td>
+              <td class="coverFnHi">4930</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3274">deparseOpExpr</a></td>
+              <td class="coverFnHi">5186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#3404">deparseOperatorName</a></td>
+              <td class="coverFnHi">5210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2807">deparseRelation</a></td>
+              <td class="coverFnHi">6992</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#242">is_foreign_expr</a></td>
+              <td class="coverFnHi">7210</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#1759">deparseFromExprForRel</a></td>
+              <td class="coverFnHi">7874</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2947">deparseVar</a></td>
+              <td class="coverFnHi">16320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#4093">is_subquery_var</a></td>
+              <td class="coverFnHi">16320</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#310">foreign_expr_walker</a></td>
+              <td class="coverFnHi">18014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2882">deparseExpr</a></td>
+              <td class="coverFnHi">23590</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="deparse.c.gcov.html#2679">deparseColumnRef</a></td>
+              <td class="coverFnHi">28932</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

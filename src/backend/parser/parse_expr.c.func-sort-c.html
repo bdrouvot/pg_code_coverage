@@ -1,0 +1,304 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - PostgreSQL 17devel - src/backend/parser/parse_expr.c - functions</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../index.html">top level</a> - <a href="index.html">src/backend/parser</a> - parse_expr.c<span style="font-size: 80%;"> (<a href="parse_expr.c.gcov.html">source</a> / functions)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">PostgreSQL 17devel</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1322</td>
+            <td class="headerCovTableEntry">1552</td>
+            <td class="headerCovTableEntryMed">85.2 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2024-02-13 10:46:01</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntry">56</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Legend:</td>
+            <td class="headerValueLeg">            Lines:
+            <span class="coverLegendCov">hit</span>
+            <span class="coverLegendNoCov">not hit</span>
+</td>
+            <td></td>
+          </tr>
+          <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <center>
+  <table width="60%" cellpadding=1 cellspacing=1 border=0>
+    <tr><td><br></td></tr>
+    <tr>
+      <td width="80%" class="tableHead">Function Name <span class="tableHeadSort"><a href="parse_expr.c.func.html"><img src="../../../updown.png" width=10 height=14 alt="Sort by function name" title="Sort by function name" border=0></a></span></td>
+      <td width="20%" class="tableHead">Hit count <span class="tableHeadSort"><img src="../../../glass.png" width=10 height=14 alt="Sort by hit count" title="Sort by hit count" border=0></span></td>
+    </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2961">make_row_distinct_op</a></td>
+              <td class="coverFnHi">6</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3038">make_nulltest_from_distinct</a></td>
+              <td class="coverFnHi">30</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#371">unknown_attribute</a></td>
+              <td class="coverFnHi">38</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3641">transformJsonArrayQueryConstructor</a></td>
+              <td class="coverFnHi">54</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3062">ParseExprKindName</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#4114">transformJsonSerializeExpr</a></td>
+              <td class="coverFnHi">78</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#4091">transformJsonScalarExpr</a></td>
+              <td class="coverFnHi">98</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3350">checkJsonOutputFormat</a></td>
+              <td class="coverFnHi">100</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3206">makeJsonByteaToTextConversion</a></td>
+              <td class="coverFnHi">120</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#4042">transformJsonParseExpr</a></td>
+              <td class="coverFnHi">148</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3796">transformJsonObjectAgg</a></td>
+              <td class="coverFnHi">156</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3899">transformJsonArrayConstructor</a></td>
+              <td class="coverFnHi">178</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3167">getJsonEncodingConst</a></td>
+              <td class="coverFnHi">180</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3858">transformJsonArrayAgg</a></td>
+              <td class="coverFnHi">186</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2427">transformXmlSerialize</a></td>
+              <td class="coverFnHi">190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1061">transformAExprNullIf</a></td>
+              <td class="coverFnHi">224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2511">transformCurrentOfExpr</a></td>
+              <td class="coverFnHi">242</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#4003">transformJsonReturning</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2206">transformMinMaxExpr</a></td>
+              <td class="coverFnHi">246</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#996">transformAExprOpAll</a></td>
+              <td class="coverFnHi">300</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3980">transformJsonIsPredicate</a></td>
+              <td class="coverFnHi">328</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3712">transformJsonAggConstructor</a></td>
+              <td class="coverFnHi">342</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3930">transformJsonParseArg</a></td>
+              <td class="coverFnHi">350</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1436">transformMultiAssignRef</a></td>
+              <td class="coverFnHi">362</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3604">transformJsonObjectConstructor</a></td>
+              <td class="coverFnHi">364</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1261">transformAExprBetween</a></td>
+              <td class="coverFnHi">502</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2298">transformXmlExpr</a></td>
+              <td class="coverFnHi">598</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2471">transformBooleanTest</a></td>
+              <td class="coverFnHi">670</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3442">transformJsonConstructorOutput</a></td>
+              <td class="coverFnHi">860</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3005">make_distinct_op</a></td>
+              <td class="coverFnHi">882</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3400">transformJsonOutput</a></td>
+              <td class="coverFnHi">888</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1010">transformAExprDistinct</a></td>
+              <td class="coverFnHi">900</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3485">coerceJsonFuncExpr</a></td>
+              <td class="coverFnHi">1118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3542">makeJsonConstructorExpr</a></td>
+              <td class="coverFnHi">1118</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#3228">transformJsonValueExpr</a></td>
+              <td class="coverFnHi">1274</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#888">exprIsNullConstant</a></td>
+              <td class="coverFnHi">1770</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2245">transformSQLValueFunction</a></td>
+              <td class="coverFnHi">2244</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2157">transformCoalesceExpr</a></td>
+              <td class="coverFnHi">2574</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2759">make_row_comparison_op</a></td>
+              <td class="coverFnHi">2826</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2119">transformRowExpr</a></td>
+              <td class="coverFnHi">5014</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2563">transformWholeRowRef</a></td>
+              <td class="coverFnHi">6408</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2719">transformCollateClause</a></td>
+              <td class="coverFnHi">7456</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1966">transformArrayExpr</a></td>
+              <td class="coverFnHi">7792</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#982">transformAExprOpAny</a></td>
+              <td class="coverFnHi">13454</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1103">transformAExprIn</a></td>
+              <td class="coverFnHi">15082</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#417">transformIndirection</a></td>
+              <td class="coverFnHi">17190</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1724">transformSubLink</a></td>
+              <td class="coverFnHi">35008</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1584">transformCaseExpr</a></td>
+              <td class="coverFnHi">53124</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1355">transformBoolExpr</a></td>
+              <td class="coverFnHi">131224</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#864">transformParamRef</a></td>
+              <td class="coverFnHi">154094</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#2635">transformTypeCast</a></td>
+              <td class="coverFnHi">218058</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#1391">transformFuncCall</a></td>
+              <td class="coverFnHi">325946</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#901">transformAExprOp</a></td>
+              <td class="coverFnHi">532152</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#489">transformColumnRef</a></td>
+              <td class="coverFnHi">1381952</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#108">transformExpr</a></td>
+              <td class="coverFnHi">1462138</td>
+            </tr>
+    <tr>
+              <td class="coverFn"><a href="parse_expr.c.gcov.html#126">transformExprRecurse</a></td>
+              <td class="coverFnHi">4059596</td>
+            </tr>
+  </table>
+  <br>
+  </center>
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>
